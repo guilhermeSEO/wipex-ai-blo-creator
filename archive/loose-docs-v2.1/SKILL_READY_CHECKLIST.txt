@@ -1,0 +1,145 @@
+================================================================================
+WIPEX BLOG GENERATION SKILL v2.0 — READY FOR BUILD
+================================================================================
+
+📋 DOCUMENTATION CREATED:
+
+1. SKILL_INPUTS_MASTER.md
+   └─ COMPLETE input matrix (7 parts)
+   └─ What you MUST provide
+   └─ What skill AUTO-RECOMMENDS
+   └─ What you can OVERRIDE
+   
+2. DECISION_MODELS.md
+   └─ 3 operational models (A/B/C)
+   └─ Trade-off matrix for each
+   └─ Recommended: MODELO B (Hybrid)
+   
+3. THIS CHECKLIST
+   └─ What you need to decide NOW
+
+================================================================================
+YOUR IMMEDIATE DECISIONS:
+================================================================================
+
+□ CHOICE 1: Which operational model do you want?
+   ☐ A) AUTO-EVERYTHING (1.5 days, <30 min your time)
+   ☐ B) HYBRID (2 days, 1-2 hrs your time) ← RECOMMENDED
+   ☐ C) HUMAN-LED (3-4 days, 2+ hrs your time)
+   ☐ D) TEST ALL THREE (run 3 test blogs, compare)
+
+□ CHOICE 2: When do you want to test the first blog?
+   ☐ This week (urgent)
+   ☐ Next week (planned)
+   ☐ After I review inputs (2-3 days)
+
+□ CHOICE 3: Which topic for test blog #1?
+   Example topics:
+   ☐ "Yoga Mat Care for Summer Studios" (Q2 focus, obvious fit)
+   ☐ "Gym Equipment Cleaning on a Budget" (Q1 procurement angle)
+   ☐ "Eco-Friendly Office Cleaning Supplies" (all-quarter, facilities)
+   ☐ OTHER: ________________________
+
+□ CHOICE 4: Product recommendation scope
+   ☐ "AI auto-recommends, I choose from top 3"
+   ☐ "I'll specify product exactly"
+   ☐ "Surprise me, dealer's choice"
+
+□ CHOICE 5: LLM-friendliness priority
+   ☐ "Max visibility for LLMs (use semantic markup, entity embedding)"
+   ☐ "Normal (readable to humans + indexable)"
+   ☐ "Doesn't matter, just needs to sell"
+
+================================================================================
+WHAT SKILL ALREADY HAS (READY TO USE):
+================================================================================
+
+✅ Claims Matrix Integration
+   └─ Loaded: C:\Users\guilh\OneDrive\Desktop\1 SEO\Wipex\2026\fix\Dean sent\Claims & Guidelines.xlsx
+   └─ 47 products mapped
+   └─ 3 tiers (Tier 1 regulated, Tier 2 TURI, Tier 3 qualitative)
+   └─ Never-Say list hardcoded
+
+✅ Shopify Product Catalog (Live API)
+   └─ Endpoint: https://wipex.co/products.json
+   └─ Real-time product data
+   └─ Auto-product-recommendation engine ready
+
+✅ Calendar Strategy Framework
+   └─ Q1-Q4 seasonal triggers
+   └─ Search volume reference table
+   └─ Trend-matching logic
+
+✅ SEO/AEO/GEO/CRO Framework
+   └─ Title optimization (65 chars exact)
+   └─ Meta description (155 chars exact)
+   └─ Schema.json generation (BlogPosting, FAQPage, Product, BreadcrumbList)
+   └─ Internal link mapping
+   └─ Readability scoring (Flesch-Kincaid 6-8 target)
+   └─ Humanization filters (removes AI-isms)
+   └─ LLM-visible structuring
+
+✅ 7 Agent Prompts (Ready to Delegate)
+   └─ Agent 1A: Keyword research
+   └─ Agent 1B: Claims pre-flight
+   └─ Agent 1C: Audience + FAQ
+   └─ Agent 2A: Copy generation
+   └─ Agent 2B: SEO optimization
+   └─ Agent 2C: Compliance validation
+   └─ Agent 2D: Image briefs + section template
+
+================================================================================
+WHAT STILL NEEDS USER INPUT (YOU DECIDE):
+================================================================================
+
+MANDATORY (fill this before each blog):
+├─ Blog topic / keyword
+├─ Calendar hook (Q1/Q2/Q3/Q4 or specific date)
+├─ CRO goal (E-commerce / Lead-gen / Brand awareness / Contact)
+├─ Blog type (Buying Guide / How-To / Educational / Comparison)
+├─ Product(s) (or "Auto-recommend")
+└─ Audience (or "Auto-detect")
+
+OPTIONAL (skill can auto-generate if you skip):
+├─ Meta title (or: AI generates + you edit)
+├─ Meta description (or: AI generates + you edit)
+├─ Internal links (or: AI maps + you verify)
+├─ Images (or: AI briefs + you refine)
+└─ Interactive section (or: AI suggests + you enable/disable)
+
+================================================================================
+TECHNICAL INTEGRATION STATUS:
+================================================================================
+
+Ready to Build:
+✅ Skill structure (PART 1-7 complete)
+✅ Input validation (matrix defined)
+✅ Decision logic (3 models defined)
+✅ Agent delegation framework (7 prompts ready)
+✅ Claims compliance engine (matrix loaded + hardcoded)
+✅ Product recommendation engine (catalog + logic)
+✅ SEO/CRO framework (all optimizations scoped)
+✅ LLM visibility optimization (semantic markup ready)
+✅ Shopify output format (liquid templates ready)
+
+Waiting On:
+⏳ Your model choice (A/B/C/D)
+⏳ Your first test blog topic
+⏳ Your product override scope (if any)
+⏳ Your LLM priority ranking
+
+================================================================================
+NEXT STEP:
+================================================================================
+
+1. ANSWER THE 5 CHOICES (above)
+2. PICK A TEST BLOG TOPIC
+3. I WILL REBUILD THE SKILL with your decisions
+4. WE KICK OFF TEST BLOG #1
+
+Ready? Reply with:
+- Model choice (A/B/C/D)
+- Test blog topic
+- Any adjustments to inputs matrix
+
+================================================================================

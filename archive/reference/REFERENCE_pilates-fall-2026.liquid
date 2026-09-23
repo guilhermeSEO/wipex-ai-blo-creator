@@ -1,0 +1,737 @@
+{%- comment -%} ============================================================
+WIPEX — Pilates Studio Cleaning Supplies: Fall 2026 Stock-Up Guide
+Scoped blog/landing module. Namespace: .wipex-pilates-fall-2026
+Multi-instance safe · Theme Editor safe · IDs suffixed with section.id
+Fall 2026 seasonal color treatment applied via CSS variables.
+MEDIA SYSTEMS:
+A) EDITORIAL / LIFESTYLE (images) -> people, studios, reformers, cleaning
+(hero_lifestyle / cleaning_lifestyle / studio_environment /
+member_experience / fall_lifestyle). Gracefully hidden when empty.
+B) EDITORIAL / LIFESTYLE (video) -> full-width 16:9 cinematic banner
+(lifestyle_video + video_fallback_image). Native Shopify video.
+C) PRODUCT PHOTOGRAPHY -> only inside product cards & feature
+(p700_image / disp_image / p400_image). Unchanged.
+============================================================= {%- endcomment -%}
+{%- assign uid = section.id -%}
+<style> .wipex-pilates-fall-2026{ /* ---- Fall 2026 approved palette ---- */ --fall-pink:#F1B1AF; --fall-neutral:#BBA8A1; --fall-peach:#EDCAB6; --fall-olive:#969054; --fall-terracotta:#BD856C; --fall-rose:#C6767F; /* Derived accessible tones */ --fall-olive-ink:#6f6a3d; --fall-terracotta-cta:#a9674e; --fall-terracotta-ink:#8a4e39; --fall-rose-ink:#9c4753; /* Soft tinted backgrounds */ --fall-peach-bg:#faf1ea; --fall-pink-bg:#fdf1f0; --fall-blush-highlight:#f8e8e6; /* ---- Re-mapped Wipex tokens ---- */ --wpx-ink:#241c1a; --wpx-muted:#6b5c57; --wpx-line:var(--fall-neutral); --wpx-line-soft:#e4d7d0; --wpx-bg:#ffffff; --wpx-soft:var(--fall-peach-bg); --wpx-accent:var(--fall-olive); --wpx-accent-ink:var(--fall-olive-ink); --wpx-gold:var(--fall-terracotta); --wpx-gold-cta:var(--fall-terracotta-cta); --wpx-radius:14px; --wpx-maxw:1120px; --wpx-readw:720px; color:var(--wpx-ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; } .wipex-pilates-fall-2026 *{box-sizing:border-box;} .wipex-pilates-fall-2026 img{max-width:100%;height:auto;display:block;} .wipex-pilates-fall-2026 h1, .wipex-pilates-fall-2026 h2, .wipex-pilates-fall-2026 h3{line-height:1.2;letter-spacing:-.01em;margin:0 0 .5em;color:var(--wpx-ink);} .wipex-pilates-fall-2026 h2{font-size:clamp(1.4rem,3.2vw,2rem);} .wipex-pilates-fall-2026 h3{font-size:1.15rem;} .wipex-pilates-fall-2026 p{margin:0 0 1rem;} .wipex-pilates-fall-2026 a{color:var(--fall-terracotta-ink);} .wipex-pilates-fall-2026 .wpx-wrap{max-width:var(--wpx-maxw);margin:0 auto;padding:0 20px;} .wipex-pilates-fall-2026 .wpx-read{max-width:var(--wpx-readw);margin:0 auto;} .wipex-pilates-fall-2026 .wpx-section{padding:44px 0;} .wipex-pilates-fall-2026 .wpx-eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em; text-transform:uppercase;color:var(--fall-terracotta-ink);margin-bottom:14px;} /* Buttons */ .wipex-pilates-fall-2026 .wpx-btn{display:inline-flex;align-items:center;justify-content:center;gap:.4em; min-height:48px;padding:13px 22px;border-radius:10px;font-weight:700;font-size:1rem; text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease;} .wipex-pilates-fall-2026 .wpx-btn:focus-visible{outline:3px solid var(--fall-rose);outline-offset:2px;} .wipex-pilates-fall-2026 .wpx-btn--primary{background:var(--fall-terracotta-cta);color:#fff;} .wipex-pilates-fall-2026 .wpx-btn--primary:hover{background:#8a4e39;transform:translateY(-1px);} .wipex-pilates-fall-2026 .wpx-btn--ghost{background:transparent;color:var(--fall-terracotta-ink);border-color:var(--fall-neutral);} .wipex-pilates-fall-2026 .wpx-btn--ghost:hover{border-color:var(--fall-terracotta-cta);background:var(--fall-peach-bg);} .wipex-pilates-fall-2026 .wpx-btn--gold{background:var(--fall-olive);color:#fff;} .wipex-pilates-fall-2026 .wpx-btn--gold:hover{background:var(--fall-olive-ink);transform:translateY(-1px);} .wipex-pilates-fall-2026 .wpx-btn--sm{min-height:44px;padding:10px 16px;font-size:.92rem;} .wipex-pilates-fall-2026 .wpx-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;} /* Reading progress */ .wipex-pilates-fall-2026 .wpx-progress{position:sticky;top:0;left:0;height:4px;width:100%;background:transparent;z-index:30;} .wipex-pilates-fall-2026 .wpx-progress__bar{height:100%;width:0; background:linear-gradient(90deg,var(--fall-olive),var(--fall-terracotta),var(--fall-rose));transition:width .1s linear;} /* ========================================================== EDITORIAL / LIFESTYLE MEDIA SYSTEM (images) ========================================================== */ .wipex-pilates-fall-2026 .wpx-life{ --wpx-img-pos:center; position:relative;overflow:hidden;border-radius:var(--wpx-radius); background:var(--fall-peach-bg); border:1px solid var(--wpx-line-soft); box-shadow:0 8px 26px rgba(189,133,108,.14); } .wipex-pilates-fall-2026 .wpx-life img{ width:100%;height:100%;object-fit:cover;object-position:var(--wpx-img-pos);display:block; } .wipex-pilates-fall-2026 .wpx-life--16x9{aspect-ratio:16/9;} .wipex-pilates-fall-2026 .wpx-life--2x3{aspect-ratio:2/3;} .wipex-pilates-fall-2026 .wpx-life--overlay::after{ content:"";position:absolute;inset:0;pointer-events:none; background:linear-gradient(to top,rgba(36,28,26,.34) 0%,rgba(36,28,26,.06) 34%,rgba(36,28,26,0) 60%); } .wipex-pilates-fall-2026 .wpx-life__cap{ margin:10px 2px 0;font-size:.82rem;line-height:1.45;color:var(--wpx-muted); padding-left:12px;border-left:3px solid var(--fall-rose); } .wipex-pilates-fall-2026 .wpx-life__cap--on{ position:absolute;left:16px;right:16px;bottom:14px;margin:0;padding:0;border:0; color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.4);font-weight:600;z-index:2; } .wipex-pilates-fall-2026 .wpx-life__ph{ display:flex;align-items:center;justify-content:center;height:100%;min-height:120px; text-align:center;padding:20px;color:var(--fall-terracotta-ink);font-size:.82rem;font-weight:600; background:repeating-linear-gradient(45deg,var(--fall-peach-bg),var(--fall-peach-bg) 12px,#fff 12px,#fff 24px); } /* ========================================================== EDITORIAL VIDEO BANNER (full-width cinematic 16:9) Natural video (no heavy tint). Palette used only on surround, CTA, overlay accents, and border. ========================================================== */ .wipex-pilates-fall-2026 .wpx-videoband{padding:44px 0;background:var(--fall-peach-bg);} .wipex-pilates-fall-2026 .wpx-vid{ position:relative;width:100%;aspect-ratio:16/9;overflow:hidden; border-radius:var(--wpx-radius); border:1px solid var(--wpx-line-soft); box-shadow:0 14px 44px rgba(189,133,108,.22); background:var(--fall-neutral); /* graceful color while media loads */ } /* Shopify video_tag wraps output; force the media to fill & cover */ .wipex-pilates-fall-2026 .wpx-vid video, .wipex-pilates-fall-2026 .wpx-vid .wpx-vid__media, .wipex-pilates-fall-2026 .wpx-vid .wpx-vid__media video, .wipex-pilates-fall-2026 .wpx-vid img{ position:absolute;inset:0;width:100%;height:100%; object-fit:cover;object-position:center;display:block; } /* Subtle gradient ONLY when a text overlay is present */ .wipex-pilates-fall-2026 .wpx-vid--overlay::after{ content:"";position:absolute;inset:0;pointer-events:none;z-index:1; background:linear-gradient(to top, rgba(36,28,26,.52) 0%, rgba(36,28,26,.24) 38%, rgba(36,28,26,.04) 66%, rgba(36,28,26,0) 100%); } .wipex-pilates-fall-2026 .wpx-vid__content{ position:absolute;left:0;right:0;bottom:0;z-index:2; padding:clamp(20px,4vw,40px); display:flex;flex-direction:column;align-items:flex-start;gap:12px;max-width:640px; } .wipex-pilates-fall-2026 .wpx-vid__eyebrow{ display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase; color:#fff;background:rgba(150,144,84,.85);padding:5px 12px;border-radius:20px; } .wipex-pilates-fall-2026 .wpx-vid__heading{color:#fff;font-size:clamp(1.5rem,3.4vw,2.3rem); font-weight:800;margin:0;text-shadow:0 2px 10px rgba(0,0,0,.35);} .wipex-pilates-fall-2026 .wpx-vid__text{color:rgba(255,255,255,.94);font-size:clamp(.98rem,1.6vw,1.12rem); margin:0;max-width:46ch;text-shadow:0 1px 6px rgba(0,0,0,.4);} .wipex-pilates-fall-2026 .wpx-vid__content .wpx-btn{margin-top:6px;} .wipex-pilates-fall-2026 .wpx-vid__content .wpx-btn--primary{background:var(--fall-terracotta-cta);color:#fff;} .wipex-pilates-fall-2026 .wpx-vid__content .wpx-btn--primary:hover{background:#8a4e39;} .wipex-pilates-fall-2026 .wpx-vid__content .wpx-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;} /* Editor-only placeholder */ .wipex-pilates-fall-2026 .wpx-vid__ph{ position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center; padding:24px;color:var(--fall-terracotta-ink);font-size:.85rem;font-weight:600; background:repeating-linear-gradient(45deg,var(--fall-peach-bg),var(--fall-peach-bg) 14px,#fff 14px,#fff 28px); } /* Hero */ .wipex-pilates-fall-2026 .wpx-hero{ background:linear-gradient(150deg,var(--fall-peach-bg) 0%,var(--fall-pink-bg) 45%,#ffffff 100%); border-bottom:1px solid var(--wpx-line-soft);} .wipex-pilates-fall-2026 .wpx-hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:52px 0;} .wipex-pilates-fall-2026 .wpx-hero h1{font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:.35em;font-weight:800;} .wipex-pilates-fall-2026 .wpx-hero__lede{font-size:1.12rem;color:var(--wpx-muted);max-width:34em;} .wipex-pilates-fall-2026 .wpx-hero__media.wpx-life{background:var(--fall-peach);} /* Inline lifestyle rows */ .wipex-pilates-fall-2026 .wpx-liferow{display:grid;grid-template-columns:1.35fr .65fr;gap:32px;align-items:center;} .wipex-pilates-fall-2026 .wpx-liferow--rev{grid-template-columns:.65fr 1.35fr;} .wipex-pilates-fall-2026 .wpx-liferow__media{max-width:360px;width:100%;margin:0 auto;} .wipex-pilates-fall-2026 .wpx-lifeband{margin:0 auto;} .wipex-pilates-fall-2026 .wpx-lifeband--wide{max-width:var(--wpx-maxw);} /* Problem strip */ .wipex-pilates-fall-2026 .wpx-strip{background:var(--fall-terracotta);color:#fff;} .wipex-pilates-fall-2026 .wpx-strip__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:32px 0;} .wipex-pilates-fall-2026 .wpx-strip__cell{background:rgba(255,255,255,.14);border-radius:12px;padding:18px;} .wipex-pilates-fall-2026 .wpx-strip__cell strong{display:block;font-size:1.05rem;margin-bottom:4px;} .wipex-pilates-fall-2026 .wpx-strip__cell span{font-size:.92rem;opacity:.92;} /* TOC */ .wipex-pilates-fall-2026 .wpx-toc{background:var(--fall-pink-bg);border:1px solid var(--wpx-line-soft);border-radius:12px;padding:16px 18px;margin:0 auto 8px;} .wipex-pilates-fall-2026 .wpx-toc__head{display:flex;justify-content:space-between;align-items:center;font-weight:700; background:none;border:0;width:100%;cursor:pointer;color:var(--wpx-ink);font-size:1rem;padding:0;} .wipex-pilates-fall-2026 .wpx-toc__list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;} .wipex-pilates-fall-2026 .wpx-toc__list a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--fall-terracotta-ink);} .wipex-pilates-fall-2026 .wpx-toc__list a:hover{text-decoration:underline;} .wipex-pilates-fall-2026 .wpx-toc[data-open="false"] .wpx-toc__list{display:none;} .wipex-pilates-fall-2026 .wpx-toc__chev{transition:transform .2s ease;color:var(--fall-olive-ink);} .wipex-pilates-fall-2026 .wpx-toc[data-open="false"] .wpx-toc__chev{transform:rotate(-90deg);} /* Equipment grid */ .wipex-pilates-fall-2026 .wpx-eqgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;} .wipex-pilates-fall-2026 .wpx-eqcard{border:1px solid var(--wpx-line-soft);border-radius:12px;padding:18px;background:#fff;} .wipex-pilates-fall-2026 .wpx-eqcard h3{font-size:1.02rem;margin-bottom:4px;} .wipex-pilates-fall-2026 .wpx-eqcard p{font-size:.9rem;color:var(--wpx-muted);margin:0;} /* Buying guide */ .wipex-pilates-fall-2026 .wpx-bg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;} .wipex-pilates-fall-2026 .wpx-bg-card{border:1px solid var(--wpx-line-soft);border-left:4px solid var(--fall-olive); border-radius:10px;padding:20px;background:var(--fall-peach-bg);} .wipex-pilates-fall-2026 .wpx-bg-card h3{font-size:1.05rem;} .wipex-pilates-fall-2026 .wpx-bg-card p{margin:0;font-size:.95rem;color:var(--wpx-muted);} /* Comparison */ .wipex-pilates-fall-2026 .wpx-cmp{border:1px solid var(--wpx-line);border-radius:14px;overflow:hidden;background:#fff;} .wipex-pilates-fall-2026 .wpx-cmp table{width:100%;border-collapse:collapse;} .wipex-pilates-fall-2026 .wpx-cmp th,.wipex-pilates-fall-2026 .wpx-cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--wpx-line-soft);vertical-align:middle;} .wipex-pilates-fall-2026 .wpx-cmp thead th{background:var(--fall-peach-bg);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--wpx-muted);} .wipex-pilates-fall-2026 .wpx-cmp tr:last-child td{border-bottom:0;} .wipex-pilates-fall-2026 .wpx-cmp__rec{font-weight:700;} .wipex-pilates-fall-2026 .wpx-cmp__best{background:var(--fall-blush-highlight);box-shadow:inset 4px 0 0 var(--fall-olive);} .wipex-pilates-fall-2026 .wpx-cmp__tag{display:inline-block;background:var(--fall-rose);color:#fff;font-size:.68rem; font-weight:700;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em;margin-left:8px;} /* Product cards (unchanged) */ .wipex-pilates-fall-2026 .wpx-prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;} .wipex-pilates-fall-2026 .wpx-prod{border:1px solid var(--wpx-line);border-radius:var(--wpx-radius);overflow:hidden; background:#fff;display:flex;flex-direction:column;} .wipex-pilates-fall-2026 .wpx-prod--hero{border:2px solid var(--fall-olive);box-shadow:0 10px 32px rgba(189,133,108,.20);} .wipex-pilates-fall-2026 .wpx-prod__media{aspect-ratio:1/1;background:var(--fall-peach-bg);} .wipex-pilates-fall-2026 .wpx-prod__media img{width:100%;height:100%;object-fit:cover;} .wipex-pilates-fall-2026 .wpx-prod__ph{display:flex;align-items:center;justify-content:center;height:100%;color:var(--wpx-muted);font-size:.8rem;text-align:center;padding:16px;} .wipex-pilates-fall-2026 .wpx-prod__body{padding:18px;display:flex;flex-direction:column;flex:1;} .wipex-pilates-fall-2026 .wpx-prod__badge{align-self:flex-start;font-size:.68rem;font-weight:700;text-transform:uppercase; letter-spacing:.06em;padding:3px 9px;border-radius:20px;margin-bottom:10px;} .wipex-pilates-fall-2026 .wpx-prod__badge--hero{background:var(--fall-olive);color:#fff;} .wipex-pilates-fall-2026 .wpx-prod__badge--sys{background:var(--fall-terracotta);color:#fff;} .wipex-pilates-fall-2026 .wpx-prod__badge--entry{background:var(--fall-peach);color:var(--fall-terracotta-ink);} .wipex-pilates-fall-2026 .wpx-prod h3{font-size:1.08rem;} .wipex-pilates-fall-2026 .wpx-prod__best{font-size:.85rem;color:var(--fall-olive-ink);font-weight:700;margin:0 0 10px;} .wipex-pilates-fall-2026 .wpx-prod__list{list-style:none;margin:0 0 16px;padding:0;font-size:.9rem;color:var(--wpx-muted);} .wipex-pilates-fall-2026 .wpx-prod__list li{padding-left:20px;position:relative;margin-bottom:6px;} .wipex-pilates-fall-2026 .wpx-prod__list li::before{content:"✓";position:absolute;left:0;color:var(--fall-olive);font-weight:700;} .wipex-pilates-fall-2026 .wpx-prod .wpx-btn{margin-top:auto;width:100%;} /* Primary feature (unchanged) */ .wipex-pilates-fall-2026 .wpx-feature{background:var(--fall-peach-bg);border-radius:var(--wpx-radius);overflow:hidden; display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;border:1px solid var(--wpx-line-soft);} .wipex-pilates-fall-2026 .wpx-feature__media{aspect-ratio:1/1;background:var(--fall-peach);} .wipex-pilates-fall-2026 .wpx-feature__media img{width:100%;height:100%;object-fit:cover;} .wipex-pilates-fall-2026 .wpx-feature__ph{display:flex;align-items:center;justify-content:center;height:100%;color:var(--wpx-muted);font-size:.85rem;text-align:center;padding:20px;} .wipex-pilates-fall-2026 .wpx-feature__body{padding:36px;} .wipex-pilates-fall-2026 .wpx-feature__list{list-style:none;margin:0 0 18px;padding:0;} .wipex-pilates-fall-2026 .wpx-feature__list li{padding-left:24px;position:relative;margin-bottom:8px;font-weight:600;} .wipex-pilates-fall-2026 .wpx-feature__list li::before{content:"→";position:absolute;left:0;color:var(--fall-terracotta);} /* System module */ .wipex-pilates-fall-2026 .wpx-system{border:2px dashed var(--fall-olive);border-radius:var(--wpx-radius); padding:32px;text-align:center;background:#fff;} .wipex-pilates-fall-2026 .wpx-system__eq{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;margin:20px 0 8px;} .wipex-pilates-fall-2026 .wpx-system__pill{background:var(--fall-peach-bg);border:1px solid var(--wpx-line);border-radius:10px; padding:14px 20px;font-weight:700;min-width:200px;} .wipex-pilates-fall-2026 .wpx-system__op{font-size:1.6rem;font-weight:800;color:var(--fall-terracotta);} .wipex-pilates-fall-2026 .wpx-system__eq-result{background:var(--fall-olive);color:#fff;border-radius:10px;padding:14px 22px;font-weight:700;min-width:220px;} /* Checklist */ .wipex-pilates-fall-2026 .wpx-check{background:#fff;border:1px solid var(--wpx-line);border-radius:var(--wpx-radius);padding:26px;} .wipex-pilates-fall-2026 .wpx-check__list{list-style:none;margin:0;padding:0;display:grid;gap:12px;} .wipex-pilates-fall-2026 .wpx-check__item{display:flex;gap:12px;align-items:flex-start;padding:12px 14px; border:1px solid var(--wpx-line-soft);border-radius:10px;transition:background .15s ease,border-color .15s ease;} .wipex-pilates-fall-2026 .wpx-check__item:hover{background:var(--fall-peach-bg);border-color:var(--fall-neutral);} .wipex-pilates-fall-2026 .wpx-check__item input{width:22px;height:22px;margin-top:2px;accent-color:var(--fall-olive);cursor:pointer;flex:none;} .wipex-pilates-fall-2026 .wpx-check__item label{cursor:pointer;font-weight:600;} .wipex-pilates-fall-2026 .wpx-check__item input:checked + label{color:var(--wpx-muted);text-decoration:line-through;} /* Decision tool */ .wipex-pilates-fall-2026 .wpx-dec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;} .wipex-pilates-fall-2026 .wpx-dec{border:1px solid var(--wpx-line);border-radius:12px;padding:22px;background:#fff;text-align:center;} .wipex-pilates-fall-2026 .wpx-dec--rec{border:2px solid var(--fall-olive);background:var(--fall-blush-highlight);} .wipex-pilates-fall-2026 .wpx-dec h3{font-size:1.02rem;} .wipex-pilates-fall-2026 .wpx-dec__arrow{font-size:1.4rem;color:var(--fall-terracotta);margin:8px 0;} .wipex-pilates-fall-2026 .wpx-dec__sol{font-weight:700;margin-bottom:14px;} /* CTA band */ .wipex-pilates-fall-2026 .wpx-band{ background:linear-gradient(135deg,var(--fall-terracotta) 0%,var(--fall-rose) 100%); color:#fff;border-radius:var(--wpx-radius);padding:44px 32px;text-align:center; box-shadow:0 12px 40px rgba(189,133,108,.28);} .wipex-pilates-fall-2026 .wpx-band h2{color:#fff;} .wipex-pilates-fall-2026 .wpx-band p{color:rgba(255,255,255,.92);max-width:40em;margin:0 auto 18px;} .wipex-pilates-fall-2026 .wpx-band .wpx-cta-row{justify-content:center;} .wipex-pilates-fall-2026 .wpx-band .wpx-btn--gold{background:#fff;color:var(--fall-terracotta-ink);} .wipex-pilates-fall-2026 .wpx-band .wpx-btn--gold:hover{background:var(--fall-peach);color:var(--fall-terracotta-ink);} .wipex-pilates-fall-2026 .wpx-band .wpx-btn--ghost{color:#fff;border-color:rgba(255,255,255,.6);} .wipex-pilates-fall-2026 .wpx-band .wpx-btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.12);} /* FAQ */ .wipex-pilates-fall-2026 .wpx-faq details{border:1px solid var(--wpx-line-soft);border-radius:10px;margin-bottom:12px;background:#fff;} .wipex-pilates-fall-2026 .wpx-faq summary{cursor:pointer;font-weight:700;padding:16px 18px;list-style:none;position:relative;padding-right:44px;} .wipex-pilates-fall-2026 .wpx-faq summary::-webkit-details-marker{display:none;} .wipex-pilates-fall-2026 .wpx-faq summary::after{content:"+";position:absolute;right:18px;top:14px;font-size:1.4rem;color:var(--fall-terracotta);} .wipex-pilates-fall-2026 .wpx-faq details[open] summary::after{content:"–";} .wipex-pilates-fall-2026 .wpx-faq details[open]{border-color:var(--fall-neutral);} .wipex-pilates-fall-2026 .wpx-faq summary:focus-visible{outline:3px solid var(--fall-rose);outline-offset:2px;} .wipex-pilates-fall-2026 .wpx-faq__a{padding:0 18px 16px;color:var(--wpx-muted);} .wipex-pilates-fall-2026 .wpx-links{font-size:.95rem;} .wipex-pilates-fall-2026 .wpx-links a{font-weight:600;color:var(--fall-terracotta-ink);} /* Sticky mobile CTA */ .wipex-pilates-fall-2026 .wpx-sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none; background:#fff;border-top:2px solid var(--fall-terracotta);padding:10px 14px; box-shadow:0 -6px 20px rgba(0,0,0,.10);align-items:center;gap:10px;} .wipex-pilates-fall-2026 .wpx-sticky .wpx-btn{flex:1;min-height:46px;} .wipex-pilates-fall-2026 .wpx-sticky__close{background:none;border:0;font-size:1.4rem;line-height:1;color:var(--wpx-muted); padding:6px 10px;cursor:pointer;min-height:44px;min-width:44px;} .wipex-pilates-fall-2026 .wpx-sticky.is-visible{display:flex;} /* Responsive */ @media(max-width:900px){ .wipex-pilates-fall-2026 .wpx-hero__grid{grid-template-columns:1fr;padding:36px 0;} .wipex-pilates-fall-2026 .wpx-strip__grid{grid-template-columns:repeat(2,1fr);} .wipex-pilates-fall-2026 .wpx-eqgrid{grid-template-columns:repeat(2,1fr);} .wipex-pilates-fall-2026 .wpx-prodgrid{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-feature{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-dec-grid{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-liferow, .wipex-pilates-fall-2026 .wpx-liferow--rev{grid-template-columns:1fr;gap:20px;} .wipex-pilates-fall-2026 .wpx-liferow__media{order:-1;max-width:420px;} .wipex-pilates-fall-2026 .wpx-liferow__media .wpx-life--2x3{aspect-ratio:3/4;} } @media(max-width:560px){ .wipex-pilates-fall-2026 .wpx-bg-grid{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-strip__grid{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-eqgrid{grid-template-columns:1fr;} .wipex-pilates-fall-2026 .wpx-feature__body{padding:24px;} .wipex-pilates-fall-2026 .wpx-cmp thead{display:none;} .wipex-pilates-fall-2026 .wpx-cmp table, .wipex-pilates-fall-2026 .wpx-cmp tbody, .wipex-pilates-fall-2026 .wpx-cmp tr, .wipex-pilates-fall-2026 .wpx-cmp td{display:block;width:100%;} .wipex-pilates-fall-2026 .wpx-cmp tr{border-bottom:8px solid var(--fall-peach-bg);padding:8px 0;} .wipex-pilates-fall-2026 .wpx-cmp__best{box-shadow:inset 0 4px 0 var(--fall-olive);} .wipex-pilates-fall-2026 .wpx-cmp td{border-bottom:0;padding:6px 18px;} .wipex-pilates-fall-2026 .wpx-cmp td::before{content:attr(data-label);display:block;font-size:.72rem;text-transform:uppercase; letter-spacing:.06em;color:var(--wpx-muted);margin-bottom:2px;} .wipex-pilates-fall-2026 .wpx-lifeband .wpx-life--16x9{aspect-ratio:4/3;} /* Video banner: keep 16:9 EXACTLY (no ratio break), just constrain text block */ .wipex-pilates-fall-2026 .wpx-vid__content{max-width:100%;gap:10px;} .wipex-pilates-fall-2026 .wpx-vid__content .wpx-btn{width:100%;} } @media(prefers-reduced-motion:reduce){ .wipex-pilates-fall-2026 *{animation:none!important;transition:none!important;scroll-behavior:auto!important;} } </style>
+<div class="wipex-pilates-fall-2026" id="wpx-{{ uid }}" data-wpx-section="{{ uid }}">
+<!-- Reading progress -->
+<div class="wpx-progress" aria-hidden="true"><div class="wpx-progress__bar" data-wpx-progress></div></div>
+<article>
+<!-- ================= MODULE 1: HERO ================= -->
+<header class="wpx-hero">
+  <div class="wpx-wrap">
+    <div class="wpx-hero__grid">
+      <div>
+        <span class="wpx-eyebrow">{{ section.settings.hero_eyebrow | default: 'Fall 2026 Studio Prep' }}</span>
+        <h1>{{ section.settings.hero_title | default: 'How to Stock Your Pilates Studio Cleaning Supplies for Fall 2026' }}</h1>
+        {%- if section.settings.hero_intro != blank -%}
+          <div class="wpx-hero__lede">{{ section.settings.hero_intro }}</div>
+        {%- else -%}
+          <p class="wpx-hero__lede">Reformer demand keeps climbing, and fall fills class calendars fast. More traffic means more equipment turnover — and more cleaning between every session. Build a scalable bulk-wipe and dispenser system now, before the rush, so no station ever runs dry.</p>
+        {%- endif -%}
+        <div class="wpx-cta-row">
+          <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-hero-cta"
+             href="{{ section.settings.hero_cta_url | default: 'https://wipex.co/products/natural-gym-wipes-bulk-refill-roll' }}">
+             {{ section.settings.hero_cta_label | default: 'Shop Bulk Equipment Wipes' }} →</a>
+          <a class="wpx-btn wpx-btn--ghost" data-cro="pilates-blog-hero-secondary"
+             href="{{ section.settings.hero_cta2_url | default: 'https://wipex.co/collections/pilates-studio-shop' }}">
+             {{ section.settings.hero_cta2_label | default: 'Build Your Studio System' }}</a>
+        </div>
+      </div>
+
+      {%- if section.settings.hero_lifestyle_image != blank -%}
+        {%- assign hero_pos = section.settings.hero_lifestyle_focal | default: 'center' -%}
+        <figure class="wpx-hero__media wpx-life wpx-life--16x9 wpx-life--overlay" style="--wpx-img-pos:{{ hero_pos }};">
+          <img
+            src="{{ section.settings.hero_lifestyle_image | image_url: width: 960 }}"
+            srcset="{{ section.settings.hero_lifestyle_image | image_url: width: 640 }} 640w,
+                    {{ section.settings.hero_lifestyle_image | image_url: width: 960 }} 960w,
+                    {{ section.settings.hero_lifestyle_image | image_url: width: 1280 }} 1280w"
+            sizes="(max-width:900px) 100vw, 46vw"
+            width="960" height="540"
+            alt="{{ section.settings.hero_lifestyle_image_alt | default: 'Bright, modern reformer Pilates studio with members and an instructor preparing equipment for class' | escape }}"
+            fetchpriority="high" loading="eager" decoding="async">
+          {%- if section.settings.hero_lifestyle_image_caption != blank -%}
+            <figcaption class="wpx-life__cap wpx-life__cap--on">{{ section.settings.hero_lifestyle_image_caption | escape }}</figcaption>
+          {%- endif -%}
+        </figure>
+      {%- elsif request.design_mode -%}
+        <div class="wpx-hero__media wpx-life wpx-life--16x9">
+          <div class="wpx-life__ph">Editor only · Hero lifestyle image (16:9)<br>Select a premium Pilates studio scene with people</div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</header>
+
+<!-- ================= MODULE 2: PROBLEM STRIP ================= -->
+<section class="wpx-strip" aria-label="Why studio cleaning demand rises">
+  <div class="wpx-wrap">
+    <div class="wpx-strip__grid">
+      <div class="wpx-strip__cell"><strong>More Classes</strong><span>More equipment turnover per day</span></div>
+      <div class="wpx-strip__cell"><strong>More Members</strong><span>More shared, high-touch surfaces</span></div>
+      <div class="wpx-strip__cell"><strong>Faster Turnover</strong><span>Less time to restock between classes</span></div>
+      <div class="wpx-strip__cell"><strong>Busy Stations</strong><span>Higher wipe consumption</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOC ================= -->
+<section class="wpx-section" style="padding-bottom:0;">
+  <div class="wpx-wrap wpx-read">
+    <nav class="wpx-toc" data-wpx-toc data-open="true" aria-label="Table of contents">
+      <button class="wpx-toc__head" data-wpx-toc-toggle aria-expanded="true" aria-controls="wpxTocList-{{ uid }}">
+        <span>On this page</span><span class="wpx-toc__chev" aria-hidden="true">▾</span>
+      </button>
+      <ul class="wpx-toc__list" id="wpxTocList-{{ uid }}">
+        <li><a href="#why-demand-{{ uid }}">Why Cleaning Demand Is Rising</a></li>
+        <li><a href="#equipment-{{ uid }}">What Pilates Equipment Needs Cleaning</a></li>
+        <li><a href="#buying-guide-{{ uid }}">What to Look for in Studio Cleaning Supplies</a></li>
+        <li><a href="#compare-{{ uid }}">Best Wipe System for Pilates Studios</a></li>
+        <li><a href="#checklist-{{ uid }}">Fall Readiness Checklist</a></li>
+        <li><a href="#faq-{{ uid }}">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- ================= MODULE 3: WHY THIS MATTERS ================= -->
+<section class="wpx-section" id="why-demand-{{ uid }}">
+  <div class="wpx-wrap">
+    {%- if section.settings.cleaning_lifestyle_image != blank -%}
+      {%- assign clean_pos = section.settings.cleaning_lifestyle_focal | default: 'center' -%}
+      <div class="wpx-liferow">
+        <div>
+          <h2>Why More Reformer Traffic Means More Cleaning Demand</h2>
+          <p>Reformer Pilates has stayed one of the most-booked boutique workouts, and fall is when new sign-ups and packed calendars collide. Every reformer that turns over between classes needs a wipe-down: the carriage, shoulder rests, footbar, straps, and handles. Across a full schedule, that's dozens of high-touch surfaces cleaned dozens of times a day.</p>
+          <p>The real operational problem isn't only how <em>much</em> you clean — it's <strong>availability</strong>. When an instructor has ninety seconds to reset the room, they can't be hunting for a wipe container or finding it empty. Empty stations slow turnover, frustrate staff, and get noticed by members who expect a spotless reformer. A well-stocked station signals a professionally run studio; a crumpled retail pack signals the opposite.</p>
+          <div class="wpx-cta-row">
+            <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-problem-cta"
+               href="https://wipex.co/collections/pilates-studio-shop">Stock Up on Pilates Studio Wipes →</a>
+          </div>
+        </div>
+        <div class="wpx-liferow__media">
+          <figure class="wpx-life wpx-life--2x3" style="--wpx-img-pos:{{ clean_pos }};">
+            <img
+              src="{{ section.settings.cleaning_lifestyle_image | image_url: width: 480 }}"
+              srcset="{{ section.settings.cleaning_lifestyle_image | image_url: width: 360 }} 360w,
+                      {{ section.settings.cleaning_lifestyle_image | image_url: width: 480 }} 480w,
+                      {{ section.settings.cleaning_lifestyle_image | image_url: width: 720 }} 720w"
+              sizes="(max-width:900px) 90vw, 24vw"
+              width="480" height="720"
+              alt="{{ section.settings.cleaning_lifestyle_image_alt | default: 'Pilates instructor wiping down a reformer carriage between classes' | escape }}"
+              loading="lazy" decoding="async">
+          </figure>
+          {%- if section.settings.cleaning_lifestyle_image_caption != blank -%}
+            <figcaption class="wpx-life__cap">{{ section.settings.cleaning_lifestyle_image_caption | escape }}</figcaption>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- else -%}
+      <div class="wpx-read">
+        {%- if request.design_mode -%}
+          <div class="wpx-life wpx-life--2x3" style="max-width:280px;margin:0 auto 22px;">
+            <div class="wpx-life__ph">Editor only · Cleaning-in-action image (2:3)<br>A real person wiping a reformer</div>
+          </div>
+        {%- endif -%}
+        <h2>Why More Reformer Traffic Means More Cleaning Demand</h2>
+        <p>Reformer Pilates has stayed one of the most-booked boutique workouts, and fall is when new sign-ups and packed calendars collide. Every reformer that turns over between classes needs a wipe-down: the carriage, shoulder rests, footbar, straps, and handles. Across a full schedule, that's dozens of high-touch surfaces cleaned dozens of times a day.</p>
+        <p>The real operational problem isn't only how <em>much</em> you clean — it's <strong>availability</strong>. When an instructor has ninety seconds to reset the room, they can't be hunting for a wipe container or finding it empty. Empty stations slow turnover, frustrate staff, and get noticed by members who expect a spotless reformer. A well-stocked station signals a professionally run studio; a crumpled retail pack signals the opposite.</p>
+        <div class="wpx-cta-row">
+          <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-problem-cta"
+             href="https://wipex.co/collections/pilates-studio-shop">Stock Up on Pilates Studio Wipes →</a>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<!-- ================= MODULE 4: EQUIPMENT GUIDE ================= -->
+<section class="wpx-section" id="equipment-{{ uid }}" style="background:var(--fall-pink-bg);">
+  <div class="wpx-wrap">
+    <div class="wpx-read" style="text-align:center;">
+      <h2>What Pilates Equipment Needs Cleaning Between Classes</h2>
+      <p style="color:var(--wpx-muted);">Reformer studios have more shared, high-touch surfaces than a standard gym floor. These are the stations that need routine equipment cleaning.</p>
+    </div>
+
+    {%- if section.settings.studio_environment_image != blank -%}
+      {%- assign env_pos = section.settings.studio_environment_focal | default: 'center' -%}
+      <div class="wpx-lifeband wpx-lifeband--wide" style="margin-top:26px;">
+        <figure class="wpx-life wpx-life--16x9" style="--wpx-img-pos:{{ env_pos }};">
+          <img
+            src="{{ section.settings.studio_environment_image | image_url: width: 1120 }}"
+            srcset="{{ section.settings.studio_environment_image | image_url: width: 720 }} 720w,
+                    {{ section.settings.studio_environment_image | image_url: width: 1120 }} 1120w,
+                    {{ section.settings.studio_environment_image | image_url: width: 1600 }} 1600w"
+            sizes="(max-width:1120px) 100vw, 1120px"
+            width="1120" height="630"
+            alt="{{ section.settings.studio_environment_image_alt | default: 'Rows of reformers in a busy boutique Pilates studio during a full class schedule' | escape }}"
+            loading="lazy" decoding="async">
+        </figure>
+        {%- if section.settings.studio_environment_image_caption != blank -%}
+          <figcaption class="wpx-life__cap">{{ section.settings.studio_environment_image_caption | escape }}</figcaption>
+        {%- endif -%}
+      </div>
+    {%- elsif request.design_mode -%}
+      <div class="wpx-lifeband wpx-lifeband--wide" style="margin-top:26px;">
+        <div class="wpx-life wpx-life--16x9">
+          <div class="wpx-life__ph">Editor only · Studio environment image (16:9)<br>Wide shot of a busy reformer studio</div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="wpx-eqgrid" style="margin-top:26px;">
+      <div class="wpx-eqcard"><h3>Reformers</h3><p>Carriages, footbars, shoulder rests — direct skin and sweat contact every session.</p></div>
+      <div class="wpx-eqcard"><h3>Pilates Chairs</h3><p>Wunda/Combo seats, pedals, and handles used back-to-back.</p></div>
+      <div class="wpx-eqcard"><h3>Barrels &amp; Spine Correctors</h3><p>Padded surfaces that hold sweat and residue.</p></div>
+      <div class="wpx-eqcard"><h3>Handles &amp; Straps</h3><p>Constant hand contact between clients throughout the day.</p></div>
+      <div class="wpx-eqcard"><h3>Props</h3><p>Resistance bands, magic circles, blocks, and weights passed between members.</p></div>
+      <div class="wpx-eqcard"><h3>Shared Surfaces</h3><p>Mat areas, ledges, and touchpoints on the way in and out.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ================= EDITORIAL VIDEO BANNER =================
+  Full-width cinematic 16:9. Native Shopify video. Placed as an editorial
+  break between the equipment story and the buying guide — deliberately
+  away from mid-article and final CTAs so it never competes for conversion.
+  Render logic:
+    video present            -> autoplay/muted/loop/playsinline video
+    no video + fallback img  -> fallback image fills the 16:9 frame
+    neither + editor         -> editor-only placeholder
+    neither + storefront     -> entire section not rendered
+{%- endcomment -%}
+{%- assign has_video = false -%}
+{%- if section.settings.lifestyle_video != blank -%}{%- assign has_video = true -%}{%- endif -%}
+{%- assign has_fallback = false -%}
+{%- if section.settings.video_fallback_image != blank -%}{%- assign has_fallback = true -%}{%- endif -%}
+{%- assign has_overlay = false -%}
+{%- if section.settings.video_banner_heading != blank or section.settings.video_banner_text != blank or section.settings.video_banner_button_text != blank -%}
+  {%- assign has_overlay = true -%}
+{%- endif -%}
+
+{%- if has_video or has_fallback or request.design_mode -%}
+  <section class="wpx-videoband" aria-label="Pilates studio in motion">
+    <div class="wpx-wrap">
+      <div class="wpx-vid{% if has_overlay %} wpx-vid--overlay{% endif %}">
+
+        {%- if has_video -%}
+          {%- comment -%} Native Shopify video: autoplay bg experience, no controls. {%- endcomment -%}
+          {{ section.settings.lifestyle_video | video_tag:
+               image_size: '1600x',
+               autoplay: true,
+               loop: true,
+               muted: true,
+               controls: false,
+               playsinline: true,
+               preload: 'metadata',
+               class: 'wpx-vid__media' }}
+        {%- elsif has_fallback -%}
+          <img
+            src="{{ section.settings.video_fallback_image | image_url: width: 1600 }}"
+            srcset="{{ section.settings.video_fallback_image | image_url: width: 800 }} 800w,
+                    {{ section.settings.video_fallback_image | image_url: width: 1200 }} 1200w,
+                    {{ section.settings.video_fallback_image | image_url: width: 1600 }} 1600w"
+            sizes="(max-width:1120px) 100vw, 1120px"
+            width="1600" height="900"
+            alt="{{ section.settings.video_fallback_image_alt | default: 'Members and an instructor moving through a modern reformer Pilates studio' | escape }}"
+            loading="lazy" decoding="async">
+        {%- else -%}
+          {%- comment -%} Editor-only placeholder (storefront never reaches here). {%- endcomment -%}
+          <div class="wpx-vid__ph">Editor only · Lifestyle video banner (16:9)<br>Upload a Shopify-hosted video, or set a fallback image</div>
+        {%- endif -%}
+
+        {%- if has_overlay and has_video or has_overlay and has_fallback -%}
+          <div class="wpx-vid__content">
+            {%- if section.settings.video_banner_eyebrow != blank -%}
+              <span class="wpx-vid__eyebrow">{{ section.settings.video_banner_eyebrow | escape }}</span>
+            {%- endif -%}
+            {%- if section.settings.video_banner_heading != blank -%}
+              <h2 class="wpx-vid__heading">{{ section.settings.video_banner_heading | escape }}</h2>
+            {%- endif -%}
+            {%- if section.settings.video_banner_text != blank -%}
+              <p class="wpx-vid__text">{{ section.settings.video_banner_text | escape }}</p>
+            {%- endif -%}
+            {%- if section.settings.video_banner_button_text != blank -%}
+              <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-video-cta"
+                 href="{{ section.settings.video_banner_button_url | default: 'https://wipex.co/products/natural-gym-wipes-bulk-refill-roll' }}">
+                 {{ section.settings.video_banner_button_text | escape }} →</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+<!-- ================= /EDITORIAL VIDEO BANNER ================= -->
+
+<!-- ================= MODULE 5: BUYING GUIDE ================= -->
+<section class="wpx-section" id="buying-guide-{{ uid }}">
+  <div class="wpx-wrap">
+    {%- if section.settings.member_experience_image != blank -%}
+      {%- assign mem_pos = section.settings.member_experience_focal | default: 'center' -%}
+      <div class="wpx-liferow wpx-liferow--rev">
+        <div class="wpx-liferow__media">
+          <figure class="wpx-life wpx-life--2x3" style="--wpx-img-pos:{{ mem_pos }};">
+            <img
+              src="{{ section.settings.member_experience_image | image_url: width: 480 }}"
+              srcset="{{ section.settings.member_experience_image | image_url: width: 360 }} 360w,
+                      {{ section.settings.member_experience_image | image_url: width: 480 }} 480w,
+                      {{ section.settings.member_experience_image | image_url: width: 720 }} 720w"
+              sizes="(max-width:900px) 90vw, 24vw"
+              width="480" height="720"
+              alt="{{ section.settings.member_experience_image_alt | default: 'Studio member reaching for a wipe at an easily accessible cleaning station beside a reformer' | escape }}"
+              loading="lazy" decoding="async">
+          </figure>
+          {%- if section.settings.member_experience_image_caption != blank -%}
+            <figcaption class="wpx-life__cap">{{ section.settings.member_experience_image_caption | escape }}</figcaption>
+          {%- endif -%}
+        </div>
+        <div>
+          <h2>What to Look for in Pilates Studio Cleaning Supplies</h2>
+          <p style="color:var(--wpx-muted);">Not all wipes are built for commercial studio volume. When you're sourcing cleaning supplies for a high-traffic Pilates studio, four factors decide whether your system keeps up.</p>
+        </div>
+      </div>
+    {%- else -%}
+      <div class="wpx-read">
+        {%- if request.design_mode -%}
+          <div class="wpx-life wpx-life--2x3" style="max-width:280px;margin:0 auto 22px;">
+            <div class="wpx-life__ph">Editor only · Member experience image (2:3)<br>Person using a wipe near a reformer</div>
+          </div>
+        {%- endif -%}
+        <h2>What to Look for in Pilates Studio Cleaning Supplies</h2>
+        <p style="color:var(--wpx-muted);">Not all wipes are built for commercial studio volume. When you're sourcing cleaning supplies for a high-traffic Pilates studio, four factors decide whether your system keeps up.</p>
+      </div>
+    {%- endif -%}
+
+    <div class="wpx-bg-grid" style="margin-top:22px;">
+      <div class="wpx-bg-card"><h3>Cost Per Wipe</h3><p>Small retail packs feel cheap but add up fast at studio volume. Bulk refill rolls drop your per-wipe cost dramatically.</p></div>
+      <div class="wpx-bg-card"><h3>Restocking Frequency</h3><p>Every empty container is an interruption. High-count rolls mean fewer refills and fewer empty-station moments at peak hours.</p></div>
+      <div class="wpx-bg-card"><h3>Station Accessibility</h3><p>Wipes should be right where cleaning happens — at the reformer, not across the room. A dispenser makes access effortless.</p></div>
+      <div class="wpx-bg-card"><h3>Scalability</h3><p>Standardize on one bulk consumable so adding stations and reordering stays simple as your studio grows.</p></div>
+    </div>
+    <div class="wpx-read" style="margin-top:22px;">
+      <div class="wpx-cta-row">
+        <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-guide-cta"
+           href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Bulk Equipment Wipes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON MODULE ================= -->
+<section class="wpx-section" id="compare-{{ uid }}" style="background:var(--fall-peach-bg);">
+  <div class="wpx-wrap">
+    <div class="wpx-read" style="text-align:center;">
+      <h2>The Best Wipe System for Pilates Studios</h2>
+      <p style="color:var(--wpx-muted);">Match your studio's size and traffic to the right Wipex setup.</p>
+    </div>
+    <div class="wpx-cmp" style="margin-top:24px;">
+      <table>
+        <thead>
+          <tr><th scope="col">Studio Need</th><th scope="col">Recommended Wipex Solution</th><th scope="col">Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Studio Need">Smaller studio / secondary station</td>
+            <td data-label="Recommended" class="wpx-cmp__rec">400ct Natural Gym Wipes</td>
+            <td data-label="Action"><a class="wpx-btn wpx-btn--ghost wpx-btn--sm" data-cro="pilates-blog-cmp-400" href="https://wipex.co/products/natural-gym-wipes-buckets">Shop 400ct →</a></td>
+          </tr>
+          <tr class="wpx-cmp__best">
+            <td data-label="Studio Need">Busy Pilates studio <span class="wpx-cmp__tag">Most Popular</span></td>
+            <td data-label="Recommended" class="wpx-cmp__rec">700ct Bulk Refill Roll</td>
+            <td data-label="Action"><a class="wpx-btn wpx-btn--primary wpx-btn--sm" data-cro="pilates-blog-cmp-700" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop 700ct →</a></td>
+          </tr>
+          <tr>
+            <td data-label="Studio Need">High-traffic professional setup</td>
+            <td data-label="Recommended" class="wpx-cmp__rec">Dispenser + 700ct Bulk Refill</td>
+            <td data-label="Action"><a class="wpx-btn wpx-btn--gold wpx-btn--sm" data-cro="pilates-blog-cmp-system" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll?variant=40058684211400">Build System →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT SHOWCASE (unchanged) ================= -->
+<section class="wpx-section">
+  <div class="wpx-wrap">
+    <div class="wpx-prodgrid">
+
+      <!-- PRIMARY: 700ct -->
+      <div class="wpx-prod wpx-prod--hero">
+        <div class="wpx-prod__media">
+          {%- if section.settings.p700_image != blank -%}
+            <img src="{{ section.settings.p700_image | image_url: width: 600 }}" width="600" height="600" loading="lazy"
+                 alt="{{ section.settings.p700_image.alt | default: 'Wipex Natural Fitness Equipment Wipes 700ct bulk gym refill roll for Pilates studios' | escape }}">
+          {%- else -%}
+            <!-- SHOPIFY IMAGE PLACEHOLDER: 700CT BULK REFILL ROLL — upload via 'p700_image' setting -->
+            <div class="wpx-prod__ph">[ 700ct BULK REFILL ROLL IMAGE ]</div>
+          {%- endif -%}
+        </div>
+        <div class="wpx-prod__body">
+          <span class="wpx-prod__badge wpx-prod__badge--hero">Primary Pick</span>
+          <h3>Wipex Natural Fitness Equipment Wipes — 700ct Bulk Refill Roll</h3>
+          <p class="wpx-prod__best">Best for: Busy Pilates studios cleaning all day</p>
+          <ul class="wpx-prod__list">
+            <li>Low cost per wipe at studio volume</li>
+            <li>Fewer restocking interruptions</li>
+            <li>Plant-based materials, equipment-safe cleaning</li>
+          </ul>
+          <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-prod-700"
+             href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Bulk Equipment Wipes →</a>
+        </div>
+      </div>
+
+      <!-- SYSTEM: Dispenser -->
+      <div class="wpx-prod">
+        <div class="wpx-prod__media">
+          {%- if section.settings.disp_image != blank -%}
+            <img src="{{ section.settings.disp_image | image_url: width: 600 }}" width="600" height="600" loading="lazy"
+                 alt="{{ section.settings.disp_image.alt | default: 'Wipex Premium Studio White Floor Dispenser for Pilates studio wipe station' | escape }}">
+          {%- else -%}
+            <!-- SHOPIFY IMAGE PLACEHOLDER: STUDIO WHITE FLOOR DISPENSER — upload via 'disp_image' setting -->
+            <div class="wpx-prod__ph">[ STUDIO WHITE FLOOR DISPENSER IMAGE ]</div>
+          {%- endif -%}
+        </div>
+        <div class="wpx-prod__body">
+          <span class="wpx-prod__badge wpx-prod__badge--sys">Complete The System</span>
+          <h3>Wipex Premium Studio White Floor Dispenser</h3>
+          <p class="wpx-prod__best">Best for: High-traffic, member-facing stations</p>
+          <ul class="wpx-prod__list">
+            <li>Centralized, easy-access wipe station</li>
+            <li>Premium, visibly clean studio appearance</li>
+            <li>Scalable across multiple locations</li>
+          </ul>
+          <a class="wpx-btn wpx-btn--gold" data-cro="pilates-blog-prod-dispenser"
+             href="https://wipex.co/products/floor-dispenser-white">Upgrade Your Studio Wipe Station →</a>
+        </div>
+      </div>
+
+      <!-- ENTRY: 400ct -->
+      <div class="wpx-prod">
+        <div class="wpx-prod__media">
+          {%- if section.settings.p400_image != blank -%}
+            <img src="{{ section.settings.p400_image | image_url: width: 600 }}" width="600" height="600" loading="lazy"
+                 alt="{{ section.settings.p400_image.alt | default: 'Wipex 400ct Natural Gym Wipes for fitness equipment and smaller Pilates studios' | escape }}">
+          {%- else -%}
+            <!-- SHOPIFY IMAGE PLACEHOLDER: 400CT NATURAL GYM WIPES — upload via 'p400_image' setting -->
+            <div class="wpx-prod__ph">[ 400ct NATURAL GYM WIPES IMAGE ]</div>
+          {%- endif -%}
+        </div>
+        <div class="wpx-prod__body">
+          <span class="wpx-prod__badge wpx-prod__badge--entry">Entry / Secondary</span>
+          <h3>Wipex 400ct Natural Gym Wipes</h3>
+          <p class="wpx-prod__best">Best for: Smaller studios &amp; secondary stations</p>
+          <ul class="wpx-prod__list">
+            <li>Flexible, portable cleaning point</li>
+            <li>Great for prop corners or lobby</li>
+            <li>Low-commitment way to start</li>
+          </ul>
+          <a class="wpx-btn wpx-btn--ghost" data-cro="pilates-blog-prod-400"
+             href="https://wipex.co/products/natural-gym-wipes-buckets">Shop 400ct Wipes →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRIMARY FEATURE MODULE (unchanged) ================= -->
+<section class="wpx-section">
+  <div class="wpx-wrap">
+    <div class="wpx-feature">
+      <div class="wpx-feature__media">
+        {%- if section.settings.p700_image != blank -%}
+          <img src="{{ section.settings.p700_image | image_url: width: 800 }}" width="800" height="800" loading="lazy"
+               alt="{{ section.settings.p700_image.alt | default: 'Wipex 700ct bulk refill roll — the workhorse for busy Pilates studios' | escape }}">
+        {%- else -%}
+          <!-- SHOPIFY IMAGE PLACEHOLDER: 700CT BULK REFILL (feature) — reuses 'p700_image' setting -->
+          <div class="wpx-feature__ph">[ 700ct BULK REFILL ROLL — FEATURE IMAGE ]</div>
+        {%- endif -%}
+      </div>
+      <div class="wpx-feature__body">
+        <span class="wpx-eyebrow">The Workhorse</span>
+        <h2>Built for Busy Pilates Studios</h2>
+        <p>At 700 wipes per roll, this is the core of a professional studio cleaning system — driving your cost per wipe down and cutting restocking to a fraction of what small packs demand.</p>
+        <ul class="wpx-feature__list">
+          <li>Remove sweat and residue from reformers, chairs &amp; props</li>
+          <li>Fewer refills = less staff downtime between classes</li>
+          <li>One consistent consumable across every station</li>
+          <li>Ideal for recurring, replenishment-based ordering</li>
+        </ul>
+        <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-feature-700"
+           href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Bulk Equipment Wipes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SYSTEM MODULE (AOV) ================= -->
+<section class="wpx-section" style="background:var(--fall-pink-bg);">
+  <div class="wpx-wrap wpx-read">
+    <div class="wpx-system">
+      <span class="wpx-eyebrow">Complete Studio System</span>
+      <h2>Bulk Refill + Professional Dispenser</h2>
+      <div class="wpx-system__eq">
+        <span class="wpx-system__pill">700ct Bulk Refill</span>
+        <span class="wpx-system__op" aria-hidden="true">+</span>
+        <span class="wpx-system__pill">Studio Floor Dispenser</span>
+        <span class="wpx-system__op" aria-hidden="true">=</span>
+        <span class="wpx-system__eq-result">Professional Studio Cleaning System</span>
+      </div>
+      <p style="color:var(--wpx-muted);margin-top:18px;">Easy member access, a centralized station, fewer restocking interruptions, and a premium appearance that scales with every location you add.</p>
+      <div class="wpx-cta-row" style="justify-content:center;">
+        <a class="wpx-btn wpx-btn--gold" data-cro="pilates-blog-system-cta"
+           href="https://wipex.co/collections/pilates-studio-shop">Build Your Studio Wipe System →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section class="wpx-section" id="checklist-{{ uid }}">
+  <div class="wpx-wrap wpx-read">
+    <h2>Your Fall 2026 Pilates Studio Readiness Checklist</h2>
+    <p style="color:var(--wpx-muted);">Run through this before your fall schedule fills up. Progress saves in your browser.</p>
+    <div class="wpx-check">
+      <ul class="wpx-check__list">
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk1-{{ uid }}" data-wpx-check><label for="wpxCk1-{{ uid }}">Identify every high-traffic cleaning point</label></li>
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk2-{{ uid }}" data-wpx-check><label for="wpxCk2-{{ uid }}">Stock bulk refill inventory (standardize on 700ct)</label></li>
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk3-{{ uid }}" data-wpx-check><label for="wpxCk3-{{ uid }}">Place wipe stations where cleaning happens</label></li>
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk4-{{ uid }}" data-wpx-check><label for="wpxCk4-{{ uid }}">Establish a between-class cleaning routine</label></li>
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk5-{{ uid }}" data-wpx-check><label for="wpxCk5-{{ uid }}">Keep backup inventory on-site for peak weeks</label></li>
+        <li class="wpx-check__item"><input type="checkbox" id="wpxCk6-{{ uid }}" data-wpx-check><label for="wpxCk6-{{ uid }}">Create a recurring replenishment schedule</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DECISION TOOL ================= -->
+<section class="wpx-section" style="background:var(--fall-peach-bg);">
+  <div class="wpx-wrap">
+    <div class="wpx-read" style="text-align:center;">
+      <h2>Which Setup Is Right for Your Studio?</h2>
+    </div>
+    <div class="wpx-dec-grid" style="margin-top:24px;">
+      <div class="wpx-dec">
+        <h3>Small / Lower-Volume Studio</h3>
+        <div class="wpx-dec__arrow" aria-hidden="true">↓</div>
+        <p class="wpx-dec__sol">400ct Natural Gym Wipes</p>
+        <a class="wpx-btn wpx-btn--ghost wpx-btn--sm" data-cro="pilates-blog-dec-400" href="https://wipex.co/products/natural-gym-wipes-buckets">Shop 400ct →</a>
+      </div>
+      <div class="wpx-dec wpx-dec--rec">
+        <h3>Busy Reformer Studio</h3>
+        <div class="wpx-dec__arrow" aria-hidden="true">↓</div>
+        <p class="wpx-dec__sol">700ct Bulk Refill</p>
+        <a class="wpx-btn wpx-btn--primary wpx-btn--sm" data-cro="pilates-blog-dec-700" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop 700ct →</a>
+      </div>
+      <div class="wpx-dec">
+        <h3>High-Traffic Professional Studio</h3>
+        <div class="wpx-dec__arrow" aria-hidden="true">↓</div>
+        <p class="wpx-dec__sol">Dispenser + 700ct Bulk Refill</p>
+        <a class="wpx-btn wpx-btn--gold wpx-btn--sm" data-cro="pilates-blog-dec-system" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll?variant=40058684211400">Build System →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CONVERSION ================= -->
+<section class="wpx-section">
+  <div class="wpx-wrap">
+
+    {%- if section.settings.fall_lifestyle_image != blank -%}
+      {%- assign fall_pos = section.settings.fall_lifestyle_focal | default: 'center' -%}
+      <div class="wpx-lifeband wpx-lifeband--wide" style="margin-bottom:24px;">
+        <figure class="wpx-life wpx-life--16x9 wpx-life--overlay" style="--wpx-img-pos:{{ fall_pos }};">
+          <img
+            src="{{ section.settings.fall_lifestyle_image | image_url: width: 1120 }}"
+            srcset="{{ section.settings.fall_lifestyle_image | image_url: width: 720 }} 720w,
+                    {{ section.settings.fall_lifestyle_image | image_url: width: 1120 }} 1120w,
+                    {{ section.settings.fall_lifestyle_image | image_url: width: 1600 }} 1600w"
+            sizes="(max-width:1120px) 100vw, 1120px"
+            width="1120" height="630"
+            alt="{{ section.settings.fall_lifestyle_image_alt | default: 'Instructor preparing a clean, organized reformer studio for the fall season' | escape }}"
+            loading="lazy" decoding="async">
+          {%- if section.settings.fall_lifestyle_image_caption != blank -%}
+            <figcaption class="wpx-life__cap wpx-life__cap--on">{{ section.settings.fall_lifestyle_image_caption | escape }}</figcaption>
+          {%- endif -%}
+        </figure>
+      </div>
+    {%- elsif request.design_mode -%}
+      <div class="wpx-lifeband wpx-lifeband--wide" style="margin-bottom:24px;">
+        <div class="wpx-life wpx-life--16x9">
+          <div class="wpx-life__ph">Editor only · Fall lifestyle banner (16:9)<br>Warm, premium reformer studio scene</div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="wpx-band">
+      <h2>Get Your Pilates Studio Ready for Fall</h2>
+      <p>Higher traffic means more equipment turnover — and more cleaning between every class. The studios that stay spotless through peak season set up their bulk-wipe and dispenser system in advance. Lower cost per wipe, effortless access, and a restock routine that never leaves a station empty.</p>
+      <div class="wpx-cta-row">
+        <a class="wpx-btn wpx-btn--gold" data-cro="pilates-blog-final-primary"
+           href="https://wipex.co/collections/pilates-studio-shop">Build Your Pilates Studio Cleaning System →</a>
+        <a class="wpx-btn wpx-btn--ghost" data-cro="pilates-blog-final-secondary"
+           href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Bulk Refills →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="wpx-section" id="faq-{{ uid }}">
+  <div class="wpx-wrap wpx-read">
+    <h2>Pilates Studio Cleaning Supplies — FAQ</h2>
+    <div class="wpx-faq">
+      <details>
+        <summary>What wipes are best for Pilates equipment?</summary>
+        <div class="wpx-faq__a">Look for plant-based materials, equipment-safe wipes that remove sweat and residue quickly and are gentle on vinyl and upholstered surfaces like reformer carriages and chairs. For busy studios, a high-count bulk refill roll such as the Wipex 700ct keeps cost per wipe low and stations stocked between classes.</div>
+      </details>
+      <details>
+        <summary>What cleaning supplies does a Pilates studio need?</summary>
+        <div class="wpx-faq__a">A high-traffic studio needs equipment cleaning wipes at every station, a dispenser or wipe station where cleaning happens, and backup bulk inventory. Most studios standardize on a bulk refill roll plus a floor dispenser, with smaller packs for secondary stations.</div>
+      </details>
+      <details>
+        <summary>How often should Pilates equipment be cleaned between classes?</summary>
+        <div class="wpx-faq__a">Reformers, chairs, handles, straps, and shared props should be wiped down after every class as part of your between-class reset. A stocked wipe station at each cleaning point keeps that routine fast and consistent even during back-to-back sessions.</div>
+      </details>
+      <details>
+        <summary>Are bulk wipes better for busy Pilates studios?</summary>
+        <div class="wpx-faq__a">Yes. Bulk refill rolls lower your cost per wipe and cut restocking frequency, which means fewer empty stations and less staff downtime during peak fall hours. The Wipex 700ct Bulk Refill Roll is built for exactly this level of studio volume.</div>
+      </details>
+      <details>
+        <summary>What is the best wipe dispenser setup for a Pilates studio?</summary>
+        <div class="wpx-faq__a">For high-traffic, member-facing studios, pair a 700ct bulk refill with the Wipex Premium Studio White Floor Dispenser. It creates a centralized, easy-access station with a premium appearance and scales cleanly as you add stations or locations.</div>
+      </details>
+    </div>
+
+    <p class="wpx-links" style="margin-top:28px;">Explore more: the
+      <a href="https://wipex.co/collections/pilates-studio-shop">Pilates Studio collection</a>,
+      <a href="https://wipex.co/collections/fitness">gym &amp; fitness wipes</a>, and the
+      <a href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">700ct bulk refill roll</a>.
+    </p>
+  </div>
+</section>
+</article>
+<!-- ================= STICKY MOBILE CTA ================= -->
+<div class="wpx-sticky" data-wpx-sticky aria-hidden="true"> <a class="wpx-btn wpx-btn--primary" data-cro="pilates-blog-sticky-cta" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Pilates Studio Wipes →</a> <button type="button" class="wpx-sticky__close" data-wpx-sticky-close aria-label="Dismiss sticky offer">×</button> </div>
+</div>
+<!-- ================= JSON-LD: ARTICLE ================= -->
+{%- if article -%}
+<script type="application/ld+json"> { "@context":"https://schema.org", "@type":"Article", "headline":{{ article.title | default: section.settings.hero_title | default: 'How to Stock Your Pilates Studio Cleaning Supplies for Fall 2026' | json }}, "description":"Prep your Pilates studio for busy fall traffic. Compare bulk reformer wipes, refills and dispensers, then stock up on a scalable cleaning system.", "datePublished":"{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}", "dateModified":"{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' }}", "mainEntityOfPage":{"@type":"WebPage","@id":"{{ canonical_url }}"}, "publisher":{"@type":"Organization","name":{{ shop.name | default: 'Wipex' | json }},"url":"{{ shop.url }}"} } </script>
+{%- endif -%}
+<!-- ================= JSON-LD: BREADCRUMB ================= -->
+<script type="application/ld+json"> { "@context":"https://schema.org", "@type":"BreadcrumbList", "itemListElement":[ {"@type":"ListItem","position":1,"name":"Home","item":"{{ shop.url }}"}, {"@type":"ListItem","position":2,"name":"Pilates Studio","item":"{{ shop.url }}/collections/pilates-studio-shop"}, {"@type":"ListItem","position":3,"name":{{ page_title | default: 'Pilates Studio Cleaning Supplies' | json }},"item":"{{ canonical_url }}"} ] } </script>
+<!-- ================= JSON-LD: FAQ (matches visible FAQ) ================= -->
+<script type="application/ld+json"> { "@context":"https://schema.org", "@type":"FAQPage", "mainEntity":[ {"@type":"Question","name":"What wipes are best for Pilates equipment?","acceptedAnswer":{"@type":"Answer","text":"Look for plant-based materials, equipment-safe wipes that remove sweat and residue quickly and are gentle on vinyl and upholstered surfaces like reformer carriages and chairs. For busy studios, a high-count bulk refill roll such as the Wipex 700ct keeps cost per wipe low and stations stocked between classes."}}, {"@type":"Question","name":"What cleaning supplies does a Pilates studio need?","acceptedAnswer":{"@type":"Answer","text":"A high-traffic studio needs equipment cleaning wipes at every station, a dispenser or wipe station where cleaning happens, and backup bulk inventory. Most studios standardize on a bulk refill roll plus a floor dispenser, with smaller packs for secondary stations."}}, {"@type":"Question","name":"How often should Pilates equipment be cleaned between classes?","acceptedAnswer":{"@type":"Answer","text":"Reformers, chairs, handles, straps, and shared props should be wiped down after every class as part of your between-class reset. A stocked wipe station at each cleaning point keeps that routine fast and consistent even during back-to-back sessions."}}, {"@type":"Question","name":"Are bulk wipes better for busy Pilates studios?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bulk refill rolls lower your cost per wipe and cut restocking frequency, which means fewer empty stations and less staff downtime during peak fall hours. The Wipex 700ct Bulk Refill Roll is built for exactly this level of studio volume."}}, {"@type":"Question","name":"What is the best wipe dispenser setup for a Pilates studio?","acceptedAnswer":{"@type":"Answer","text":"For high-traffic, member-facing studios, pair a 700ct bulk refill with the Wipex Premium Studio White Floor Dispenser. It creates a centralized, easy-access station with a premium appearance and scales cleanly as you add stations or locations."}} ] } </script>
+<!-- ================= JAVASCRIPT (scoped, instance-safe, Theme-Editor-safe) ================= -->
+<script> (function(){ "use strict"; window.WpxPilatesFall2026 = window.WpxPilatesFall2026 || {}; function init(sectionId){ var root = document.getElementById('wpx-' + sectionId); if(!root) return; if(window.WpxPilatesFall2026[sectionId]) return; var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; var bar = root.querySelector('[data-wpx-progress]'); var article = root.querySelector('article'); var sticky = root.querySelector('[data-wpx-sticky]'); var band = root.querySelector('.wpx-band'); var stickyDismissed = false; var ticking = false; function update(){ ticking = false; if(article){ var rect = article.getBoundingClientRect(); var total = article.offsetHeight - window.innerHeight; if(bar){ var scrolled = Math.min(Math.max(-rect.top,0), total > 0 ? total : 1); bar.style.width = (total > 0 ? (scrolled/total)*100 : 0) + '%'; } if(sticky && !stickyDismissed){ var pastHero = rect.top < -300; var nearEnd = band ? (band.getBoundingClientRect().top < window.innerHeight) : false; var show = pastHero && !nearEnd; sticky.classList.toggle('is-visible', show); sticky.setAttribute('aria-hidden', show ? 'false' : 'true'); } } } function onScroll(){ if(ticking) return; ticking = true; window.requestAnimationFrame(update); } /* Video autoplay safety net — ensures muted+inline+play() even if the theme/browser is strict. No external libraries; native <video> only. */ var vids = root.querySelectorAll('.wpx-vid video'); vids.forEach(function(v){ v.muted = true; v.defaultMuted = true; v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); if(reduceMotion){ // Respect reduced-motion: pause the background video for these users. try { v.pause(); v.removeAttribute('autoplay'); } catch(e){} } else { var p = v.play && v.play(); if(p && typeof p.catch === 'function'){ p.catch(function(){}); } } }); /* TOC toggle */ var toc = root.querySelector('[data-wpx-toc]'); var tocToggle = root.querySelector('[data-wpx-toc-toggle]'); function onTocToggle(){ var open = toc.getAttribute('data-open') === 'true'; toc.setAttribute('data-open', open ? 'false' : 'true'); tocToggle.setAttribute('aria-expanded', open ? 'false' : 'true'); } if(tocToggle && toc){ if(window.innerWidth < 700){ toc.setAttribute('data-open','false'); tocToggle.setAttribute('aria-expanded','false'); } tocToggle.addEventListener('click', onTocToggle); } /* Smooth scroll for TOC anchors */ var anchorHandlers = []; root.querySelectorAll('.wpx-toc__list a').forEach(function(link){ function onClick(e){ var id = link.getAttribute('href'); var target = (id && id.charAt(0) === '#') ? root.querySelector(id) : null; if(target){ e.preventDefault(); target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'}); target.setAttribute('tabindex','-1'); target.focus({preventScroll:true}); } } link.addEventListener('click', onClick); anchorHandlers.push({el:link, fn:onClick}); }); /* Checklist persistence — key scoped per section instance */ var STORE = 'wipex-pilates-fall-2026-checklist-' + sectionId; var boxes = root.querySelectorAll('[data-wpx-check]'); var saved = {}; try { saved = JSON.parse(localStorage.getItem(STORE)) || {}; } catch(e){ saved = {}; } var boxHandlers = []; boxes.forEach(function(box){ if(saved[box.id]) box.checked = true; function onChange(){ saved[box.id] = box.checked; try { localStorage.setItem(STORE, JSON.stringify(saved)); } catch(e){} } box.addEventListener('change', onChange); boxHandlers.push({el:box, fn:onChange}); }); /* Sticky mobile CTA close */ var stickyClose = root.querySelector('[data-wpx-sticky-close]'); function onStickyClose(){ stickyDismissed = true; if(sticky){ sticky.classList.remove('is-visible'); sticky.setAttribute('aria-hidden','true'); } } if(stickyClose) stickyClose.addEventListener('click', onStickyClose); window.addEventListener('scroll', onScroll, {passive:true}); window.addEventListener('resize', onScroll, {passive:true}); update(); window.WpxPilatesFall2026[sectionId] = { destroy: function(){ window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); if(tocToggle) tocToggle.removeEventListener('click', onTocToggle); if(stickyClose) stickyClose.removeEventListener('click', onStickyClose); anchorHandlers.forEach(function(h){ h.el.removeEventListener('click', h.fn); }); boxHandlers.forEach(function(h){ h.el.removeEventListener('change', h.fn); }); delete window.WpxPilatesFall2026[sectionId]; } }; } function initAll(){ document.querySelectorAll('[data-wpx-section]').forEach(function(el){ init(el.getAttribute('data-wpx-section')); }); } if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initAll); } else { initAll(); } document.addEventListener('shopify:section:load', function(e){ if(e.target && e.target.querySelector){ var el = e.target.querySelector('[data-wpx-section]'); if(el) init(el.getAttribute('data-wpx-section')); } }); document.addEventListener('shopify:section:unload', function(e){ if(e.target && e.target.querySelector){ var el = e.target.querySelector('[data-wpx-section]'); if(el){ var id = el.getAttribute('data-wpx-section'); if(window.WpxPilatesFall2026[id]) window.WpxPilatesFall2026[id].destroy(); } } }); })(); </script>
+{% schema %}
+{
+"name": "Pilates Fall 2026 Guide",
+"tag": "section",
+"class": "wipex-section-pilates-fall-2026",
+"settings": [
+{ "type": "header", "content": "Hero" },
+{ "type": "text", "id": "hero_eyebrow", "label": "Hero eyebrow", "default": "Fall 2026 Studio Prep" },
+{ "type": "text", "id": "hero_title", "label": "Hero H1", "default": "How to Stock Your Pilates Studio Cleaning Supplies for Fall 2026" },
+{ "type": "richtext", "id": "hero_intro", "label": "Hero intro" },
+{ "type": "text", "id": "hero_cta_label", "label": "Hero primary CTA label", "default": "Shop Bulk Equipment Wipes" },
+{ "type": "url", "id": "hero_cta_url", "label": "Hero primary CTA URL" },
+{ "type": "text", "id": "hero_cta2_label", "label": "Hero secondary CTA label", "default": "Build Your Studio System" },
+{ "type": "url", "id": "hero_cta2_url", "label": "Hero secondary CTA URL" },
+{ "type": "header", "content": "Editorial / Lifestyle Photography", "info": "People + Pilates studio environments. NOT product photos. Each block is hidden on the storefront if left empty." },
+
+{ "type": "paragraph", "content": "1) Hero lifestyle banner (16:9) — premium studio with people." },
+{ "type": "image_picker", "id": "hero_lifestyle_image", "label": "Hero lifestyle image (16:9)" },
+{ "type": "text", "id": "hero_lifestyle_image_alt", "label": "Hero image alt text", "info": "Describe what's visible. Leave blank to use a sensible default. Use a space for decorative-only images." },
+{ "type": "text", "id": "hero_lifestyle_image_caption", "label": "Hero image caption (optional)" },
+{ "type": "select", "id": "hero_lifestyle_focal", "label": "Hero focal point", "default": "center",
+  "options": [
+    { "value": "center", "label": "Center" },
+    { "value": "top", "label": "Top" },
+    { "value": "bottom", "label": "Bottom" },
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+
+{ "type": "paragraph", "content": "2) Cleaning in action (2:3) — a real person wiping equipment." },
+{ "type": "image_picker", "id": "cleaning_lifestyle_image", "label": "Cleaning-in-action image (2:3)" },
+{ "type": "text", "id": "cleaning_lifestyle_image_alt", "label": "Cleaning image alt text", "info": "e.g. Pilates instructor wiping a reformer between classes." },
+{ "type": "text", "id": "cleaning_lifestyle_image_caption", "label": "Cleaning image caption (optional)" },
+{ "type": "select", "id": "cleaning_lifestyle_focal", "label": "Cleaning focal point", "default": "center",
+  "options": [
+    { "value": "center", "label": "Center" },
+    { "value": "top", "label": "Top" },
+    { "value": "bottom", "label": "Bottom" },
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+
+{ "type": "paragraph", "content": "3) Studio environment (16:9) — wide shot of a busy reformer studio." },
+{ "type": "image_picker", "id": "studio_environment_image", "label": "Studio environment image (16:9)" },
+{ "type": "text", "id": "studio_environment_image_alt", "label": "Studio image alt text" },
+{ "type": "text", "id": "studio_environment_image_caption", "label": "Studio image caption (optional)" },
+{ "type": "select", "id": "studio_environment_focal", "label": "Studio focal point", "default": "center",
+  "options": [
+    { "value": "center", "label": "Center" },
+    { "value": "top", "label": "Top" },
+    { "value": "bottom", "label": "Bottom" },
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+
+{ "type": "paragraph", "content": "4) Member experience (2:3) — person using a wipe / cleaning station." },
+{ "type": "image_picker", "id": "member_experience_image", "label": "Member experience image (2:3)" },
+{ "type": "text", "id": "member_experience_image_alt", "label": "Member image alt text" },
+{ "type": "text", "id": "member_experience_image_caption", "label": "Member image caption (optional)" },
+{ "type": "select", "id": "member_experience_focal", "label": "Member focal point", "default": "center",
+  "options": [
+    { "value": "center", "label": "Center" },
+    { "value": "top", "label": "Top" },
+    { "value": "bottom", "label": "Bottom" },
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+
+{ "type": "paragraph", "content": "5) Fall lifestyle banner (16:9) — seasonal studio scene before the final CTA." },
+{ "type": "image_picker", "id": "fall_lifestyle_image", "label": "Fall lifestyle banner (16:9)" },
+{ "type": "text", "id": "fall_lifestyle_image_alt", "label": "Fall banner alt text" },
+{ "type": "text", "id": "fall_lifestyle_image_caption", "label": "Fall banner caption (optional)" },
+{ "type": "select", "id": "fall_lifestyle_focal", "label": "Fall banner focal point", "default": "center",
+  "options": [
+    { "value": "center", "label": "Center" },
+    { "value": "top", "label": "Top" },
+    { "value": "bottom", "label": "Bottom" },
+    { "value": "left", "label": "Left" },
+    { "value": "right", "label": "Right" }
+  ]
+},
+
+{ "type": "header", "content": "Editorial Video Banner", "info": "Full-width cinematic 16:9 lifestyle video (Shopify-hosted). Placed mid-article between the equipment guide and buying guide. Shows nothing on the storefront if no video AND no fallback image are set." },
+{ "type": "video", "id": "lifestyle_video", "label": "Lifestyle video", "info": "Upload/select a Shopify-hosted video. Plays muted, looped, autoplay, inline. Best content: reformer class, instructor moving through the studio, cleaning between classes — editorial, not a product demo." },
+{ "type": "image_picker", "id": "video_fallback_image", "label": "Video fallback image (16:9)", "info": "Shown if no video is selected, or while the video loads on unsupported devices." },
+{ "type": "text", "id": "video_fallback_image_alt", "label": "Fallback image alt text", "info": "Describe the scene. Use a single space for a purely decorative image." },
+{ "type": "text", "id": "video_banner_eyebrow", "label": "Overlay eyebrow (optional)", "info": "Small label above the heading, e.g. 'Fall 2026 Studio Prep'." },
+{ "type": "text", "id": "video_banner_heading", "label": "Overlay heading (optional)", "info": "e.g. Ready for the Fall Studio Rush?" },
+{ "type": "textarea", "id": "video_banner_text", "label": "Overlay text (optional)", "info": "e.g. Keep every reformer clean, stocked, and ready for the next class." },
+{ "type": "text", "id": "video_banner_button_text", "label": "Overlay CTA label (optional)", "info": "e.g. Shop Bulk Equipment Wipes. Leave blank to hide the button." },
+{ "type": "url", "id": "video_banner_button_url", "label": "Overlay CTA URL" },
+
+{ "type": "header", "content": "Product Images", "info": "Product packshots only. Shown inside the product cards & primary feature module." },
+{ "type": "image_picker", "id": "p700_image", "label": "700ct Bulk Refill image" },
+{ "type": "image_picker", "id": "disp_image", "label": "Floor Dispenser image" },
+{ "type": "image_picker", "id": "p400_image", "label": "400ct Wipes image" }
+],
+"presets": [
+{ "name": "Pilates Fall 2026 Guide" }
+]
+}
+{% endschema %}

@@ -1,0 +1,1014 @@
+{%- comment -%}
+  Wipex blog section — wipex-section-cost-per-table-2026.
+  Reference-grade module: theme-editor settings, editorial media (16:9 / 2:3 stills, native video
+  band), interactive TOC, real checklist, reading progress, sticky mobile CTA, data-cro on every
+  CTA, instance-safe JavaScript (safe to place twice on one page).
+
+  The prose below is GENERATED from the compliance-approved markdown. Do not retype it in the
+  editor: edit the markdown, regenerate, re-paste. The prose may not contain Liquid delimiters —
+  the generator refuses to emit a section when it does.
+
+  Structured data is NOT in this file: Shopify's validator counts every @type key in the file as a
+  setting and blows the 40-setting cap. It lives in snippets/wipex-blog-schema.liquid.
+
+  Files in the theme:
+    sections/wipex-section-cost-per-table-2026.liquid
+    snippets/wipex-blog-schema.liquid
+    templates/article.cost-per-table.json
+{%- endcomment -%}
+
+{%- assign uid = section.id -%}
+{% raw %}
+<style>
+.wx-cpt{--wx-ink:#1a1a1a;--wx-mut:#5b5b5b;--wx-line:#e3e3e3;--wx-soft:#fafafa;--wx-acc:#0f5132;--wx-acc-ink:#0b3d26;
+  --wx-maxw:1120px;--wx-readw:44rem;--wx-radius:8px;
+  max-width:var(--wx-maxw);margin-inline:auto;color:var(--wx-ink);line-height:1.65;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative}
+.wx-cpt *,.wx-cpt *::before,.wx-cpt *::after{box-sizing:border-box}
+.wx-cpt img{max-width:100%;height:auto;display:block}
+.wx-cpt h1{font-size:clamp(1.75rem,1.2rem + 2.2vw,2.5rem);line-height:1.2;margin:0 0 1rem;letter-spacing:-.01em}
+.wx-cpt h2{font-size:clamp(1.35rem,1.1rem + 1vw,1.75rem);line-height:1.25;margin:2.5rem 0 .75rem;letter-spacing:-.01em;scroll-margin-top:5rem}
+.wx-cpt h3{font-size:1.175rem;line-height:1.3;margin:1.75rem 0 .5rem;scroll-margin-top:5rem}
+.wx-cpt p{margin:0 0 1.05rem}
+.wx-cpt ul,.wx-cpt ol{margin:0 0 1.15rem;padding-left:1.35rem}
+.wx-cpt li{margin:.35rem 0}
+.wx-cpt a{color:var(--wx-acc);text-decoration:underline;text-underline-offset:2px}
+.wx-cpt a:hover{text-decoration-thickness:2px}
+.wx-cpt strong{font-weight:650}
+.wx-cpt code{background:#f2f2f2;padding:.1em .35em;border-radius:3px;font-size:.9em}
+.wx-cpt :focus-visible{outline:2px solid var(--wx-acc);outline-offset:2px;border-radius:3px}
+.wx-cpt__wrap{max-width:var(--wx-maxw);margin-inline:auto;padding:0 20px}
+.wx-cpt__read{max-width:var(--wx-readw);margin-inline:auto}
+.wx-cpt__sec{padding:26px 0}
+.wx-cpt__sec-block{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);
+  padding:1.15rem 1.2rem 1.3rem;margin:1.75rem 0}
+.wx-cpt__sec-block h2{margin-top:.25rem}
+/* hero */
+.wx-cpt__hero{padding:8px 0 26px}
+.wx-cpt__hero .wx-cpt__wrap{max-width:var(--wx-maxw)}
+.wx-cpt__hero-inner{max-width:var(--wx-readw)}
+.wx-cpt__eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--wx-acc-ink);margin-bottom:12px}
+.wx-cpt__lede{font-size:1.09rem}
+.wx-cpt__lede p:last-child{margin-bottom:1.05rem}
+.wx-cpt__cta-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.35rem 0}
+/* buttons */
+.wx-cpt__btn{display:inline-block;font-weight:640;font-size:.95rem;line-height:1.2;text-decoration:none;
+  padding:.7rem 1.05rem;border-radius:999px;border:1.5px solid transparent;transition:opacity .15s ease}
+.wx-cpt__btn--primary{background:var(--wx-acc);color:#fff}
+.wx-cpt__btn--primary:hover{opacity:.9}
+.wx-cpt__btn--ghost{background:transparent;color:var(--wx-acc-ink);border-color:var(--wx-line)}
+.wx-cpt__btn--ghost:hover{border-color:var(--wx-acc);}
+.wx-cpt__btn--sm{padding:.5rem .85rem;font-size:.875rem}
+/* media */
+.wx-cpt__band{margin:1.5rem 0}
+.wx-cpt__band img{object-position:var(--wx-cpt-img-pos,center)}
+.wx-cpt__life--16x9 img,.wx-cpt__band.wx-cpt__life--16x9 img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:var(--wx-radius)}
+.wx-cpt__life--2x3 img{aspect-ratio:2/3;object-fit:cover;width:100%;max-width:420px;border-radius:var(--wx-radius)}
+.wx-cpt__band.wx-cpt__life--2x3 .wx-cpt__wrap{max-width:480px}
+.wx-cpt__cap{display:block;color:var(--wx-mut);font-size:.82rem;margin-top:.5rem}
+.wx-cpt__ph{border:1px dashed #bfbfbf;border-radius:var(--wx-radius);background:repeating-linear-gradient(45deg,#fbfbfb,#fbfbfb 10px,#f4f4f4 10px,#f4f4f4 20px);
+  color:var(--wx-mut);font-size:.85rem;text-align:center;padding:2.5rem 1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+/* video band */
+.wx-cpt__videoband{padding:10px 0}
+.wx-cpt__video{position:relative;border-radius:var(--wx-radius);overflow:hidden;background:#111}
+.wx-cpt__video video,.wx-cpt__video img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.wx-cpt__video-content{position:absolute;inset:auto 0 0 0;padding:1.5rem;color:#fff;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.68) 100%)}
+.wx-cpt__video-h{margin:0 0 .35rem;color:#fff;font-size:1.25rem}
+.wx-cpt__video-t{margin:0 0 .85rem;color:#f2f2f2;font-size:.95rem}
+/* takeaways */
+.wx-cpt__takeaways{list-style:none;padding:1.05rem 1.15rem;margin:1.25rem 0 1.5rem;border-left:4px solid var(--wx-acc);
+  background:var(--wx-soft);border-radius:0 var(--wx-radius) var(--wx-radius) 0}
+.wx-cpt__takeaways li{position:relative;padding-left:1.5rem;margin:.5rem 0}
+.wx-cpt__takeaways li::before{content:"✓";position:absolute;left:0;color:var(--wx-acc);font-weight:700}
+/* toc */
+.wx-cpt__toc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;margin:1.25rem 0 1.75rem}
+.wx-cpt__toc-head{display:flex;justify-content:space-between;align-items:center;width:100%;gap:.75rem;
+  font:inherit;font-weight:650;font-size:.95rem;text-align:left;background:none;border:0;cursor:pointer;padding:.85rem 1rem}
+.wx-cpt__toc-chev{transition:transform .18s ease;color:var(--wx-mut)}
+.wx-cpt__toc[data-open="false"] .wx-cpt__toc-chev{transform:rotate(-90deg)}
+.wx-cpt__toc[data-open="false"] .wx-cpt__toc-list{display:none}
+.wx-cpt__toc-list{list-style:none;margin:0;padding:0 1rem 1rem;border-top:1px solid var(--wx-line)}
+.wx-cpt__toc-list li{margin:.4rem 0}
+.wx-cpt__toc-list a{text-decoration:none}
+.wx-cpt__toc-list a:hover{text-decoration:underline}
+/* table */
+.wx-cpt__tablewrap{overflow-x:auto;margin:0 0 1.25rem;border:1px solid var(--wx-line);border-radius:6px}
+.wx-cpt__table{border-collapse:collapse;width:100%;font-size:.975rem}
+.wx-cpt__table--wide{min-width:34rem}
+.wx-cpt__table th,.wx-cpt__table td{padding:.6rem .75rem;border-bottom:1px solid var(--wx-line);text-align:left;vertical-align:top}
+.wx-cpt__table thead th{background:var(--wx-soft);font-weight:650}
+.wx-cpt__table tbody tr:last-child td,.wx-cpt__table tbody tr:last-child th{border-bottom:0}
+.wx-cpt__table tbody th{font-weight:600}
+/* checklist */
+.wx-cpt__check{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);padding:1rem 1.15rem}
+.wx-cpt__check-list{list-style:none;padding-left:0;margin:0}
+.wx-cpt__check-item{display:flex;gap:.6rem;align-items:flex-start;margin:.5rem 0}
+.wx-cpt__check-item input{margin:.3rem 0 0;width:1.05rem;height:1.05rem;accent-color:var(--wx-acc);flex:none}
+.wx-cpt__check-item label{cursor:pointer}
+.wx-cpt__check-item input:checked + label{color:var(--wx-mut);text-decoration:line-through}
+.wx-cpt__check-note{margin:.85rem 0 0;font-size:.78rem;color:var(--wx-mut)}
+/* calculator */
+.wx-cpt__calc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);padding:1.1rem 1.15rem 1rem;margin:1.5rem 0 1.75rem;contain:content}
+.wx-cpt__calc-h{margin:0 0 .85rem;font-size:1.05rem}
+.wx-cpt__calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem}
+.wx-cpt__calc-grid label{display:flex;flex-direction:column;gap:.25rem;font-size:.8rem;color:var(--wx-mut)}
+.wx-cpt__calc-grid input{font:inherit;font-size:.95rem;color:var(--wx-ink);padding:.45rem .5rem;border:1px solid #cfcfcf;border-radius:5px;background:#fff;min-width:0}
+.wx-cpt__calc-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:1rem}
+.wx-cpt__calc-out>div{background:#fff;border:1px solid var(--wx-line);border-radius:6px;padding:.6rem .7rem}
+.wx-cpt__calc-out span{display:block;font-size:1.35rem;font-weight:680;letter-spacing:-.01em}
+.wx-cpt__calc-out small{display:block;color:var(--wx-mut);font-size:.75rem;margin-top:.1rem}
+.wx-cpt__calc-note{margin:.85rem 0 0;font-size:.78rem;color:var(--wx-mut)}
+/* product cards */
+.wx-cpt__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1rem}
+.wx-cpt__card{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;padding:1rem 1.05rem 1.15rem;display:flex;flex-direction:column}
+.wx-cpt__card-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;margin-bottom:.75rem}
+.wx-cpt__badge{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--wx-acc-ink);background:#eaf3ee;border-radius:999px;padding:.25rem .6rem;margin-bottom:.6rem}
+.wx-cpt__card-h{margin:0 0 .35rem;font-size:1.05rem}
+.wx-cpt__card-best{margin:0 0 .6rem;font-size:.85rem;color:var(--wx-mut)}
+.wx-cpt__card-list{margin:0 0 1rem;padding-left:1.1rem;font-size:.92rem}
+.wx-cpt__card .wx-cpt__btn{margin-top:auto;align-self:flex-start}
+/* sticky + progress */
+.wx-cpt__progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:60;pointer-events:none}
+.wx-cpt__progress-bar{height:100%;width:0;background:var(--wx-acc)}
+.wx-cpt__sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;align-items:center;gap:.6rem;justify-content:center;
+  padding:.6rem .9rem;background:#fff;border-top:1px solid var(--wx-line);box-shadow:0 -4px 18px rgba(0,0,0,.07);
+  transform:translateY(110%);transition:transform .2s ease}
+.wx-cpt__sticky.is-visible{transform:translateY(0)}
+.wx-cpt__sticky-close{background:none;border:0;font-size:1.35rem;line-height:1;color:var(--wx-mut);cursor:pointer;padding:.1rem .4rem}
+/* problem strip + stat cards */
+.wx-cpt__strip{background:var(--wx-soft);border-top:1px solid var(--wx-line);border-bottom:1px solid var(--wx-line);margin:6px 0 10px}
+.wx-cpt__strip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--wx-line)}
+.wx-cpt__strip-cell{background:#fff;padding:.9rem 1rem}
+.wx-cpt__strip-cell strong{display:block;font-size:.95rem}
+.wx-cpt__strip-cell span{display:block;color:var(--wx-mut);font-size:.85rem;margin-top:.2rem}
+.wx-cpt__stats-block{padding:20px 0}
+.wx-cpt__stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin:1rem 0 0}
+.wx-cpt__stat{background:var(--wx-soft);border:1px solid var(--wx-line);border-radius:6px;padding:.75rem .8rem}
+.wx-cpt__stat b{display:block;font-size:1.5rem;letter-spacing:-.02em}
+.wx-cpt__stat span{display:block;color:var(--wx-mut);font-size:.78rem;margin-top:.15rem}
+/* decision tool + system + feature */
+.wx-cpt__dec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-top:1rem}
+.wx-cpt__dec{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;padding:1rem 1.05rem;text-align:center}
+.wx-cpt__dec--rec{border-color:var(--wx-acc);box-shadow:inset 0 0 0 1px var(--wx-acc)}
+.wx-cpt__dec h3{margin:0 0 .35rem;font-size:1rem}
+.wx-cpt__dec-arrow{color:var(--wx-mut);margin:.2rem 0}
+.wx-cpt__dec-sol{font-weight:640;margin:0 0 .8rem}
+.wx-cpt__system{text-align:center}
+.wx-cpt__system-eq{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;margin:1rem 0}
+.wx-cpt__pill{background:#fff;border:1px solid var(--wx-line);border-radius:999px;padding:.45rem .9rem;font-size:.9rem}
+.wx-cpt__op{color:var(--wx-mut)}
+.wx-cpt__system-result{font-weight:660}
+.wx-cpt__feature{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
+@media(min-width:760px){.wx-cpt__feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
+.wx-cpt__feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius)}
+.wx-cpt__feature-list{margin:0 0 1rem;padding-left:1.1rem}
+/* faq + footer */
+.wx-cpt__faqq{margin-top:1.6rem}
+.wx-cpt__links{font-size:.95rem}
+.wx-cpt__foot{color:var(--wx-mut);font-size:.85rem;font-style:italic}
+.wx-cpt__hr{border:0;border-top:1px solid var(--wx-line);margin:2.25rem 0}
+.wx-cpt__code{background:#f7f7f7;border:1px solid var(--wx-line);border-radius:6px;padding:.9rem 1rem;overflow-x:auto;font-size:.9rem;line-height:1.5;margin:0 0 1.15rem}
+.wx-cpt__code code{background:none;padding:0}
+.wx-cpt__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media print{.wx-cpt__calc,.wx-cpt__tablewrap,.wx-cpt__sticky,.wx-cpt__progress{display:none!important}.wx-cpt a{color:inherit;text-decoration:none}}
+@media (max-width:640px){
+  .wx-cpt{font-size:1rem}
+  .wx-cpt__table--wide{min-width:30rem}
+  .wx-cpt__table:not(.wx-cpt__table--wide) thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .wx-cpt__table:not(.wx-cpt__table--wide) tr{display:block;border-bottom:1px solid var(--wx-line);padding:.35rem 0}
+  .wx-cpt__table:not(.wx-cpt__table--wide) tr:last-child{border-bottom:0}
+  .wx-cpt__table:not(.wx-cpt__table--wide) th,.wx-cpt__table:not(.wx-cpt__table--wide) td{display:flex;gap:.75rem;justify-content:space-between;border:0;padding:.35rem .75rem}
+  .wx-cpt__table:not(.wx-cpt__table--wide) th[data-label]::before,.wx-cpt__table:not(.wx-cpt__table--wide) td[data-label]::before{
+    content:attr(data-label);font-weight:640;color:var(--wx-mut);flex:0 0 42%}
+  .wx-cpt__table:not(.wx-cpt__table--wide) th[data-label]::before{color:var(--wx-ink)}
+}
+</style>
+{% endraw %}
+
+<div class="wx-cpt__root" id="wx-cpt-{{ uid }}" data-wpx-section="{{ uid }}">
+<div class="wx-cpt__progress" aria-hidden="true"><div class="wx-cpt__progress-bar" data-wpx-progress></div></div>
+<header class="wx-cpt__hero">
+  <div class="wx-cpt__wrap">
+    <div class="wx-cpt__hero-inner">
+      <span class="wx-cpt__eyebrow">{{ section.settings.hero_eyebrow | default: 'Q4 Front-of-House' | escape }}</span>
+      <h1>{{ section.settings.hero_title | default: 'How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)' | escape }}</h1>
+      <div class="wx-cpt__lede">{%- if section.settings.hero_lede != blank -%}{{ section.settings.hero_lede }}{%- else -%}Every minute a table sits dirty is revenue you already paid labour for. The busser is on the clock, the party at the door is deciding whether to wait, and the seat is earning nothing.{%- endif -%}</div>
+      <p class="wx-cpt__cta-row">
+        <a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="cost-per-table-restaurant-hero" href="{{ section.settings.hero_cta_url | default: 'https://wipex.co/products/table-bussers-surface-wipes' }}">{{ section.settings.hero_cta_label | default: 'Shop Table Bussers® Autumn-Scented' | escape }} →</a>
+        <a class="wx-cpt__btn wx-cpt__btn--ghost" data-cro="cost-per-table-restaurant-hero-2" href="{{ section.settings.hero_cta2_url | default: 'https://wipex.co/collections/food-service-commercial' }}">{{ section.settings.hero_cta2_label | default: 'Browse the food service collection' | escape }}</a>
+      </p>
+    </div>
+    {%- assign foc = section.settings.hero_image_focal | default: 'center' -%}
+{%- if section.settings.hero_image != blank -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9" style="--wx-cpt-img-pos:{{ foc }};">
+<div class="wx-cpt__wrap">
+<img
+  src="{{ section.settings.hero_image | image_url: width: 1120 }}"
+  srcset="{{ section.settings.hero_image | image_url: width: 638 }} 638w,
+          {{ section.settings.hero_image | image_url: width: 1120 }} 1120w,
+          {{ section.settings.hero_image | image_url: width: 1568 }} 1568w"
+  sizes="(max-width: 1120px) 100vw, 1120px"
+  width="1120" height="630"
+  alt="{{ section.settings.hero_image_alt | default: 'Busser wiping a four-top table in a busy dining room between covers, pre-mixed wipe bucket at the service station' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.hero_image_caption != blank -%}<figcaption class="wx-cpt__cap">{{ section.settings.hero_image_caption | escape }}</figcaption>{%- endif -%}
+</div></figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9"><div class="wx-cpt__wrap"><div class="wx-cpt__ph">Editor only · Hero image (16:9)<br>Busser wiping a four-top table in a busy dining room between covers, pre-mixed wipe bucket at th</div></div></figure>
+{%- endif -%}
+  </div>
+</header>
+<section class="wx-cpt__strip" aria-label="What drives front-of-house cleaning cost"><div class="wx-cpt__wrap"><div class="wx-cpt__strip-grid"><div class="wx-cpt__strip-cell"><strong>Q4 volume</strong><span>Parties, holiday bookings and private events multiply every reset</span></div><div class="wx-cpt__strip-cell"><strong>Three turns an hour</strong><span>Every extra trip costs seat time at your busiest</span></div><div class="wx-cpt__strip-cell"><strong>Labour 30-35% of expenses</strong><span>The loaded rate is what makes the minute expensive</span></div><div class="wx-cpt__strip-cell"><strong>Par levels set now</strong><span>Year-end is when supply spend gets reviewed</span></div></div></div></section>
+<article class="wx-cpt__article">
+<section class="wx-cpt__sec">
+<div class="wx-cpt__read">
+<p>That is why cost per wipe is the wrong unit to manage. Cost per wipe tells you what you spent. <strong>Cost per table</strong> tells you what the seat cost you — and that is the number your P&amp;L is actually denominated in.</p>
+<p>Table Bussers® pre-mixed table wipes make that arithmetic simple: there is one consumable to count, and it is already at the table when the guest stands. By the end of this guide you will be able to calculate your own cost per table, see where the minutes disappear during a reset, and reduce both without lowering the standard a guest notices.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="quick-answer--key-takeaways-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="quick-answer--key-takeaways-{{ uid }}">Quick answer / key takeaways</h2>
+<ul class="wx-cpt__takeaways"><li>A pre-mixed table wipe works out at roughly <strong>$0.09</strong>, so a two-wipe reset costs about <strong>$0.15–$0.18 per table</strong> in consumables.</li><li>The reset target most operators work to is <strong>under 90 seconds</strong> (Lavu, checked 23 Sep 2026).</li><li>Casual dining averages about <strong>1.5 turns per hour</strong> (Worldmetrics, 2026).</li><li>Labour is <strong>30–35% of expenses</strong> in casual dining — the biggest single lever on what a reset really costs (Worldmetrics, 2026).</li><li><strong>Cost per table is not cost per wipe.</strong> One is the unit you buy in; the other is the unit you are paid in.</li></ul>
+</div>
+<div class="wx-cpt__stats-block"><div class="wx-cpt__read"><div class="wx-cpt__stats"><div class="wx-cpt__stat"><b>$0.09</b><span>consumable per table, one wipe per reset</span></div><div class="wx-cpt__stat"><b>$0.29</b><span>cost per table in a 20-table room</span></div><div class="wx-cpt__stat"><b>90 seconds</b><span>target reset time most operators work to</span></div><div class="wx-cpt__stat"><b>1.5 turns/hour</b><span>casual-dining average (Worldmetrics, 2026)</span></div></div></div></div>
+</section>
+<section class="wx-cpt__sec" id="on-this-page-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="on-this-page-{{ uid }}">On this page</h2>
+<nav class="wx-cpt__toc" data-wpx-toc data-open="true" aria-label="On this page"><button type="button" class="wx-cpt__toc-head" data-wpx-toc-toggle aria-expanded="true" aria-controls="tocList-{{ uid }}"><span>On this page</span><span class="wx-cpt__toc-chev" aria-hidden="true">▾</span></button><ul class="wx-cpt__toc-list" id="tocList-{{ uid }}"><li><a href="#quick-answer--key-takeaways-{{ uid }}">Quick answer / key takeaways</a></li><li><a href="#what-cost-per-table-means-{{ uid }}">What cost per table means</a></li><li><a href="#why-q4-is-the-moment-to-measure-it-{{ uid }}">Why Q4 is the moment to measure it</a></li><li><a href="#the-four-step-reset-{{ uid }}">The four-step reset</a></li><li><a href="#how-to-calculate-your-own-cost-per-table-{{ uid }}">How to calculate your own cost per table</a></li><li><a href="#what-your-current-setup-actually-costs-{{ uid }}">What your current setup actually costs</a></li><li><a href="#the-five-places-minutes-hide-in-a-reset-{{ uid }}">The five places minutes hide in a reset</a></li><li><a href="#bar-patio-and-private-room-three-rooms-three-costs-{{ uid }}">Bar, patio and private room: three rooms, three costs</a></li><li><a href="#setting-a-par-level-from-your-reset-count-{{ uid }}">Setting a par level from your reset count</a></li><li><a href="#which-table-bussers-fits-your-room-{{ uid }}">Which Table Bussers fits your room</a></li><li><a href="#self-assessment-your-cost-per-table-and-reset-time-{{ uid }}">Self-assessment: your cost per table and reset time</a></li><li><a href="#your-q4-front-of-house-readiness-checklist-{{ uid }}">Your Q4 front-of-house readiness checklist</a></li><li><a href="#frequently-asked-questions-{{ uid }}">Frequently asked questions</a></li><li><a href="#reduce-table-turnover-time-{{ uid }}">Reduce Table Turnover Time</a></li></ul></nav>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="what-cost-per-table-means-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="what-cost-per-table-means-{{ uid }}">What cost per table means</h2>
+<p>Cost per table is the total cost of returning one table to service — the consumable, the labour minutes, and the share of supplies a single reset consumes — divided by how many times the table turns.</p>
+<p>It is deliberately not the same as cost per wipe. Cost per wipe is a purchasing figure: it tells you which format is cheaper to buy. Cost per table is an operating figure: it tells you which setup is cheaper to <em>run</em>, including the seconds your staff spend on it. Operators who manage only the first number routinely pay more for the second.</p>
+<p>Here is the difference in one line. A cheaper wipe that takes two trips per table is more expensive than a slightly dearer one that takes a single pass.</p>
+<h3 id="the-three-numbers-you-are-really-adding-up-{{ uid }}">The three numbers you are really adding up</h3>
+<div class="wx-cpt__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-cpt__table"><thead><tr>
+<th scope="col">Component</th>
+<th scope="col">What goes in</th>
+<th scope="col">Where it comes from</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Component">Consumable</th>
+<td data-label="What goes in">the wipe, at your case rate</td>
+<td data-label="Where it comes from">your supplier invoice</td>
+</tr>
+<tr>
+<th scope="row" data-label="Component">Reset labour</th>
+<td data-label="What goes in">minutes per reset × loaded hourly rate</td>
+<td data-label="Where it comes from">your schedule and payroll</td>
+</tr>
+<tr>
+<th scope="row" data-label="Component">Reset count</th>
+<td data-label="What goes in">turns per service × services per week</td>
+<td data-label="Where it comes from">your POS and your floor</td>
+</tr>
+</tbody></table></div>
+<p>The first is the only one most purchasing decisions look at. It is also the smallest.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="why-q4-is-the-moment-to-measure-it-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="why-q4-is-the-moment-to-measure-it-{{ uid }}">Why Q4 is the moment to measure it</h2>
+<p>Year-end is when you set next year's par levels and when your supply spend gets reviewed. It is also when front-of-house volume climbs: parties, holiday bookings, private events.</p>
+<p>Higher volume does not create a cleaning problem — it multiplies whatever reset routine you already have. If a reset takes three minutes, a busier dining room turns that into three minutes of lost seat time more often, not less often.</p>
+<p>That is the argument for measuring cost per table now: the number you calculate in a quiet week is the number you will be running at your busiest, only more times over.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="the-four-step-reset-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="the-four-step-reset-{{ uid }}">The four-step reset</h2>
+<p>Every reset, in every operation, is the same four moves:</p>
+<ol><li><strong>Clear</strong> — plates, glassware and linen leave the table.</li><li><strong>Clean</strong> — the surface is wiped, in one pass, before anything is set back down.</li><li><strong>Reset</strong> — cutlery, glassware, condiments and settings return.</li><li><strong>Seat</strong> — the host is told the table is ready.</li></ol>
+<p>We covered this workflow in detail in <a href="https://wipex.co/blogs/library/table-busser-restaurant-efficiency">how table bussers improve restaurant efficiency and table turnover</a> — read that for the staffing and training side. This article stays on the money: what each step costs, and how to bring the cleaning step down without slowing the room.</p>
+<p>The cleaning step is the one operators under-measure, because it looks like a small action repeated many times. It is also the step where supplies and minutes meet.</p>
+</div>
+{%- assign foc = section.settings.process_image_focal | default: 'center' -%}
+{%- if section.settings.process_image != blank -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9" style="--wx-cpt-img-pos:{{ foc }};">
+<div class="wx-cpt__wrap">
+<img
+  src="{{ section.settings.process_image | image_url: width: 1120 }}"
+  srcset="{{ section.settings.process_image | image_url: width: 638 }} 638w,
+          {{ section.settings.process_image | image_url: width: 1120 }} 1120w,
+          {{ section.settings.process_image | image_url: width: 1568 }} 1568w"
+  sizes="(max-width: 1120px) 100vw, 1120px"
+  width="1120" height="630"
+  alt="{{ section.settings.process_image_alt | default: 'Four-panel sequence of a table reset: clearing plates, wiping the top, setting the table, seating guests' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.process_image_caption != blank -%}<figcaption class="wx-cpt__cap">{{ section.settings.process_image_caption | escape }}</figcaption>{%- endif -%}
+</div></figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9"><div class="wx-cpt__wrap"><div class="wx-cpt__ph">Editor only · Process image (16:9)<br>Four-panel sequence of a table reset: clearing plates, wiping the top, setting the table, seatin</div></div></figure>
+{%- endif -%}
+</section>
+<section class="wx-cpt__sec" id="how-to-calculate-your-own-cost-per-table-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="how-to-calculate-your-own-cost-per-table-{{ uid }}">How to calculate your own cost per table</h2>
+<p>Four inputs, one multiplication.</p>
+<p><strong>Step 1 — Your cost per wipe.</strong> Take the case price and divide by the wipe count. At the <a href="https://wipex.co/products/table-bussers-surface-wipes">400-count Table Bussers® bucket</a> price that is roughly <strong>$0.09 per wipe</strong>; buy the four-pack case and it is about <strong>$0.075 per wipe</strong>.</p>
+<p><strong>Step 2 — Wipes per reset.</strong> One wipe per table in a single pass is the target. Allow two if your team commonly returns for a second wipe, and count that second trip in Step 4 as well.</p>
+<p><strong>Step 3 — Consumable cost per table.</strong> <code>wipes per reset × cost per wipe</code>. At one wipe, about $0.09. At two, about $0.18.</p>
+<p><strong>Step 4 — Add the labour minute.</strong> Multiply minutes per reset by your loaded hourly rate and divide by 60. At a $16 loaded rate, 45 seconds of reset labour is about <strong>$0.12</strong>.</p>
+<pre class="wx-cpt__code"><code>cost per table = (wipes per reset × cost per wipe) + (reset minutes ÷ 60 × loaded hourly rate)</code></pre>
+<p>Run it with real numbers and the picture changes. <strong>Labour is 30–35% of expenses in casual dining</strong> (Worldmetrics, 2026), so it is the term that dominates the equation — and the term a one-pass wipe actually moves.</p>
+<h3 id="worked-example-a-20-table-room-{{ uid }}">Worked example: a 20-table room</h3>
+<p>A 20-table dining room, three turns per table per evening, six services a week:</p>
+<div class="wx-cpt__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-cpt__table"><thead><tr>
+<th scope="col">Line</th>
+<th scope="col">Assumption</th>
+<th scope="col">Weekly</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Line">Resets</th>
+<td data-label="Assumption">20 tables × 3 turns × 6 services</td>
+<td data-label="Weekly">360 resets</td>
+</tr>
+<tr>
+<th scope="row" data-label="Line">Consumable</th>
+<td data-label="Assumption">360 × $0.09</td>
+<td data-label="Weekly">$32.40</td>
+</tr>
+<tr>
+<th scope="row" data-label="Line">Reset labour</th>
+<td data-label="Assumption">360 × 45 sec = 4.5 hours × $16</td>
+<td data-label="Weekly">$72.00</td>
+</tr>
+<tr>
+<th scope="row" data-label="Line"><strong>Total</strong></th>
+<td data-label="Assumption"></td>
+<td data-label="Weekly"><strong>$104.40</strong></td>
+</tr>
+<tr>
+<th scope="row" data-label="Line"><strong>Per table</strong></th>
+<td data-label="Assumption">$104.40 ÷ 360</td>
+<td data-label="Weekly"><strong>$0.29</strong></td>
+</tr>
+</tbody></table></div>
+<p>Consumables are under a third of the real cost. The rest is the minute.</p>
+</div>
+<div class="wx-cpt__sec-block wx-cpt__system"><span class="wx-cpt__eyebrow">The system</span><h2>What a pre-mixed wipe actually changes</h2><div class="wx-cpt__system-eq"><span class="wx-cpt__pill">400-count bucket at the station</span><span class="wx-cpt__op" aria-hidden="true">+</span><span class="wx-cpt__pill">one wipe, one pass</span><span class="wx-cpt__op" aria-hidden="true">=</span><span class="wx-cpt__pill wx-cpt__system-result">a reset that never needs a second trip</span></div><p>It removes the fetch, not the standard: the wipe is already where the cleaning happens, so the cleaning step starts at the table.</p><p class="wx-cpt__cta-row" style="justify-content:center;"><a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="@CRO@-system" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® →</a></p></div>
+</section>
+<section class="wx-cpt__sec" id="what-your-current-setup-actually-costs-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="what-your-current-setup-actually-costs-{{ uid }}">What your current setup actually costs</h2>
+<p>If you are running paper towels and a spray, the consumable looks cheap per sheet — around <strong>5¢ a sheet</strong> (The Zero Store, 2026). The reset, though, usually involves a spray bottle and a second trip. It also leaves a wet surface that has to dry before you can set the table.</p>
+<p>Laundry is the other invisible line. Operators spend <strong>upwards of $200,000 a year</strong> getting linen clean (Berkwiper, distributor guide) — and a large part of that volume is table linen that a pre-mixed wipe routine replaces entirely.</p>
+<p>None of this argues that one approach is cheaper than another. It argues for measuring both on the same basis: per table, per reset, including the minute.</p>
+<h3 id="what-a-one-pass-cleaning-step-changes-{{ uid }}">What a one-pass cleaning step changes</h3>
+<p>A dedicated busser can cut reset time by roughly half (Restaurant Booking System, Academy). The cleaning step sits inside that time. If the wipe is already at the table, mixed and ready, the busser never leaves the station to fetch a spray or a cloth.</p>
+<p>That is the whole proposition of a pre-mixed table wipe: it removes a trip, not a standard.</p>
+</div>
+<div class="wx-cpt__sec-block"><div class="wx-cpt__feature"><div class="wx-cpt__feature-body"><span class="wx-cpt__eyebrow">The workhorse</span><h2>One consumable, already at the table</h2><p>One bucket is the whole purchase: no spray, no cloth, and no walk to the station during a reset.</p><ul class="wx-cpt__feature-list"><li>Removes the fetch from the cleaning step</li><li>One wipe per table in a single pass</li><li>Keeps the standard a guest notices</li></ul><a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="@CRO@-feature" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® →</a></div></div></div>
+</section>
+<section class="wx-cpt__sec" id="the-five-places-minutes-hide-in-a-reset-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="the-five-places-minutes-hide-in-a-reset-{{ uid }}">The five places minutes hide in a reset</h2>
+<p>Measure one reset with a stopwatch and you will usually find the time is not in the wiping. It is in these five places:</p>
+<ol><li><strong>The fetch.</strong> The busser leaves the table to find the spray, the cloth or the wipe. This is usually the single largest cost, and it exists only because the supplies are not at the station.</li></ol>
+<ol><li><strong>The second pass.</strong> The first wipe left residue or streaks, so it is done again. One pass is the target; two is a routine that needs changing.</li><li><strong>The wet wait.</strong> A wet surface cannot be set. Tableware placed on a damp top gets re-cleared when the guest sits.</li><li><strong>The handoff.</strong> The table is ready but nobody has told the host, so it sits empty in a queue.</li><li><strong>The Monday-morning redo.</strong> Areas missed at peak get cleaned again at close, at overtime rates.</li></ol>
+<p>Only one of those five is the actual cleaning. The other four are layout, stationing and communication problems wearing a cleaning costume.</p>
+<p>Fix the first one — put the bucket at the station — and you fix the second and third most of the time, because the busser is no longer walking and no longer rushing.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="bar-patio-and-private-room-three-rooms-three-costs-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="bar-patio-and-private-room-three-rooms-three-costs-{{ uid }}">Bar, patio and private room: three rooms, three costs</h2>
+<p>Cost per table is not one number for a whole venue. Three rooms usually carry three different resets, and they should be measured separately.</p>
+<h3 id="dining-room-{{ uid }}">Dining room</h3>
+<p>The dining room is the baseline: seated covers, a full reset, the highest labour share per table.</p>
+<h3 id="bar-{{ uid }}">Bar</h3>
+<p>The bar resets more often and more shallowly. Bar tops are deep-cleaned less frequently, so the consumable count per reset is lower, but the reset count per hour is higher — which pushes the labour term up even when the consumable term falls.</p>
+<h3 id="patio-and-private-room-{{ uid }}">Patio and private room</h3>
+<p>Patios and private rooms are seasonal. A patio that opens for six months a year has its own par level and its own scent decision, because the room may be partly open to the street.</p>
+<p>Two formats help here rather than a single SKU across the venue: <a href="https://wipex.co/products/table-bussers-surface-wipes">Table Bussers® Autumn-Scented</a> for the guest-facing rooms and <a href="https://wipex.co/products/table-bussers-unscented">Unscented</a> where guests should not notice anything at all. The certification and food-service documentation belongs to the Autumn SKU only — see the comparison below.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="setting-a-par-level-from-your-reset-count-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="setting-a-par-level-from-your-reset-count-{{ uid }}">Setting a par level from your reset count</h2>
+<p>Most operators set a par level from instinct, then discover it in the middle of a Friday. The arithmetic is five minutes of work.</p>
+<ol><li>Count resets per service on a normal week: tables × turns.</li><li>Multiply by wipes per reset.</li><li>Multiply by services per week, then multiply by the weeks between deliveries.</li><li>Add a buffer worth your busiest two weeks of the year — for most venues, that is December.</li></ol>
+<p>Run it: 20 tables × 3 turns × 6 services = 360 resets a week. At one wipe per reset that is 360 wipes a week, or just under one 400-count bucket. Two buckets covers a week with the buffer already in it.</p>
+<p>The point of a par level is not to hold more stock. It is to make the fetch unnecessary, because there is always a bucket within reach of the station.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="which-table-bussers-fits-your-room-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="which-table-bussers-fits-your-room-{{ uid }}">Which Table Bussers fits your room</h2>
+<p>Two formats, one formulation difference that matters for food service.</p>
+<div class="wx-cpt__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-cpt__table"><thead><tr>
+<th scope="col" class="wx-cpt__th-empty"><span class="wx-cpt__sr">Item</span></th>
+<th scope="col">Table Bussers® Autumn-Scented</th>
+<th scope="col">Table Bussers® Unscented</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Item">Suited to</th>
+<td data-label="Table Bussers® Autumn-Scented">seasonal dining rooms and bars</td>
+<td data-label="Table Bussers® Unscented">fragrance-neutral rooms, kitchens, prep areas</td>
+</tr>
+<tr>
+<th scope="row" data-label="Item">Scent</th>
+<td data-label="Table Bussers® Autumn-Scented">cinnamon and clove oils</td>
+<td data-label="Table Bussers® Unscented">fragrance-free</td>
+</tr>
+<tr>
+<th scope="row" data-label="Item">Format</th>
+<td data-label="Table Bussers® Autumn-Scented">400-count bucket, plant-based viscose cloth</td>
+<td data-label="Table Bussers® Unscented">400-count bucket, plant-based viscose cloth</td>
+</tr>
+<tr>
+<th scope="row" data-label="Item">NSF</th>
+<td data-label="Table Bussers® Autumn-Scented"><strong>NSF-certified</strong>, as the certificate states</td>
+<td data-label="Table Bussers® Unscented">not certified</td>
+</tr>
+<tr>
+<th scope="row" data-label="Item">Food service</th>
+<td data-label="Table Bussers® Autumn-Scented"><strong>suitable for food service environments</strong></td>
+<td data-label="Table Bussers® Unscented">no such claim</td>
+</tr>
+<tr>
+<th scope="row" data-label="Item">Cloth</th>
+<td data-label="Table Bussers® Autumn-Scented">TÜV certified (OK COMPOST HOME and INDUSTRIAL)</td>
+<td data-label="Table Bussers® Unscented">TÜV certified (OK COMPOST HOME and INDUSTRIAL)</td>
+</tr>
+</tbody></table></div>
+<p><em>Cloth certification in the table above applies to the cloth substrate only, not the finished wipe, formula or packaging.</em></p>
+<p><strong>Read those last two rows carefully.</strong> The NSF certification and the food-service environment wording belong to the <strong>Autumn-Scented</strong> SKU. They do <strong>not</strong> transfer to the Unscented one, even though the buckets look the same. If a specification or an inspection file needs that paper trail, Autumn is the SKU that carries it.</p>
+<h3 id="autumn-scented-for-guest-facing-rooms-in-the-season-{{ uid }}">Autumn-Scented: for guest-facing rooms in the season</h3>
+<p>Table Bussers® Autumn-Scented is built on a proprietary formulation designed for tables, counters and food-service surfaces, with cinnamon and clove essential oils and cleaning vinegar. It is NSF-certified as the certificate states, and it is the SKU we describe as suitable for food service environments.</p>
+<p>Counter tops, tabletops, bar tops and laminate front-of-house surfaces. If in doubt, test on a small, inconspicuous area first.</p>
+<h3 id="unscented-for-rooms-where-nothing-should-smell-{{ uid }}">Unscented: for rooms where nothing should smell</h3>
+<p>Table Bussers® Natural Unscented Cleaning Wipes use the same plant-based viscose cloth with no fragrance at all — for kitchens, prep areas, and dining rooms where guests notice scent. It is made with natural ingredients, and the cloth is TÜV certified (OK COMPOST HOME and INDUSTRIAL). <strong>This applies to the cloth substrate only, not the finished wipe, formula or packaging.</strong></p>
+<p>Counters, prep surfaces, tabletops and laminate finishes. If in doubt, test on a small, inconspicuous area first.</p>
+<h3 id="the-price-ladder-per-table-{{ uid }}">The price ladder, per table</h3>
+<div class="wx-cpt__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-cpt__table wx-cpt__table--wide"><thead><tr>
+<th scope="col">Format</th>
+<th scope="col">Price</th>
+<th scope="col">Count</th>
+<th scope="col">$/wipe</th>
+<th scope="col">$/table at two wipes</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Format">Autumn, single bucket</th>
+<td data-label="Price">$36.99</td>
+<td data-label="Count">400</td>
+<td data-label="$/wipe">≈ $0.09</td>
+<td data-label="$/table at two wipes">≈ $0.18</td>
+</tr>
+<tr>
+<th scope="row" data-label="Format">Autumn, 2-pack</th>
+<td data-label="Price">$69.99</td>
+<td data-label="Count">800</td>
+<td data-label="$/wipe">≈ $0.09</td>
+<td data-label="$/table at two wipes">≈ $0.17</td>
+</tr>
+<tr>
+<th scope="row" data-label="Format">Autumn, 4-pack case</th>
+<td data-label="Price">$119.99</td>
+<td data-label="Count">1,600</td>
+<td data-label="$/wipe">≈ $0.075</td>
+<td data-label="$/table at two wipes">≈ $0.15</td>
+</tr>
+<tr>
+<th scope="row" data-label="Format">Unscented, single bucket</th>
+<td data-label="Price">$36.99</td>
+<td data-label="Count">400</td>
+<td data-label="$/wipe">≈ $0.09</td>
+<td data-label="$/table at two wipes">≈ $0.18</td>
+</tr>
+</tbody></table></div>
+<p>Browse the full <a href="https://wipex.co/collections/food-service-commercial">food service and commercial collection</a> for case rates across formats. At the case rate, a two-wipe reset is about $0.15. Against the $0.29 all-in cost per table in the worked example, the consumable is still the smaller half of the number.</p>
+</div>
+<div class="wx-cpt__sec-block">
+  <h2>Which format fits the room</h2>
+  <div class="wx-cpt__cards"><article class="wx-cpt__card">
+  
+  <span class="wx-cpt__badge">Certified for food service</span>
+  <h3 class="wx-cpt__card-h">Table Bussers® Autumn-Scented Surface Wipes</h3>
+  <p class="wx-cpt__card-best">Suited to: Guest-facing dining rooms and bar tops</p>
+  <ul class="wx-cpt__card-list"><li>Pre-mixed — no spray bottle to fetch</li><li>One wipe per table in a single pass</li><li>NSF-certified formulation, suitable for food service environments</li></ul>
+  <a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="cost-per-table-restaurant-prod-1" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® Autumn-Scented →</a>
+</article><article class="wx-cpt__card">
+  
+  <span class="wx-cpt__badge">Fragrance-free</span>
+  <h3 class="wx-cpt__card-h">Table Bussers® Unscented Surface Wipes</h3>
+  <p class="wx-cpt__card-best">Suited to: Kitchens, prep areas and quiet rooms</p>
+  <ul class="wx-cpt__card-list"><li>The same pre-mixed format</li><li>Nothing for a guest to notice</li><li>Keeps the cleaning step at the station</li></ul>
+  <a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="cost-per-table-restaurant-prod-2" href="https://wipex.co/products/table-bussers-unscented">Shop Table Bussers® Unscented →</a>
+</article></div>
+</div>
+</section>
+<section class="wx-cpt__sec" id="self-assessment-your-cost-per-table-and-reset-time-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="self-assessment-your-cost-per-table-and-reset-time-{{ uid }}">Self-assessment: your cost per table and reset time</h2>
+<p>Run this on one section of your floor. It takes one service to fill in.</p>
+<p><strong>Reset time</strong></p>
+<ol><li>Time three resets with a phone stopwatch. Start when the guest stands, stop when the table is set.</li><li>Average them.</li><li>If the average is above 90 seconds, watch one reset and count the trips your busser makes. Trips, not effort, are usually the delay.</li></ol>
+<p><strong>Cost per table</strong></p>
+<ol><li>Case price ÷ wipe count = cost per wipe.</li><li>× wipes per reset = consumable per table.</li><li>× minutes ÷ 60 × loaded hourly rate = labour per table.</li><li>Add the two.</li></ol>
+<p><strong>Then compare against the room</strong></p>
+<ul><li>Weekly resets = tables × turns × services.</li><li>Weekly cleaning cost = weekly resets × cost per table.</li><li>Cost per cover = weekly cleaning cost ÷ covers served.</li></ul>
+<p>If cost per cover is a number you have never seen written down, you are not alone — most operators can quote their food cost to one decimal place and have never calculated this one.</p>
+</div>
+{%- assign foc = section.settings.evidence_image_focal | default: 'center' -%}
+{%- if section.settings.evidence_image != blank -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9" style="--wx-cpt-img-pos:{{ foc }};">
+<div class="wx-cpt__wrap">
+<img
+  src="{{ section.settings.evidence_image | image_url: width: 1120 }}"
+  srcset="{{ section.settings.evidence_image | image_url: width: 638 }} 638w,
+          {{ section.settings.evidence_image | image_url: width: 1120 }} 1120w,
+          {{ section.settings.evidence_image | image_url: width: 1568 }} 1568w"
+  sizes="(max-width: 1120px) 100vw, 1120px"
+  width="1120" height="630"
+  alt="{{ section.settings.evidence_image_alt | default: 'Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.evidence_image_caption != blank -%}<figcaption class="wx-cpt__cap">{{ section.settings.evidence_image_caption | escape }}</figcaption>{%- endif -%}
+</div></figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-cpt__band wx-cpt__life--16x9"><div class="wx-cpt__wrap"><div class="wx-cpt__ph">Editor only · Evidence image (16:9)<br>Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass bef</div></div></figure>
+{%- endif -%}
+<div class="wx-cpt__sec-block"><h2>Which setup fits your room</h2><div class="wx-cpt__dec-grid"><div class="wx-cpt__dec"><h3>Under 150 covers a night</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">400-count bucket at the station</p><a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="@CRO@-dec-1" href="https://wipex.co/products/table-bussers-surface-wipes">Shop the 400ct bucket →</a></div><div class="wx-cpt__dec wx-cpt__dec--rec"><h3>Guest-facing rooms in the season</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">Table Bussers® Autumn-Scented</p><a class="wx-cpt__btn wx-cpt__btn--primary wx-cpt__btn--sm" data-cro="@CRO@-dec-2" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Autumn-Scented →</a></div><div class="wx-cpt__dec"><h3>Kitchens, prep areas, quiet rooms</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">Table Bussers® Unscented</p><a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="@CRO@-dec-3" href="https://wipex.co/products/table-bussers-unscented">Shop Unscented →</a></div></div></div>
+</section>
+<section class="wx-cpt__sec" id="your-q4-front-of-house-readiness-checklist-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="your-q4-front-of-house-readiness-checklist-{{ uid }}">Your Q4 front-of-house readiness checklist</h2>
+<p>Print it, then fill it in before the holiday volume lands.</p>
+<div class="wx-cpt__check" data-wpx-checklist><ul class="wx-cpt__check-list"><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck1-{{ uid }}" data-wpx-check><label for="wx-cpt-ck1-{{ uid }}">Reset time measured on three tables and averaged</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck2-{{ uid }}" data-wpx-check><label for="wx-cpt-ck2-{{ uid }}">Cost per wipe recalculated from this quarter's invoice, not last year's</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck3-{{ uid }}" data-wpx-check><label for="wx-cpt-ck3-{{ uid }}">Cost per table and cost per cover written down</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck4-{{ uid }}" data-wpx-check><label for="wx-cpt-ck4-{{ uid }}">Par level set from resets per week, not from a guess</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck5-{{ uid }}" data-wpx-check><label for="wx-cpt-ck5-{{ uid }}">One bucket per station, so the wipe is at the table before the guest stands</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck6-{{ uid }}" data-wpx-check><label for="wx-cpt-ck6-{{ uid }}">Scented and unscented allocated by room, not by preference</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck7-{{ uid }}" data-wpx-check><label for="wx-cpt-ck7-{{ uid }}">Autumn-Scented used wherever the NSF and food-service documentation is needed</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck8-{{ uid }}" data-wpx-check><label for="wx-cpt-ck8-{{ uid }}">Bar, dining room and patio measured separately</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck9-{{ uid }}" data-wpx-check><label for="wx-cpt-ck9-{{ uid }}">Team briefed on the one-pass clean step</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck10-{{ uid }}" data-wpx-check><label for="wx-cpt-ck10-{{ uid }}">December and January order dates in the calendar</label></li><li class="wx-cpt__check-item"><input type="checkbox" id="wx-cpt-ck11-{{ uid }}" data-wpx-check><label for="wx-cpt-ck11-{{ uid }}">A par buffer for the busiest two weeks of the year</label></li></ul><p class="wx-cpt__check-note">Progress saves in this browser.</p></div>
+</div>
+
+</section>
+{%- assign has_video = false -%}
+{%- if section.settings.lifestyle_video != blank -%}{%- assign has_video = true -%}{%- endif -%}
+{%- assign has_fallback = false -%}
+{%- if section.settings.video_fallback_image != blank -%}{%- assign has_fallback = true -%}{%- endif -%}
+{%- if has_video or has_fallback or request.design_mode -%}
+<section class="wx-cpt__sec wx-cpt__videoband" aria-label="Editorial video">
+  <div class="wx-cpt__wrap">
+    <div class="wx-cpt__video">
+      {%- if has_video -%}
+        {{ section.settings.lifestyle_video | video_tag: image_size: '1600x', autoplay: true, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', class: 'wx-cpt__video-media' }}
+      {%- elsif has_fallback -%}
+        <img src="{{ section.settings.video_fallback_image | image_url: width: 1600 }}"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="{{ section.settings.video_fallback_image_alt | default: 'Wipex food service wipes in use' | escape }}">
+      {%- else -%}
+        <div class="wx-cpt__ph">Editor only · editorial video banner (16:9)<br>Upload a Shopify-hosted video, or set a fallback image</div>
+      {%- endif -%}
+      {%- if section.settings.video_banner_heading != blank or section.settings.video_banner_text != blank -%}
+        <div class="wx-cpt__video-content">
+          {%- if section.settings.video_banner_heading != blank -%}<h2 class="wx-cpt__video-h">{{ section.settings.video_banner_heading | escape }}</h2>{%- endif -%}
+          {%- if section.settings.video_banner_text != blank -%}<p class="wx-cpt__video-t">{{ section.settings.video_banner_text | escape }}</p>{%- endif -%}
+          {%- if section.settings.video_banner_cta_label != blank and section.settings.video_banner_cta_url != blank -%}
+            <a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="cost-per-table-restaurant-video" href="{{ section.settings.video_banner_cta_url }}">{{ section.settings.video_banner_cta_label | escape }} →</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+<section class="wx-cpt__sec" id="frequently-asked-questions-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="frequently-asked-questions-{{ uid }}">Frequently asked questions</h2>
+<h3 class="wx-cpt__faqq">What is cost per table, and how is it different from cost per wipe?</h3>
+<p>Cost per wipe is what you paid for a wipe. Cost per table is what it costs to return one table to service — the wipe, plus the labour minute, plus the supplies a single reset consumes. The first is a purchasing number; the second is the operating number your seat revenue is measured against. When the two disagree, the operating number is the one that shows up in your margin.</p>
+<h3 class="wx-cpt__faqq">How do I calculate my own cost per table?</h3>
+<p>Divide your case price by the wipe count to get your cost per wipe. Multiply by the wipes one reset takes. Then add the labour: minutes per reset, divided by 60, multiplied by your loaded hourly rate. Add the two figures. With a 400-count bucket at $36.99 and a 45-second reset at a $16 loaded rate, that is roughly nine cents of consumable plus about twelve cents of labour — twenty-one cents per table, before any second trip is counted.</p>
+<h3 class="wx-cpt__faqq">What is a good table reset time?</h3>
+<p>The target most operators work to is under 90 seconds, and a full reset in three to five minutes is typical for casual dining (Lavu, checked 23 Sep 2026; FlipMenu, same date). The most useful thing you can do is measure your own three resets and compare them with the trip count, because extra trips are usually the delay rather than slow hands.</p>
+<h3 class="wx-cpt__faqq">How many wipes does one reset take?</h3>
+<p>One wipe per table in a single pass is the target, which is why a bucket at the station matters more than a larger count in a storeroom. If your team routinely takes two, budget two — and count the extra trip in the labour line as well, because that second walk is where the cost actually sits.</p>
+<h3 class="wx-cpt__faqq">How does cost per cover relate to cost per table?</h3>
+<p>Cost per table is what a reset costs. Cost per cover is that cost spread across the guests a table serves. Casual dining averages around 1.5 turns per hour (Worldmetrics, 2026), so a table serving two covers per turn carries half the cleaning cost per cover that a single-cover table does. It is the number that connects cleaning spend to revenue per seat — and the one an owner or a bank will ask for.</p>
+<h3 class="wx-cpt__faqq">Should I use scented or unscented across the dining room and the bar?</h3>
+<p>Use them by room rather than by preference. Autumn-Scented carries cinnamon and clove oils and is the SKU that is NSF-certified and suitable for food service environments; Unscented is fragrance-free for kitchens, prep areas and rooms where guests should not notice anything at all. The documentation belongs to Autumn only — it does not follow the product family.</p>
+<h3 class="wx-cpt__faqq">What should I check before switching table-cleaning supplies?</h3>
+<p>Check four things. Does the product carry the certification your inspections ask for? Is the formulation described for the surfaces you actually have? Does the format put the wipe at the station rather than in a storeroom? And does the case rate improve your cost per table, not just your cost per wipe? Then measure one section for a week before you change the whole floor.</p>
+<h3 class="wx-cpt__faqq">Should labour minutes count in my cleaning cost?</h3>
+<p>Yes — it is usually the larger half. Labour is 30–35% of expenses in casual dining (Worldmetrics, 2026), and reset labour is the share of it that is easiest to reduce without touching service. A one-pass clean step removes a trip; a trip is seconds; seconds are money at three turns per hour.</p>
+</div>
+
+</section>
+<section class="wx-cpt__sec" id="keep-reading-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="keep-reading-{{ uid }}">Keep reading</h2>
+<ul><li><a href="https://wipex.co/blogs/library/table-busser-restaurant-efficiency">How table bussers improve restaurant efficiency and table turnover</a> — the staffing and workflow side of the same problem</li><li><a href="https://wipex.co/blogs/library/gym-wipe-dispenser-vs-bucket">Gym wipe dispensers vs buckets</a> — the same arithmetic applied to a different room</li><li><a href="https://wipex.co/blogs/library/buy-cleaning-wipes-in-bulk">Buying wipes in bulk</a> — wholesale pricing, MOQs and how to set up a facility account</li><li><a href="https://wipex.co/blogs/library/bulk-gym-cleaning-wipes-supplies">Commercial gym cleaning supplies</a> — how to build a repeatable supply system</li></ul>
+</div>
+
+</section>
+<section class="wx-cpt__sec wx-cpt__sec--final" id="reduce-table-turnover-time-{{ uid }}">
+<div class="wx-cpt__read">
+<h2 id="reduce-table-turnover-time-{{ uid }}">Reduce Table Turnover Time</h2>
+<p>Set your cost per table first, then decide what to change. Most operators find the consumable is the smaller half and the extra trip is the larger one.</p>
+<p><a href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® Autumn-Scented →</a> · <a href="https://wipex.co/products/table-bussers-unscented">Shop Table Bussers® Unscented →</a> · <a href="https://wipex.co/collections/food-service-commercial">Browse the food service collection →</a></p>
+<hr class="wx-cpt__hr">
+<p><em>Wipex — Facility Supply Team · Industrial &amp; commercial cleaning specialists · Reviewed 22 September 2026</em></p>
+</div>
+
+</section>
+</article>
+<div class="wx-cpt__sticky" data-wpx-sticky aria-hidden="true"><a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="cost-per-table-restaurant-sticky" href="{{ section.settings.sticky_url | default: 'https://wipex.co/products/table-bussers-surface-wipes' }}">{{ section.settings.sticky_label | default: 'Shop Table Bussers®' | escape }} →</a><button type="button" class="wx-cpt__sticky-close" data-wpx-sticky-close aria-label="Dismiss">×</button></div>
+</div>
+
+{% raw %}
+<script>
+(function () {
+  "use strict";
+  var P = "wx-cpt";
+  function init(id) {
+    var root = document.getElementById(P + "-" + id);
+    if (!root || root.getAttribute("data-wpx-ready") === "1") return;
+    root.setAttribute("data-wpx-ready", "1");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var bar = root.querySelector("[data-wpx-progress]");
+    var article = root.querySelector("article");
+    var sticky = root.querySelector("[data-wpx-sticky]");
+    var finalSec = root.querySelector(".wx-cpt__sec-block--final, .wx-cpt__sec--final");
+    var ticking = false;
+    function update() {
+      ticking = false;
+      if (!article) return;
+      var rect = article.getBoundingClientRect();
+      var total = article.offsetHeight - window.innerHeight;
+      if (bar) {
+        var scrolled = Math.min(Math.max(-rect.top, 0), total > 0 ? total : 1);
+        bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + "%";
+      }
+      if (sticky && sticky.getAttribute("data-dismissed") !== "1") {
+        var nearEnd = finalSec ? finalSec.getBoundingClientRect().top < window.innerHeight : false;
+        var show = rect.top < -320 && !nearEnd;
+        sticky.classList.toggle("is-visible", show);
+        sticky.setAttribute("aria-hidden", show ? "false" : "true");
+      }
+    }
+    function onScroll() { if (ticking) return; ticking = true; window.requestAnimationFrame(update); }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+
+    if (sticky) {
+      var close = sticky.querySelector("[data-wpx-sticky-close]");
+      if (close) close.addEventListener("click", function () {
+        sticky.setAttribute("data-dismissed", "1");
+        sticky.classList.remove("is-visible");
+        sticky.setAttribute("aria-hidden", "true");
+      });
+    }
+
+    var toc = root.querySelector("[data-wpx-toc]");
+    if (toc) {
+      var tbtn = toc.querySelector("[data-wpx-toc-toggle]");
+      if (tbtn) tbtn.addEventListener("click", function () {
+        var open = toc.getAttribute("data-open") !== "false";
+        toc.setAttribute("data-open", open ? "false" : "true");
+        tbtn.setAttribute("aria-expanded", open ? "false" : "true");
+      });
+    }
+
+    var list = root.querySelector("[data-wpx-checklist]");
+    if (list) {
+      var boxes = list.querySelectorAll("input[data-wpx-check]");
+      var key = "wpxcheck:" + id;
+      var saved = null;
+      try { saved = JSON.parse(window.localStorage.getItem(key) || "null"); } catch (e) { saved = null; }
+      for (var i = 0; i < boxes.length; i++) {
+        if (saved && saved[i]) boxes[i].checked = true;
+        boxes[i].addEventListener("change", function () {
+          var state = [];
+          for (var k = 0; k < boxes.length; k++) state.push(boxes[k].checked);
+          try { window.localStorage.setItem(key, JSON.stringify(state)); } catch (e) {}
+        });
+      }
+    }
+
+    var vids = root.querySelectorAll(".wx-cpt__video video");
+    for (var v = 0; v < vids.length; v++) {
+      vids[v].muted = true;
+      vids[v].defaultMuted = true;
+      vids[v].setAttribute("muted", "");
+      vids[v].setAttribute("playsinline", "");
+      if (reduce) { try { vids[v].pause(); vids[v].removeAttribute("autoplay"); } catch (e) {} }
+      else { var pr = vids[v].play && vids[v].play(); if (pr && pr.catch) pr.catch(function () {}); }
+    }
+
+    var calc = root.querySelector("[data-wpx-calc]");
+    if (!calc) { update(); return; }
+    var fields = calc.querySelectorAll("input[data-k]");
+    var outs = { table: calc.querySelector('[data-out="table"]'),
+                 week: calc.querySelector('[data-out="week"]'),
+                 cover: calc.querySelector('[data-out="cover"]') };
+    function val(k) {
+      for (var f = 0; f < fields.length; f++) {
+        if (fields[f].getAttribute("data-k") === k) {
+          var n = parseFloat(fields[f].value);
+          return isNaN(n) || n < 0 ? 0 : n;
+        }
+      }
+      return 0;
+    }
+    function money(x) { return "$" + (x < 1 ? x.toFixed(4) : x.toFixed(2)); }
+    var queued = false;
+    function run() {
+      queued = false;
+      var resets = val("tables") * val("turns") * val("services");
+      var perWipe = val("count") ? val("price") / val("count") : 0;
+      var perTable = perWipe * val("wipes") + val("seconds") / 3600 * val("rate");
+      var week = perTable * resets;
+      if (outs.table) outs.table.textContent = money(perTable);
+      if (outs.week) outs.week.textContent = "$" + week.toFixed(2);
+      if (outs.cover) outs.cover.textContent = resets ? money(week / (resets * 2)) : money(0);
+    }
+    function schedule() { if (!queued) { queued = true; window.requestAnimationFrame(run); } }
+    for (var f2 = 0; f2 < fields.length; f2++) fields[f2].addEventListener("input", schedule, { passive: true });
+    run();
+    update();
+  }
+  function boot() {
+    var nodes = document.querySelectorAll("[data-wpx-section]");
+    for (var i = 0; i < nodes.length; i++) init(nodes[i].getAttribute("data-wpx-section"));
+  }
+  if (document.readyState !== "loading") boot();
+  else document.addEventListener("DOMContentLoaded", boot);
+  document.addEventListener("shopify:section:load", function (ev) {
+    var s = ev.target.querySelector ? ev.target.querySelector("[data-wpx-section]") : null;
+    if (s) init(s.getAttribute("data-wpx-section"));
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Wipex Cost Per Table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Hero eyebrow",
+      "default": "Q4 Front-of-House"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero H1 (defaults to the post title)",
+      "default": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_lede",
+      "label": "Hero intro (leave empty to use the article opening)"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_label",
+      "label": "Primary CTA label",
+      "default": "Shop Table Bussers® Autumn-Scented"
+    },
+    {
+      "type": "url",
+      "id": "hero_cta_url",
+      "label": "Primary CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta2_label",
+      "label": "Secondary CTA label",
+      "default": "Browse the food service collection"
+    },
+    {
+      "type": "url",
+      "id": "hero_cta2_url",
+      "label": "Secondary CTA URL"
+    },
+    {
+      "type": "header",
+      "content": "Editorial photography",
+      "info": "People, places and process. NOT product packshots. Each block hides itself when empty."
+    },
+    {
+      "type": "paragraph",
+      "content": "Hero image (16:9) — hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "hero_image_alt",
+      "label": "hero image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "hero_image_caption",
+      "label": "hero image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "hero_image_focal",
+      "label": "hero image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Process image (16:9) — after:The four-step reset"
+    },
+    {
+      "type": "image_picker",
+      "id": "process_image",
+      "label": "Process image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "process_image_alt",
+      "label": "process image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "process_image_caption",
+      "label": "process image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "process_image_focal",
+      "label": "process image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Evidence image (16:9) — after:Self-assessment"
+    },
+    {
+      "type": "image_picker",
+      "id": "evidence_image",
+      "label": "Evidence image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "evidence_image_alt",
+      "label": "evidence image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "evidence_image_caption",
+      "label": "evidence image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "evidence_image_focal",
+      "label": "evidence image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Editorial video band",
+      "info": "Native Shopify video, muted and looping, with an optional overlay. Renders nothing if no video and no fallback are set."
+    },
+    {
+      "type": "video",
+      "id": "lifestyle_video",
+      "label": "Lifestyle video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_fallback_image",
+      "label": "Video fallback image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "video_fallback_image_alt",
+      "label": "Fallback image alt text"
+    },
+    {
+      "type": "text",
+      "id": "video_banner_heading",
+      "label": "Overlay heading (optional)"
+    },
+    {
+      "type": "textarea",
+      "id": "video_banner_text",
+      "label": "Overlay text (optional)"
+    },
+    {
+      "type": "text",
+      "id": "video_banner_cta_label",
+      "label": "Overlay CTA label (optional)"
+    },
+    {
+      "type": "url",
+      "id": "video_banner_cta_url",
+      "label": "Overlay CTA URL"
+    },
+    {
+      "type": "header",
+      "content": "Sticky mobile CTA"
+    },
+    {
+      "type": "text",
+      "id": "sticky_label",
+      "label": "Sticky CTA label",
+      "default": "Shop Table Bussers®"
+    },
+    {
+      "type": "url",
+      "id": "sticky_url",
+      "label": "Sticky CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wipex Cost Per Table"
+    }
+  ]
+}
+{% endschema %}

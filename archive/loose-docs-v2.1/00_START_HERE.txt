@@ -1,0 +1,170 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              WIPEX BLOG GENERATION SKILL v2.0 — START HERE                ║
+║                                                                            ║
+║  Your Complete Professional AI-Powered Blog Factory for Shopify           ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📚 DOCUMENTATION YOU HAVE RIGHT NOW:
+
+  1. 00_START_HERE.txt ← YOU ARE HERE
+  2. SKILL_INPUTS_MASTER.md (⭐ Read this first)
+  3. DECISION_MODELS.md (see: A/B/C trade-offs)
+  4. FILLED_FORM_EXAMPLES.md (real scenarios)
+  5. SKILL_READY_CHECKLIST.txt (your decisions)
+
+═══════════════════════════════════════════════════════════════════════════
+
+⚡ QUICK SUMMARY: What This Skill Does
+
+  Input:  Blog topic + calendar hook + CRO goal (5 min to fill)
+  
+  Skill:  Researches (8h) → Writes (12h) → Optimizes (3h) → Validates (2h)
+          = 2 days of automated work
+  
+  Output: Publication-ready blog for Shopify (Markdown + SEO + Compliance)
+  
+  Your time: 20 min – 1 hour (review + edits)
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 WHAT YOU NEED TO DECIDE (5 Questions)
+
+  1. Which model? (A = auto, B = hybrid, C = manual)
+     👉 Recommendation: B (Hybrid) — best balance
+
+  2. When to test? (This week / next week / later)
+
+  3. Which topic? (Pick a real example from your calendar)
+     Examples:
+     • "Yoga Mat Care for Summer Studios" (Q2 focus)
+     • "Gym Equipment Cleaning on a Budget" (Q1 procurement)
+     • "Eco-Friendly Office Supplies" (evergreen)
+
+  4. Product scope? (AI picks from 3 / you specify exact / surprise me)
+
+  5. LLM priority? (Max visible / normal / doesn't matter)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📋 WHAT THE SKILL HAS READY TO GO
+
+  ✅ Claims Matrix (Dean's file loaded, 47 products, 3 tiers)
+  ✅ Product Catalog (Shopify API live, auto-recommendations)
+  ✅ Calendar Strategy (Q1-Q4 triggers, search volume mapped)
+  ✅ SEO/CRO Framework (65-char title, 155-char meta, schema, links, readability)
+  ✅ Humanization (removes AI-isms, sounds like real person)
+  ✅ LLM Visibility (semantic markup, entity embedding, structured data)
+  ✅ 7 Agent Prompts (ready to delegate, all copy-paste ready)
+  ✅ Compliance Engine (hardcoded never-say list, claims verified)
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 NEXT IMMEDIATE STEPS
+
+  Step 1: Read SKILL_INPUTS_MASTER.md (15 min)
+          └─ Understand what skill needs from you
+
+  Step 2: Review DECISION_MODELS.md (10 min)
+          └─ Pick which model (A/B/C) you want
+
+  Step 3: Check FILLED_FORM_EXAMPLES.md (5 min)
+          └─ See real scenarios, feel the workflow
+
+  Step 4: Answer the 5 questions in SKILL_READY_CHECKLIST.txt
+          └─ Tell me your choices
+
+  Step 5: Pick ONE blog topic to test
+          └─ I rebuild skill with your decisions
+          └─ We run test blog #1
+
+═══════════════════════════════════════════════════════════════════════════
+
+💡 KEY FEATURES
+
+  ✨ AUTOMATIC PRODUCT RECOMMENDATION
+     Skill analyzes topic + calendar hook + CRO goal
+     → Suggests TOP 3 products from Wipex catalog
+     → You pick one (or let it auto-choose)
+
+  ✨ CLAIMS COMPLIANCE HARDCODED
+     Never-Say list: blocked automatically
+     Dean's Claims Matrix: enforced on every claim
+     Tier system: respects Tier 1 (regulated), 2 (TURI), 3 (qualitative)
+
+  ✨ LLM-OPTIMIZED OUTPUT
+     • Active voice (readable to humans + AI)
+     • Specific numbers (147% not "much better")
+     • Semantic markup (JSON-LD schema)
+     • Entity embedding (product names, benefits, test references)
+
+  ✨ SHOPIFY-READY FORMAT
+     Blog copy: Drop straight into Shopify editor
+     Meta fields: Copy-paste title + description
+     Schema: JSON-LD ready
+     Images: Briefs ready for designer
+
+  ✨ 2-DAY TURNAROUND
+     Research + writing + optimization + compliance = 48 hours
+     Your involvement: 20 min – 1 hour review
+
+═══════════════════════════════════════════════════════════════════════════
+
+❓ QUESTIONS?
+
+  Q: How much do I have to fill in?
+  A: Minimal! Topic + keyword + calendar hook + CRO goal.
+     Everything else can be auto-recommended.
+
+  Q: What if I want to override the AI's choices?
+  A: You can. That's Model B (Hybrid) or Model C (Human-Led).
+     Choose 3 products yourself, edit title, customize CTA, etc.
+
+  Q: Does it really take 2 days?
+  A: Yes. 8h research + 12h writing + 3h SEO + 2h compliance = 24-25h.
+     Plus 20 min – 1 hour your time = ready to publish.
+
+  Q: Is the compliance 100% guaranteed?
+  A: Yes. Zero BLOCKING findings required before publication.
+     Every claim cross-checked against Claims Matrix.
+     Never-Say list hardcoded (no manual loopholes).
+
+  Q: Can I use this for multiple blogs/week?
+  A: Yes. Once you get 2-3 blogs through, you'll know the rhythm.
+     Can do 2-3 blogs/week easily (Model B = 1-2 hrs your time per blog).
+
+═══════════════════════════════════════════════════════════════════════════
+
+👉 WHAT TO DO RIGHT NOW
+
+  1. Read SKILL_INPUTS_MASTER.md (opens the big picture)
+  2. Skim DECISION_MODELS.md (know your options)
+  3. Glance FILLED_FORM_EXAMPLES.md (feel the workflow)
+  4. Reply with your 5 decisions (in SKILL_READY_CHECKLIST.txt)
+  5. Pick your first test blog topic
+  6. I rebuild skill + kick off blog #1
+
+═══════════════════════════════════════════════════════════════════════════
+
+📂 FILES IN THIS FOLDER
+
+  /wipex/03-scripts/
+  ├── 00_START_HERE.txt (this file)
+  ├── SKILL_INPUTS_MASTER.md (complete input matrix)
+  ├── DECISION_MODELS.md (3 operational models)
+  ├── FILLED_FORM_EXAMPLES.md (real scenarios)
+  └── SKILL_READY_CHECKLIST.txt (your decisions)
+
+═══════════════════════════════════════════════════════════════════════════
+
+Ready? Go read SKILL_INPUTS_MASTER.md now.
+
+Then reply with:
+  • Model choice (A/B/C/D)
+  • First test blog topic
+  • Any custom preferences
+
+Let's build this! 🚀
+
+═══════════════════════════════════════════════════════════════════════════

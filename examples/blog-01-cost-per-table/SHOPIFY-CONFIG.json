@@ -1,0 +1,204 @@
+{
+  "title": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)",
+  "slug": "cost-per-table-restaurant",
+  "meta_title": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4",
+  "meta_desc": "Cost per table, not per wipe. Calculate your restaurant reset cost, add the labour minute, and cut Q4 spend without lowering standards. Read the guide now.",
+  "meta_tags": "food service, restaurant cleaning, cost per table, cost per cover, table turnover, Table Bussers, Q4, budget planning",
+  "author": "Livia Schlemmer",
+  "published": "2026-11-08",
+  "publish_note": "window Nov 1-20 — QUEUE, do not publish early",
+  "keywords": "cost per table, cost per cover, restaurant cost per table, restaurant cleaning cost, table reset time",
+  "article_section": "Food Service",
+  "domain": "https://wipex.co",
+  "css_prefix": "wx-cpt",
+  "section_id": "wipex-section-cost-per-table-2026",
+  "section_name": "Wipex Cost Per Table",
+  "template_file": "article.cost-per-table.json",
+  "hero_eyebrow": "Q4 Front-of-House",
+  "hero_cta": {
+    "label": "Shop Table Bussers® Autumn-Scented",
+    "url": "https://wipex.co/products/table-bussers-surface-wipes"
+  },
+  "hero_cta2": {
+    "label": "Browse the food service collection",
+    "url": "https://wipex.co/collections/food-service-commercial"
+  },
+  "sticky_cta": {
+    "label": "Shop Table Bussers®",
+    "url": "https://wipex.co/products/table-bussers-surface-wipes"
+  },
+  "video_anchor": "before_faq",
+  "video_heading": "",
+  "video_text": "",
+  "video_cta": {
+    "label": "",
+    "url": ""
+  },
+  "image_slots": [
+    {
+      "setting": "hero_image",
+      "anchor": "hero",
+      "ratio": "16x9",
+      "label": "Hero image (16:9)",
+      "alt": "Busser wiping a four-top table in a busy dining room between covers, pre-mixed wipe bucket at the service station",
+      "caption": ""
+    },
+    {
+      "setting": "process_image",
+      "anchor": "after:The four-step reset",
+      "ratio": "16x9",
+      "label": "Process image (16:9)",
+      "alt": "Four-panel sequence of a table reset: clearing plates, wiping the top, setting the table, seating guests",
+      "caption": "Clear · Clean · Reset · Seat"
+    },
+    {
+      "setting": "evidence_image",
+      "anchor": "after:Self-assessment",
+      "ratio": "16x9",
+      "label": "Evidence image (16:9)",
+      "alt": "Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service",
+      "caption": ""
+    }
+  ],
+  "products_anchor": "after:Which Table Bussers fits your room",
+  "products_heading": "Which format fits the room",
+  "products": [
+    {
+      "name": "Table Bussers® Autumn-Scented Surface Wipes",
+      "url": "https://wipex.co/products/table-bussers-surface-wipes",
+      "badge": "Certified for food service",
+      "best_for": "Guest-facing dining rooms and bar tops",
+      "image": "",
+      "bullets": [
+        "Pre-mixed — no spray bottle to fetch",
+        "One wipe per table in a single pass",
+        "NSF-certified formulation, suitable for food service environments"
+      ]
+    },
+    {
+      "name": "Table Bussers® Unscented Surface Wipes",
+      "url": "https://wipex.co/products/table-bussers-unscented",
+      "badge": "Fragrance-free",
+      "best_for": "Kitchens, prep areas and quiet rooms",
+      "image": "",
+      "bullets": [
+        "The same pre-mixed format",
+        "Nothing for a guest to notice",
+        "Keeps the cleaning step at the station"
+      ]
+    }
+  ],
+  "problem_strip": {
+    "anchor": "after_hero",
+    "label": "What drives front-of-house cleaning cost",
+    "cells": [
+      {
+        "strong": "Q4 volume",
+        "span": "Parties, holiday bookings and private events multiply every reset"
+      },
+      {
+        "strong": "Three turns an hour",
+        "span": "Every extra trip costs seat time at your busiest"
+      },
+      {
+        "strong": "Labour 30-35% of expenses",
+        "span": "The loaded rate is what makes the minute expensive"
+      },
+      {
+        "strong": "Par levels set now",
+        "span": "Year-end is when supply spend gets reviewed"
+      }
+    ]
+  },
+  "stat_cards": {
+    "anchor": "after:Quick answer",
+    "cards": [
+      {
+        "value": "$0.09",
+        "label": "consumable per table, one wipe per reset"
+      },
+      {
+        "value": "$0.29",
+        "label": "cost per table in a 20-table room"
+      },
+      {
+        "value": "90 seconds",
+        "label": "target reset time most operators work to"
+      },
+      {
+        "value": "1.5 turns/hour",
+        "label": "casual-dining average (Worldmetrics, 2026)"
+      }
+    ]
+  },
+  "decision_tool": {
+    "anchor": "after:Self-assessment",
+    "heading": "Which setup fits your room",
+    "options": [
+      {
+        "title": "Under 150 covers a night",
+        "answer": "400-count bucket at the station",
+        "cta": "Shop the 400ct bucket",
+        "url": "https://wipex.co/products/table-bussers-surface-wipes"
+      },
+      {
+        "title": "Guest-facing rooms in the season",
+        "answer": "Table Bussers® Autumn-Scented",
+        "cta": "Shop Autumn-Scented",
+        "url": "https://wipex.co/products/table-bussers-surface-wipes",
+        "recommended": true
+      },
+      {
+        "title": "Kitchens, prep areas, quiet rooms",
+        "answer": "Table Bussers® Unscented",
+        "cta": "Shop Unscented",
+        "url": "https://wipex.co/products/table-bussers-unscented"
+      }
+    ]
+  },
+  "system_block": {
+    "anchor": "after:How to calculate your own cost per table",
+    "eyebrow": "The system",
+    "heading": "What a pre-mixed wipe actually changes",
+    "pills": [
+      "400-count bucket at the station",
+      "one wipe, one pass"
+    ],
+    "result": "a reset that never needs a second trip",
+    "text": "It removes the fetch, not the standard: the wipe is already where the cleaning happens, so the cleaning step starts at the table.",
+    "cta": {
+      "label": "Shop Table Bussers®",
+      "url": "https://wipex.co/products/table-bussers-surface-wipes"
+    }
+  },
+  "feature_block": {
+    "anchor": "after:What your current setup actually costs",
+    "eyebrow": "The workhorse",
+    "heading": "One consumable, already at the table",
+    "text": "One bucket is the whole purchase: no spray, no cloth, and no walk to the station during a reset.",
+    "bullets": [
+      "Removes the fetch from the cleaning step",
+      "One wipe per table in a single pass",
+      "Keeps the standard a guest notices"
+    ],
+    "image": "",
+    "cta": {
+      "label": "Shop Table Bussers®",
+      "url": "https://wipex.co/products/table-bussers-surface-wipes"
+    }
+  },
+  "final_cta_heading": "Reduce Table Turnover Time",
+  "schema_products": [
+    {
+      "name": "Table Bussers Surface Wipes (scented, cinnamon-clove; autumn variant)",
+      "sku": "WX01126TN",
+      "url": "https://wipex.co/products/table-bussers-surface-wipes",
+      "price": "36.99"
+    }
+  ],
+  "schema_mentions": [
+    "Table Bussers Autumn-Scented",
+    "Table Bussers Unscented"
+  ],
+  "hero_fallback_image": ""
+}

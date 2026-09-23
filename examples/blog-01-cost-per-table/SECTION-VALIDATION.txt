@@ -1,0 +1,39 @@
+SECTION VALIDATION — wipex-section-cost-per-table-2026
+generated: sections/wipex-section-cost-per-table-2026.liquid (1015 lines, 69331 chars)
+
+PRE-SAVE (Shopify hard limits)
+  section name      : 'Wipex Cost Per Table' (20 chars, limit 25)  OK
+  settings declared : 35 (limit 40)            OK
+  @type in section  : 0                        OK
+  JSON-LD location  : snippets/wipex-blog-schema.liquid  OK
+  setting ids unique: OK
+
+DELIVERABLE CHECKS
+  theme-editor settings : 35 (4 image_picker, 4 url, 3 select, 1 video, 7 group blocks)
+  instance safety       : section.id + registry OK
+  data-cro annotations  : 11
+  a11y landmarks        : aria-label 8, aria-expanded 1, role=region 4, sr-only 2
+  interactive modules   : toc yes, checklist yes, calculator yes, sticky yes, progress yes, video yes
+  media slots           : 3 editorial stills + video band
+  module library        : problem_strip, stat_cards, decision_tool, system_block, feature_block, products, faq, checklist, calculator, toc, sticky
+  editorial media only  : yes (product imagery stays out of the section)
+
+CONTENT INTEGRITY
+  prose generated from  : 2D-body-clean.md
+  Liquid tag balance    : if 15/15, raw 2/2, schema blocks 1
+  Liquid-safe prose     : OK
+  FAQ questions         : 8 visible == 8 in JSON-LD
+  TOC entries           : 16
+  links                 : 37, all canonical (https://wipex.co)
+
+CLAIMS LINT (Never-Say-Prohibitions.csv)
+  source                : C:\Users\guilh\AppData\Local\hermes\workdir\wipex\01-compliance\Never-Say-Prohibitions.csv
+  BLOCKING findings     : 0
+  REVIEW (context)      : 5
+    "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...cented: for rooms where nothing should smell Table Bussers® Natural Unscented Cleaning Wipes use the same plant-based vi...
+    "natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...and dining rooms where guests notice scent. It is made with natural ingredients, and the cloth is TÜV certified (OK COMP...
+    "plant-based" — fine as substrate wording; never as a "natural" claim | ...amon and clove oils fragrance-free Format 400-count bucket, plant-based viscose cloth 400-count bucket, plant-based visc...
+    "plant-based" — fine as substrate wording; never as a "natural" claim | ...0-count bucket, plant-based viscose cloth 400-count bucket, plant-based viscose cloth NSF NSF-certified , as the certifi...
+    "plant-based" — fine as substrate wording; never as a "natural" claim | ...able Bussers® Natural Unscented Cleaning Wipes use the same plant-based viscose cloth with no fragrance at all — for kit...
+
+RESULT: NONE — safe to paste

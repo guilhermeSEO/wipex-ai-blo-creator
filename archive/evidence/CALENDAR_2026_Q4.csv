@@ -1,0 +1,45 @@
+week,publish_date,track,title,keyword_cluster,product_family,hook,rationale,occasion_date,lead_days
+W01,2026-09-22,E,Facility Cleaning Par Levels: How to Stop Running Out Mid-Shift,facility cleaning / par level,Natural Gym Wipes 400ct buckets + 700ct refills,evergreen,"operational, high baseline",,
+W01,2026-09-25,S,The Custodial Team Carries the Building: A Frontline Readiness Guide,custodial staff / cleaning protocol,dispensers + all-purpose wipes,National Custodial Workers Day (2026-10-02),occasion: workforce recognition,2026-10-02,7
+W01,2026-09-27,S,Fire Prevention Week: What Wipes Can and Cannot Do in a Kitchen,kitchen safety / surface cleaning,Table Bussers (NSF-listed SKU),Fire Prevention Week (2026-10-04),"occasion: compliance-safe framing, no germ-kill",2026-10-04,7
+W02,2026-09-28,E,Wipes vs Paper Towels vs Reusable Cloths: The Coverage Math,coverage per wipe / cost per table,Table Bussers + bulk rolls,evergreen,"cost math, no performance claim",,
+W03,2026-10-05,S,"Holiday Roster, Full Standard: Running a Facility With Skeleton Staff",holiday staffing / readiness,refill rolls + dispensers,Indigenous Peoples' Day (2026-10-12),occasion: US federal holiday,2026-10-12,7
+W03,2026-10-06,E,Q4 Facility Reset: The 6-Point Program Review Before Budgets Close,facility cleaning program,fitness + food-service families,evergreen,"operational, Q4 trigger",,
+W03,2026-10-08,S,Global Handwashing Day: Hygiene That Holds Up in Busy Facilities,handwashing / hygiene,EMBODY + skin wipes,Global Handwashing Day (2026-10-15),occasion: skin-compliant wording only,2026-10-15,7
+W03,2026-10-09,S,World Food Day: Front-of-House Cleaning in Food Service Environments,food service surfaces,Table Bussers Autumn + Unscented,World Food Day (2026-10-16),occasion: NSF wording on Autumn only,2026-10-16,7
+W04,2026-10-12,E,One Wipe Per Station: Designing a Floors-and-Surfaces Route,surface cleaning route,all-purpose + floor wipes,evergreen,"operational, evergreen",,
+W04,2026-10-13,S,What to Use on Shared Devices: A Facility Guide to Screens and Keyboards,touchscreen / electronics,touchscreen + 70% IPA wipes,Cybersecurity Awareness Month (2026-10-20),occasion: October is Cybersecurity Awareness Month,2026-10-20,7
+W05,2026-10-19,E,Where Facilities Actually Overspend on Cleaning Supplies (and the Fix),overspend / procurement,buckets vs rolls vs refills,evergreen,"commercial, evergreen",,
+W05,2026-10-24,S,"Halloween Recovery: Sticky Surfaces, Spills and the Morning After",event cleanup,all-purpose + floor wipes,Halloween (2026-10-31),occasion: high-traffic event,2026-10-31,7
+W05,2026-10-25,S,Falling Back: The Weekend the Clocks Change and Facilities Reset,DST / seasonal reset,floor + surface wipes,Daylight Saving ends (2026-11-01),occasion: operational reset,2026-11-01,7
+W06,2026-10-26,P,Office Cleaning Reset: High-Touch Surfaces in Shared Workspaces,office cleaning / high-touch,IPA + touchscreen wipes,office cleaning 2nd peak,"peak 2026-11-16, published 21d ahead",,
+W06,2026-10-27,S,"Election Day Facility Plan: Traffic, Staffing and Reset",event traffic / staffing,all-purpose + dispensers,US Election Day (2026-11-03),occasion: midterms,2026-11-03,7
+W06,2026-10-28,S,Dia de los Muertos Hospitality: Preparing Guest-Facing Spaces,hospitality surfaces,Table Bussers Autumn,Dia de los Muertos (2026-11-02),"occasion: LatAm tradition, CA/TX/FL",2026-11-02,5
+W06,2026-11-01,S,Diwali Hospitality: Preparing Guest Spaces for the Festival of Lights,hospitality surfaces,Table Bussers Autumn,Diwali (2026-11-08),"occasion: religious, seasonal scent fit",2026-11-08,7
+W07,2026-11-02,E,"Choosing Between Buckets, Refills and Dispensers: A Format Decision Matrix",format choice,bucket / 700ct roll / dispenser,evergreen,"commercial, evergreen",,
+W07,2026-11-04,S,Veterans Day Roster: Standards That Hold With a Short Crew,holiday staffing,refill rolls + dispensers,Veterans Day (2026-11-11),occasion: US federal holiday,2026-11-11,7
+W07,2026-11-06,P,"Cost Per Use, Recomputed for 2027: The Number Your Budget Needs",cost per use,buckets / rolls / cases,cost per use peak,"peak 2026-11-30, published 24d ahead",,
+W07,2026-11-08,S,America Recycles Day: Cutting Wipe Waste Without Cutting Coverage,waste reduction / refills,refill + dispenser system,America Recycles Day (2026-11-15),"occasion: environmental, Eco wording",2026-11-15,7
+W08,2026-11-09,P,Holiday Cleaning Program: A 6-Week Front-of-House Plan,holiday cleaning,Table Bussers + floor wipes,holiday cleaning peak,"peak 2026-11-30, published 21d ahead",,
+W08,2026-11-10,E,Q4 Procurement Calendar: Order Dates That Beat the Holiday Crunch,procurement timing,all families,evergreen,"commercial, seasonal",,
+W08,2026-11-12,S,World Toilet Day: Washroom Standards in Commercial Facilities,washroom / sanitation,floor wipes + EPA disinfecting,World Toilet Day (2026-11-19),occasion: EPA label wording only,2026-11-19,7
+W09,2026-11-16,E,Restaurant Supplies in Volume: What Front-of-House Really Consumes,restaurant supplies,Table Bussers + bulk,evergreen,"commercial, highest baseline (60.3)",,
+W09,2026-11-19,S,Thanksgiving Week: What Hospitality Actually Burns Through,food service demand,Table Bussers + bulk,Thanksgiving (2026-11-26),occasion: peak hospitality volume,2026-11-26,7
+W09,2026-11-20,S,"Buy Nothing Day: Buying Less, Using Better (a Refill Case Study)",consumption / refills,refill rolls + dispensers,Buy Nothing Day (2026-11-27),occasion: environmental counter-position,2026-11-27,7
+W09,2026-11-21,S,Small Business Saturday: A Cleaning Plan That Fits One Store,SMB buying,buckets + bundles,Small Business Saturday (2026-11-28),occasion: SMB buyer,2026-11-28,7
+W10,2026-11-23,S,Cyber Monday Logistics: Getting Supplies Delivered Before the Holidays,delivery / lead times,bulk cases,Cyber Monday (2026-11-30),occasion: e-commerce,2026-11-30,7
+W10,2026-11-24,S,Handwashing Awareness Week: Hygiene Stations That Actually Get Used,hygiene stations,EMBODY + skin wipes + dispensers,Handwashing Awareness Week (2026-12-01),occasion: health-compliant,2026-12-01,7
+W10,2026-11-25,E,Car Care in Detail: Wipes for Interiors Through the Winter,car detailing,AutoWipes,evergreen,"evergreen, highest 1-m avg (80.4)",,
+W10,2026-11-27,S,Hanukkah-Ready Hospitality: Preparing Guest Spaces for Eight Nights,hospitality surfaces,Table Bussers + floor wipes,Hanukkah begins (2026-12-04),occasion: religious,2026-12-04,7
+W11,2026-11-30,E,The October Restock Window: Why Q4 Orders Should Land This Month,bulk ordering / restock,bulk rolls + dispensers,evergreen,"commercial, seasonal",,
+W11,2026-12-01,S,Bodhi Day and the Calmer Space: Studio Hygiene as Practice,studio / wellness,EMPOWER + odor eliminator,Bodhi Day (2026-12-08),"occasion: religious, studio buyer",2026-12-08,7
+W11,2026-12-04,P,January Is Coming: The Facility Reset Nobody Schedules,new year gym / resolution,fitness family + refreshes,new year gym peak,"peak 2026-12-28, published 24d ahead",,
+W12,2026-12-07,P,Flu Season Readiness: A Surface Routine That Survives the Peak,flu season / high-touch,EPA disinfecting + all-purpose,flu season peak (Dec 28 - Jan 10),"peak 2026-12-28, published 21d ahead",,
+W12,2026-12-08,E,Deep Cleaning Without Downtime: Sequencing a Busy Facility,deep cleaning,floor + surface + full range,evergreen,"operational, high baseline (60.6)",,
+W12,2026-12-09,S,"Las Posadas Season: Hospitality Cleaning in CA, TX and FL Venues",hospitality / GEO,Table Bussers + all-purpose,Las Posadas (2026-12-16),"occasion: religious, GEO-native (CA/TX/FL)",2026-12-16,7
+W12,2026-12-10,P,The New-Year Reset: A 30-Day Facility Plan for January Traffic,resolution / january traffic,fitness + floor + surface,new year resolution peak,"peak 2026-12-28, published 18d ahead",,
+W13,2026-12-14,S,Winter Solstice: The Longest Night and the Deepest Clean,year-end deep clean,floor + surface + full range,Winter Solstice (2026-12-21),occasion: seasonal,2026-12-21,7
+W13,2026-12-15,E,Damp Corners and Cold Weather: Preventing Moisture Problems,mold prevention / damp,EPA disinfecting + all-purpose,evergreen,"operational, high baseline (57.6)",,
+W13,2026-12-18,S,"Christmas Week Operations: Skeleton Crews, Full Standards",holiday operations,dispensers + refills,Christmas (2026-12-25),occasion: US federal holiday,2026-12-25,7
+W13,2026-12-19,S,Kwanzaa and Ujamaa: Cooperative Economics for Small Operators,values / SMB,bundles + buckets,Boxing Day / Kwanzaa (2026-12-26),occasion: Kwanzaa Dec 26-Jan 1,2026-12-26,7
+W14,2026-12-24,S,Year-End Close: What to Log So Next Q4 Is Easier,records / planning,all families,New Year's Eve (2026-12-31),occasion: calendar close,2026-12-31,7

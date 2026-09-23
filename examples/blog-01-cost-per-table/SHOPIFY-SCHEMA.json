@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)",
+      "alternativeHeadline": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4",
+      "author": {
+        "@type": "Organization",
+        "name": "Wipex",
+        "url": "https://wipex.co"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wipex",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wipex.co/logo.png"
+        }
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "keywords": "cost per table, cost per cover, restaurant cost per table, restaurant cleaning cost, table reset time",
+      "articleSection": "Food Service",
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "Table Bussers Autumn-Scented"
+        },
+        {
+          "@type": "Thing",
+          "name": "Table Bussers Unscented"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is cost per table, and how is it different from cost per wipe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cost per wipe is what you paid for a wipe. Cost per table is what it costs to return one table to service — the wipe, plus the labour minute, plus the supplies a single reset consumes. The first is a purchasing number; the second is the operating number your seat revenue is measured against. When the two disagree, the operating number is the one that shows up in your margin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my own cost per table?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide your case price by the wipe count to get your cost per wipe. Multiply by the wipes one reset takes. Then add the labour: minutes per reset, divided by 60, multiplied by your loaded hourly rate. Add the two figures. With a 400-count bucket at $36.99 and a 45-second reset at a $16 loaded rate, that is roughly nine cents of consumable plus about twelve cents of labour — twenty-one cents per table, before any second trip is counted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good table reset time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The target most operators work to is under 90 seconds, and a full reset in three to five minutes is typical for casual dining (Lavu, checked 23 Sep 2026; FlipMenu, same date). The most useful thing you can do is measure your own three resets and compare them with the trip count, because extra trips are usually the delay rather than slow hands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many wipes does one reset take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One wipe per table in a single pass is the target, which is why a bucket at the station matters more than a larger count in a storeroom. If your team routinely takes two, budget two — and count the extra trip in the labour line as well, because that second walk is where the cost actually sits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does cost per cover relate to cost per table?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cost per table is what a reset costs. Cost per cover is that cost spread across the guests a table serves. Casual dining averages around 1.5 turns per hour (Worldmetrics, 2026), so a table serving two covers per turn carries half the cleaning cost per cover that a single-cover table does. It is the number that connects cleaning spend to revenue per seat — and the one an owner or a bank will ask for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use scented or unscented across the dining room and the bar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use them by room rather than by preference. Autumn-Scented carries cinnamon and clove oils and is the SKU that is NSF-certified and suitable for food service environments; Unscented is fragrance-free for kitchens, prep areas and rooms where guests should not notice anything at all. The documentation belongs to Autumn only — it does not follow the product family."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I check before switching table-cleaning supplies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check four things. Does the product carry the certification your inspections ask for? Is the formulation described for the surfaces you actually have? Does the format put the wipe at the station rather than in a storeroom? And does the case rate improve your cost per table, not just your cost per wipe? Then measure one section for a week before you change the whole floor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should labour minutes count in my cleaning cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — it is usually the larger half. Labour is 30–35% of expenses in casual dining (Worldmetrics, 2026), and reset labour is the share of it that is easiest to reduce without touching service. A one-pass clean step removes a trip; a trip is seconds; seconds are money at three turns per hour."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Table Bussers Surface Wipes (scented, cinnamon-clove; autumn variant)",
+      "sku": "WX01126TN",
+      "brand": {
+        "@type": "Brand",
+        "name": "Wipex"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "36.99",
+        "availability": "https://schema.org/InStock",
+        "url": "https://wipex.co/products/table-bussers-surface-wipes"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wipex.co"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Library",
+          "item": "https://wipex.co/blogs/library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4"
+        }
+      ]
+    }
+  ]
+}
