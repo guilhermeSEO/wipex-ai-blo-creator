@@ -113,3 +113,47 @@ The house already uses this device in production (a live meta title reads
 ## Recommended structure for THIS post
    <module list from the house pattern, reordered to fit the angle>
 ```
+
+---
+
+## 5. Objections → answers, and where the answer lives
+
+The template gains a column the earlier version did not have: every objection is answered **somewhere
+specific** in the article, because an objection answered nowhere is an objection still standing.
+
+| Objection | The only honest answer | Where it lives |
+|---|---|---|
+| "A pre-mixed wipe costs more per unit than a spray and a cloth" | It moves the cost from the consumable to the minute, and the minute is the larger term | cost block |
+| "We already clean, we just do it cheaply" | The cheaper routine usually takes a second trip per table | cost block + calculator |
+| "Our team will not change how they reset" | The change is one less walk, not one more rule | reset framework |
+| "Do we need the scented one?" | Scent is a room decision: guest-facing vs back of house | differentiation section |
+| "Can we put one bucket in the middle of the floor?" | Placement decides whether the cleaning step starts at the table | FAQ |
+| "How do we know we are buying enough?" | Par level from resets per week, not from a guess | checklist + FAQ |
+
+## 6. The consumption formula the reader keeps
+
+```
+tables × turns per service × wipes per reset × services per week  =  resets per week
+resets per week × $/wipe                                          =  weekly consumable cost
+```
+
+Hand it over with the reader's own numbers in mind, not with our price — the arithmetic is the
+argument, the price is the invoice.
+
+## 7. Worked example: the eight mined FAQs (food service)
+
+1. cost per table vs cost per wipe · 2. how to calculate it · 3. what a good reset time is
+(<90 s target; 3–5 min typical) · 4. how many wipes a reset takes · 5. cost per cover vs cost per
+ table · 6. scented or unscented, by room · 7. what to check before switching supplies ·
+ 8. whether labour minutes belong in the cleaning cost.
+
+That set is the model: each question is a decision the reader is about to make, and each answer can
+be given honestly inside the envelope.
+
+## 8. Three decision paths, not two
+
+Beyond "what should I buy" and "how do I use it", there is a third path: **new location or
+opening**. A buyer fitting out a room has no incumbent routine, so the post's system framing (formats,
+station placement, par level, replenishment) is the whole answer. Do not lose it when the other two
+paths dominate the outline.
+

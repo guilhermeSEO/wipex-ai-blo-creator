@@ -170,3 +170,53 @@ Recording these here so they are not rediscovered:
    cloth-substrate disclaimer.
 
 Until corrected, the blog may link to those URLs but must not echo the phrases.
+
+---
+
+## 7. The per-post envelope (template — fill it, don't gesture at it)
+
+Six blocks, in this order. Blocks 1–3 come from Part 4 of the Filter; blocks 4–6 are our judgement
+and must be dated.
+
+```
+1  Part 4 rows for the SKUs this post may mention   (SKU | codes | source page | date checked)
+2  THE ENVELOPE OF THIS POST — the exclusions that apply, applied to every surface of the
+   article, not just the body: title · meta title · meta description · H1 · H2 · H3 · table
+   headers · bullet labels · image captions · alt text · CTA button text · schema fields
+3  What the copy MAY use: Tier 3 qualitative sentences + certifications, in their exact form
+4  Adjudication of the tensions the brief creates (see §8)
+5  Escalations opened, with the route and the date
+6  Part 9.3 note (YAML): filter_version, page_verified, recompute_before_publish
+```
+
+## 8. Adjudications that are ours, not the Filter's
+
+These are the calls that keep recurring. Each was decided by the owner or by compliance; none of them
+is in the Filter document itself, so they live here with the reason attached.
+
+- **A cost figure is a price unit, not a performance claim.** "Cost per table" may be used even
+  when the SKU has no `P` code, because it prices the consumable; it is not a cleaning claim. Use it
+  as the differentiator precisely because "cost per wipe" is saturated (16 of 21 posts, see
+  `references/08b`).
+- **Adjacency guardrail.** A cost or price number must never sit next to a performance claim, a
+  percentage, or the word "safe". Cost paragraphs stay cost paragraphs.
+- **"suitable for food service environments" is an exact phrase.** Never "perfect for", never
+  "food-safe", never "food-grade". `NSF` attaches to the scented family only — it does not travel to
+  the unscented sibling.
+- **Do not transfer `P` between visually identical SKUs.** Two buckets can look the same and carry
+  different codes; the claim belongs to the SKU row, not the bucket.
+- **Arithmetic is recomputed, never inherited.** Cost per wipe → cost per table, dated, from live
+  prices:
+
+| SKU | Case price | Count | $/wipe | $/table (2 wipes/reset) |
+|---|---|---|---|---|
+| WX01126TN / WX72024TBB | $36.99 | 400 | ≈$0.092 | ≈$0.18 |
+| WX01130TN | $69.99 | 800 | ≈$0.087 | ≈$0.17 |
+| WX01126TN-4 | $119.99 | 1,600 | ≈$0.075 | ≈$0.15 |
+
+- **Tier-3-only envelope (a worked model).** For a product outside TURI and EPA — isopropyl alcohol
+  is the example — the envelope is: `tier: tier_3_only`,
+  `blocked_terms: [disinfecting, sanitizing, germ-kill]`, and an explicit note that the story is the
+  IPA use case, **not** a natural/fitness positioning, with a different audience. When a product has
+  no test data, the envelope is what stops the copy from drifting into a claim.
+

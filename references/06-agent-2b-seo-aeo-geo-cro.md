@@ -144,3 +144,85 @@ honest_limits:    <what is NOT claimed and why>
 
 **Never publish an expectation as a promise.** Anything of the form "8–12% CTR",
 "15–25% conversion" is a projection. Label it as a projection and keep it out of the copy.
+
+---
+
+## 11. E-E-A-T scaffold — four signals, four places, all of them real
+
+Score each signal with a yes/no before delivery. **If the signal is not real, it does not appear** — a
+fabricated trust marker is a compliance finding, not a CRO win.
+
+| Signal | What it looks like | Where it goes |
+|---|---|---|
+| **Experience** | two concrete use cases from the reader's own operation | body, right after the proof/data section |
+| **Expertise** | author byline + the credentials actually held | byline block |
+| **Authoritativeness** | two external references, one of them a study | body, next to the data they support |
+| **Trustworthiness** | price, availability, freight/lead time, and what is *not* claimed | immediately before the first CTA and again at the close |
+
+## 12. Citation triggers — the complete set
+
+Use them **before** the data claim they introduce, not after:
+
+1. `According to [source]…`
+2. `Testing showed that…`
+3. `[N] operators / [N]% of …` — only with a real count, and only if the source is named
+4. `Wipex lab testing methodology: …` — only on a product whose envelope carries the test
+
+Trigger 3 with an invented count is the single most common way a draft breaks the no-invented-facts
+rule. If the count is not in hand, drop the trigger and state the claim qualitatively.
+
+## 13. The snippet and PAA molds
+
+**Featured-snippet answer** — five bullets, each `• <axis>: <micro-proof + source>`, placed early
+(after the intro, before the argument):
+
+```
+• Cost: <the unit this post manages> — <figure and source>
+• Time: <reset/consumption figure> — <source>
+• Labour: <share of expense> — <source>
+• Format: <what changes operationally>
+• Proof: <certification or test, in its exact approved wording>
+```
+
+**People-also-ask questions** — use the question format a searcher types, and answer it inside the
+first 40 words of the FAQ answer (the rest of the answer can develop the point).
+
+**Rich snippets:** Shopping and rating snippets only when the data is real. A product schema without
+data still earns the plain result; an invented `aggregateRating` earns a penalty.
+
+## 14. Choosing the title by the signal you actually have
+
+Auditable decision, not taste:
+
+1. if there is a **real price promotion** → the title carries the saving ("Save X%")
+2. else if there is a **strong measured figure the envelope allows** → the title carries the number
+3. else → the title carries the operational benefit or the audience
+4. never a superlative in place of a signal (see §1)
+
+Record which branch was taken in the spec, so the choice can be reviewed later.
+
+## 15. CTA copy and friction reduction
+
+**CTA copy answers two questions:** what do I get, and why now. "Shop now" and "Learn more" are not
+copy. "Build the par level for your room", "Compare the two formats", "Get the bulk case rate" are.
+
+A CTA that is specific about the next step converts better than a louder one. Friction reducers,
+each only if the offer genuinely exists:
+
+- a one-page business case the buyer can hand to whoever approves spend
+- the format chooser / par-level checklist
+- a starter or sample format for a first order
+- the freight term and the lead time stated next to the price
+- bulk case rate on request
+
+**Do not** promise a consultation, a demo, a trial or a discount that is not live at publish time —
+the pre-peak readiness pass (Phase 3 checklist, `references/09`) verifies every one of them.
+
+## 16. GEO variants and geo schema — considered and rejected
+
+Two tactics from the earlier strategy documents are **not** used, and the reason is recorded in
+`references/14-superseded-rules.md`: publishing the same post as state-by-state variants (duplicate
+content and cannibalisation, on top of the angle-delta rule), and page-level `ServiceArea` /
+`geo_shape` schema (a blog post does not serve a geographic area; the signal belongs in prose drawn
+from measured sub-regions, per §8).
+

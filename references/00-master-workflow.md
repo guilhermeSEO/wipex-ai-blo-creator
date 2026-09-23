@@ -144,6 +144,7 @@ workdir/wipex/
 | visible FAQ == FAQPage entities | generator assertion | build stops |
 | prohibited claim wording | `lint_claims()` vs `Never-Say-Prohibitions.csv` | BLOCKING stops the build; REVIEW is printed with context |
 | house pattern (words, H2s, FAQ, links) | `audit_blog_patterns.py` | rewrite before delivery |
+| a rule that was already superseded coming back | `references/14-superseded-rules.md` | read it before "we already decided…" |
 
 ## 8. Escalation
 
@@ -160,21 +161,26 @@ silently: each one is either folded into a reference below or superseded with th
 
 | Original document | Destination |
 |---|---|
-| `SKILL_INPUTS_MASTER.md`, `FILLED_FORM_EXAMPLES.md` | `references/01` (form + worked variants) |
-| `01_AGENT_1A_TRENDS_KEYWORD.md`, `GOOGLE_TRENDS_INTEGRATION.md`, `LLM_KEYWORD_SCORING.md` | `references/02`, `references/11`, `references/13` |
-| `PRODUCT_RECOMMENDATION_ENGINE.md` | `references/02` §product match, `references/13` §5 |
-| `02_AGENT_1B_CLAIMS_PREFLIGHT.md`, `1B-claims-envelope.md` | `references/03` |
-| `03_AGENT_1C_AUDIENCE_FAQ.md`, `1C-audience-faq.md` | `references/04` |
+| `SKILL_INPUTS_MASTER.md`, `FILLED_FORM_EXAMPLES.md` | `references/01` §5–§9 (segments, product engine, 12-field checklist, red flags, the `your_edit` form format) |
+| `01_AGENT_1A_TRENDS_KEYWORD.md`, `GOOGLE_TRENDS_INTEGRATION.md`, `LLM_KEYWORD_SCORING.md` | `references/02` §2–§15, `references/11`, `references/13` |
+| `PRODUCT_RECOMMENDATION_ENGINE.md` | `references/02` §11–§12, `references/13` §5 |
+| `02_AGENT_1B_CLAIMS_PREFLIGHT.md`, `1B-claims-envelope.md` | `references/03` §7–§8 (envelope template + adjudications) |
+| `03_AGENT_1C_AUDIENCE_FAQ.md`, `1C-audience-faq.md` | `references/04` §5–§8 (objection table with "where it lives", consumption formula, mined FAQ set, third decision path) |
 | `AGENT_2B_MASTER_PROMPT.md`, `2B-seo-spec.md` | `references/06` |
 | `SENIOR_SEO_AEO_STRATEGY.md`, `GEO_CRO_CTR_STRATEGY.md` | `references/06` |
-| `DECISION_MODELS.md` | `references/01` (modes A/B/C) |
-| `WIPEX_BLOG_V2.1_COMPLETE_WORKFLOW.md`, `00_START_HERE.txt` | this document |
-| `SKILL_READY_CHECKLIST.txt`, `FINAL_CHECKLIST_v2.1.txt` | §3 gates + §7 validation matrix |
-| `21_blogs_outline.md`, `blog_patterns_21.csv` | `references/08` (measured house pattern) |
+| `DECISION_MODELS.md` | `references/01` §8 (the red flags that force Model C); the cadence table is superseded |
+| `WIPEX_BLOG_V2.1_COMPLETE_WORKFLOW.md`, `00_START_HERE.txt` | this document + `references/07` (calculator spec) |
+| `SKILL_READY_CHECKLIST.txt`, `FINAL_CHECKLIST_v2.1.txt` | §3 gates + §7 validation matrix; the phase hour budget is in §1 |
+| `21_blogs_outline.md` | `references/08b-house-outline.md` (the H2 registry — the angle-delta instrument) |
+| `blog_patterns_21.csv` | `assets/evidence/` in the repository, so the skill no longer points at a loose workdir file |
 | `CALENDAR_2026_Q4.*` | `references/09` (calendar rules) |
-| `REFERENCE_pilates-fall-2026.liquid` | `assets/reference/` + `references/10` (the module library) |
+| `REFERENCE_pilates-fall-2026.liquid` | `assets/reference/` + `references/10` (the module library now emitted by the generator) |
 | `REFERENCE_SECTION_GAP_ANALYSIS.md` | `references/10` §1, `archive/reference/` |
+| every contradiction between those documents and this skill | `references/14-superseded-rules.md` — the register, so a superseded rule cannot be reintroduced |
 | the 13 documents themselves and the raw evidence | `archive/` in the repository, for provenance |
+
+Rule for the future: a document that stops being a source becomes an archive entry **and** a row in
+`references/14`. Nothing is dropped silently, and nothing superseded is left loose.
 
 ## 10. Changing this skill
 

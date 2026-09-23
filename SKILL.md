@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.0'
+version: '3.1'
 date_created: '2026-09-22'
 date_updated: '2026-09-23'
 owner: Guilherme (Wipex automation lead)
@@ -9,7 +9,7 @@ description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
 ---
 
-# Wipex Blog Generation — v3.0
+# Wipex Blog Generation — v3.1
 
 Research, copy, SEO/AEO/GEO, CRO and claims compliance in one evidence-driven flow.
 Written so the only thing you supply is an input form; everything else is researched,
@@ -47,6 +47,8 @@ Everything is in `references/`. Read in flow order; don't preload all of it.
 | Fetching Trends (the method that works from this host) | `references/11-trends-extraction.md` |
 | Any number you are about to trust | `references/12-measurement-discipline.md` |
 | The de-branded method behind phases 1–2 | `references/13-generic-method.md` |
+| The H2 registry of the 21 recent posts (angle delta) | `references/08b-house-outline.md` |
+| Before reintroducing a rule "we already decided" | `references/14-superseded-rules.md` |
 | Always (the measured house blueprint) | `references/08-house-patterns.md` |
 | Gates, escalation, learning loop | `references/09-gates-escalation-learning.md` |
 | Tools | `scripts/trends_fetch.py`, `scripts/google-trends-probe.js`, `scripts/audit_blog_patterns.py`, `scripts/build_content_calendar.py`, `scripts/build_shopify_paste.py` |
@@ -248,13 +250,38 @@ product/audience override; anything that would change this skill's rules.
   plus `Never-Say-Prohibitions.csv`, `Approved-Surface-Claims-16-Sentences.csv`,
   `TURI-Results-Reference-v1.0.csv`, `Wipex-Surface-Claims-Guide-Annex-A-v1.0.pdf`.
   **That document is not editable by us** — changes go to Dean for Part 11 and a new version.
-- House structure: measured from 21 live posts, 2026-09-23 (raw in
-  `wipex/04-data/blog_patterns_21.csv`, `21_blogs_outline.md`).
+- House structure: measured from 21 live posts, 2026-09-23. The metrics are in
+  `references/08-house-patterns.md`, the measured table in `assets/evidence/blog_patterns_21.csv`,
+  and the H2 registry of every post in `references/08b-house-outline.md`. The skill no longer
+  depends on a loose file in the project workdir for any of it.
 - Trends method: validated 2026-09-23. curl is blocked with HTTP 429 from this host; the
   browser path works. Widget data requires the widget's `token`, and endpoints are named
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.1 (2026-09-23)** — **the consolidation itself: the 13 loose documents were audited against the
+skill, item by item, and everything still true was folded in.** Eight parallel delta analyses
+covered the research, claims, audience, copy, SEO/CRO/GEO/CTR and input layers; the surviving content
+landed as `references/01` §5–§9 (audience segments, the `products: auto` engine, the 12-field
+pre-flight, the red flags that force Model C, the `your_edit` form format), `references/02` §9–§15
+(the specificity spectrum, the calendar×trend×niche matrix, fit calibration anchors, the signal→
+family table, the **semantic-pollution test**, the **corpus-saturation count**, and the measured peak
+rows for cost per table / per cover / cleaning-supplies cost), `references/03` §7–§8 (the six-block
+envelope template, the adjudications that are ours — the cost-figure rule, the adjacency guardrail,
+the exact food-service phrase, the no-transfer rule, the recomputed $/wipe→$/table arithmetic, and
+the Tier-3-only envelope model), `references/04` §5–§8 (the objection table with a "where it lives"
+column, the consumption formula, the mined FAQ set as a worked example, the third decision path),
+and `references/06` §11–§16 (E-E-A-T scaffold with insertion points, the full citation-trigger set,
+the snippet/PAA molds, the title-choice rule, CTA copy + friction reducers). Two new files exist
+because the audit found things a reference alone could not hold: `references/08b-house-outline.md`
+(the H2 registry of the 21 posts — the actual angle-delta instrument, with the one contaminated
+record and the boilerplate caveat measured and documented) and `references/14-superseded-rules.md`
+(the register of every claim in those documents that this skill now denies, so a superseded rule
+cannot be reintroduced by accident — including the dangerous one: a Tier 2 performance claim on a
+SKU whose `P = —`). `blog_patterns_21.csv` moved into `assets/evidence/`, so no rule in this skill
+points at a loose workdir file. Measured house metrics, claims rules and the pipeline are unchanged;
+what changed is that the reasoning behind them is now written down where the next run can read it.
 
 **v3.0 (2026-09-23)** — **consolidated: everything aligned in the workdir now lives in this one
 skill, and it is published.** `references/00-master-workflow.md` is the operating manual — the

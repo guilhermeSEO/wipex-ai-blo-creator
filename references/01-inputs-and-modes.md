@@ -123,3 +123,46 @@ CONFLICTS SEEN: (1) every product-level keyword has zero Google Trends volume, s
 
 All three conflicts were real and all three were found *before* any copy was written.
 That is the value of the gate.
+
+---
+
+## 5. Audience segments — auto-detected, you confirm
+
+Between the persona and the calendar sits the segment. Pick it in the brief; it decides the angle,
+the proof and the CTA tone.
+
+| Segment | Buying pattern | What moves them | Hook |
+|---|---|---|---|
+| Fitness studios | B2B bulk, supply-chain and compliance cost | total cost of ownership | bundle + ROI |
+| Yoga instructors | individual purchase, sustainability guilt, premium price sensitivity | materials and certifications | plant-based + certification |
+| Office managers | Q1 budget cycle, employee wellbeing | skin safety, volume discount | volume pricing |
+| Facilities managers | procurement, cost first | measured data | TURI data + performance metrics |
+
+## 6. Product recommendation when `products: auto` — five steps
+
+1. extract the hook's attributes; 2. match product families; 3. cross the claims matrix (what each
+SKU may say); 4. rank by commercial intent (primary / premium upsell / cross-sell); 5. present the
+**top 3 with the reason for each**.
+The skill proposes three and the owner chooses or overrides — that is what gives Gate 2 content.
+
+## 7. Pre-generation checklist (12 fields, each takes `auto`)
+
+topic/keyword · calendar hook · CRO goal · blog type · products · audience · meta title ·
+meta description · primary CTA · internal links · images · interactive section.
+
+## 8. Red flags that force Model C (human-led)
+
+A new SKU launch · competitor targeting · a "custom" post requested by an executive · a VIP customer
+case study · regulatory or claims-audit sensitivity. Any of these and the human stops being the
+reviewer and becomes the author of record.
+
+## 9. The filled-form format (what makes Gate 2 auditable)
+
+```yaml
+<field>: <what the skill proposes>
+  your_edit: ACCEPT | EDIT | OVERRIDE
+  reason:   <required when EDIT or OVERRIDE>
+```
+
+The `your_edit` line is the difference between an approval and an assumption. A Gate 2 record
+without it is not an approval.

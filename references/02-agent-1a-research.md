@@ -270,3 +270,88 @@ today: <date>   verdict: GO NOW / QUEUE (target <date>) / NEXT CYCLE / EVERGREEN
 - absolute search volume: NOT obtained (needs Marketing)
 - ...
 ```
+
+---
+
+## 9. Specificity spectrum — the shape of the trade-off
+
+Illustrative only: **these volumes and conversion rates are not measured** and must never be
+published or quoted. What is real is the monotonic shape — conversion rises with specificity, and
+volume falls faster than conversion rises, so the niche band is where the ROI is.
+
+The order below is the decision instrument: shape and direction, never the digits.
+
+| Band | Example shape | Competition | Conversion shape | Verdict |
+|---|---|---|---|---|
+| Broad | "cleaning wipes" | very high | lowest | avoid |
+| Medium-niche | "eco yoga mat wipes" | medium | mid | ok evergreen |
+| Niche | "plant-based mat wipes for boutique studios" | low | high | best when there is measured demand |
+| Ultra-niche | a term with a handful of searches | none | highest, on a tiny audience | test only |
+
+Ultra-niche 5/5 is not a defect: what decides is the **measured** trend momentum, not narrowness.
+
+## 10. Calendar × trend × niche matrix
+
+| Calendar | Momentum | Score | Decision |
+|---|---|---|---|
+| Q2 | rising hard | 4.5+ | GO NOW |
+| Q2 | rising | 4.0+ | PLAN FOR THE MONTH BEFORE THE PEAK |
+| Q2 | stable | 3.5+ | SECONDARY (evergreen) |
+| Q2 | falling | any | SKIP |
+| Evergreen | rising | 4.0+ | GO ANYTIME |
+| Evergreen | stable | 4.5+ | ALWAYS VALID |
+| Evergreen | falling | <3.5 | SKIP |
+
+This complements, and does not replace, the peak-window derivation in §6.
+
+## 11. Fit calibration anchors (1–5) and the claim-code pre-check
+
+| Fit | Looks like |
+|---|---|
+| 4.8 | trend material + bulk + commercial intent |
+| 4.2 | premium / upsell tier |
+| 3.5 | eco generic, not the vertical |
+| 2.1 | right format, wrong positioning |
+| 1.0–1.2 | incompatible scale or use |
+| 0.5 | wrong vertical |
+
+Before ranking: **validate the SKU's claim codes**. A product without the codes the angle needs
+cannot carry the angle, however well it scores.
+
+## 12. Signal → product family
+
+| Signal | Family |
+|---|---|
+| plant-based | natural gym wipes |
+| premium | premium line |
+| eco | plant-based bulk rolls |
+| budget | table bussers / handy jack |
+| sanitizing | only if compliance permits (registered products) |
+
+## 13. Semantic pollution test (run before accepting a term with a high average)
+
+Read the **related queries of the term with the highest average**. If the cluster belongs to another
+intent — job-seekers, software, unrelated brands — the volume is real and the reader is wrong.
+Reject it as the primary keyword even when its average is the highest in the set.
+Control: a term whose related queries are all commercial ("near me", "wholesale") is clean, even if
+its own peak sits in the wrong month.
+
+## 14. Corpus saturation count (the angle-delta instrument)
+
+Scan the N most recent posts and count how many already own the territory. Measured example: the
+term "cost per wipe" appears in **16 of 21** live posts, including as a literal H2 in both format
+posts — saturated. That term also had the lowest measured demand in its cluster.
+The delta is therefore a change of **unit** (wipe → table/cover), not a new adjective.
+
+## 15. Measured peaks added to §6 (2026-09-23, US)
+
+| Term | 12-m avg | Top weeks | 1-m | Window |
+|---|---|---|---|---|
+| cost per table | 46.5 | Mar 1–7 (100), **Nov 30–Dec 6 (95)** | 49.4 | Nov 1–20 |
+| cost per cover | 38.2 | **Nov 30–Dec 6 (100)**, Dec 7–13 (77) | 45.0 | Nov 1–20 |
+| cleaning supplies cost | 50.9 | Nov 30–Dec 6 (93) | 19.3 → 35.1 | rising into Nov |
+
+The first two move as a pair (46.5 vs 38.2) — treat them as one bet, not two.
+Terms with the wrong seasonality for Q4: table reset time, labor cost restaurant, janitorial
+supplies, restaurant operating costs.
+
