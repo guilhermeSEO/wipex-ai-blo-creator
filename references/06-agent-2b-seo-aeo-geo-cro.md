@@ -12,7 +12,9 @@ Formula: `[primary keyword in the first 5 words] + [benefit or hook] + [emotion/
 - Count every character. Exactly 65, not "about 65".
 - Primary keyword first. No brand name unless there is room last.
 - Never use absolutes ("best") without the test to back it — and on a `P = —` product, never.
-- Produce 2–3 candidates, pick one, show the live character count for each.
+- Produce 2–3 candidates, show the live character count for each, and **record the rejected ones
+  with the reason** (e.g. "rejected: 'Turn Rate' is jargon the buyer does not use"). A rejection
+  with a stated reason is reviewable; a rejection by taste is not.
 
 ## 2. Meta description — 155 characters EXACTLY
 
@@ -71,7 +73,10 @@ Deliver as a table: `anchor text | destination | placement | why`.
 
 ## 6. Readability + entity clarity
 
-- Flesch-Kincaid 6–8; passive <10%; average sentence <15 words; average paragraph 35–55 words.
+- Flesch-Kincaid 6–8 and **Flesch Reading Ease 60–70** (plain); passive <10%; average sentence
+  <15 words; average paragraph 35–55 words.
+- Measure on **paragraph text only** — tables, lists, headings and captions are excluded, or the
+  grade reports the layout instead of the prose (`references/12`).
 - Report the measured numbers, not adjectives.
 - **Entity clarity:** every key statement = exact product + specification + benefit + proof.
   ✘ "our wipes clean well" → ✔ "Table Bussers® (400-count, plant-based viscose) lift residue

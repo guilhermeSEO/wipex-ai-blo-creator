@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.1.1'
+version: '3.1.2'
 date_created: '2026-09-22'
 date_updated: '2026-09-23'
 owner: Guilherme (Wipex automation lead)
@@ -9,7 +9,7 @@ description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
 ---
 
-# Wipex Blog Generation — v3.1.1
+# Wipex Blog Generation — v3.1.2
 
 Research, copy, SEO/AEO/GEO, CRO and claims compliance in one evidence-driven flow.
 Written so the only thing you supply is an input form; everything else is researched,
@@ -259,6 +259,12 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.1.2 (2026-09-23)** — three small corrections found by cross-checking the worked SEO spec
+(`2B-seo-spec.md`) against `references/06`: title candidates must record the **rejected** options with
+the stated reason ("Turn Rate" was rejected as buyer jargon) so a rejection is reviewable instead of
+taste; readability adds **Flesch Reading Ease 60–70** alongside FK 6–8, measured on paragraph text
+only. No rule changed — the instruments got sharper.
 
 **v3.1.1 (2026-09-23)** — closes the four loose ends the audit left open: `references/07` was still
 describing the v2.7 delivery (everything inside `{% raw %}`, "settings declares 0") and now matches
