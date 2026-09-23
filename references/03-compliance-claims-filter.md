@@ -220,3 +220,21 @@ is in the Filter document itself, so they live here with the reason attached.
   IPA use case, **not** a natural/fitness positioning, with a different audience. When a product has
   no test data, the envelope is what stops the copy from drifting into a claim.
 
+## 9. The per-SKU claims report (the shape the reviewer expects)
+
+“What can I say about this product?” is answered in four blocks, always in this order, always with
+the filter version and the verification date attached:
+
+```
+CAN SAY           <each permitted claim, with the code that permits it>
+CANNOT SAY        <each prohibited phrasing and, in one line, why>
+RECOMMENDED ANGLE <the honest framing that survives CANNOT SAY>
+FILTER VERSION    <vX.Y, page verified YYYY-MM-DD, recompute before publish>
+```
+
+Rules for the report: every line is derived from Part 4 for **that** SKU (never from a sibling or a
+visually identical bucket); the codes in an old report are assumptions, not evidence, and are
+re-derived before reuse; and the `FILTER VERSION` line is dated, because a claim set without a date
+cannot be defended later.
+
+

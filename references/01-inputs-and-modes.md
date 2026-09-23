@@ -166,3 +166,10 @@ reviewer and becomes the author of record.
 
 The `your_edit` line is the difference between an approval and an assumption. A Gate 2 record
 without it is not an approval.
+
+## 10. Model D — test all three (once)
+
+A one-off variant, kept for completeness: run models A, B and C on three different posts and compare
+the outcomes before standardising on one. It is only meaningful **once**, on a controlled batch of
+three — as a standing mode it is just an excuse not to choose. Default remains B.
+

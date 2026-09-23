@@ -14,8 +14,9 @@ claims review and the interactive section must not promise anything the Filter f
 | Mood | professional / operational / seasonal |
 | Dimensions | hero 1200×800 · body 600×400 · stat/inline 400×300 |
 | Overlay text | only if it is a claim-free label |
+| Execution notes (`mood_notes`) | how to shoot it so it does not look like stock: "sunlit studio, real action mid-class, diverse regulars, no posed smiles" |
 | Source | product photography, custom brief, stock library |
-| Alt text | descriptive + keyword-bearing, 100–125 chars |
+| Alt text | descriptive + keyword-bearing, **100–125 chars, count reported per image** |
 
 **Alt-text rules:** describe what is visible; include the product or the surface, not a
 claim; no "safe", no superlatives, no "best". Alt text is checked by 2C like any other copy.
@@ -33,6 +34,22 @@ Pick from: calculator, comparison toggle, checklist, quiz/score, timeline, forma
 | Output | what they learn (cost per reset, cost per month, comparison to current) |
 | Benefit | why it earns the interaction |
 | Implementation | custom Liquid section, or an existing app |
+
+**Executable spec — the mold, so the module is not re-imagined per post:**
+
+```yaml
+module_type: calculator
+inputs:                      # label | type | default  (defaults must be a plausible operation)
+  - { label: "Mat areas",        type: number, default: 20 }
+  - { label: "Classes per day",  type: number, default: 4 }
+  - { label: "Wipes per mat",    type: number, default: 2 }
+calculation: "days_per_month * mats * classes_per_day * wipes_per_mat"
+output_template: "You'll need {N} wipes per month — about {B} buckets at 400 count."
+cta: { label: "Shop the 400ct bucket", url: "<product>" }
+```
+
+`calculation` must be arithmetic over the inputs only, and the output sentence must be a count, a
+cost or a coverage — never a performance verdict.
 
 **Guard:** a calculator may compute cost, coverage and consumption. It may **not** output a
 cleaning-performance comparison, a time-saving promise, or a "safe" verdict.
@@ -90,12 +107,18 @@ sections/wipex-section-<slug>-<year>.liquid     scoped CSS + article HTML + JS +
 templates/article.<name>.json                   assigns the section to that one post
 ```
 
-The whole content sits inside `{% raw %} … {% endraw %}` so Liquid cannot try to parse the CSS/JS
-braces, with the `{% schema %}` block **outside** the raw tag. Verify before delivering:
-- exactly one `{% raw %}` / `{% endraw %}` pair, one comment pair, one schema pair
-- **zero** `{{` or `{%` inside the raw block
-- the schema block parses as JSON
-- the post body is left **empty**, so the article cannot render twice
+The prose is **Liquid-parsed** (so the hero, media bands and sticky CTA can be theme-editor
+settings), and only `<style>` and the JS `<script>` sit inside `{% raw %} … {% endraw %}`. That is
+why the generator refuses to emit a section when the approved copy contains `{{` or `{%` — the copy
+is inert only while it carries no Liquid delimiter. Verify before delivering:
+
+- exactly one `{% schema %}` block, and it parses as JSON;
+- tagged pairs balanced: `if/endif`, `raw/endraw` (the generator counts them and stops the build);
+- the prose carries no `{{` or `{%`;
+- every id carries `{{ uid }}` (no static id — two instances of the section must not collide);
+- the post body is left **empty**, so the article cannot render twice.
+
+Method and contracts: `references/10-section-engineering.md`.
 
 ### Why not the post body
 
@@ -115,6 +138,8 @@ silently disagree with what Agent 2C cleared, and nothing would catch it.
 | Output | Purpose |
 |---|---|
 | `sections/<slug>.liquid` | **the deliverable** — paste into Edit code > Sections |
+| `SHOPIFY-CONFIG.json` | the per-post knobs the operator edits instead of touching Liquid: hero copy and CTAs, image slots with alt/caption/focal, the video anchor, the module library (problem strip, stat cards, decision tool, A+B system, feature block) and their anchors, product cards, slug, section name |
+| `SECTION-VALIDATION.txt` | the build receipt — this file must read `RESULT: NONE` before anything is pasted |
 | `templates/article.<name>.json` | assigns the section to that one post |
 | `SHOPIFY-README.md` | install path, verification list, troubleshooting table |
 | `SHOPIFY-META.md` | title, slug, meta title (65), meta description (155), tags, author, date |
@@ -158,9 +183,13 @@ Reviewers ask "will it lag?" — these are the rules that answer it:
 [ ] compliance regression: grep the HTML for food-safe / safe on / beats / lab-tested /
     hygienic / "Best" / 100% natural — all must be 0
 [ ] the patch-test line count is unchanged from the approved copy
-[ ] Shopify: schema name (and preset names) <= 25 characters
-[ ] Shopify: settings <= 40 per section/block (ours declares 0)
-[ ] Shopify: ZERO `@type` keys inside the section file — the JSON-LD lives in a snippet
+| Shopify: schema name (and preset names) <= 25 characters |
+| Shopify: settings <= 40 per section (ours declares 35: 4 group blocks, 9 media settings, hero + CTA + sticky) |
+| Shopify: ZERO `@type` keys inside the section file — the JSON-LD lives in a snippet |
+| one `{% schema %}` block; `if/endif`, `raw/endraw` balanced; prose free of `{{` / `{%` |
+| no static id (every id carries the section id); `section.id` registry present |
+| `data-cro` on every CTA (the cost-per-table post carries 11) |
+| visible FAQ count == FAQPage question count |
 ```
 
 ### Shopify platform limits (learned in production, 2026-09-22)
@@ -205,16 +234,18 @@ it is re-checked rather than assumed.
 
 ```markdown
 # 2D — IMAGES, INTERACTIVE, SHOPIFY
-## Image briefs (table, 5–8 rows)
-## Alt text (list, 100–125 chars each, counted)
-## Interactive section (type / input / output / benefit / implementation / guard)
-## Liquid section (code)
-## Paste file (blocks 1–9 above)
+## Image briefs (table, 5–8 rows: section · subject · mood + execution notes · dimensions · overlay · alt)
+## Alt text (list, 100–125 chars each, count reported)
+## Interactive section (type / inputs / calculation / output sentence / CTA / guard)
+## SHOPIFY-CONFIG.json (the module anchors, media slots and hero copy for this post)
+## Generated artifacts (sections/ · snippets/ · templates/ · SHOPIFY-*) + SECTION-VALIDATION.txt
 ## Operator checklist
-- [ ] paste body, set title + slug
-- [ ] set meta fields (verify counts after paste)
-- [ ] upload images with alt text
-- [ ] add the JSON-LD in the theme / SEO app
-- [ ] add the Liquid section, then preview mobile
-- [ ] publish, then submit for indexing
+- [ ] paste the section; install the snippet and the template
+- [ ] leave the post body EMPTY
+- [ ] fill the image slots in the theme editor (or set them in the config) and check alt text
+- [ ] set title, slug and meta fields (recount after pasting)
+- [ ] preview mobile: calculator, checklist persistence, sticky CTA, table stacking
+- [ ] add the reciprocal link on the older cluster post
+- [ ] publish on the target date, then log it in `published_ledger.md`
 ```
+
