@@ -1,5 +1,5 @@
 SECTION VALIDATION — wipex-section-cost-per-table-2026
-generated: sections/wipex-section-cost-per-table-2026.liquid (1033 lines, 71477 chars)
+generated: sections/wipex-section-cost-per-table-2026.liquid (1096 lines, 78749 chars)
 
 PRE-SAVE (Shopify hard limits)
   section name      : 'Wipex Cost Per Table' (20 chars, limit 25)  OK
@@ -13,7 +13,8 @@ DELIVERABLE CHECKS
   instance safety       : section.id + registry OK
   data-cro annotations  : 14
   a11y landmarks        : aria-label 8, aria-expanded 1, role=region 4, sr-only 2
-  interactive modules   : toc yes, checklist yes, calculator yes, sticky yes, progress yes, video yes
+  modules rendered      : toc OK, checklist OK, calculator OK, sticky OK, progress OK, video OK, hero OK, liferow OK
+  token block applied   : OK  (root carries the bare prefix class, so the palette and base typography resolve)
   media slots           : 3 editorial stills + video band
   module library        : problem_strip, stat_cards, card_grid, decision_tool, system_block, feature_block, products, faq, checklist, calculator, toc, sticky, liferow
   editorial media only  : yes (product imagery stays out of the section)

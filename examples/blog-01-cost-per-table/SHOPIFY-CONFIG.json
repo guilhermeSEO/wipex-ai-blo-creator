@@ -1,20 +1,39 @@
 {
-  "title": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)",
-  "slug": "cost-per-table-restaurant",
-  "meta_title": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4",
-  "meta_desc": "Cost per table, not per wipe. Calculate your restaurant reset cost, add the labour minute, and cut Q4 spend without lowering standards. Read the guide now.",
-  "meta_tags": "food service, restaurant cleaning, cost per table, cost per cover, table turnover, Table Bussers, Q4, budget planning",
-  "author": "Livia Schlemmer",
-  "published": "2026-11-08",
-  "publish_note": "window Nov 1-20 — QUEUE, do not publish early",
-  "keywords": "cost per table, cost per cover, restaurant cost per table, restaurant cleaning cost, table reset time",
-  "article_section": "Food Service",
   "domain": "https://wipex.co",
   "css_prefix": "wx-cpt",
-  "section_id": "wipex-section-cost-per-table-2026",
-  "section_name": "Wipex Cost Per Table",
-  "template_file": "article.cost-per-table.json",
+  "theme": {
+    "ink": "#1c1d1d",
+    "ink_soft": "#4a4a48",
+    "muted": "#6f6f6b",
+    "line": "#e8e8e1",
+    "surface": "#ffffff",
+    "surface_warm": "#fdfbf8",
+    "dark": "#111111",
+    "accent": "#76c39c",
+    "accent_ink": "#2f6b4f",
+    "accent_soft": "#eaf6f0",
+    "plum": "#b68fbd",
+    "plum_soft": "#f5eef7",
+    "gold": "#b08d57",
+    "radius": "16px",
+    "radius_sm": "6px",
+    "pill": "999px",
+    "shadow": "0 1px 2px rgba(28,29,29,.05), 0 10px 30px rgba(28,29,29,.06)",
+    "shadow_hover": "0 2px 6px rgba(28,29,29,.07), 0 18px 44px rgba(28,29,29,.11)",
+    "max_width": "1180px",
+    "read_width": "44rem",
+    "space": "28px",
+    "font_body": "Raleway, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+    "font_head": "\"New Order\", Raleway, system-ui, -apple-system, Segoe UI, sans-serif",
+    "hero_tint": "linear-gradient(180deg, #fdfbf8 0%, #ffffff 78%)"
+  },
+  "meta_tags": "food service, restaurant cleaning, cost per table, cost per cover, table turnover, Table Bussers, Q4, budget planning",
+  "author": "Livia Schlemmer",
+  "keywords": "cost per table, cost per cover, restaurant cost per table, restaurant cleaning cost, table reset time",
+  "article_section": "Food Service",
+  "publish_note": "window Nov 1-20 — QUEUE, do not publish early",
   "hero_eyebrow": "Q4 Front-of-House",
+  "hero_lede": "",
   "hero_cta": {
     "label": "Shop Table Bussers® Autumn-Scented",
     "url": "https://wipex.co/products/table-bussers-surface-wipes"
@@ -28,12 +47,6 @@
     "url": "https://wipex.co/products/table-bussers-surface-wipes"
   },
   "video_anchor": "before_faq",
-  "video_heading": "",
-  "video_text": "",
-  "video_cta": {
-    "label": "",
-    "url": ""
-  },
   "image_slots": [
     {
       "setting": "hero_image",
@@ -224,5 +237,97 @@
     "Table Bussers Autumn-Scented",
     "Table Bussers Unscented"
   ],
+  "calculator": {
+    "anchor_heading": "Worked example",
+    "heading": "Calculate your cost per table",
+    "note": "Cost figures only, based on the prices you enter. Check your own invoice.",
+    "covers_per_turn": 2,
+    "inputs": [
+      {
+        "key": "tables",
+        "label": "Tables",
+        "value": 20,
+        "step": 1,
+        "min": 0
+      },
+      {
+        "key": "turns",
+        "label": "Turns per service",
+        "value": 3,
+        "step": 0.5,
+        "min": 0
+      },
+      {
+        "key": "services",
+        "label": "Services per week",
+        "value": 6,
+        "step": 1,
+        "min": 0
+      },
+      {
+        "key": "price",
+        "label": "Case price ($)",
+        "value": 36.99,
+        "step": 0.01,
+        "min": 0
+      },
+      {
+        "key": "count",
+        "label": "Wipes per case",
+        "value": 400,
+        "step": 1,
+        "min": 1
+      },
+      {
+        "key": "wipes",
+        "label": "Wipes per reset",
+        "value": 2,
+        "step": 1,
+        "min": 1
+      },
+      {
+        "key": "seconds",
+        "label": "Seconds per reset",
+        "value": 45,
+        "step": 5,
+        "min": 0
+      },
+      {
+        "key": "rate",
+        "label": "Loaded hourly rate ($)",
+        "value": 16,
+        "step": 0.5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "key": "table",
+        "label": "cost per table"
+      },
+      {
+        "key": "week",
+        "label": "weekly cleaning cost"
+      },
+      {
+        "key": "cover",
+        "label": "cost per cover"
+      }
+    ]
+  },
+  "title": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)",
+  "slug": "cost-per-table-restaurant",
+  "meta_title": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4",
+  "meta_desc": "Cost per table, not per wipe. Calculate your restaurant reset cost, add the labour minute, and cut Q4 spend without lowering standards. Read the guide now.",
+  "published": "2026-11-08",
+  "section_id": "wipex-section-cost-per-table-2026",
+  "section_name": "Wipex Cost Per Table",
+  "template_file": "article.cost-per-table.json",
+  "video_heading": "",
+  "video_text": "",
+  "video_cta": {
+    "label": "",
+    "url": ""
+  },
   "hero_fallback_image": ""
 }

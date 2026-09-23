@@ -34,6 +34,44 @@ exactly those words and refuses to declare the artifact clean when it finds one.
 - Current layout: hero 7 · photography 12 (3 slots x image/alt/caption/focal) · video 7 · sticky 2 · 7 group blocks = **35**.
 - Inspector, not a guess: `build_settings()` in the generator + `SECTION-VALIDATION.txt`.
 
+## 2b. Design system — the palette is config, the stylesheet is a file
+
+`scripts/wipex-section.css` holds every rule; it contains **no colour, font or radius**. Those are
+tokens in the config's `theme` block, and the stylesheet only references `var(--wx-*)`. Two tokens
+are substituted at build time: `%P%` (the post's CSS prefix) and `%%TOKENS%%` (the palette block).
+
+| Token group | Values shipped (grounded in the live theme, 2026-09-23) |
+|---|---|
+| ink · muted · line | `#1c1d1d` · `#6f6f6b` · `#e8e8e1` |
+| surfaces | `#ffffff`, warm `#fdfbf8`, dark card `#111111` |
+| accent (their button green) | `#76c39c`, text-safe `#2f6b4f`, tint `#eaf6f0` |
+| plum (their seasonal accent) | `#b68fbd`, tint `#f5eef7` |
+| brand gold | `#b08d57` |
+| shape | radius `16px`, small `6px`, pills `999px` |
+| type | body `Raleway`, headings `"New Order"` (both already loaded by the theme — no extra request) |
+
+A post or a season restyles by editing `theme` in `SHOPIFY-CONFIG.json`. The generator writes the
+resolved palette into the config the first time, so the operator sees the tokens instead of a void.
+
+### The three rendering defects that static checks did not catch
+
+All three shipped green in `SECTION-VALIDATION.txt` before they were seen in a browser. They are now
+checked mechanically (see §8):
+
+1. **A selector that matched nothing.** The token block was scoped to `.<prefix>` while the root
+   element carried only `<prefix>__root`, so the palette and every base rule (`h1`, `p`, `a`) applied
+   to no element: the section rendered unstyled while every assertion passed. The root now carries the
+   bare prefix class too, and the validator refuses an artifact whose root does not.
+2. **A CSS comment outside `<style>`.** The stylesheet's header comment sat before the opening tag, so
+   it rendered as visible page text. The validator now scans everything outside `<style>`/`<script>`
+   for `/*`.
+3. **A link rule beating the button rule.** `.%P% a{color}` (0,1,1) outranked `.__btn--primary{color}`, so
+   primary buttons rendered dark-green-on-mint. Variant rules are now `.%P% a.%P%__btn--*`.
+
+**Lesson, and it is the `references/12` lesson again:** a static assertion proves a string exists, not
+that it renders. Any change to the stylesheet or the module CSS must be confirmed by reading computed
+values from a real page (the browser check in this repo's workflow), not by re-reading the file.
+
 ## 3. Media system (three tiers — do not blur them)
 
 - **A — editorial stills.** `image_picker` + alt + caption + focal `select`. 16:9 for bands
@@ -68,7 +106,7 @@ exactly those words and refuses to declare the artifact clean when it finds one.
 | feature block | `after:<H2>` | the reference's "workhorse" block: image, eyebrow, heading, proof bullets, one CTA |
 | A+B system block | `after:<H2>` | the reference's AOV device. Config decides what the two parts are — a real bundle only when marketing has confirmed the companion SKU, otherwise the article's own workflow framing. **Never invent a companion product** |
 | decision tool | `after:<H2>` | "which setup fits your room", one card per operation profile, each with its own `data-cro` |
-| calculator | injected before the worked example | cost only, never a performance claim |
+| calculator | `before:<H3>` (config `calculator.anchor`, default `before:Worked example`) | cost only, never a performance claim. Fields, labels, defaults, outputs, heading and note come from the config; the arithmetic is fixed and documented here |
 | checklist | markdown `- [ ]` run | real checkboxes + `localStorage` persistence |
 | FAQ | `## Frequently asked questions` | visible Q&A whose text IS the FAQPage JSON-LD |
 | sticky CTA | always | appears past the hero, hides over the final CTA, dismissible |

@@ -46,138 +46,71 @@ AUTO = "https://wipex.co"
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG — every knob the operator may need, kept out of the code
 # ─────────────────────────────────────────────────────────────────────────────
-CFG_DEFAULTS = {
-    "title": "How to Calculate Cost Per Table for a Restaurant (and Cut It Without Cutting Standards)",
-    "slug": "cost-per-table-restaurant",
-    "meta_title": "Cost Per Table for Restaurants: Cut Cost, Not the Standard, in Q4",
-    "meta_desc": ("Cost per table, not per wipe. Calculate your restaurant reset cost, add the labour "
-                  "minute, and cut Q4 spend without lowering standards. Read the guide now."),
-    "meta_tags": "food service, restaurant cleaning, cost per table, cost per cover, table turnover, "
-                 "Table Bussers, Q4, budget planning",
-    "author": "Livia Schlemmer",
-    "published": "2026-11-08",
-    "publish_note": "window Nov 1-20 — QUEUE, do not publish early",
-    "keywords": "cost per table, cost per cover, restaurant cost per table, restaurant cleaning cost, table reset time",
-    "article_section": "Food Service",
-    "domain": AUTO,
-    "css_prefix": "wx-cpt",
-    "section_id": "wipex-section-cost-per-table-2026",
-    "section_name": "Wipex Cost Per Table",
-    "template_file": "article.cost-per-table.json",
-    "hero_eyebrow": "Q4 Front-of-House",
-    "hero_cta":  {"label": "Shop Table Bussers\u00ae Autumn-Scented", "url": AUTO + "/products/table-bussers-surface-wipes"},
-    "hero_cta2": {"label": "Browse the food service collection", "url": AUTO + "/collections/food-service-commercial"},
-    "sticky_cta": {"label": "Shop Table Bussers\u00ae", "url": AUTO + "/products/table-bussers-surface-wipes"},
-    "video_anchor": "before_faq",
-    "video_heading": "",
-    "video_text": "",
-    "video_cta": {"label": "", "url": ""},
-    "image_slots": [
-        {"setting": "hero_image", "anchor": "hero", "ratio": "16x9", "label": "Hero image (16:9)",
-         "alt": "Busser wiping a four-top table in a busy dining room between covers, pre-mixed wipe bucket at the service station",
-         "caption": ""},
-        {"setting": "process_image", "anchor": "after:The four-step reset", "ratio": "16x9",
-         "label": "Process image (16:9)",
-         "alt": "Four-panel sequence of a table reset: clearing plates, wiping the top, setting the table, seating guests",
-         "caption": "Clear \u00b7 Clean \u00b7 Reset \u00b7 Seat"},
-        {"setting": "evidence_image", "anchor": "after:Self-assessment", "ratio": "16x9", "layout": "row",
-         "label": "Evidence image (16:9)",
-         "alt": "Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service",
-         "caption": ""},
-    ],
-    "products_anchor": "after:Which Table Bussers fits your room",
-    "products_heading": "Which format fits the room",
-    "products": [
-        {"name": "Table Bussers\u00ae Autumn-Scented Surface Wipes",
-         "url": AUTO + "/products/table-bussers-surface-wipes",
-         "badge": "Certified for food service", "best_for": "Guest-facing dining rooms and bar tops",
-         "image": "",
-         "bullets": ["Pre-mixed — no spray bottle to fetch",
-                     "One wipe per table in a single pass",
-                     "NSF-certified formulation, suitable for food service environments"]},
-        {"name": "Table Bussers\u00ae Unscented Surface Wipes",
-         "url": AUTO + "/products/table-bussers-unscented",
-         "badge": "Fragrance-free", "best_for": "Kitchens, prep areas and quiet rooms",
-         "image": "",
-         "bullets": ["The same pre-mixed format",
-                     "Nothing for a guest to notice",
-                     "Keeps the cleaning step at the station"]},
-    ],
-    # ---- the reference module library (v2.9): config-driven, each entry carries its own anchor ----
-    "problem_strip": {
-        "anchor": "after_hero",
-        "label": "What drives front-of-house cleaning cost",
-        "cells": [
-            {"strong": "Q4 volume", "span": "Parties, holiday bookings and private events multiply every reset"},
-            {"strong": "Three turns an hour", "span": "Every extra trip costs seat time at your busiest"},
-            {"strong": "Labour 30-35% of expenses", "span": "The loaded rate is what makes the minute expensive"},
-            {"strong": "Par levels set now", "span": "Year-end is when supply spend gets reviewed"},
-        ],
-    },
-    "stat_cards": {
-        "anchor": "after:Quick answer",
-        "cards": [
-            {"value": "$0.09", "label": "consumable per table, one wipe per reset"},
-            {"value": "$0.29", "label": "cost per table in a 20-table room"},
-            {"value": "90 seconds", "label": "target reset time most operators work to"},
-            {"value": "1.5 turns/hour", "label": "casual-dining average (Worldmetrics, 2026)"},
-        ],
-    },
-    "card_grid": {
-        "anchor": "before_faq",
-        "heading": "Four things to check before you switch",
-        "cards": [
-            {"title": "Certification", "text": "Does the product carry the certification your inspections ask for?"},
-            {"title": "Formulation", "text": "Is it described for the surfaces you actually have?"},
-            {"title": "Format", "text": "Does it put the wipe at the station rather than in a storeroom?"},
-            {"title": "Case rate", "text": "Does it improve your cost per table, not just your cost per wipe?"},
-        ],
-        "note": "Then measure one section for a week before you change the whole floor.",
-    },
-    "decision_tool": {
-        "anchor": "after:Self-assessment",
-        "heading": "Which setup fits your room",
-        "options": [
-            {"title": "Under 150 covers a night", "answer": "400-count bucket at the station",
-             "cta": "Shop the 400ct bucket", "url": AUTO + "/products/table-bussers-surface-wipes"},
-            {"title": "Guest-facing rooms in the season", "answer": "Table Bussers\u00ae Autumn-Scented",
-             "cta": "Shop Autumn-Scented", "url": AUTO + "/products/table-bussers-surface-wipes",
-             "recommended": True},
-            {"title": "Kitchens, prep areas, quiet rooms", "answer": "Table Bussers\u00ae Unscented",
-             "cta": "Shop Unscented", "url": AUTO + "/products/table-bussers-unscented"},
-        ],
-    },
-    "system_block": {
-        "anchor": "after:How to calculate your own cost per table",
-        "eyebrow": "The system",
-        "heading": "What a pre-mixed wipe actually changes",
-        "pills": ["400-count bucket at the station", "one wipe, one pass"],
-        "result": "a reset that never needs a second trip",
-        "text": ("It removes the fetch, not the standard: the wipe is already where the cleaning "
-                 "happens, so the cleaning step starts at the table."),
-        "cta": {"label": "Shop Table Bussers\u00ae", "url": AUTO + "/products/table-bussers-surface-wipes"},
-    },
-    "feature_block": {
-        "anchor": "after:What your current setup actually costs",
-        "eyebrow": "The workhorse",
-        "heading": "One consumable, already at the table",
-        "text": ("One bucket is the whole purchase: no spray, no cloth, and no walk to the station "
-                 "during a reset."),
-        "bullets": ["Removes the fetch from the cleaning step",
-                    "One wipe per table in a single pass",
-                    "Keeps the standard a guest notices"],
-        "image": "",
-        "cta": {"label": "Shop Table Bussers\u00ae", "url": AUTO + "/products/table-bussers-surface-wipes"},
-    },
-    "final_cta_heading": "Reduce Table Turnover Time",
-    "schema_products": [
-        {"name": "Table Bussers Surface Wipes (scented, cinnamon-clove; autumn variant)",
-         "sku": "WX01126TN", "url": AUTO + "/products/table-bussers-surface-wipes", "price": "36.99"},
-    ],
-    "schema_mentions": ["Table Bussers Autumn-Scented", "Table Bussers Unscented"],
-    "hero_fallback_image": "",
+THEME_DEFAULTS = {
+    # Design tokens, grounded in the live Wipex theme (read from the storefront, 2026-09-23):
+    # mint green primary, mauve accent, brand gold token, ink #1c1d1d, warm surface #fdfbf8,
+    # pill buttons, 16px cards, Raleway body + "New Order" headings (both already loaded by the
+    # theme, so referencing them costs no extra request). A post or a season restyles by editing
+    # this block in SHOPIFY-CONFIG.json — never the CSS.
+    "ink": "#1c1d1d", "ink_soft": "#4a4a48", "muted": "#6f6f6b", "line": "#e8e8e1",
+    "surface": "#ffffff", "surface_warm": "#fdfbf8", "dark": "#111111",
+    "accent": "#76c39c", "accent_ink": "#2f6b4f", "accent_soft": "#eaf6f0",
+    "plum": "#b68fbd", "plum_soft": "#f5eef7", "gold": "#b08d57",
+    "radius": "16px", "radius_sm": "6px", "pill": "999px",
+    "shadow": "0 1px 2px rgba(28,29,29,.05), 0 10px 30px rgba(28,29,29,.06)",
+    "shadow_hover": "0 2px 6px rgba(28,29,29,.07), 0 18px 44px rgba(28,29,29,.11)",
+    "max_width": "1180px", "read_width": "44rem", "space": "28px",
+    "font_body": "Raleway, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+    "font_head": "\"New Order\", Raleway, system-ui, -apple-system, Segoe UI, sans-serif",
+    "hero_tint": "linear-gradient(180deg, #fdfbf8 0%, #ffffff 78%)",
 }
 
+CFG_DEFAULTS = {
+    # ── STRUCTURAL DEFAULTS ONLY ──────────────────────────────────────────────────────────────
+    # Every word of copy, every link, every image slot for a post lives in that post's
+    # SHOPIFY-CONFIG.json, next to the approved markdown. The generator ships no post content:
+    # if it is not in the config, it does not exist.
+    "domain": AUTO,
+    "css_prefix": "wx",
+    "theme": {},
+    "meta_tags": "", "author": "", "keywords": "", "article_section": "", "publish_note": "",
+    "hero_eyebrow": "", "hero_lede": "",
+    "hero_cta": {"label": "", "url": ""}, "hero_cta2": {"label": "", "url": ""},
+    "sticky_cta": {"label": "", "url": ""},
+    "video_anchor": "before_faq", "image_slots": [],
+    "products_anchor": "", "products_heading": "", "products": [],
+    "problem_strip": None, "stat_cards": None, "card_grid": None,
+    "decision_tool": None, "system_block": None, "feature_block": None,
+    "final_cta_heading": "",
+    "schema_products": [], "schema_mentions": [],
+    "calculator": {
+        # the cost-per-use module: fields, outputs, copy and the one tunable (covers per turn).
+        # Arithmetic itself is fixed in the JS and documented in references/10 — a different
+        # calculation needs a new module function, not a new formula string.
+        "anchor_heading": "Worked example",
+        "heading": "Calculate your cost per table",
+        "note": "Cost figures only, based on the prices you enter. Check your own invoice.",
+        "covers_per_turn": 2,
+        "inputs": [
+            {"key": "tables", "label": "Tables", "value": 20, "step": 1, "min": 0},
+            {"key": "turns", "label": "Turns per service", "value": 3, "step": 0.5, "min": 0},
+            {"key": "services", "label": "Services per week", "value": 6, "step": 1, "min": 0},
+            {"key": "price", "label": "Case price ($)", "value": 36.99, "step": 0.01, "min": 0},
+            {"key": "count", "label": "Wipes per case", "value": 400, "step": 1, "min": 1},
+            {"key": "wipes", "label": "Wipes per reset", "value": 2, "step": 1, "min": 1},
+            {"key": "seconds", "label": "Seconds per reset", "value": 45, "step": 5, "min": 0},
+            {"key": "rate", "label": "Loaded hourly rate ($)", "value": 16, "step": 0.5, "min": 0},
+        ],
+        "outputs": [
+            {"key": "table", "label": "cost per table"},
+            {"key": "week", "label": "weekly cleaning cost"},
+            {"key": "cover", "label": "cost per cover"},
+        ],
+    },
+}
+
+REQUIRED = ("title", "slug", "meta_title", "meta_desc", "published",
+            "section_id", "section_name", "template_file")
 CFG_PATH = os.path.join(OUTDIR, 'SHOPIFY-CONFIG.json')
 
 
@@ -194,6 +127,8 @@ def load_cfg():
     # never overwrite a value the operator set.
     missing = [k for k in CFG_DEFAULTS if k not in user]
     if missing:
+        if not cfg.get('theme'):
+            cfg['theme'] = dict(THEME_DEFAULTS)      # show the operator the tokens to edit
         io.open(CFG_PATH, 'w', encoding='utf-8').write(
             json.dumps(cfg, indent=2, ensure_ascii=False) + '\n')
         print('config extended: %s' % ', '.join(missing))
@@ -201,6 +136,12 @@ def load_cfg():
 
 
 CFG = load_cfg()
+_missing_required = [k for k in REQUIRED if not CFG.get(k)]
+if _missing_required:
+    raise SystemExit(
+        'SHOPIFY-CONFIG.json is the post: it is missing %s.\n'
+        'The generator carries no post content on purpose — fill the config next to the markdown.'
+        % ', '.join(_missing_required))
 P = CFG["css_prefix"]                      # css class prefix, scoped under one class
 DOMAIN = CFG["domain"].rstrip('/')
 
@@ -605,7 +546,7 @@ def products_module(P, cfg, resolved):
         return ''
     cards = []
     for pr in prods:
-        media = ('<div class="%P%__card-media"><img src="%s" width="600" height="600" loading="lazy" alt="%s"></div>'
+        media = ('<div class="@P@__card-media"><img src="%s" width="600" height="600" loading="lazy" alt="%s"></div>'
                  % (pr['image'], html.escape(pr['name']))) if pr.get('image') else ''
         bullets = ''.join('<li>%s</li>' % html.escape(b) for b in pr.get('bullets', []))
         cards.append("""<article class="%(P)s__card">
@@ -660,220 +601,67 @@ def sticky_cta(P, cfg, resolved):
             % (cfg['slug'], url, label.replace("'", "\\'")))
 
 
-CALC_HTML = """
-<div class="%P%__calc" data-wpx-calc data-module="cost-per-table">
-  <h3 class="%P%__calc-h">Calculate your cost per table</h3>
-  <div class="%P%__calc-grid">
-    <label>Tables<input type="number" inputmode="decimal" step="1" min="0" value="20" data-k="tables"></label>
-    <label>Turns per service<input type="number" inputmode="decimal" step="0.5" min="0" value="3" data-k="turns"></label>
-    <label>Services per week<input type="number" inputmode="decimal" step="1" min="0" value="6" data-k="services"></label>
-    <label>Case price ($)<input type="number" inputmode="decimal" step="0.01" min="0" value="36.99" data-k="price"></label>
-    <label>Wipes per case<input type="number" inputmode="decimal" step="1" min="1" value="400" data-k="count"></label>
-    <label>Wipes per reset<input type="number" inputmode="decimal" step="1" min="1" value="2" data-k="wipes"></label>
-    <label>Seconds per reset<input type="number" inputmode="decimal" step="5" min="0" value="45" data-k="seconds"></label>
-    <label>Loaded hourly rate ($)<input type="number" inputmode="decimal" step="0.5" min="0" value="16" data-k="rate"></label>
-  </div>
-  <div class="%P%__calc-out" role="status" aria-live="polite">
-    <div><span data-out="table">&mdash;</span><small>cost per table</small></div>
-    <div><span data-out="week">&mdash;</span><small>weekly cleaning cost</small></div>
-    <div><span data-out="cover">&mdash;</span><small>cost per cover</small></div>
-  </div>
-  <p class="%P%__calc-note">Cost figures only, based on the prices you enter. Check your own invoice.</p>
-</div>
-"""
-
-
-def calc_html(P):
-    return CALC_HTML.replace('%P%', P)
+def calc_html(P, cfg, uidt):
+    """The cost-per-use calculator module. Fields, labels, defaults, outputs, heading and note come
+    from `calculator` in the config; the arithmetic is fixed and documented in references/10 — a
+    different calculation is a new module function, not a new config string."""
+    c = dict(CFG_DEFAULTS['calculator'])
+    c.update({k: v for k, v in (cfg.get('calculator') or {}).items() if v not in (None, '', [], {})})
+    fields, outs = [], []
+    for f in c['inputs']:
+        fields.append('<label>%s<input type="number" inputmode="decimal" step="%s" min="%s" value="%s" data-k="%s"></label>'
+                      % (html.escape(str(f['label'])), f.get('step', 1), f.get('min', 0),
+                         f.get('value', 0), html.escape(str(f['key']))))
+    for o in c['outputs']:
+        outs.append('<div><span data-out="%s">&mdash;</span><small>%s</small></div>'
+                    % (html.escape(str(o['key'])), html.escape(str(o['label']))))
+    return ('<div class="%%P%%__calc" data-wpx-calc data-module="cost-per-use" id="%%P%%-calc-%s">'
+            '<h3 class="%%P%%__calc-h">%s</h3>'
+            '<div class="%%P%%__calc-grid">%s</div>'
+            '<div class="%%P%%__calc-out" role="status" aria-live="polite">%s</div>'
+            '<p class="%%P%%__calc-note">%s</p>'
+            '</div>'
+            % (uidt or 'paste', html.escape(str(c['heading'])), ''.join(fields),
+               ''.join(outs), html.escape(str(c['note']))))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CSS — scoped under .%P% , tokens first, modules after
 # ─────────────────────────────────────────────────────────────────────────────
-CSS = """<style>
-.%P%{--wx-ink:#1a1a1a;--wx-mut:#5b5b5b;--wx-line:#e3e3e3;--wx-soft:#fafafa;--wx-acc:#0f5132;--wx-acc-ink:#0b3d26;
-  --wx-maxw:1120px;--wx-readw:44rem;--wx-radius:8px;
-  max-width:var(--wx-maxw);margin-inline:auto;color:var(--wx-ink);line-height:1.65;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative}
-.%P% *,.%P% *::before,.%P% *::after{box-sizing:border-box}
-.%P% img{max-width:100%;height:auto;display:block}
-.%P% h1{font-size:clamp(1.75rem,1.2rem + 2.2vw,2.5rem);line-height:1.2;margin:0 0 1rem;letter-spacing:-.01em}
-.%P% h2{font-size:clamp(1.35rem,1.1rem + 1vw,1.75rem);line-height:1.25;margin:2.5rem 0 .75rem;letter-spacing:-.01em;scroll-margin-top:5rem}
-.%P% h3{font-size:1.175rem;line-height:1.3;margin:1.75rem 0 .5rem;scroll-margin-top:5rem}
-.%P% p{margin:0 0 1.05rem}
-.%P% ul,.%P% ol{margin:0 0 1.15rem;padding-left:1.35rem}
-.%P% li{margin:.35rem 0}
-.%P% a{color:var(--wx-acc);text-decoration:underline;text-underline-offset:2px}
-.%P% a:hover{text-decoration-thickness:2px}
-.%P% strong{font-weight:650}
-.%P% code{background:#f2f2f2;padding:.1em .35em;border-radius:3px;font-size:.9em}
-.%P% :focus-visible{outline:2px solid var(--wx-acc);outline-offset:2px;border-radius:3px}
-.%P%__wrap{max-width:var(--wx-maxw);margin-inline:auto;padding:0 20px}
-.%P%__read{max-width:var(--wx-readw);margin-inline:auto}
-.%P%__sec{padding:26px 0}
-.%P%__sec-block{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);
-  padding:1.15rem 1.2rem 1.3rem;margin:1.75rem 0}
-.%P%__sec-block h2{margin-top:.25rem}
-/* hero */
-.%P%__hero{padding:8px 0 26px}
-.%P%__hero .%P%__wrap{max-width:var(--wx-maxw)}
-.%P%__hero-inner{max-width:var(--wx-readw)}
-.%P%__eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--wx-acc-ink);margin-bottom:12px}
-.%P%__lede{font-size:1.09rem}
-.%P%__lede p:last-child{margin-bottom:1.05rem}
-.%P%__cta-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.35rem 0}
-/* buttons */
-.%P%__btn{display:inline-block;font-weight:640;font-size:.95rem;line-height:1.2;text-decoration:none;
-  padding:.7rem 1.05rem;border-radius:999px;border:1.5px solid transparent;transition:opacity .15s ease}
-.%P%__btn--primary{background:var(--wx-acc);color:#fff}
-.%P%__btn--primary:hover{opacity:.9}
-.%P%__btn--ghost{background:transparent;color:var(--wx-acc-ink);border-color:var(--wx-line)}
-.%P%__btn--ghost:hover{border-color:var(--wx-acc);}
-.%P%__btn--sm{padding:.5rem .85rem;font-size:.875rem}
-/* media */
-.%P%__band{margin:1.5rem 0}
-.%P%__band img{object-position:var(--%P%-img-pos,center)}
-.%P%__life--16x9 img,.%P%__band.%P%__life--16x9 img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:var(--wx-radius)}
-.%P%__life--2x3 img{aspect-ratio:2/3;object-fit:cover;width:100%;max-width:420px;border-radius:var(--wx-radius)}
-.%P%__band.%P%__life--2x3 .%P%__wrap{max-width:480px}
-.%P%__cap{display:block;color:var(--wx-mut);font-size:.82rem;margin-top:.5rem}
-.%P%__ph{border:1px dashed #bfbfbf;border-radius:var(--wx-radius);background:repeating-linear-gradient(45deg,#fbfbfb,#fbfbfb 10px,#f4f4f4 10px,#f4f4f4 20px);
-  color:var(--wx-mut);font-size:.85rem;text-align:center;padding:2.5rem 1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
-/* video band */
-.%P%__videoband{padding:10px 0}
-.%P%__video{position:relative;border-radius:var(--wx-radius);overflow:hidden;background:#111}
-.%P%__video video,.%P%__video img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.%P%__video-content{position:absolute;inset:auto 0 0 0;padding:1.5rem;color:#fff;
-  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.68) 100%)}
-.%P%__video-h{margin:0 0 .35rem;color:#fff;font-size:1.25rem}
-.%P%__video-t{margin:0 0 .85rem;color:#f2f2f2;font-size:.95rem}
-/* takeaways */
-.%P%__takeaways{list-style:none;padding:1.05rem 1.15rem;margin:1.25rem 0 1.5rem;border-left:4px solid var(--wx-acc);
-  background:var(--wx-soft);border-radius:0 var(--wx-radius) var(--wx-radius) 0}
-.%P%__takeaways li{position:relative;padding-left:1.5rem;margin:.5rem 0}
-.%P%__takeaways li::before{content:"✓";position:absolute;left:0;color:var(--wx-acc);font-weight:700}
-/* toc */
-.%P%__toc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;margin:1.25rem 0 1.75rem}
-.%P%__toc-head{display:flex;justify-content:space-between;align-items:center;width:100%;gap:.75rem;
-  font:inherit;font-weight:650;font-size:.95rem;text-align:left;background:none;border:0;cursor:pointer;padding:.85rem 1rem}
-.%P%__toc-chev{transition:transform .18s ease;color:var(--wx-mut)}
-.%P%__toc[data-open="false"] .%P%__toc-chev{transform:rotate(-90deg)}
-.%P%__toc[data-open="false"] .%P%__toc-list{display:none}
-.%P%__toc-list{list-style:none;margin:0;padding:0 1rem 1rem;border-top:1px solid var(--wx-line)}
-.%P%__toc-list li{margin:.4rem 0}
-.%P%__toc-list a{text-decoration:none}
-.%P%__toc-list a:hover{text-decoration:underline}
-/* table */
-.%P%__tablewrap{overflow-x:auto;margin:0 0 1.25rem;border:1px solid var(--wx-line);border-radius:6px}
-.%P%__table{border-collapse:collapse;width:100%;font-size:.975rem}
-.%P%__table--wide{min-width:34rem}
-.%P%__table th,.%P%__table td{padding:.6rem .75rem;border-bottom:1px solid var(--wx-line);text-align:left;vertical-align:top}
-.%P%__table thead th{background:var(--wx-soft);font-weight:650}
-.%P%__table tbody tr:last-child td,.%P%__table tbody tr:last-child th{border-bottom:0}
-.%P%__table tbody th{font-weight:600}
-/* checklist */
-.%P%__check{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);padding:1rem 1.15rem}
-.%P%__check-list{list-style:none;padding-left:0;margin:0}
-.%P%__check-item{display:flex;gap:.6rem;align-items:flex-start;margin:.5rem 0}
-.%P%__check-item input{margin:.3rem 0 0;width:1.05rem;height:1.05rem;accent-color:var(--wx-acc);flex:none}
-.%P%__check-item label{cursor:pointer}
-.%P%__check-item input:checked + label{color:var(--wx-mut);text-decoration:line-through}
-.%P%__check-note{margin:.85rem 0 0;font-size:.78rem;color:var(--wx-mut)}
-/* calculator */
-.%P%__calc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-soft);padding:1.1rem 1.15rem 1rem;margin:1.5rem 0 1.75rem;contain:content}
-.%P%__calc-h{margin:0 0 .85rem;font-size:1.05rem}
-.%P%__calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem}
-.%P%__calc-grid label{display:flex;flex-direction:column;gap:.25rem;font-size:.8rem;color:var(--wx-mut)}
-.%P%__calc-grid input{font:inherit;font-size:.95rem;color:var(--wx-ink);padding:.45rem .5rem;border:1px solid #cfcfcf;border-radius:5px;background:#fff;min-width:0}
-.%P%__calc-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:1rem}
-.%P%__calc-out>div{background:#fff;border:1px solid var(--wx-line);border-radius:6px;padding:.6rem .7rem}
-.%P%__calc-out span{display:block;font-size:1.35rem;font-weight:680;letter-spacing:-.01em}
-.%P%__calc-out small{display:block;color:var(--wx-mut);font-size:.75rem;margin-top:.1rem}
-.%P%__calc-note{margin:.85rem 0 0;font-size:.78rem;color:var(--wx-mut)}
-/* product cards */
-.%P%__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1rem}
-.%P%__card{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;padding:1rem 1.05rem 1.15rem;display:flex;flex-direction:column}
-.%P%__card-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;margin-bottom:.75rem}
-.%P%__badge{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--wx-acc-ink);background:#eaf3ee;border-radius:999px;padding:.25rem .6rem;margin-bottom:.6rem}
-.%P%__card-h{margin:0 0 .35rem;font-size:1.05rem}
-.%P%__card-best{margin:0 0 .6rem;font-size:.85rem;color:var(--wx-mut)}
-.%P%__card-list{margin:0 0 1rem;padding-left:1.1rem;font-size:.92rem}
-.%P%__card .%P%__btn{margin-top:auto;align-self:flex-start}
-/* sticky + progress */
-.%P%__progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:60;pointer-events:none}
-.%P%__progress-bar{height:100%;width:0;background:var(--wx-acc)}
-.%P%__sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;align-items:center;gap:.6rem;justify-content:center;
-  padding:.6rem .9rem;background:#fff;border-top:1px solid var(--wx-line);box-shadow:0 -4px 18px rgba(0,0,0,.07);
-  transform:translateY(110%);transition:transform .2s ease}
-.%P%__sticky.is-visible{transform:translateY(0)}
-.%P%__sticky-close{background:none;border:0;font-size:1.35rem;line-height:1;color:var(--wx-mut);cursor:pointer;padding:.1rem .4rem}
-/* problem strip + stat cards */
-.%P%__strip{background:var(--wx-soft);border-top:1px solid var(--wx-line);border-bottom:1px solid var(--wx-line);margin:6px 0 10px}
-.%P%__strip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--wx-line)}
-.%P%__strip-cell{background:#fff;padding:.9rem 1rem}
-.%P%__strip-cell strong{display:block;font-size:.95rem}
-.%P%__strip-cell span{display:block;color:var(--wx-mut);font-size:.85rem;margin-top:.2rem}
-.%P%__stats-block{padding:20px 0}
-.%P%__stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin:1rem 0 0}
-.%P%__stat{background:var(--wx-soft);border:1px solid var(--wx-line);border-radius:6px;padding:.75rem .8rem}
-.%P%__stat b{display:block;font-size:1.5rem;letter-spacing:-.02em}
-.%P%__stat span{display:block;color:var(--wx-mut);font-size:.78rem;margin-top:.15rem}
-/* decision tool + system + feature */
-.%P%__dec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-top:1rem}
-.%P%__dec{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:#fff;padding:1rem 1.05rem;text-align:center}
-.%P%__dec--rec{border-color:var(--wx-acc);box-shadow:inset 0 0 0 1px var(--wx-acc)}
-.%P%__dec h3{margin:0 0 .35rem;font-size:1rem}
-.%P%__dec-arrow{color:var(--wx-mut);margin:.2rem 0}
-.%P%__dec-sol{font-weight:640;margin:0 0 .8rem}
-.%P%__system{text-align:center}
-.%P%__system-eq{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;margin:1rem 0}
-.%P%__pill{background:#fff;border:1px solid var(--wx-line);border-radius:999px;padding:.45rem .9rem;font-size:.9rem}
-.%P%__op{color:var(--wx-mut)}
-.%P%__system-result{font-weight:660}
-.%P%__feature{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
-@media(min-width:760px){.%P%__feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
-.%P%__feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius)}
-.%P%__feature-list{margin:0 0 1rem;padding-left:1.1rem}
-/* liferow (image beside the prose) + info cards + closing band */
-.%P%__liferow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1.75rem;align-items:start;
-  max-width:var(--wx-maxw);margin-inline:auto;padding:0 20px}
-.%P%__liferow .%P%__read{margin-inline:0;max-width:none}
-.%P%__band--row{margin:0}
-.%P%__band--row img{border-radius:var(--wx-radius)}
-.%P%__info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin-top:1rem}
-.%P%__card-info{background:#fff;border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:.9rem 1rem}
-.%P%__card-info h3{margin:0 0 .3rem;font-size:1rem}
-.%P%__card-info p{margin:0;font-size:.92rem;color:var(--wx-mut)}
-.%P%__note{font-size:.85rem;color:var(--wx-mut);margin:.9rem 0 0}
-.%P%__btn--gold{background:var(--wx-acc-ink);color:#fff}
-.%P%__btn--gold:hover{opacity:.9}
-.%P%__sec--final .%P%__read{background:var(--wx-soft);border:1px solid var(--wx-line);
-  border-radius:var(--wx-radius);padding:1.4rem 1.5rem}
-@media (max-width:820px){.%P%__liferow{grid-template-columns:minmax(0,1fr);gap:1rem}}
-/* faq + footer */
-.%P%__faqq{margin-top:1.6rem}
-.%P%__links{font-size:.95rem}
-.%P%__foot{color:var(--wx-mut);font-size:.85rem;font-style:italic}
-.%P%__hr{border:0;border-top:1px solid var(--wx-line);margin:2.25rem 0}
-.%P%__code{background:#f7f7f7;border:1px solid var(--wx-line);border-radius:6px;padding:.9rem 1rem;overflow-x:auto;font-size:.9rem;line-height:1.5;margin:0 0 1.15rem}
-.%P%__code code{background:none;padding:0}
-.%P%__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@media print{.%P%__calc,.%P%__tablewrap,.%P%__sticky,.%P%__progress{display:none!important}.%P% a{color:inherit;text-decoration:none}}
-@media (max-width:640px){
-  .%P%{font-size:1rem}
-  .%P%__table--wide{min-width:30rem}
-  .%P%__table:not(.%P%__table--wide) thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .%P%__table:not(.%P%__table--wide) tr{display:block;border-bottom:1px solid var(--wx-line);padding:.35rem 0}
-  .%P%__table:not(.%P%__table--wide) tr:last-child{border-bottom:0}
-  .%P%__table:not(.%P%__table--wide) th,.%P%__table:not(.%P%__table--wide) td{display:flex;gap:.75rem;justify-content:space-between;border:0;padding:.35rem .75rem}
-  .%P%__table:not(.%P%__table--wide) th[data-label]::before,.%P%__table:not(.%P%__table--wide) td[data-label]::before{
-    content:attr(data-label);font-weight:640;color:var(--wx-mut);flex:0 0 42%}
-  .%P%__table:not(.%P%__table--wide) th[data-label]::before{color:var(--wx-ink)}
-}
-</style>"""
+CSS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'wipex-section.css')
+if not os.path.exists(CSS_PATH):
+    raise SystemExit('missing stylesheet: %s (it ships next to this script)' % CSS_PATH)
+CSS = io.open(CSS_PATH, encoding='utf-8').read()
+
+
+def token_block(theme):
+    """The palette as CSS custom properties, generated from the config's `theme` block. The
+    stylesheet only ever references var(--wx-*), so a post or a season restyles by editing tokens —
+    no colour, font or radius is written in the CSS by hand."""
+    t = dict(THEME_DEFAULTS)
+    t.update({k: v for k, v in (theme or {}).items() if v not in (None, '')})
+    return (".%%P%%{--wx-ink:%(ink)s;--wx-ink-soft:%(ink_soft)s;--wx-muted:%(muted)s;--wx-line:%(line)s;"
+            "--wx-surface:%(surface)s;--wx-surface-warm:%(surface_warm)s;--wx-dark:%(dark)s;"
+            "--wx-accent:%(accent)s;--wx-accent-ink:%(accent_ink)s;--wx-accent-soft:%(accent_soft)s;"
+            "--wx-plum:%(plum)s;--wx-plum-soft:%(plum_soft)s;--wx-gold:%(gold)s;"
+            "--wx-radius:%(radius)s;--wx-radius-sm:%(radius_sm)s;--wx-pill:%(pill)s;"
+            "--wx-shadow:%(shadow)s;--wx-shadow-hover:%(shadow_hover)s;--wx-maxw:%(max_width)s;"
+            "--wx-readw:%(read_width)s;--wx-space:%(space)s;--wx-hero-tint:%(hero_tint)s;"
+            "--wx-font-head:%(font_head)s;font-family:%(font_body)s;color:var(--wx-ink);"
+            "line-height:1.65;font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative;"
+            "-webkit-font-smoothing:antialiased}" % t)
+
+
+def build_js(P, cfg):
+    covers = (cfg.get('calculator') or {}).get('covers_per_turn')
+    if covers in (None, ''):
+        covers = CFG_DEFAULTS['calculator']['covers_per_turn']
+    return JS.replace('%%COVERS%%', str(covers)).replace('%P%', P)
+
+
+def build_css(P, cfg):
+    return (CSS.replace('%%TOKENS%%', token_block(cfg.get('theme'))).replace('%P%', P))
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -983,7 +771,7 @@ JS = """<script>
       var week = perTable * resets;
       if (outs.table) outs.table.textContent = money(perTable);
       if (outs.week) outs.week.textContent = "$" + week.toFixed(2);
-      if (outs.cover) outs.cover.textContent = resets ? money(week / (resets * 2)) : money(0);
+      if (outs.cover) outs.cover.textContent = resets ? money(week / (resets * %%COVERS%%)) : money(0);
     }
     function schedule() { if (!queued) { queued = true; window.requestAnimationFrame(run); } }
     for (var f2 = 0; f2 < fields.length; f2++) fields[f2].addEventListener("input", schedule, { passive: true });
@@ -1148,6 +936,31 @@ def build_article(nodes, toc, cfg, resolved, uidt):
         else:
             end_bands.append(html_mod)
 
+    # the calculator module, placed by anchor inside its section (config: calculator.anchor)
+    _calc_cfg = dict(CFG_DEFAULTS['calculator'])
+    _calc_cfg.update({k: v for k, v in (cfg.get('calculator') or {}).items() if v not in (None, '', [], {})})
+    _anchor = _calc_cfg.get('anchor', 'before:Worked example')
+    _needle = _anchor.split(':', 1)[1].strip().lower() if ':' in _anchor else _anchor.lower()
+    _calc_node = {'t': 'html', 'html': fin(calc_html(P, cfg, uidt))}
+    _placed = False
+    for sec in sections:
+        for k, n in enumerate(sec['nodes']):
+            if n['t'] in ('h2', 'h3') and _needle and _needle in (n.get('text') or '').lower():
+                sec['nodes'].insert(k, _calc_node)
+                _placed = True
+                break
+        if _placed:
+            break
+    if not _placed:
+        for sec in sections:
+            if any(_needle and _needle in (n.get('text') or '').lower() for n in sec['nodes']) or \
+               any('calculate' in (n.get('text') or '').lower() for n in sec['nodes']):
+                sec['nodes'].append(_calc_node)
+                _placed = True
+                break
+    if not _placed:
+        print('  WARN calculator anchor not found: %r — the module was not placed' % _anchor)
+
     faq_i = None
     for i, sec in enumerate(sections):
         if (sec['title'] or '').strip().lower().startswith(('frequently asked', 'faq')):
@@ -1223,7 +1036,7 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                           % (body, '\n'.join(slots_by_sec.get(0, []))))
             article = article.replace(parts[0], first_html, 1)
 
-    root = """<div class="@P@__root" id="@P@-%s" data-wpx-section="%s">
+    root = """<div class="@P@ @P@__root" id="@P@-%s" data-wpx-section="%s">
 <div class="@P@__progress" aria-hidden="true"><div class="@P@__progress-bar" data-wpx-progress></div></div>
 %s
 %s
@@ -1364,8 +1177,8 @@ def wrap_liquid(html_str, comment):
             + html_str + "\n\n{% schema %}\n" + schema_json + "\n{% endschema %}\n")
 
 SECTION = wrap_liquid(
-    "{% raw %}\n" + CSS.replace('%P%', P) + "\n{% endraw %}\n\n"
-    + section_body + "\n\n{% raw %}\n" + JS.replace('%P%', P) + "\n{% endraw %}",
+    "{% raw %}\n" + build_css(P, CFG) + "\n{% endraw %}\n\n"
+    + section_body + "\n\n{% raw %}\n" + build_js(P, CFG) + "\n{% endraw %}",
     """  Wipex blog section — %s.
   Reference-grade module: theme-editor settings, editorial media (16:9 / 2:3 stills, native video
   band), interactive TOC, real checklist, reading progress, sticky mobile CTA, data-cro on every
@@ -1416,7 +1229,7 @@ PASTE = """<!-- ================================================================
 <script type="application/ld+json">
 %s
 </script>
-""" % (CFG['title'], SECTION_ID, CSS.replace('%P%', P) + '\n' + paste_body.replace('%P%', P) + '\n' + JS.replace('%P%', P), '', SCHEMA_JSON)
+""" % (CFG['title'], SECTION_ID, build_css(P, CFG) + '\n' + paste_body.replace('%P%', P) + '\n' + build_js(P, CFG), '', SCHEMA_JSON)
 io.open(os.path.join(OUTDIR, 'SHOPIFY-PASTE.html'), 'w', encoding='utf-8').write(PASTE)
 
 LIQUID_DOC = """# SHOPIFY LIQUID VARIANT
@@ -1585,6 +1398,23 @@ for o_tag, c_tag in (('if', 'endif'), ('unless', 'endunless'), ('for', 'endfor')
 if len(re.findall(r'\{%\s*schema\s*%\}', section_text)) != 1:
     problems.append('expected exactly one {% schema %} block')
 
+# CSS/markup coverage — the bug class this catches: a selector that matches nothing, so the styles
+# silently do not apply (the token block was scoped to `.wx-cpt` while the root element carried only
+# `wx-cpt__root`, which meant no palette and no base typography, and every static check still passed).
+_root_ok = ('<div class="%s ' % P in section_text) or ('<div class="%s"' % P in section_text)
+if not _root_ok:
+    problems.append('the root element does not carry the bare "%s" class: the token block and every '
+                    'base selector (h1/h2/p/a) match nothing, so the section renders unstyled' % P)
+_css_classes = set(re.findall(r'\.%s(?:__)?([a-zA-Z0-9_-]+)' % P, section_text.split('</style>')[0]))
+_missing_css = sorted(c for c in _css_classes if ('%s__%s' % (P, c)) not in section_text
+                      and ('%s-%s' % (P, c)) not in section_text and (' %s ' % c) not in section_text)
+# anything that is not inside <style>/<script> and is not markup renders as visible page text —
+# this caught the stylesheet's own header comment sitting before the <style> tag
+_outside = re.sub(r'<style.*?</style>', ' ', section_text, flags=re.S | re.I)
+_outside = re.sub(r'<script.*?</script>', ' ', _outside, flags=re.S | re.I)
+if '/*' in _outside:
+    problems.append('a CSS comment sits outside <style> — it renders as visible text on the page')
+
 # claims lint over the rendered prose + the module copy
 claims_csv = find_claims_csv()
 lint_target = strip_markup(section_text)
@@ -1620,10 +1450,20 @@ report.append('  data-cro annotations  : %d' % cro)
 report.append('  a11y landmarks        : aria-label %d, aria-expanded %d, role=region %d, sr-only %d'
               % (len(re.findall(r'aria-label=', section_text)), len(re.findall(r'aria-expanded=', section_text)),
                  len(re.findall(r'role="region"', section_text)), len(re.findall(r'%s__sr' % P, section_text))))
-report.append('  interactive modules   : toc %s, checklist %s, calculator %s, sticky %s, progress %s, video %s'
-              % tuple('yes' if t in section_text else 'no' for t in
-                      ('data-wpx-toc', 'data-wpx-checklist', 'data-wpx-calc', 'data-wpx-sticky',
-                       'data-wpx-progress', 'lifestyle_video')))
+_mod_probes = (('toc', '<nav class="%s__toc"' % P), ('checklist', '<div class="%s__check"' % P),
+               ('calculator', '<div class="%s__calc"' % P), ('sticky', '<div class="%s__sticky"' % P),
+               ('progress', '<div class="%s__progress"' % P), ('video', 'lifestyle_video'),
+               ('hero', '<header class="%s__hero"' % P), ('liferow', '<div class="%s__liferow"' % P))
+_absent = [name for name, probe in _mod_probes if probe not in section_text]
+for name, probe in _mod_probes:
+    if probe not in section_text:
+        problems.append('module %r declared but not rendered (no %s in the section)' % (name, probe))
+report.append('  modules rendered      : %s'
+              % ', '.join('%s %s' % (n, 'OK' if n not in _absent else 'MISSING') for n, _ in _mod_probes))
+report.append('  token block applied   : %s  (root carries the bare prefix class, so the palette and '
+              'base typography resolve)' % ('OK' if _root_ok else 'FAIL'))
+if _missing_css:
+    report.append('  CSS classes with no markup (state-only or dead): %s' % ', '.join(_missing_css))
 report.append('  media slots           : %d editorial stills + video band' % len([s for s in CFG['image_slots']]))
 report.append('  module library        : %s'
               % ', '.join([k for k in ('problem_strip', 'stat_cards', 'card_grid', 'decision_tool',

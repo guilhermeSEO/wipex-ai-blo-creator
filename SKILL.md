@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.2'
+version: '3.3'
 date_created: '2026-09-22'
 date_updated: '2026-09-23'
 owner: Guilherme (Wipex automation lead)
@@ -9,7 +9,7 @@ description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
 ---
 
-# Wipex Blog Generation — v3.2
+# Wipex Blog Generation — v3.3
 
 Research, copy, SEO/AEO/GEO, CRO and claims compliance in one evidence-driven flow.
 Written so the only thing you supply is an input form; everything else is researched,
@@ -259,6 +259,25 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.3 (2026-09-23)** — **the design layer, and three rendering bugs it exposed.** The stylesheet is
+now a real file (`scripts/wipex-section.css`, 300+ rules) with **zero colours, fonts or radii in it**:
+they are design tokens in the config's `theme` block, grounded in what the live theme actually uses
+(mint `#76c39c` primary, plum `#b68fbd` accent, brand gold `#b08d57`, ink `#1c1d1d`, warm surface
+`#fdfbf8`, dark card `#111111`, 16px radius, pill buttons, Raleway + "New Order"). A post or a season
+restyles by editing tokens. The whole section was redesigned around them: tinted hero with a chip
+eyebrow, pill buttons with elevation, a dark problem strip, elevated cards with hover, tinted table
+headers with zebra rows, a dark A+B system card, a dark code block, a dark sticky bar, and a
+gradient progress bar. Also: the generator carries **no post copy any more** — `CFG_DEFAULTS` is
+structural only and the build refuses to run without the config's required keys; and the
+cost-per-use calculator is config-driven (fields, labels, defaults, outputs, heading, note) because it
+turned out the module had been dropped from the HTML since v3.0 while the JS for it shipped — the
+validator said "calculator yes" because it was matching the JS selector. That check now probes for
+rendered markup. Three defects were found by reading computed styles in a real browser, not by
+re-reading files: a token block scoped to a class the root element did not carry (so **nothing** was
+styled), a CSS comment rendered as page text, and a link rule outranking the button colour. All three
+are now mechanical checks, and `references/10` §2b records them as the local version of the
+`references/12` lesson: a static assertion proves a string exists, not that it renders.
 
 **v3.2 (2026-09-23)** — **the section rebuilt against the reference's module library.** Three
 patterns the reference had and we did not are now emitted: the **liferow** (an editorial still placed
