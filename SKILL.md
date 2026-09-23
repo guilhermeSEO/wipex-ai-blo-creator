@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.1.2'
+version: '3.2'
 date_created: '2026-09-22'
 date_updated: '2026-09-23'
 owner: Guilherme (Wipex automation lead)
@@ -9,7 +9,7 @@ description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
 ---
 
-# Wipex Blog Generation — v3.1.2
+# Wipex Blog Generation — v3.2
 
 Research, copy, SEO/AEO/GEO, CRO and claims compliance in one evidence-driven flow.
 Written so the only thing you supply is an input form; everything else is researched,
@@ -259,6 +259,17 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.2 (2026-09-23)** — **the section rebuilt against the reference's module library.** Three
+patterns the reference had and we did not are now emitted: the **liferow** (an editorial still placed
+in a second column beside that section's prose instead of above it — `"layout": "row"` on any image
+slot), the **card grid** (the reference's equipment / buying-guide grids: short label + one line per
+card, plus a note), and the **closing band** (the final section styled as a conversion band with its
+link paragraph promoted into a real CTA row — primary / gold / ghost, each with its own `data-cro`).
+None of the three invents copy: the card grid is built from the approved article's own four
+pre-purchase checks, and the closing band restyles links the article already carries, which is why it
+cannot introduce a claim. The cost-per-table section now ships 13 module types and 14 `data-cro`
+annotations (was 11), validated `RESULT: NONE`. `references/10` documents the three additions.
 
 **v3.1.2 (2026-09-23)** — three small corrections found by cross-checking the worked SEO spec
 (`2B-seo-spec.md`) against `references/06`: title candidates must record the **rejected** options with

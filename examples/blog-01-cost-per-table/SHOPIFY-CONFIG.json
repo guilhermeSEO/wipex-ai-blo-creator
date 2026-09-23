@@ -55,6 +55,7 @@
       "setting": "evidence_image",
       "anchor": "after:Self-assessment",
       "ratio": "16x9",
+      "layout": "row",
       "label": "Evidence image (16:9)",
       "alt": "Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service",
       "caption": ""
@@ -130,6 +131,29 @@
         "label": "casual-dining average (Worldmetrics, 2026)"
       }
     ]
+  },
+  "card_grid": {
+    "anchor": "before_faq",
+    "heading": "Four things to check before you switch",
+    "cards": [
+      {
+        "title": "Certification",
+        "text": "Does the product carry the certification your inspections ask for?"
+      },
+      {
+        "title": "Formulation",
+        "text": "Is it described for the surfaces you actually have?"
+      },
+      {
+        "title": "Format",
+        "text": "Does it put the wipe at the station rather than in a storeroom?"
+      },
+      {
+        "title": "Case rate",
+        "text": "Does it improve your cost per table, not just your cost per wipe?"
+      }
+    ],
+    "note": "Then measure one section for a week before you change the whole floor."
   },
   "decision_tool": {
     "anchor": "after:Self-assessment",

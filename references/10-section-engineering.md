@@ -37,7 +37,9 @@ exactly those words and refuses to declare the artifact clean when it finds one.
 ## 3. Media system (three tiers — do not blur them)
 
 - **A — editorial stills.** `image_picker` + alt + caption + focal `select`. 16:9 for bands
-  (`1120x630`), 2:3 for portrait slots (`480x720`). Always `srcset` + `sizes` + `loading="lazy"`
+  (`1120x630`), 2:3 for portrait slots (`480x720`). Two placements: a full-width band (default), or
+  `"layout": "row"` to sit the figure in a second column beside that section's prose
+  (`.…__liferow`, single column under 820px). Always `srcset` + `sizes` + `loading="lazy"`
   + `decoding="async"`; hero image is `fetchpriority="high" loading="eager"`. Focal point is a
   CSS variable on the figure (`--<prefix>-img-pos`), consumed by `object-position`.
 - **B — video band.** Native `video_tag`, `autoplay loop muted playsinline`, no controls, plus a
@@ -57,7 +59,9 @@ exactly those words and refuses to declare the artifact clean when it finds one.
 | quick-answer callout | `## Quick answer` list | the LLM-quotable key numbers |
 | stat cards | `after:<H2>` | number + label pairs lifted from the article's own takeaways (the module renders claims, it never makes them) |
 | interactive TOC | `## On this page` | collapsible, `aria-expanded`/`aria-controls` |
-| editorial stills | config `image_slots[].anchor` = `hero`, `after:<H2>`, `before_faq` | proof and place |
+| editorial stills | config `image_slots[].anchor` = `hero`, `after:<H2>`, `before_faq` | proof and place. `layout: row` renders the still beside that section's prose (the reference's liferow) instead of above it |
+| card grid | `after:<H2>` / `before_faq` | the reference's equipment / buying-guide grids: 4 short label + line cards, plus an optional note |
+| closing band | the final section, automatically | the closing section is styled as a conversion band and its link paragraph is promoted to a real CTA row (`primary` / `gold` / `ghost`). No new copy — it restyles links the approved article already carries |
 | video band | config `video_anchor` (default `before_faq`) | editorial break, away from the final CTA |
 | comparison table | markdown table | `data-label` on every cell → rows stack as cards ≤640px |
 | product cards | config `products_anchor` | 2–3 formats, `Suited to:` (not "Best for") |

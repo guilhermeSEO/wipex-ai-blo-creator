@@ -80,7 +80,7 @@ CFG_DEFAULTS = {
          "label": "Process image (16:9)",
          "alt": "Four-panel sequence of a table reset: clearing plates, wiping the top, setting the table, seating guests",
          "caption": "Clear \u00b7 Clean \u00b7 Reset \u00b7 Seat"},
-        {"setting": "evidence_image", "anchor": "after:Self-assessment", "ratio": "16x9",
+        {"setting": "evidence_image", "anchor": "after:Self-assessment", "ratio": "16x9", "layout": "row",
          "label": "Evidence image (16:9)",
          "alt": "Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service",
          "caption": ""},
@@ -122,6 +122,17 @@ CFG_DEFAULTS = {
             {"value": "90 seconds", "label": "target reset time most operators work to"},
             {"value": "1.5 turns/hour", "label": "casual-dining average (Worldmetrics, 2026)"},
         ],
+    },
+    "card_grid": {
+        "anchor": "before_faq",
+        "heading": "Four things to check before you switch",
+        "cards": [
+            {"title": "Certification", "text": "Does the product carry the certification your inspections ask for?"},
+            {"title": "Formulation", "text": "Is it described for the surfaces you actually have?"},
+            {"title": "Format", "text": "Does it put the wipe at the station rather than in a storeroom?"},
+            {"title": "Case rate", "text": "Does it improve your cost per table, not just your cost per wipe?"},
+        ],
+        "note": "Then measure one section for a week before you change the whole floor.",
     },
     "decision_tool": {
         "anchor": "after:Self-assessment",
@@ -382,9 +393,11 @@ def s_expr(sid, default, resolved, escape=True):
     return '{{ section.settings.%s | default: %s%s }}' % (sid, d, ' | escape' if escape else '')
 
 
-def band(P, slot, resolved, uidt):
+def band(P, slot, resolved, uidt, row=False):
     """Editorial still: 16:9 or 2:3 frame, srcset + sizes + focal point + alt + caption.
     Empty -> hidden on the storefront, editor placeholder inside the theme editor.
+    `row=True` renders the figure for a two-column liferow (no inner wrap, so it sits beside the
+    prose instead of above it) — the reference's wpx-liferow / liferow--rev pattern.
     Built by concatenation on purpose: a Liquid template cannot go through %-formatting, because
     '{%-' is read as a format spec."""
     s, a, c, f = slot['setting'], slot['setting'] + '_alt', slot['setting'] + '_caption', slot['setting'] + '_focal'
@@ -396,6 +409,8 @@ def band(P, slot, resolved, uidt):
         img = ('<img src="%s" width="%d" height="%d" alt="%s" loading="lazy" decoding="async">'
                % (slot['literal_url'], w, h, html.escape(slot['alt'])))
         cap = ('<figcaption class="@P@__cap">%s</figcaption>' % html.escape(slot['caption'])) if slot['caption'] else ''
+        if row:
+            return ('<figure class="@P@__band @P@__band--row %s">%s%s</figure>' % (ratio_cls, img, cap))
         return ('<figure class="@P@__band %s"><div class="@P@__wrap">%s%s</div></figure>'
                 % (ratio_cls, img, cap))
     sw1, sw2 = int(w * 0.57), int(w * 1.4)
@@ -403,8 +418,9 @@ def band(P, slot, resolved, uidt):
     p = []
     p.append("{%- assign foc = section.settings." + f + " | default: 'center' -%}")
     p.append("{%- if section.settings." + s + " != blank -%}")
-    p.append('<figure class="@P@__band ' + ratio_cls + '" style="--@P@-img-pos:{{ foc }};">')
-    p.append('<div class="@P@__wrap">')
+    p.append('<figure class="@P@__band ' + ('@P@__band--row ' if row else '') + ratio_cls + '" style="--@P@-img-pos:{{ foc }};">')
+    if not row:
+        p.append('<div class="@P@__wrap">')
     p.append('<img')
     p.append('  src="{{ section.settings.' + s + ' | image_url: width: ' + str(w) + ' }}"')
     p.append('  srcset="{{ section.settings.' + s + ' | image_url: width: ' + str(sw1) + ' }} ' + str(sw1) + 'w,')
@@ -415,10 +431,12 @@ def band(P, slot, resolved, uidt):
     p.append('  alt="' + alt_expr + '" loading="lazy" decoding="async">')
     p.append('{%- if section.settings.' + c + ' != blank -%}<figcaption class="@P@__cap">{{ section.settings.'
              + c + ' | escape }}</figcaption>{%- endif -%}')
-    p.append('</div></figure>')
+    p.append('</div></figure>' if not row else '</figure>')
     p.append('{%- elsif request.design_mode -%}')
-    p.append('<figure class="@P@__band ' + ratio_cls + '"><div class="@P@__wrap"><div class="@P@__ph">Editor only · '
-             + html.escape(slot['label']) + '<br>' + html.escape(slot['alt'][:96]) + '</div></div></figure>')
+    p.append('<figure class="@P@__band ' + ('@P@__band--row ' if row else '') + ratio_cls + '">'
+             + ('' if row else '<div class="@P@__wrap">') + '<div class="@P@__ph">Editor only · '
+             + html.escape(slot['label']) + '<br>' + html.escape(slot['alt'][:96]) + '</div>'
+             + ('' if row else '</div>') + '</figure>')
     p.append('{%- endif -%}')
     return '\n'.join(p)
 
@@ -505,6 +523,38 @@ def feature_block(P, cfg):
             '</div></div></div>'
             % (media, html.escape(cfg.get('eyebrow', '')), html.escape(cfg['heading']),
                html.escape(cfg.get('text', '')), bullets, cfg['cta']['url'], html.escape(cfg['cta']['label'])))
+
+
+def card_grid(P, cfg):
+    """Informative card grid — the reference's equipment / buying-guide grids. Cards carry short
+    labels and one supporting line each; the copy comes from config and is linted like everything
+    else."""
+    cards = cfg.get('cards') or []
+    if not cards:
+        return ''
+    body = ''.join('<div class="@P@__card-info"><h3>%s</h3><p>%s</p></div>'
+                   % (html.escape(c['title']), html.escape(c['text'])) for c in cards)
+    head = ('<h2>%s</h2>' % html.escape(cfg['heading'])) if cfg.get('heading') else ''
+    note = ('<p class="@P@__note">%s</p>' % html.escape(cfg['note'])) if cfg.get('note') else ''
+    return ('<div class="@P@__sec-block">%s<div class="@P@__info-grid">%s</div>%s</div>'
+            % (head, body, note))
+
+
+def promote_cta_row(html_str, P, slug, tag):
+    """Turn the closing section's link paragraph into a real CTA row of buttons — the reference's
+    final conversion band. No new copy: it restyles the links the approved article already carries,
+    which is why it cannot introduce a claim."""
+    def repl(m):
+        links = re.findall(r'<a href="([^"]+)">(.*?)</a>', m.group(1))
+        if len(links) < 2:
+            return m.group(0)
+        btns = []
+        for i, (href, label) in enumerate(links, 1):
+            kind = 'primary' if i == 1 else ('gold' if i == 2 else 'ghost')
+            btns.append('<a class="%s__btn %s__btn--%s" data-cro="%s-%s-%d" href="%s">%s</a>'
+                        % (P, P, kind, slug, tag, i, href, label))
+        return '<p class="%s__cta-row">%s</p>' % (P, ''.join(btns))
+    return re.sub(r'<p>((?:<a [^>]+>.*?</a>\s*(?:·\s*)?)+)</p>', repl, html_str)
 
 
 def video_band(P, cfg, resolved):
@@ -787,6 +837,22 @@ CSS = """<style>
 @media(min-width:760px){.%P%__feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
 .%P%__feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius)}
 .%P%__feature-list{margin:0 0 1rem;padding-left:1.1rem}
+/* liferow (image beside the prose) + info cards + closing band */
+.%P%__liferow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1.75rem;align-items:start;
+  max-width:var(--wx-maxw);margin-inline:auto;padding:0 20px}
+.%P%__liferow .%P%__read{margin-inline:0;max-width:none}
+.%P%__band--row{margin:0}
+.%P%__band--row img{border-radius:var(--wx-radius)}
+.%P%__info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin-top:1rem}
+.%P%__card-info{background:#fff;border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:.9rem 1rem}
+.%P%__card-info h3{margin:0 0 .3rem;font-size:1rem}
+.%P%__card-info p{margin:0;font-size:.92rem;color:var(--wx-mut)}
+.%P%__note{font-size:.85rem;color:var(--wx-mut);margin:.9rem 0 0}
+.%P%__btn--gold{background:var(--wx-acc-ink);color:#fff}
+.%P%__btn--gold:hover{opacity:.9}
+.%P%__sec--final .%P%__read{background:var(--wx-soft);border:1px solid var(--wx-line);
+  border-radius:var(--wx-radius);padding:1.4rem 1.5rem}
+@media (max-width:820px){.%P%__liferow{grid-template-columns:minmax(0,1fr);gap:1rem}}
 /* faq + footer */
 .%P%__faqq{margin-top:1.6rem}
 .%P%__links{font-size:.95rem}
@@ -1015,9 +1081,10 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                 return i
         return None
 
-    slots_by_sec, before_faq_bands, end_bands = {}, [], []
+    slots_by_sec, rows_by_sec, before_faq_bands, end_bands = {}, {}, [], []
     for slot in cfg["image_slots"]:
-        htmlband = band(P, slot, resolved, uidt).replace('%P%', P)
+        is_row = slot.get("layout") == "row"
+        htmlband = band(P, slot, resolved, uidt, row=is_row).replace('%P%', P)
         if not htmlband:
             continue
         a = slot.get("anchor", "")
@@ -1028,7 +1095,7 @@ def build_article(nodes, toc, cfg, resolved, uidt):
             if i is None:
                 print('  WARN anchor not found : %s -> %r' % (slot['setting'], a[6:]))
                 continue
-            slots_by_sec.setdefault(i, []).append(htmlband)
+            (rows_by_sec if is_row else slots_by_sec).setdefault(i, []).append(htmlband)
         elif a == "before_faq":
             before_faq_bands.append(htmlband)
         else:
@@ -1058,6 +1125,7 @@ def build_article(nodes, toc, cfg, resolved, uidt):
     # A+B system / feature block. Each one carries its own anchor in the config.
     after_hero = []
     for key, fn in (('problem_strip', problem_strip), ('stat_cards', stat_cards),
+                    ('card_grid', card_grid),
                     ('decision_tool', decision_tool), ('system_block', system_block),
                     ('feature_block', feature_block)):
         conf = cfg.get(key)
@@ -1094,10 +1162,17 @@ def build_article(nodes, toc, cfg, resolved, uidt):
             cls += ' %P%__sec--final'
         body = nodes_html(sec['nodes'])
         extra = '\n'.join(slots_by_sec.get(i, []))
-        if not body.strip() and not extra:
+        rows = rows_by_sec.get(i, [])
+        if not body.strip() and not extra and not rows:
             continue
-        inner = ('<div class="@P@__read">\n%s\n</div>' % body) if body.strip() else ''
         sid_attr = (' id="%s"' % sec['id']) if sec['id'] != 'intro' else ''
+        if rows:
+            inner = ('<div class="@P@__liferow">\n<div class="@P@__read">\n%s\n</div>\n%s\n</div>'
+                     % (body, '\n'.join(rows)))
+        else:
+            inner = ('<div class="@P@__read">\n%s\n</div>' % body) if body.strip() else ''
+        if 'sec--final' in cls and body.strip():
+            inner = promote_cta_row(inner, P, cfg['slug'], 'final')
         parts.append('<section class="%s"%s>\n%s\n%s\n</section>' % (cls, sid_attr, inner, extra))
     parts.extend(end_bands)
     article = ('<article class="%P%__article">\n' + '\n'.join(parts) + '\n</article>')
@@ -1551,9 +1626,9 @@ report.append('  interactive modules   : toc %s, checklist %s, calculator %s, st
                        'data-wpx-progress', 'lifestyle_video')))
 report.append('  media slots           : %d editorial stills + video band' % len([s for s in CFG['image_slots']]))
 report.append('  module library        : %s'
-              % ', '.join([k for k in ('problem_strip', 'stat_cards', 'decision_tool', 'system_block',
-                                       'feature_block') if CFG.get(k)] + ['products', 'faq', 'checklist',
-                                                                          'calculator', 'toc', 'sticky']))
+              % ', '.join([k for k in ('problem_strip', 'stat_cards', 'card_grid', 'decision_tool',
+                                       'system_block', 'feature_block') if CFG.get(k)]
+                          + ['products', 'faq', 'checklist', 'calculator', 'toc', 'sticky', 'liferow']))
 report.append('  editorial media only  : %s (product imagery stays out of the section)'
               % ('yes' if 'image_picker' in section_text else 'no'))
 report.append('')

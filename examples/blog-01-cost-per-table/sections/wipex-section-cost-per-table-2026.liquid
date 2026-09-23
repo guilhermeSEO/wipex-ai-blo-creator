@@ -166,6 +166,22 @@
 @media(min-width:760px){.wx-cpt__feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
 .wx-cpt__feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius)}
 .wx-cpt__feature-list{margin:0 0 1rem;padding-left:1.1rem}
+/* liferow (image beside the prose) + info cards + closing band */
+.wx-cpt__liferow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1.75rem;align-items:start;
+  max-width:var(--wx-maxw);margin-inline:auto;padding:0 20px}
+.wx-cpt__liferow .wx-cpt__read{margin-inline:0;max-width:none}
+.wx-cpt__band--row{margin:0}
+.wx-cpt__band--row img{border-radius:var(--wx-radius)}
+.wx-cpt__info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin-top:1rem}
+.wx-cpt__card-info{background:#fff;border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:.9rem 1rem}
+.wx-cpt__card-info h3{margin:0 0 .3rem;font-size:1rem}
+.wx-cpt__card-info p{margin:0;font-size:.92rem;color:var(--wx-mut)}
+.wx-cpt__note{font-size:.85rem;color:var(--wx-mut);margin:.9rem 0 0}
+.wx-cpt__btn--gold{background:var(--wx-acc-ink);color:#fff}
+.wx-cpt__btn--gold:hover{opacity:.9}
+.wx-cpt__sec--final .wx-cpt__read{background:var(--wx-soft);border:1px solid var(--wx-line);
+  border-radius:var(--wx-radius);padding:1.4rem 1.5rem}
+@media (max-width:820px){.wx-cpt__liferow{grid-template-columns:minmax(0,1fr);gap:1rem}}
 /* faq + footer */
 .wx-cpt__faqq{margin-top:1.6rem}
 .wx-cpt__links{font-size:.95rem}
@@ -516,6 +532,7 @@
 </div>
 </section>
 <section class="wx-cpt__sec" id="self-assessment-your-cost-per-table-and-reset-time-{{ uid }}">
+<div class="wx-cpt__liferow">
 <div class="wx-cpt__read">
 <h2 id="self-assessment-your-cost-per-table-and-reset-time-{{ uid }}">Self-assessment: your cost per table and reset time</h2>
 <p>Run this on one section of your floor. It takes one service to fill in.</p>
@@ -529,8 +546,7 @@
 </div>
 {%- assign foc = section.settings.evidence_image_focal | default: 'center' -%}
 {%- if section.settings.evidence_image != blank -%}
-<figure class="wx-cpt__band wx-cpt__life--16x9" style="--wx-cpt-img-pos:{{ foc }};">
-<div class="wx-cpt__wrap">
+<figure class="wx-cpt__band wx-cpt__band--row wx-cpt__life--16x9" style="--wx-cpt-img-pos:{{ foc }};">
 <img
   src="{{ section.settings.evidence_image | image_url: width: 1120 }}"
   srcset="{{ section.settings.evidence_image | image_url: width: 638 }} 638w,
@@ -540,10 +556,11 @@
   width="1120" height="630"
   alt="{{ section.settings.evidence_image_alt | default: 'Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass before service' | escape }}" loading="lazy" decoding="async">
 {%- if section.settings.evidence_image_caption != blank -%}<figcaption class="wx-cpt__cap">{{ section.settings.evidence_image_caption | escape }}</figcaption>{%- endif -%}
-</div></figure>
+</figure>
 {%- elsif request.design_mode -%}
-<figure class="wx-cpt__band wx-cpt__life--16x9"><div class="wx-cpt__wrap"><div class="wx-cpt__ph">Editor only · Evidence image (16:9)<br>Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass bef</div></div></figure>
+<figure class="wx-cpt__band wx-cpt__band--row wx-cpt__life--16x9"><div class="wx-cpt__ph">Editor only · Evidence image (16:9)<br>Restaurant manager and busser reviewing a printed front-of-house reset checklist at the pass bef</div></figure>
 {%- endif -%}
+</div>
 <div class="wx-cpt__sec-block"><h2>Which setup fits your room</h2><div class="wx-cpt__dec-grid"><div class="wx-cpt__dec"><h3>Under 150 covers a night</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">400-count bucket at the station</p><a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="@CRO@-dec-1" href="https://wipex.co/products/table-bussers-surface-wipes">Shop the 400ct bucket →</a></div><div class="wx-cpt__dec wx-cpt__dec--rec"><h3>Guest-facing rooms in the season</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">Table Bussers® Autumn-Scented</p><a class="wx-cpt__btn wx-cpt__btn--primary wx-cpt__btn--sm" data-cro="@CRO@-dec-2" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Autumn-Scented →</a></div><div class="wx-cpt__dec"><h3>Kitchens, prep areas, quiet rooms</h3><div class="wx-cpt__dec-arrow" aria-hidden="true">↓</div><p class="wx-cpt__dec-sol">Table Bussers® Unscented</p><a class="wx-cpt__btn wx-cpt__btn--ghost wx-cpt__btn--sm" data-cro="@CRO@-dec-3" href="https://wipex.co/products/table-bussers-unscented">Shop Unscented →</a></div></div></div>
 </section>
 <section class="wx-cpt__sec" id="your-q4-front-of-house-readiness-checklist-{{ uid }}">
@@ -584,6 +601,7 @@
   </div>
 </section>
 {%- endif -%}
+<div class="wx-cpt__sec-block"><h2>Four things to check before you switch</h2><div class="wx-cpt__info-grid"><div class="wx-cpt__card-info"><h3>Certification</h3><p>Does the product carry the certification your inspections ask for?</p></div><div class="wx-cpt__card-info"><h3>Formulation</h3><p>Is it described for the surfaces you actually have?</p></div><div class="wx-cpt__card-info"><h3>Format</h3><p>Does it put the wipe at the station rather than in a storeroom?</p></div><div class="wx-cpt__card-info"><h3>Case rate</h3><p>Does it improve your cost per table, not just your cost per wipe?</p></div></div><p class="wx-cpt__note">Then measure one section for a week before you change the whole floor.</p></div>
 <section class="wx-cpt__sec" id="frequently-asked-questions-{{ uid }}">
 <div class="wx-cpt__read">
 <h2 id="frequently-asked-questions-{{ uid }}">Frequently asked questions</h2>
@@ -617,7 +635,7 @@
 <div class="wx-cpt__read">
 <h2 id="reduce-table-turnover-time-{{ uid }}">Reduce Table Turnover Time</h2>
 <p>Set your cost per table first, then decide what to change. Most operators find the consumable is the smaller half and the extra trip is the larger one.</p>
-<p><a href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® Autumn-Scented →</a> · <a href="https://wipex.co/products/table-bussers-unscented">Shop Table Bussers® Unscented →</a> · <a href="https://wipex.co/collections/food-service-commercial">Browse the food service collection →</a></p>
+<p class="wx-cpt__cta-row"><a class="wx-cpt__btn wx-cpt__btn--primary" data-cro="cost-per-table-restaurant-final-1" href="https://wipex.co/products/table-bussers-surface-wipes">Shop Table Bussers® Autumn-Scented →</a><a class="wx-cpt__btn wx-cpt__btn--gold" data-cro="cost-per-table-restaurant-final-2" href="https://wipex.co/products/table-bussers-unscented">Shop Table Bussers® Unscented →</a><a class="wx-cpt__btn wx-cpt__btn--ghost" data-cro="cost-per-table-restaurant-final-3" href="https://wipex.co/collections/food-service-commercial">Browse the food service collection →</a></p>
 <hr class="wx-cpt__hr">
 <p><em>Wipex — Facility Supply Team · Industrial &amp; commercial cleaning specialists · Reviewed 22 September 2026</em></p>
 </div>
