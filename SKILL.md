@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.1'
+version: '3.1.1'
 date_created: '2026-09-22'
 date_updated: '2026-09-23'
 owner: Guilherme (Wipex automation lead)
@@ -9,7 +9,7 @@ description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
 ---
 
-# Wipex Blog Generation — v3.1
+# Wipex Blog Generation — v3.1.1
 
 Research, copy, SEO/AEO/GEO, CRO and claims compliance in one evidence-driven flow.
 Written so the only thing you supply is an input form; everything else is researched,
@@ -259,6 +259,17 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.1.1 (2026-09-23)** — closes the four loose ends the audit left open: `references/07` was still
+describing the v2.7 delivery (everything inside `{% raw %}`, "settings declares 0") and now matches
+the v3 generator — Liquid-parsed prose with raw only around `<style>`/the JS, `SHOPIFY-CONFIG.json`
+and `SECTION-VALIDATION.txt` in the artifact table, and a verification list that asserts what the
+build actually asserts (35 settings, uid-suffixed ids, ≥ 4 `data-cro`, FAQ parity, tag balance); the
+image brief gains execution notes and a reported alt-text count; the calculator gains the executable
+`inputs / calculation / output_template / cta` mold. `references/03` §9 adds the shape of a per-SKU
+claims report (`CAN SAY / CANNOT SAY / RECOMMENDED ANGLE / FILTER VERSION` — dated, because a claim
+set without a date cannot be defended). `references/01` §10 records model D (test all three), which
+is meaningful once, on three posts, and never as a standing mode.
 
 **v3.1 (2026-09-23)** — **the consolidation itself: the 13 loose documents were audited against the
 skill, item by item, and everything still true was folded in.** Eight parallel delta analyses
