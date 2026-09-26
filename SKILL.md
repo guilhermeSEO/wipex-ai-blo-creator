@@ -3,7 +3,7 @@ name: wipex-blog-generation
 title: Wipex Blog Generation
 version: '3.3'
 date_created: '2026-09-22'
-date_updated: '2026-09-23'
+date_updated: '2026-09-26'
 owner: Guilherme (Wipex automation lead)
 description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
