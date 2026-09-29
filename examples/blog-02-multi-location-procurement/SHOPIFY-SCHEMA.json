@@ -1,0 +1,156 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site",
+      "alternativeHeadline": "Commercial Cleaning Supplies: A Multi-Location Program Guide 2026",
+      "author": {
+        "@type": "Organization",
+        "name": "Wipex",
+        "url": "https://wipex.co"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wipex",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wipex.co/logo.png"
+        }
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "keywords": "commercial cleaning supplies, multi-location cleaning supplies, bulk cleaning supplies, janitorial supplies, wholesale cleaning supplies, par level, volume tier, SKU consolidation",
+      "articleSection": "Facility Procurement",
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "Commercial cleaning supplies"
+        },
+        {
+          "@type": "Thing",
+          "name": "Multi-location procurement"
+        },
+        {
+          "@type": "Thing",
+          "name": "Par level"
+        },
+        {
+          "@type": "Thing",
+          "name": "Volume tier"
+        },
+        {
+          "@type": "Thing",
+          "name": "SKU consolidation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a multi-location cleaning supply procurement program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One standard for buying and replenishing consumables across several facilities: one approved SKU list for the footprint, a par level and reorder trigger per site, one dispenser standard, one delivery cadence. The supply half sets what you buy; the operating half keeps every site on that standard after launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we reach volume pricing if we cannot place one huge order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through the whole footprint, not one shipment. Standardising the same SKUs across sites means the cumulative demand qualifies for a tier even when each site orders a normal quantity. Consolidating most of your spend with one primary supplier is what turns scattered transactions into leverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we consolidate SKUs without breaking how the sites work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Audit first, then collapse. List every product actually present at each site, identify the duplicates that do the same job, and settle on one approved item per category. Formats can differ by room type, but if the format differs by site for the same room, consolidation fails — the reorder cannot run on two standards at once."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we set reorder points?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the par-level formula: (Daily Usage Rate × Lead Time) + Safety Stock. Measure the daily usage rate on a normal week, add a buffer sized to your worst realistic delay, and label the shelf with the resulting number so anyone can trigger the order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should every location run the same dispenser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, per room type. Dispenser standardisation is what lets one refill fit every site, which is what lets a single order cover the network. Mixed hardware forces special orders, and special orders are the front door to emergency pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a volume tier and how is it reached?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A price band tied to the quantity the footprint commits over a period. It is reached through cumulative demand plus standardisation, not one large order: more sites on the same SKU list reach a better tier than the same sites buying different products."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a procurement quote request include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The number of sites and their types, the approved SKU list per room type, and the dispenser standard you intend to run. Add the delivery cadence you want and whether you need consolidated invoicing across the footprint. Those five items let a supplier quote a program instead of a product."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we know whether the program is working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Track two numbers per site: cost per wipe and stockouts. If cost per wipe is stable and stockouts fall after the par levels go in, the operating half is holding. If emergency orders persist, the par level is set too low or the dispenser standard is not uniform."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Natural Gym Wipes Bulk Refill Roll 700ct — Original XL (meltblown)",
+      "sku": "WX11121FN",
+      "brand": {
+        "@type": "Brand",
+        "name": "Wipex"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "42.99",
+        "availability": "https://schema.org/InStock",
+        "url": "https://wipex.co/products/natural-gym-wipes-bulk-refill-roll"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wipex.co"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Library",
+          "item": "https://wipex.co/blogs/library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Commercial Cleaning Supplies: A Multi-Location Program Guide 2026"
+        }
+      ]
+    }
+  ]
+}

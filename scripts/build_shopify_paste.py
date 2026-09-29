@@ -81,6 +81,11 @@ CFG_DEFAULTS = {
     "products_anchor": "", "products_heading": "", "products": [],
     "problem_strip": None, "stat_cards": None, "card_grid": None,
     "decision_tool": None, "system_block": None, "feature_block": None,
+    # layout model: "editorial" (default: one long scrolling article) or "funnel" (short hero,
+    # one value band, the conversion modules high on the page, long sections collapsed into an
+    # accordion). The two models share the same tokens, typography and prose contract; only the
+    # arrangement and the reading rhythm differ, so a series can vary without leaving the brand.
+    "layout_model": "editorial", "value_strip": None, "accordion": None,
     "final_cta_heading": "",
     "schema_products": [], "schema_mentions": [],
     "calculator": {
@@ -153,7 +158,7 @@ def fin(s):
     """Resolve the two class-prefix tokens. Two tokens exist because a few templates are built with
     %-formatting, and a literal '%P%' inside a %-format string raises. '@P@' is used in those, and
     both are folded to the real prefix here — once, on the finished artifact."""
-    return s.replace('%P%', P).replace('@P@', P)
+    return s.replace('%P%', P).replace('@P@', P).replace('@CRO@', CFG['slug'])
 
 
 def inline(t):
@@ -481,6 +486,25 @@ def card_grid(P, cfg):
             % (head, body, note))
 
 
+def value_strip(P, cfg):
+    """Value strip — the funnel model's single conversion band under the hero: the article's own
+    numbers in one row, plus one CTA. Same rule as the stat cards: every figure must already exist
+    in the approved copy, because the module renders claims, it never makes them."""
+    items = cfg.get('items') or []
+    if not items:
+        return ''
+    cells = ''.join('<div class="@P@__vstrip-item"><b>%s</b><span>%s</span></div>'
+                    % (html.escape(i['value']), html.escape(i['label'])) for i in items)
+    label = ('<span class="@P@__vstrip-label">%s</span>' % html.escape(cfg['label'])) if cfg.get('label') else ''
+    cta = ''
+    if cfg.get('cta'):
+        cta = ('<a class="@P@__btn @P@__btn--primary @P@__btn--sm" data-cro="@CRO@-vstrip" href="%s">%s →</a>'
+               % (cfg['cta']['url'], html.escape(cfg['cta']['label'])))
+    return ('<section class="@P@__vstrip" aria-label="%s"><div class="@P@__wrap">'
+            '<div>%s<div class="@P@__vstrip-items">%s</div></div>%s</div></section>'
+            % (html.escape(cfg.get('aria', 'The program in numbers')), label, cells, cta))
+
+
 def promote_cta_row(html_str, P, slug, tag):
     """Turn the closing section's link paragraph into a real CTA row of buttons — the reference's
     final conversion band. No new copy: it restyles the links the approved article already carries,
@@ -578,14 +602,15 @@ def checklist_module(P, items, uidt):
             '<p class="@P@__check-note">Progress saves in this browser.</p></div>' % ''.join(rows))
 
 
-def toc_module(P, toc, uidt):
+def toc_module(P, toc, uidt, open=True):
     lis = ''.join('<li><a href="#%s">%s</a></li>' % (sid, html.escape(t))
                   for sid, t in toc if not t.strip().lower().startswith(('on this page', 'keep reading')))
     lid = 'tocList-%s' % (uidt or 'paste')
-    return ('<nav class="@P@__toc" data-wpx-toc data-open="true" aria-label="On this page">'
-            '<button type="button" class="@P@__toc-head" data-wpx-toc-toggle aria-expanded="true" aria-controls="%s">'
+    state = 'true' if open else 'false'
+    return ('<nav class="@P@__toc" data-wpx-toc data-open="%s" aria-label="On this page">'
+            '<button type="button" class="@P@__toc-head" data-wpx-toc-toggle aria-expanded="%s" aria-controls="%s">'
             '<span>On this page</span><span class="@P@__toc-chev" aria-hidden="true">▾</span></button>'
-            '<ul class="@P@__toc-list" id="%s">%s</ul></nav>' % (lid, lid, lis))
+            '<ul class="@P@__toc-list" id="%s">%s</ul></nav>' % (state, state, lid, lid, lis))
 
 
 def sticky_cta(P, cfg, resolved):
@@ -778,10 +803,18 @@ JS = """<script>
     run();
     update();
   }
+  function openFromHash() {
+    var h = window.location.hash ? window.location.hash.slice(1) : "";
+    if (!h) return;
+    var el = document.getElementById(h);
+    if (el && el.tagName === "DETAILS") el.open = true;
+  }
   function boot() {
     var nodes = document.querySelectorAll("[data-wpx-section]");
     for (var i = 0; i < nodes.length; i++) init(nodes[i].getAttribute("data-wpx-section"));
+    openFromHash();
   }
+  window.addEventListener("hashchange", openFromHash);
   if (document.readyState !== "loading") boot();
   else document.addEventListener("DOMContentLoaded", boot);
   document.addEventListener("shopify:section:load", function (ev) {
@@ -854,7 +887,7 @@ def build_article(nodes, toc, cfg, resolved, uidt):
         out = []
         for n in ns:
             if n['t'] == 'toc':
-                out.append(fin(toc_module(P, toc, uidt)))
+                out.append(fin(toc_module(P, toc, uidt, open=cfg.get('toc_open', True))))
             elif n['t'] == 'check':
                 out.append(fin(checklist_module(P, n['items'], uidt)))
             else:
@@ -869,6 +902,7 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                 return i
         return None
 
+    after_hero, after_hero_products = [], []
     slots_by_sec, rows_by_sec, before_faq_bands, end_bands = {}, {}, [], []
     for slot in cfg["image_slots"]:
         is_row = slot.get("layout") == "row"
@@ -892,7 +926,9 @@ def build_article(nodes, toc, cfg, resolved, uidt):
     prod = products_module(P, cfg, resolved).replace('%P%', P)
     if prod:
         a = cfg.get("products_anchor", "")
-        if a.startswith("after:"):
+        if a == "after_hero":
+            after_hero_products.append(prod)
+        elif a.startswith("after:"):
             i = find_section(a[6:])
             if i is None:
                 print('  WARN products anchor not found: %r' % a[6:])
@@ -911,9 +947,8 @@ def build_article(nodes, toc, cfg, resolved, uidt):
 
     # the reference's module library, config-driven: strip / stat cards / decision tool /
     # A+B system / feature block. Each one carries its own anchor in the config.
-    after_hero = []
-    for key, fn in (('problem_strip', problem_strip), ('stat_cards', stat_cards),
-                    ('card_grid', card_grid),
+    for key, fn in (('value_strip', value_strip), ('problem_strip', problem_strip),
+                    ('stat_cards', stat_cards), ('card_grid', card_grid),
                     ('decision_tool', decision_tool), ('system_block', system_block),
                     ('feature_block', feature_block)):
         conf = cfg.get(key)
@@ -935,6 +970,10 @@ def build_article(nodes, toc, cfg, resolved, uidt):
             before_faq_bands.append(html_mod)
         else:
             end_bands.append(html_mod)
+
+    # product cards anchored to the hero are appended after the config modules, so the funnel's
+    # above-the-fold order is value strip -> choice -> shop, not shop first.
+    after_hero.extend(after_hero_products)
 
     # the calculator module, placed by anchor inside its section (config: calculator.anchor)
     _calc_cfg = dict(CFG_DEFAULTS['calculator'])
@@ -966,6 +1005,10 @@ def build_article(nodes, toc, cfg, resolved, uidt):
         if (sec['title'] or '').strip().lower().startswith(('frequently asked', 'faq')):
             faq_i = i; break
 
+    acc_titles = [t.lower() for t in ((cfg.get('accordion') or {}).get('sections') or [])]
+    acc_hint = (cfg.get('accordion') or {}).get('hint', '')
+    acc_hint_used = False
+
     parts = []
     for i, sec in enumerate(sections):
         if faq_i is not None and i == faq_i:
@@ -973,12 +1016,27 @@ def build_article(nodes, toc, cfg, resolved, uidt):
         cls = '%P%__sec'
         if (sec['title'] or '').lower().startswith(cfg.get("final_cta_heading", "").lower()[:12]):
             cls += ' %P%__sec--final'
-        body = nodes_html(sec['nodes'])
+        # accordion model: matched H2 sections render as a native <details> panel, so the deep
+        # reading is available without making the page a wall. The heading id moves to the
+        # <details> element, which is what the TOC link targets (the JS opens it on hash).
+        is_acc = bool(acc_titles) and any(t in (sec['title'] or '').lower() for t in acc_titles) \
+            and len(sec['nodes']) > 1
+        if is_acc:
+            inner_nodes = [n for n in sec['nodes'] if n['t'] != 'h2']
+            body = ('<details class="@P@__acc" id="%s"><summary><h2>%s</h2></summary>'
+                    '<div class="@P@__acc-body">\n%s\n</div></details>'
+                    % (sec['id'], html.escape(sec['title']), nodes_html(inner_nodes)))
+            if acc_hint and not acc_hint_used:
+                body = '<p class="@P@__acc-hint">%s</p>\n%s' % (html.escape(acc_hint), body)
+                acc_hint_used = True
+            sid_attr = ''
+        else:
+            body = nodes_html(sec['nodes'])
+            sid_attr = (' id="%s"' % sec['id']) if sec['id'] != 'intro' else ''
         extra = '\n'.join(slots_by_sec.get(i, []))
         rows = rows_by_sec.get(i, [])
         if not body.strip() and not extra and not rows:
             continue
-        sid_attr = (' id="%s"' % sec['id']) if sec['id'] != 'intro' else ''
         if rows:
             inner = ('<div class="@P@__liferow">\n<div class="@P@__read">\n%s\n</div>\n%s\n</div>'
                      % (body, '\n'.join(rows)))
@@ -1036,13 +1094,16 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                           % (body, '\n'.join(slots_by_sec.get(0, []))))
             article = article.replace(parts[0], first_html, 1)
 
-    root = """<div class="@P@ @P@__root" id="@P@-%s" data-wpx-section="%s">
+    _model_cls = ''
+    if (cfg.get('layout_model') or 'editorial') != 'editorial':
+        _model_cls = ' @P@__model @P@__model--%s' % cfg['layout_model']
+    root = """<div class="@P@ @P@__root%s" id="@P@-%s" data-wpx-section="%s">
 <div class="@P@__progress" aria-hidden="true"><div class="@P@__progress-bar" data-wpx-progress></div></div>
 %s
 %s
 %s
 %s
-</div>""" % (uidt, uidt, hero, '\n'.join(after_hero), article, sticky_cta(P, cfg, resolved))
+</div>""" % (_model_cls, uidt, uidt, hero, '\n'.join(after_hero), article, sticky_cta(P, cfg, resolved))
     return fin(root), lede_default
 
 
@@ -1161,6 +1222,10 @@ def uid_anchors(html_str, heading_ids):
     for sid in set(heading_ids):
         html_str = html_str.replace('id="%s"' % sid, 'id="%s-{{ uid }}"' % sid)
         html_str = html_str.replace('href="#%s"' % sid, 'href="#%s-{{ uid }}"' % sid)
+        # a hero CTA can point at an in-page section: its href sits inside a Liquid
+        # `default: '#…'` expression, so it does not match the two rules above and would
+        # silently break once the heading id carries the section id.
+        html_str = html_str.replace("default: '#%s'" % sid, "default: '#%s-{{ uid }}'" % sid)
     return html_str
 
 
@@ -1454,6 +1519,10 @@ _mod_probes = (('toc', '<nav class="%s__toc"' % P), ('checklist', '<div class="%
                ('calculator', '<div class="%s__calc"' % P), ('sticky', '<div class="%s__sticky"' % P),
                ('progress', '<div class="%s__progress"' % P), ('video', 'lifestyle_video'),
                ('hero', '<header class="%s__hero"' % P), ('liferow', '<div class="%s__liferow"' % P))
+if CFG.get('value_strip'):
+    _mod_probes = _mod_probes + (('value_strip', '<section class="%s__vstrip"' % P),)
+if CFG.get('accordion'):
+    _mod_probes = _mod_probes + (('accordion', '<details class="%s__acc"' % P),)
 _absent = [name for name, probe in _mod_probes if probe not in section_text]
 for name, probe in _mod_probes:
     if probe not in section_text:

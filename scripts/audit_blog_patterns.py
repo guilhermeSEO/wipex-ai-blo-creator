@@ -15,6 +15,7 @@ Wipex — house-pattern audit.
 """
 import csv
 import html
+import json
 import os
 import re
 import sys
@@ -33,6 +34,30 @@ FEEDS = ['https://wipex.co/blogs/library.atom',
 TARGET = {'words': (3000, 4500), 'h2': (14, 22), 'h3': (8, 24),
           'paras': (50, 80), 'avg_para': (35, 55),
           'products': (4, 10), 'blogs': (4, 8)}
+
+# Per layout model. "editorial" is the measured house range above. "funnel" is the deliberately
+# shorter, conversion-first arrangement (short hero, one value band, deck of modules high on the
+# page, long sections collapsed) — same tokens, same brand, a different reading rhythm — so it is
+# scored against its own band instead of failing the editorial one.
+MODEL_TARGETS = {
+    'editorial': TARGET,
+    'funnel': {'words': (2200, 2800), 'h2': (8, 16), 'h3': (5, 14),
+               'paras': (28, 60), 'avg_para': (30, 55),
+               'products': (4, 10), 'blogs': (4, 8)},
+}
+
+
+def target_for(path):
+    """The band for this draft's layout model, read from SHOPIFY-CONFIG.json next to the draft.
+    No config or no model key -> the editorial house targets."""
+    cfg_path = os.path.join(os.path.dirname(os.path.abspath(path)), 'SHOPIFY-CONFIG.json')
+    model = 'editorial'
+    if os.path.exists(cfg_path):
+        try:
+            model = json.load(open(cfg_path, encoding='utf-8')).get('layout_model') or 'editorial'
+        except Exception:
+            model = 'editorial'
+    return model, MODEL_TARGETS.get(model, TARGET)
 
 
 def get(u):
@@ -220,10 +245,13 @@ def draft(path):
     met['words'] = len(strip(body).split())
     met['faq'] = bool(re.search(r'frequently asked|\bFAQ\b', src, re.I)) or '?\n' not in src and len(re.findall(r'\?', src)) >= 6
     lines = ['# PATTERN AUDIT — <name>', f'source: {path}', '']
+    model, target = target_for(path)
+    lines.append(f'model: {model}')
+    print(f'layout model: {model}')
     print(f"{'dimension':12} {'draft':>8} {'target':>13}  verdict")
     print('-' * 52)
     fails = []
-    for k, (lo, hi) in TARGET.items():
+    for k, (lo, hi) in target.items():
         v = met.get(k, 0)
         ok = lo <= v <= hi
         if not ok:

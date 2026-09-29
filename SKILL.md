@@ -1,9 +1,9 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.3'
+version: '3.4'
 date_created: '2026-09-22'
-date_updated: '2026-09-26'
+date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
 description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
@@ -123,6 +123,42 @@ Not every post uses all of them, but these are the modules the house actually re
 14. **Keep Reading** — 3–4 internal blog links
 15. **Closing CTA** — restates the operation outcome, 2–4 arrow-anchored links
 16. **Compliance blocks when health-related** — disclaimer / health-information note
+
+---
+
+## LAYOUT MODELS — one brand, more than one rhythm
+
+A series that uses the same module order for every post reads as a template. The section is
+therefore emitted from a **layout model**, chosen per post in `SHOPIFY-CONFIG.json`
+(`layout_model`). Both models share the design tokens, the typography, the CSS file, the prose
+contract and the same validation gates — only the arrangement and the reading rhythm differ.
+
+| | `editorial` (default) | `funnel` |
+|---|---|---|
+| intent | depth: the post is the answer | conversion: the post is the shortest path to the quote/product |
+| words | 3,000–4,500 | 2,200–2,800 |
+| hero | full hero + lede | short hero, tighter padding |
+| first band | `problem_strip` (4 cells) | **`value_strip`** (one row + one CTA) |
+| conversion modules | wherever the argument lands | **`after_hero`**: decision tool → product cards |
+| calculator | late | early |
+| FAQ | near the end | early, before the deep framework |
+| long sections | open prose | **accordion** (`<details>`, closed by default) |
+| TOC | open | collapsed (`toc_open: false`) |
+
+New config keys, all optional (absent ⇒ the editorial model and the old behaviour):
+
+- `layout_model`: `"editorial"` | `"funnel"`. Anything other than `editorial` puts
+  `…__model …__model--<name>` on the root, which is what the model CSS hangs off.
+- `value_strip`: `{anchor, label, aria, items[{value,label}], cta{label,url}}` — the single value
+  band. **Every figure must already exist in the approved copy** (same rule as the stat cards).
+- `accordion`: `{sections:[<H2 substring>], hint}` — matched H2 sections render as a native
+  `<details>` panel (no JS needed to open). The heading id moves to the `<details>` element, which
+  is what the TOC links to; the section JS opens it when the hash targets it.
+- `toc_open`: `false` collapses the jump-link TOC.
+- `products_anchor` now also accepts `"after_hero"`.
+
+`scripts/audit_blog_patterns.py --draft` reads `layout_model` from the config next to the draft and
+scores the post against **that model's** band, so a funnel post is not failed for being short.
 
 ---
 
@@ -259,6 +295,27 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4 (2026-09-29)** — **layout models, so a series stops looking like one post.** The section used
+to be one fixed module order, which made every post read the same. `SHOPIFY-CONFIG.json` now takes
+`layout_model`, and the generator gained a second model: **`funnel`** — short hero, a single
+**value strip** instead of the problem strip (the post's own numbers in one row + one CTA), the
+conversion modules (decision tool, product cards) placed **above the fold** via a new `after_hero`
+anchor, the calculator and FAQ early, and any H2 named in `accordion.sections` rendered as a native
+`<details>` panel (closed by default, opened by the section JS when the hash targets it — so the TOC
+still works). `toc_open: false` collapses the jump-link TOC. Same tokens, same stylesheet, same
+prose contract, same gates; only the arrangement and the rhythm change. `audit_blog_patterns.py
+--draft` now reads `layout_model` from the config and scores against that model's band
+(editorial 3,000–4,500 words; funnel 2,200–2,800), so a deliberately short post is not failed for
+being short. Two real defects were found and fixed while building it, both by reading the rendered
+page rather than the file: (1) **`@CRO@` was never resolved** — the decision tool, the system block
+and the feature block shipped five `data-cro="@CRO@-…"` attributes instead of the slug, so those
+CTAs were untracked; `fin()` now resolves it. (2) a hero CTA pointing at an in-page section
+(`default: '#slug'`) was not uid-suffixed by `uid_anchors()` and would have broken on the section id
+— that pattern is now rewritten too. Both fixes change blog 01's output; its content is otherwise
+byte-identical. First post on the new model: `blog-02-multi-location-procurement` (funnel, 2,744
+words, 1 `<details>`, value strip, 12 `data-cro`, `SECTION-VALIDATION.txt` = RESULT: NONE, verified
+in a real engine).
 
 **v3.3 (2026-09-23)** — **the design layer, and three rendering bugs it exposed.** The stylesheet is
 now a real file (`scripts/wipex-section.css`, 300+ rules) with **zero colours, fonts or radii in it**:

@@ -176,6 +176,41 @@ Five modules are pure config (`problem_strip`, `stat_cards`, `decision_tool`, `s
 code change. Their copy is linted exactly like the article copy — the stat cards especially: every
 number in them must already exist in the approved article.
 
+## 11. Layout models (v3.4)
+
+The section is emitted from a **layout model**, picked per post in the config (`layout_model`).
+Absent ⇒ `editorial`, which is the module order documented above and the behaviour of every post
+before v3.4. `funnel` is the conversion-first arrangement. The two share the stylesheet, the tokens,
+the prose contract, the JS and every gate; only the arrangement differs — which is what lets a
+series vary without leaving the brand.
+
+| | `editorial` | `funnel` |
+|---|---|---|
+| first band | `problem_strip` | `value_strip` |
+| conversion modules | by argument | `after_hero` (new anchor) |
+| calculator / FAQ | late | early |
+| long H2 sections | open | `<details>` accordion |
+| TOC | open | `toc_open: false` |
+| audit band | 3,000–4,500 w | 2,200–2,800 w |
+
+**`value_strip`** renders `<section class="…__vstrip">` under the hero: a label, the post's own
+numbers in one row, and one CTA. It is config-only (no theme setting), so the ≤ 40-setting cap is
+untouched — and like the stat cards, **every figure in it must already exist in the approved copy**.
+
+**`accordion`** turns the matched H2 sections into `<details class="…__acc">`, closed by default. The
+heading id moves from the `<h2>` to the `<details>` element, so the TOC link and the browser's own
+anchor jump still land on it; the section JS opens the panel when the hash targets it (native
+`<details>` needs no JS to open by hand, and it is keyboard-accessible for free).
+
+**Model CSS** hangs off `…__model--<name>` on the root, added only when the model is not `editorial`.
+The `_mod_probes` validation grows a probe for each model-only module, so a `value_strip` or an
+`accordion` declared in the config but not rendered fails the build instead of shipping an empty
+band.
+
+**Regression note (v3.4).** Rebuilding an editorial post on v3.4 changes its bytes in exactly two
+places: the new model CSS (inert — no element carries the class) and the `@CRO@` fix. Verify a
+rebuild with `diff` rather than assuming.
+
 ## 10. Pitfalls (each one cost a build)
 
 - **A Liquid template cannot go through Python `%`-formatting** — `{%-` is read as a format spec.

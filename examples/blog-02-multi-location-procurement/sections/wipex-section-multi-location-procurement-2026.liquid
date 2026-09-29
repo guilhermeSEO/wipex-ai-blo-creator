@@ -1,0 +1,1043 @@
+{%- comment -%}
+  Wipex blog section — wipex-section-multi-location-procurement-2026.
+  Reference-grade module: theme-editor settings, editorial media (16:9 / 2:3 stills, native video
+  band), interactive TOC, real checklist, reading progress, sticky mobile CTA, data-cro on every
+  CTA, instance-safe JavaScript (safe to place twice on one page).
+
+  The prose below is GENERATED from the compliance-approved markdown. Do not retype it in the
+  editor: edit the markdown, regenerate, re-paste. The prose may not contain Liquid delimiters —
+  the generator refuses to emit a section when it does.
+
+  Structured data is NOT in this file: Shopify's validator counts every @type key in the file as a
+  setting and blows the 40-setting cap. It lives in snippets/wipex-blog-schema.liquid.
+
+  Files in the theme:
+    sections/wipex-section-multi-location-procurement-2026.liquid
+    snippets/wipex-blog-schema.liquid
+    templates/article.multi-location-procurement.json
+{%- endcomment -%}
+
+{%- assign uid = section.id -%}
+{% raw %}
+<style>
+/* ============================================================================
+   Wipex blog section — stylesheet  (kept inside <style> so nothing renders as text)
+
+   Design belongs here; logic belongs in build_shopify_paste.py. Two tokens are
+   substituted at build time:
+
+     wx-mlp          -> the post's CSS prefix (e.g. wx-cpt), so every rule is scoped
+                     to the section and cannot leak into the theme
+     .wx-mlp{--wx-ink:#1c1d1d;--wx-ink-soft:#4a4a48;--wx-muted:#6f6f6b;--wx-line:#e8e8e1;--wx-surface:#ffffff;--wx-surface-warm:#fdfbf8;--wx-dark:#111111;--wx-accent:#76c39c;--wx-accent-ink:#2f6b4f;--wx-accent-soft:#eaf6f0;--wx-plum:#b68fbd;--wx-plum-soft:#f5eef7;--wx-gold:#b08d57;--wx-radius:16px;--wx-radius-sm:6px;--wx-pill:999px;--wx-shadow:0 1px 2px rgba(28,29,29,.05), 0 10px 30px rgba(28,29,29,.06);--wx-shadow-hover:0 2px 6px rgba(28,29,29,.07), 0 18px 44px rgba(28,29,29,.11);--wx-maxw:1180px;--wx-readw:44rem;--wx-space:28px;--wx-hero-tint:linear-gradient(180deg, #fdfbf8 0%, #ffffff 78%);--wx-font-head:"New Order", Raleway, system-ui, -apple-system, Segoe UI, sans-serif;font-family:Raleway, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--wx-ink);line-height:1.65;font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative;-webkit-font-smoothing:antialiased}   -> the palette/typography block generated from "theme" in
+                     SHOPIFY-CONFIG.json
+
+   To restyle a post or a season: edit the `theme` block in the config. Do not
+   write a colour, a font or a radius in this file — only var(--wx-*).
+   ============================================================================ */
+.wx-mlp{--wx-ink:#1c1d1d;--wx-ink-soft:#4a4a48;--wx-muted:#6f6f6b;--wx-line:#e8e8e1;--wx-surface:#ffffff;--wx-surface-warm:#fdfbf8;--wx-dark:#111111;--wx-accent:#76c39c;--wx-accent-ink:#2f6b4f;--wx-accent-soft:#eaf6f0;--wx-plum:#b68fbd;--wx-plum-soft:#f5eef7;--wx-gold:#b08d57;--wx-radius:16px;--wx-radius-sm:6px;--wx-pill:999px;--wx-shadow:0 1px 2px rgba(28,29,29,.05), 0 10px 30px rgba(28,29,29,.06);--wx-shadow-hover:0 2px 6px rgba(28,29,29,.07), 0 18px 44px rgba(28,29,29,.11);--wx-maxw:1180px;--wx-readw:44rem;--wx-space:28px;--wx-hero-tint:linear-gradient(180deg, #fdfbf8 0%, #ffffff 78%);--wx-font-head:"New Order", Raleway, system-ui, -apple-system, Segoe UI, sans-serif;font-family:Raleway, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--wx-ink);line-height:1.65;font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative;-webkit-font-smoothing:antialiased}
+.wx-mlp *,.wx-mlp *::before,.wx-mlp *::after{box-sizing:border-box}
+.wx-mlp img{max-width:100%;height:auto;display:block}
+.wx-mlp h1,.wx-mlp h2,.wx-mlp h3{font-family:var(--wx-font-head);line-height:1.18;letter-spacing:-.015em;color:var(--wx-ink);margin:0 0 .6em}
+.wx-mlp h1{font-size:clamp(1.95rem,1.3rem + 2.6vw,3rem)}
+.wx-mlp h2{font-size:clamp(1.4rem,1.15rem + 1.1vw,1.9rem)}
+.wx-mlp h3{font-size:1.15rem}
+.wx-mlp p{margin:0 0 1.1rem}
+.wx-mlp ul,.wx-mlp ol{margin:0 0 1.2rem;padding-left:1.3rem}
+.wx-mlp li{margin:.4rem 0}
+.wx-mlp a{color:var(--wx-accent-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.wx-mlp a:hover{color:var(--wx-accent);text-decoration-thickness:2px}
+.wx-mlp a.wx-mlp__btn{text-decoration:none}
+.wx-mlp strong{font-weight:700}
+.wx-mlp code{background:var(--wx-surface-warm);border:1px solid var(--wx-line);padding:.1em .4em;border-radius:var(--wx-radius-sm);font-size:.9em}
+.wx-mlp :focus-visible{outline:2px solid var(--wx-accent);outline-offset:2px;border-radius:4px}
+.wx-mlp__wrap{max-width:var(--wx-maxw);margin-inline:auto;padding:0 22px}
+.wx-mlp__read{max-width:var(--wx-readw);margin-inline:auto}
+.wx-mlp__sec{padding:var(--wx-space) 0;border-top:1px solid var(--wx-line)}
+.wx-mlp__sec:first-of-type{border-top:0}
+.wx-mlp__sec-block{background:var(--wx-surface);border:1px solid var(--wx-line);border-radius:var(--wx-radius);
+  box-shadow:var(--wx-shadow);padding:1.35rem 1.45rem 1.5rem;margin:1.9rem 0}
+.wx-mlp__sec-block h2{margin-top:0}
+
+/* hero */
+.wx-mlp__hero{background:var(--wx-hero-tint);border-bottom:1px solid var(--wx-line);padding:14px 0 38px}
+.wx-mlp__hero-inner{max-width:46rem}
+.wx-mlp__eyebrow{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--wx-accent-ink);background:var(--wx-accent-soft);border-radius:var(--wx-pill);padding:.38rem .85rem;margin-bottom:18px}
+.wx-mlp__lede{font-size:1.12rem;color:var(--wx-ink-soft);max-width:44rem}
+.wx-mlp__lede p:last-child{margin-bottom:1.1rem}
+.wx-mlp__cta-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin:1.6rem 0 0}
+
+/* buttons */
+.wx-mlp__btn{display:inline-flex;align-items:center;font-weight:700;font-size:.95rem;line-height:1;text-decoration:none;
+  padding:.9rem 1.4rem;border-radius:var(--wx-pill);border:1.5px solid transparent;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease,border-color .15s ease}
+.wx-mlp a.wx-mlp__btn--primary{background:var(--wx-accent);color:#fff;box-shadow:0 8px 18px rgba(118,195,156,.3)}
+.wx-mlp a.wx-mlp__btn--primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(118,195,156,.36);color:#fff}
+.wx-mlp a.wx-mlp__btn--gold{background:var(--wx-plum);color:#fff;box-shadow:0 8px 18px rgba(182,143,189,.32)}
+.wx-mlp a.wx-mlp__btn--gold:hover{transform:translateY(-1px);color:#fff}
+.wx-mlp a.wx-mlp__btn--ghost{background:var(--wx-surface);color:var(--wx-ink);border-color:var(--wx-line);box-shadow:var(--wx-shadow)}
+.wx-mlp a.wx-mlp__btn--ghost:hover{border-color:var(--wx-accent);color:var(--wx-accent-ink)}
+.wx-mlp__btn--sm{padding:.62rem 1.05rem;font-size:.875rem}
+
+/* editorial media */
+.wx-mlp__band{margin:1.6rem 0}
+.wx-mlp__band img{object-position:var(--wx-mlp-img-pos,center)}
+.wx-mlp__band.wx-mlp__life--16x9 img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:var(--wx-radius);box-shadow:var(--wx-shadow)}
+.wx-mlp__life--2x3 img{aspect-ratio:2/3;object-fit:cover;width:100%;max-width:420px;border-radius:var(--wx-radius);box-shadow:var(--wx-shadow)}
+.wx-mlp__band.wx-mlp__life--2x3 .wx-mlp__wrap{max-width:480px}
+.wx-mlp__cap{display:block;color:var(--wx-muted);font-size:.8rem;letter-spacing:.02em;margin-top:.55rem}
+.wx-mlp__ph{border:1px dashed var(--wx-line);border-radius:var(--wx-radius);color:var(--wx-muted);font-size:.85rem;
+  text-align:center;padding:2.5rem 1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  background:repeating-linear-gradient(45deg,var(--wx-surface-warm),var(--wx-surface-warm) 10px,#f6f3ee 10px,#f6f3ee 20px)}
+.wx-mlp__liferow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1.9rem;align-items:start;
+  max-width:var(--wx-maxw);margin-inline:auto;padding:0 22px}
+.wx-mlp__liferow .wx-mlp__read{margin-inline:0;max-width:none}
+.wx-mlp__band--row{margin:0}
+.wx-mlp__band--row img{border-radius:var(--wx-radius);box-shadow:var(--wx-shadow)}
+
+/* video band */
+.wx-mlp__videoband{padding:var(--wx-space) 0}
+.wx-mlp__video{position:relative;border-radius:var(--wx-radius);overflow:hidden;background:var(--wx-dark);box-shadow:var(--wx-shadow)}
+.wx-mlp__video video,.wx-mlp__video img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.wx-mlp__video-content{position:absolute;inset:auto 0 0 0;padding:1.6rem;color:#fff;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(17,17,17,.72) 100%)}
+.wx-mlp__video-h{margin:0 0 .35rem;color:#fff;font-size:1.3rem}
+.wx-mlp__video-t{margin:0 0 .9rem;color:#f2f2f2;font-size:.95rem}
+
+/* key takeaways */
+.wx-mlp__takeaways{list-style:none;padding:1.3rem 1.4rem;margin:1.4rem 0 1.6rem;background:var(--wx-accent-soft);
+  border-left:4px solid var(--wx-accent);border-radius:0 var(--wx-radius) var(--wx-radius) 0}
+.wx-mlp__takeaways li{position:relative;padding-left:1.6rem;margin:.55rem 0}
+.wx-mlp__takeaways li::before{content:"\2713";position:absolute;left:0;color:var(--wx-accent-ink);font-weight:700}
+
+/* table of contents */
+.wx-mlp__toc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-surface);
+  box-shadow:var(--wx-shadow);margin:1.4rem 0 1.9rem;overflow:hidden}
+.wx-mlp__toc-head{display:flex;justify-content:space-between;align-items:center;width:100%;gap:.75rem;
+  font-family:var(--wx-font-head);font-weight:700;font-size:.95rem;text-align:left;background:none;border:0;
+  cursor:pointer;padding:1rem 1.15rem;color:var(--wx-ink)}
+.wx-mlp__toc-chev{transition:transform .18s ease;color:var(--wx-accent)}
+.wx-mlp__toc[data-open="false"] .wx-mlp__toc-chev{transform:rotate(-90deg)}
+.wx-mlp__toc[data-open="false"] .wx-mlp__toc-list{display:none}
+.wx-mlp__toc-list{list-style:none;margin:0;padding:.35rem 1.15rem 1.1rem;border-top:1px solid var(--wx-line)}
+.wx-mlp__toc-list li{margin:.45rem 0}
+.wx-mlp__toc-list a{text-decoration:none;font-size:.95rem}
+
+/* tables */
+.wx-mlp__tablewrap{overflow-x:auto;margin:0 0 1.4rem;border:1px solid var(--wx-line);border-radius:var(--wx-radius);
+  box-shadow:var(--wx-shadow);background:var(--wx-surface)}
+.wx-mlp__table{border-collapse:collapse;width:100%;font-size:.965rem}
+.wx-mlp__table--wide{min-width:34rem}
+.wx-mlp__table th,.wx-mlp__table td{padding:.7rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--wx-line)}
+.wx-mlp__table thead th{background:var(--wx-accent-soft);color:var(--wx-accent-ink);font-weight:700;white-space:nowrap}
+.wx-mlp__table tbody tr:nth-child(even){background:var(--wx-surface-warm)}
+.wx-mlp__table tbody tr:last-child td,.wx-mlp__table tbody tr:last-child th{border-bottom:0}
+.wx-mlp__table tbody th{font-weight:700}
+
+/* problem strip */
+.wx-mlp__strip{background:var(--wx-dark);color:#fff;margin:0 0 6px}
+.wx-mlp__strip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:rgba(255,255,255,.14)}
+.wx-mlp__strip-cell{background:var(--wx-dark);padding:1.15rem 1.25rem}
+.wx-mlp__strip-cell strong{display:block;font-family:var(--wx-font-head);font-size:1rem;color:#fff}
+.wx-mlp__strip-cell span{display:block;color:rgba(255,255,255,.72);font-size:.85rem;margin-top:.25rem}
+
+/* stat cards */
+.wx-mlp__stats-block{padding:var(--wx-space) 0 0}
+.wx-mlp__stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.85rem;margin:1.1rem 0 0}
+.wx-mlp__stat{background:var(--wx-surface-warm);border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:1rem 1.05rem}
+.wx-mlp__stat b{display:block;font-family:var(--wx-font-head);font-size:1.75rem;letter-spacing:-.02em;color:var(--wx-accent-ink)}
+.wx-mlp__stat span{display:block;color:var(--wx-muted);font-size:.8rem;margin-top:.2rem}
+
+/* info cards */
+.wx-mlp__info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin-top:1.15rem}
+.wx-mlp__card-info{background:var(--wx-surface-warm);border:1px solid var(--wx-line);border-radius:var(--wx-radius);
+  padding:1.05rem 1.1rem;box-shadow:var(--wx-shadow);transition:box-shadow .15s ease,transform .15s ease}
+.wx-mlp__card-info:hover{box-shadow:var(--wx-shadow-hover);transform:translateY(-2px)}
+.wx-mlp__card-info h3{margin:0 0 .35rem;font-size:1.02rem}
+.wx-mlp__card-info p{margin:0;font-size:.92rem;color:var(--wx-muted)}
+.wx-mlp__note{font-size:.85rem;color:var(--wx-muted);margin:1rem 0 0}
+
+/* product cards */
+.wx-mlp__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.1rem;margin-top:1.2rem}
+.wx-mlp__card{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-surface);
+  padding:1.15rem 1.2rem 1.3rem;display:flex;flex-direction:column;box-shadow:var(--wx-shadow);
+  transition:box-shadow .15s ease,transform .15s ease}
+.wx-mlp__card:hover{box-shadow:var(--wx-shadow-hover);transform:translateY(-2px)}
+.wx-mlp__card-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius-sm);margin-bottom:.85rem}
+.wx-mlp__badge{align-self:flex-start;font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--wx-plum);background:var(--wx-plum-soft);border-radius:var(--wx-pill);padding:.3rem .7rem;margin-bottom:.7rem}
+.wx-mlp__card-h{margin:0 0 .35rem;font-size:1.08rem}
+.wx-mlp__card-best{margin:0 0 .7rem;font-size:.85rem;color:var(--wx-muted)}
+.wx-mlp__card-list{margin:0 0 1.15rem;padding-left:1.1rem;font-size:.92rem}
+.wx-mlp__card .wx-mlp__btn{margin-top:auto;align-self:flex-start}
+
+/* decision tool */
+.wx-mlp__dec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.1rem;margin-top:1.2rem}
+.wx-mlp__dec{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-surface-warm);
+  padding:1.15rem 1.2rem;text-align:center;transition:box-shadow .15s ease,transform .15s ease}
+.wx-mlp__dec:hover{transform:translateY(-2px);box-shadow:var(--wx-shadow-hover)}
+.wx-mlp__dec--rec{background:var(--wx-surface);border-color:var(--wx-accent);box-shadow:inset 0 0 0 1px var(--wx-accent),var(--wx-shadow)}
+.wx-mlp__dec h3{margin:0 0 .4rem;font-size:1.02rem}
+.wx-mlp__dec-arrow{color:var(--wx-accent);margin:.25rem 0}
+.wx-mlp__dec-sol{font-family:var(--wx-font-head);font-weight:700;margin:0 0 .9rem}
+
+/* A + B system block — the dark card, straight from the store's own card style */
+.wx-mlp__system{background:var(--wx-dark);border-color:var(--wx-dark);color:#fff;text-align:center}
+.wx-mlp__system h2{color:#fff}
+.wx-mlp__system p{color:rgba(255,255,255,.78)}
+.wx-mlp__system-eq{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;align-items:center;margin:1.25rem 0}
+.wx-mlp__pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--wx-pill);
+  padding:.55rem 1.05rem;font-size:.92rem;color:#fff}
+.wx-mlp__op{color:rgba(255,255,255,.55)}
+.wx-mlp__system-result{background:var(--wx-accent);border-color:var(--wx-accent);font-weight:700}
+
+/* primary feature */
+.wx-mlp__feature{display:grid;grid-template-columns:minmax(0,1fr);gap:1.4rem}
+.wx-mlp__feature-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--wx-radius);box-shadow:var(--wx-shadow)}
+.wx-mlp__feature-list{margin:0 0 1.15rem;padding-left:1.1rem}
+.wx-mlp__feature-list li::marker{color:var(--wx-accent)}
+
+/* checklist */
+.wx-mlp__check{background:var(--wx-surface-warm);border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:1.15rem 1.3rem}
+.wx-mlp__check-list{list-style:none;padding-left:0;margin:0}
+.wx-mlp__check-item{display:flex;gap:.7rem;align-items:flex-start;margin:.6rem 0}
+.wx-mlp__check-item input{margin:.28rem 0 0;width:1.15rem;height:1.15rem;accent-color:var(--wx-accent);flex:none}
+.wx-mlp__check-item label{cursor:pointer}
+.wx-mlp__check-item input:checked + label{color:var(--wx-muted);text-decoration:line-through}
+.wx-mlp__check-note{margin:.95rem 0 0;font-size:.78rem;color:var(--wx-muted)}
+
+/* calculator */
+.wx-mlp__calc{background:var(--wx-surface-warm);border:1px solid var(--wx-line);border-left:4px solid var(--wx-accent);
+  border-radius:var(--wx-radius);padding:1.3rem 1.35rem 1.2rem;margin:1.7rem 0 1.9rem;contain:content}
+.wx-mlp__calc-h{margin:0 0 1rem;font-size:1.1rem}
+.wx-mlp__calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem}
+.wx-mlp__calc-grid label{display:flex;flex-direction:column;gap:.3rem;font-size:.8rem;color:var(--wx-muted)}
+.wx-mlp__calc-grid input{font:inherit;font-size:.95rem;color:var(--wx-ink);padding:.55rem .6rem;border:1px solid var(--wx-line);
+  border-radius:var(--wx-radius-sm);background:var(--wx-surface);min-width:0}
+.wx-mlp__calc-grid input:focus{outline:2px solid var(--wx-accent);outline-offset:1px;border-color:var(--wx-accent)}
+.wx-mlp__calc-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.8rem;margin-top:1.15rem}
+.wx-mlp__calc-out>div{background:var(--wx-surface);border:1px solid var(--wx-line);border-radius:var(--wx-radius-sm);padding:.7rem .8rem}
+.wx-mlp__calc-out span{display:block;font-family:var(--wx-font-head);font-size:1.55rem;font-weight:700;letter-spacing:-.02em;color:var(--wx-accent-ink)}
+.wx-mlp__calc-out small{display:block;color:var(--wx-muted);font-size:.75rem;margin-top:.15rem}
+.wx-mlp__calc-note{margin:.9rem 0 0;font-size:.78rem;color:var(--wx-muted)}
+
+/* progress + sticky CTA */
+.wx-mlp__progress{position:fixed;top:0;left:0;right:0;height:3px;background:transparent;z-index:60;pointer-events:none}
+.wx-mlp__progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--wx-accent),var(--wx-plum))}
+.wx-mlp__sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;align-items:center;gap:.7rem;justify-content:center;
+  padding:.7rem 1rem;background:var(--wx-dark);border-top:1px solid rgba(255,255,255,.12);
+  box-shadow:0 -8px 26px rgba(17,17,17,.22);transform:translateY(110%);transition:transform .2s ease}
+.wx-mlp__sticky.is-visible{transform:translateY(0)}
+.wx-mlp__sticky .wx-mlp__btn--primary{box-shadow:none;padding:.7rem 1.15rem}
+.wx-mlp__sticky-close{background:none;border:0;font-size:1.4rem;line-height:1;color:rgba(255,255,255,.7);cursor:pointer;padding:.1rem .45rem}
+.wx-mlp__sticky-close:hover{color:#fff}
+
+/* faq, links, footer */
+.wx-mlp__faqq{margin:2rem 0 .5rem;padding-top:1.1rem;border-top:1px solid var(--wx-line)}
+.wx-mlp__faqq:first-of-type{border-top:0;padding-top:0;margin-top:1.5rem}
+.wx-mlp__links{font-size:.95rem;background:var(--wx-surface-warm);border:1px solid var(--wx-line);border-radius:var(--wx-radius);padding:1rem 1.15rem}
+.wx-mlp__foot{color:var(--wx-muted);font-size:.82rem;letter-spacing:.02em}
+.wx-mlp__hr{border:0;border-top:1px solid var(--wx-line);margin:2.2rem 0}
+.wx-mlp__code{background:var(--wx-dark);color:#f4f4f2;border:0;border-radius:var(--wx-radius-sm);padding:1rem 1.1rem;
+  overflow-x:auto;font-size:.9rem;line-height:1.55;margin:0 0 1.2rem}
+.wx-mlp__code code{background:none;border:0;padding:0;color:inherit}
+.wx-mlp__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wx-mlp__sec--final .wx-mlp__read{background:var(--wx-surface-warm);border:1px solid var(--wx-line);
+  border-radius:var(--wx-radius);padding:1.7rem 1.8rem;box-shadow:var(--wx-shadow)}
+
+/* ── layout model: funnel — short hero, one value band, accordion ───────── */
+.wx-mlp__model--funnel .wx-mlp__hero{padding:12px 0 26px}
+.wx-mlp__model--funnel .wx-mlp__hero-inner{max-width:52rem}
+.wx-mlp__model--funnel .wx-mlp__sec{padding:22px 0}
+.wx-mlp__model--funnel .wx-mlp__stats-block{padding-top:20px}
+
+/* value strip — the single value band under the hero (funnel model) */
+.wx-mlp__vstrip{background:var(--wx-dark);color:#fff;margin:0 0 6px}
+.wx-mlp__vstrip .wx-mlp__wrap{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center;
+  justify-content:space-between;padding-top:1.15rem;padding-bottom:1.15rem}
+.wx-mlp__vstrip-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--wx-accent);margin-bottom:.45rem}
+.wx-mlp__vstrip-items{display:flex;flex-wrap:wrap;gap:.5rem 2.1rem}
+.wx-mlp__vstrip-item b{display:block;font-family:var(--wx-font-head);font-size:1.42rem;letter-spacing:-.02em;color:#fff}
+.wx-mlp__vstrip-item span{display:block;color:rgba(255,255,255,.7);font-size:.76rem;max-width:15rem}
+.wx-mlp__vstrip .wx-mlp__btn--primary{box-shadow:none}
+
+/* accordion — native details/summary, no JS needed to open */
+.wx-mlp__acc{border:1px solid var(--wx-line);border-radius:var(--wx-radius);background:var(--wx-surface);
+  box-shadow:var(--wx-shadow);margin:0 0 1rem;overflow:hidden}
+.wx-mlp__acc[open]{box-shadow:var(--wx-shadow-hover)}
+.wx-mlp__acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.85rem;
+  padding:1.05rem 1.25rem;font-family:var(--wx-font-head);font-weight:700;color:var(--wx-ink)}
+.wx-mlp__acc>summary::-webkit-details-marker{display:none}
+.wx-mlp__acc>summary::after{content:"+";margin-left:auto;font-size:1.3rem;line-height:1;color:var(--wx-accent)}
+.wx-mlp__acc[open]>summary::after{content:"\2013"}
+.wx-mlp__acc>summary h2{margin:0;font-size:1.05rem}
+.wx-mlp__acc-body{padding:1.1rem 1.25rem 1.35rem;border-top:1px solid var(--wx-line)}
+.wx-mlp__acc-body h3{font-size:1rem;margin-top:1.3rem}
+.wx-mlp__acc-body h3:first-child{margin-top:0}
+.wx-mlp__acc-hint{font-size:.82rem;color:var(--wx-muted);margin:.1rem 0 1rem}
+
+@media (min-width:760px){.wx-mlp__feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
+@media (max-width:820px){.wx-mlp__liferow{grid-template-columns:minmax(0,1fr);gap:1.1rem}}
+@media print{
+  .wx-mlp__calc,.wx-mlp__tablewrap,.wx-mlp__sticky,.wx-mlp__progress{display:none!important}
+  .wx-mlp__btn{background:none!important;color:inherit!important;border:0!important;box-shadow:none!important;padding:0!important}
+  .wx-mlp a{color:inherit;text-decoration:none}}
+@media (max-width:640px){
+  .wx-mlp{font-size:1rem}
+  .wx-mlp__hero{padding:10px 0 30px}
+  .wx-mlp__sec-block{padding:1.15rem 1.2rem 1.25rem}
+  .wx-mlp__table--wide{min-width:30rem}
+  .wx-mlp__table:not(.wx-mlp__table--wide) thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .wx-mlp__table:not(.wx-mlp__table--wide) tr{display:block;border-bottom:1px solid var(--wx-line);padding:.35rem 0}
+  .wx-mlp__table:not(.wx-mlp__table--wide) tr:last-child{border-bottom:0}
+  .wx-mlp__table:not(.wx-mlp__table--wide) th,.wx-mlp__table:not(.wx-mlp__table--wide) td{display:flex;gap:.75rem;justify-content:space-between;border:0;padding:.4rem .9rem}
+  .wx-mlp__table:not(.wx-mlp__table--wide) th[data-label]::before,.wx-mlp__table:not(.wx-mlp__table--wide) td[data-label]::before{
+    content:attr(data-label);font-weight:700;color:var(--wx-muted);flex:0 0 42%}
+  .wx-mlp__table:not(.wx-mlp__table--wide) th[data-label]::before{color:var(--wx-accent-ink)}
+}
+</style>
+{% endraw %}
+
+<div class="wx-mlp wx-mlp__root wx-mlp__model wx-mlp__model--funnel" id="wx-mlp-{{ uid }}" data-wpx-section="{{ uid }}">
+<div class="wx-mlp__progress" aria-hidden="true"><div class="wx-mlp__progress-bar" data-wpx-progress></div></div>
+<header class="wx-mlp__hero">
+  <div class="wx-mlp__wrap">
+    <div class="wx-mlp__hero-inner">
+      <span class="wx-mlp__eyebrow">{{ section.settings.hero_eyebrow | default: 'Facility Procurement' | escape }}</span>
+      <h1>{{ section.settings.hero_title | default: 'Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site' | escape }}</h1>
+      <div class="wx-mlp__lede">{%- if section.settings.hero_lede != blank -%}{{ section.settings.hero_lede }}{%- else -%}Every location that buys its own wipes is a location quietly drifting off-spec. One site runs a bucket, the next runs a refill roll, a third reorders whatever the local rep has on the truck this week. The invoices look fine. The operation is not.{%- endif -%}</div>
+      <p class="wx-mlp__cta-row">
+        <a class="wx-mlp__btn wx-mlp__btn--primary" data-cro="multi-location-cleaning-supply-procurement-hero" href="{{ section.settings.hero_cta_url | default: 'https://wipex.co/pages/contact-us' }}">{{ section.settings.hero_cta_label | default: 'Request a Wipe Procurement Quote' | escape }} →</a>
+        <a class="wx-mlp__btn wx-mlp__btn--ghost" data-cro="multi-location-cleaning-supply-procurement-hero-2" href="{{ section.settings.hero_cta2_url | default: '#what-the-program-saves-cost-per-wipe-{{ uid }}' }}">{{ section.settings.hero_cta2_label | default: 'See what the program saves' | escape }}</a>
+      </p>
+    </div>
+    {%- assign foc = section.settings.hero_image_focal | default: 'center' -%}
+{%- if section.settings.hero_image != blank -%}
+<figure class="wx-mlp__band wx-mlp__life--16x9" style="--wx-mlp-img-pos:{{ foc }};">
+<div class="wx-mlp__wrap">
+<img
+  src="{{ section.settings.hero_image | image_url: width: 1120 }}"
+  srcset="{{ section.settings.hero_image | image_url: width: 638 }} 638w,
+          {{ section.settings.hero_image | image_url: width: 1120 }} 1120w,
+          {{ section.settings.hero_image | image_url: width: 1568 }} 1568w"
+  sizes="(max-width: 1120px) 100vw, 1120px"
+  width="1120" height="630"
+  alt="{{ section.settings.hero_image_alt | default: 'Multi-location cleaning supply procurement: one wipe program across every site' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.hero_image_caption != blank -%}<figcaption class="wx-mlp__cap">{{ section.settings.hero_image_caption | escape }}</figcaption>{%- endif -%}
+</div></figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-mlp__band wx-mlp__life--16x9"><div class="wx-mlp__wrap"><div class="wx-mlp__ph">Editor only · Hero image (16:9)<br>Multi-location cleaning supply procurement: one wipe program across every site</div></div></figure>
+{%- endif -%}
+  </div>
+</header>
+<section class="wx-mlp__vstrip" aria-label="The program in numbers"><div class="wx-mlp__wrap"><div><span class="wx-mlp__vstrip-label">The program, in numbers</span><div class="wx-mlp__vstrip-items"><div class="wx-mlp__vstrip-item"><b>$4.92 vs $6.10</b><span>Centralised vs decentralised procurement spend, per $1,000 of revenue</span></div><div class="wx-mlp__vstrip-item"><b>20–30%</b><span>Emergency stockout premium over planned replenishment</span></div><div class="wx-mlp__vstrip-item"><b>300 → 60</b><span>Facility SKUs one organisation cut to standardise</span></div><div class="wx-mlp__vstrip-item"><b>~$0.06</b><span>Our cost per wipe at the bulk refill tier</span></div></div></div><a class="wx-mlp__btn wx-mlp__btn--primary wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-vstrip" href="https://wipex.co/pages/contact-us">Request a procurement quote →</a></div></section>
+<div class="wx-mlp__sec-block"><h2>Match the format to the room</h2><div class="wx-mlp__dec-grid"><div class="wx-mlp__dec wx-mlp__dec--rec"><h3>Fitness sites</h3><div class="wx-mlp__dec-arrow" aria-hidden="true">↓</div><p class="wx-mlp__dec-sol">Refill roll paired with one dispenser standard across every gym in the footprint.</p><a class="wx-mlp__btn wx-mlp__btn--primary wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-dec-1" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop the 700ct refill roll →</a></div><div class="wx-mlp__dec"><h3>Food-service sites</h3><div class="wx-mlp__dec-arrow" aria-hidden="true">↓</div><p class="wx-mlp__dec-sol">The NSF-certified scented Table Bussers on the front-of-house list.</p><a class="wx-mlp__btn wx-mlp__btn--ghost wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-dec-2" href="https://wipex.co/products/autumn-scented-all-purpose-cleaning-wipes">Shop Table Bussers →</a></div><div class="wx-mlp__dec"><h3>Sustainability-graded sites</h3><div class="wx-mlp__dec-arrow" aria-hidden="true">↓</div><p class="wx-mlp__dec-sol">Plant-based 700ct refill roll, same dispenser standard.</p><a class="wx-mlp__btn wx-mlp__btn--ghost wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-dec-3" href="https://wipex.co/products/plant-based-bulk-rolls">Shop the plant-based roll →</a></div></div></div>
+<div class="wx-mlp__sec-block">
+  <h2>Formats on the approved list</h2>
+  <div class="wx-mlp__cards"><article class="wx-mlp__card">
+  
+  <span class="wx-mlp__badge">Bulk refill</span>
+  <h3 class="wx-mlp__card-h">Natural Fitness Equipment Wipes 700ct Bulk Refill Roll</h3>
+  <p class="wx-mlp__card-best">Suited to: fitness sites on one dispenser standard</p>
+  <ul class="wx-mlp__card-list"><li>700 wipes per roll</li><li>Pairs with wall or floor dispensers</li><li>~$0.061 per wipe at the single-roll tier</li></ul>
+  <a class="wx-mlp__btn wx-mlp__btn--ghost wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-prod-1" href="https://wipex.co/products/natural-gym-wipes-bulk-refill-roll">Shop Natural Fitness Equipment Wipes 700ct Bulk Refill Roll →</a>
+</article><article class="wx-mlp__card">
+  
+  <span class="wx-mlp__badge">Food service</span>
+  <h3 class="wx-mlp__card-h">Table Bussers Surface Wipes — Autumn-Scented</h3>
+  <p class="wx-mlp__card-best">Suited to: front-of-house reset across food-service sites</p>
+  <ul class="wx-mlp__card-list"><li>400 wipes per bucket</li><li>NSF-certified scented line</li><li>Suitable for food service environments</li></ul>
+  <a class="wx-mlp__btn wx-mlp__btn--ghost wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-prod-2" href="https://wipex.co/products/autumn-scented-all-purpose-cleaning-wipes">Shop Table Bussers →</a>
+</article><article class="wx-mlp__card">
+  
+  <span class="wx-mlp__badge">Sustainability</span>
+  <h3 class="wx-mlp__card-h">Plant-Based 700ct Bulk Refill Roll (viscose)</h3>
+  <p class="wx-mlp__card-best">Suited to: programs that grade sustainability</p>
+  <ul class="wx-mlp__card-list"><li>700 wipes per roll</li><li>EWG Verified</li><li>Same dispenser standard as the fitness roll</li></ul>
+  <a class="wx-mlp__btn wx-mlp__btn--ghost wx-mlp__btn--sm" data-cro="multi-location-cleaning-supply-procurement-prod-3" href="https://wipex.co/products/plant-based-bulk-rolls">Shop Plant-Based 700ct Bulk Refill Roll (viscose) →</a>
+</article></div>
+</div>
+<article class="wx-mlp__article">
+<section class="wx-mlp__sec">
+<div class="wx-mlp__read">
+<p>This guide turns that drift into a program: one approved list, one dispenser standard, one reorder that triggers itself, and a cost-per-use number you can defend in a Q4 budget review. It is written for the buyer who signs off across sites — procurement managers, operations directors, and franchise or multi-unit owners.</p>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="quick-answer--key-takeaways-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="quick-answer--key-takeaways-{{ uid }}">Quick answer / key takeaways</h2>
+<ul class="wx-mlp__takeaways"><li>A multi-location program is four decisions: par level per site, one approved SKU list for the footprint, one dispenser standard, one delivery cadence.</li><li>Standardise first. One organisation cut its facility SKUs from 300 to 60 core items and made ordering and storage simpler the same quarter.</li><li>You do not need one giant order to reach volume pricing — standardising the same SKUs across sites is what unlocks a tier.</li><li>Reactive buying is the hidden tax: an emergency order that covers a stockout costs 20–30% more than planned replenishment.</li><li>Set reorder points from a formula, not a hunch: Par Level = (Daily Usage Rate × Lead Time) + Safety Stock.</li><li>At the refill tier our bulk roll runs about $0.06 per wipe and our pallet tier about $0.05 per wipe — about half a bucket's unit cost.</li></ul>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="on-this-page-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="on-this-page-{{ uid }}">On this page</h2>
+<nav class="wx-mlp__toc" data-wpx-toc data-open="false" aria-label="On this page"><button type="button" class="wx-mlp__toc-head" data-wpx-toc-toggle aria-expanded="false" aria-controls="tocList-{{ uid }}"><span>On this page</span><span class="wx-mlp__toc-chev" aria-hidden="true">▾</span></button><ul class="wx-mlp__toc-list" id="tocList-{{ uid }}"><li><a href="#quick-answer--key-takeaways-{{ uid }}">Quick answer / key takeaways</a></li><li><a href="#what-is-multi-location-cleaning-supply-procurement-{{ uid }}">What is multi-location cleaning supply procurement?</a></li><li><a href="#why-this-matters-in-q4-{{ uid }}">Why this matters in Q4</a></li><li><a href="#what-the-program-saves-cost-per-wipe-{{ uid }}">What the program saves: cost per wipe</a></li><li><a href="#frequently-asked-questions-{{ uid }}">Frequently asked questions</a></li><li><a href="#the-six-part-program-framework-{{ uid }}">The six-part program framework</a></li><li><a href="#where-a-multi-location-program-leaks-money-{{ uid }}">Where a multi-location program leaks money</a></li><li><a href="#which-wipe-format-fits-which-site-{{ uid }}">Which wipe format fits which site</a></li><li><a href="#your-q4-multi-location-readiness-checklist-{{ uid }}">Your Q4 multi-location readiness checklist</a></li><li><a href="#run-one-standard-across-every-site-{{ uid }}">Run one standard across every site</a></li></ul></nav>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="what-is-multi-location-cleaning-supply-procurement-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="what-is-multi-location-cleaning-supply-procurement-{{ uid }}">What is multi-location cleaning supply procurement?</h2>
+<p>Multi-location cleaning supply procurement is the practice of buying and replenishing consumables — wipes, liners, chemicals, paper — under one standard across several facilities. Without it, each site buys on its own. It has two halves. The <strong>supply half</strong> decides what the footprint buys and at what tier. The <strong>operating half</strong> keeps every site running that standard after the launch: par levels, reorder triggers, dispenser fit, and a usage number per location.</p>
+<p>Most operators stop at the supply half. They negotiate once, then lose the standard within two quarters because nothing governs the sites day to day. The two halves also fail differently. A weak supply half shows up as a price you wish were lower. A weak operating half shows up as ten sites that each believe they are following the standard and none of them are.</p>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="why-this-matters-in-q4-{{ uid }}">
+<div class="wx-mlp__liferow">
+<div class="wx-mlp__read">
+<h2 id="why-this-matters-in-q4-{{ uid }}">Why this matters in Q4</h2>
+<p>Q4 is when the next year's supply reality gets decided. Budgets close, contracts renew, and the same conversations repeat in a compressed window. It is also the quarter where cleaning-supply cost becomes a visible line. Search interest around the cost of cleaning supplies climbs into late November, and office-cleaning activity hits its second seasonal peak in mid-November as workspaces reset for winter occupancy.</p>
+<p>That gives a multi-location buyer a natural deadline. If you want the program running by January, the standardisation audit has to happen while the budget is still open — not in February, when the money is committed and the sites have reordered on habit. The benchmark figures behind that: centralised procurement spend runs <strong>$4.92 per $1,000 of revenue against $6.10 decentralised</strong>, and an emergency order covering a stockout carries a <strong>20–30% premium</strong> over planned replenishment (Metro Wholesale, checked 2026-09-28).</p>
+</div>
+{%- assign foc = section.settings.still1_image_focal | default: 'center' -%}
+{%- if section.settings.still1_image != blank -%}
+<figure class="wx-mlp__band wx-mlp__band--row wx-mlp__life--2x3" style="--wx-mlp-img-pos:{{ foc }};">
+<img
+  src="{{ section.settings.still1_image | image_url: width: 480 }}"
+  srcset="{{ section.settings.still1_image | image_url: width: 273 }} 273w,
+          {{ section.settings.still1_image | image_url: width: 480 }} 480w,
+          {{ section.settings.still1_image | image_url: width: 672 }} 672w"
+  sizes="(max-width: 1120px) 100vw, 480px"
+  width="480" height="720"
+  alt="{{ section.settings.still1_image_alt | default: 'Labelled par level on a supply-room shelf: product name, case quantity, reorder point' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.still1_image_caption != blank -%}<figcaption class="wx-mlp__cap">{{ section.settings.still1_image_caption | escape }}</figcaption>{%- endif -%}
+</figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-mlp__band wx-mlp__band--row wx-mlp__life--2x3"><div class="wx-mlp__ph">Editor only · Editorial still (2:3)<br>Labelled par level on a supply-room shelf: product name, case quantity, reorder point</div></figure>
+{%- endif -%}
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="what-the-program-saves-cost-per-wipe-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="what-the-program-saves-cost-per-wipe-{{ uid }}">What the program saves: cost per wipe</h2>
+<p>Cost per wipe is one price divided by one count. Cost per use is that number meeting real consumption. Both belong in the same review, because a cheap wipe that a site uses twice per task is not cheap. Every figure below is recomputed from live list prices and re-checked before publish.</p>
+<div class="wx-mlp__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-mlp__table wx-mlp__table--wide"><thead><tr>
+<th scope="col">Product</th>
+<th scope="col">Variant</th>
+<th scope="col">Price</th>
+<th scope="col">Count</th>
+<th scope="col">Cost per wipe</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Product">[Natural Fitness Equipment Wipes 700ct Bulk Refill Roll](/products/natural-gym-wipes-bulk-refill-roll)</th>
+<td data-label="Variant">Single roll</td>
+<td data-label="Price">$42.99</td>
+<td data-label="Count">700</td>
+<td data-label="Cost per wipe">~$0.061</td>
+</tr>
+<tr>
+<th scope="row" data-label="Product">Natural Fitness Equipment Wipes 700ct Bulk Refill Roll</th>
+<td data-label="Variant">4-pack</td>
+<td data-label="Price">$142.99</td>
+<td data-label="Count">2,800</td>
+<td data-label="Cost per wipe">~$0.051</td>
+</tr>
+<tr>
+<th scope="row" data-label="Product">[Plant-Based 700ct Bulk Refill Roll (viscose)](/products/plant-based-bulk-rolls)</th>
+<td data-label="Variant">Full pallet (140 rolls)</td>
+<td data-label="Price">$4,585.00</td>
+<td data-label="Count">98,000</td>
+<td data-label="Cost per wipe">~$0.047</td>
+</tr>
+<tr>
+<th scope="row" data-label="Product">[Table Bussers® Surface Wipes](/products/autumn-scented-all-purpose-cleaning-wipes)</th>
+<td data-label="Variant">1 bucket</td>
+<td data-label="Price">$36.99</td>
+<td data-label="Count">400</td>
+<td data-label="Cost per wipe">~$0.092</td>
+</tr>
+<tr>
+<th scope="row" data-label="Product">Table Bussers® Surface Wipes</th>
+<td data-label="Variant">4-pack case</td>
+<td data-label="Price">$119.99</td>
+<td data-label="Count">1,600</td>
+<td data-label="Cost per wipe">~$0.075</td>
+</tr>
+</tbody></table></div>
+<p>A fuller breakdown of the refill format and its dispensing options sits in [Gym Wipe Dispensers vs. Buckets](/blogs/library/gym-wipe-dispenser-vs-bucket).</p>
+<p>Take one site that burns 500 wipes a week. At the bucket tier that is roughly $46 a week before any emergency premium; at the refill tier it is closer to $26. Multiply the gap by every site in the footprint and by the weeks in a year, and the program's whole justification sits in that line. No cleaning claim is required, because the arithmetic is about price and consumption, not about how well anything works. Stack the reactive premium on top and the gap widens further — an emergency order looks like a normal invoice until you compare it against what a planned one would have cost.</p>
+<p>The formula to hand to each site:</p>
+<pre class="wx-mlp__code"><code>daily wipes used × days of lead time = reorder trigger
+footprint demand = sum of every site&#x27;s par level
+footprint cost per cycle = footprint demand × cost per wipe at the footprint&#x27;s tier</code></pre>
+<div class="wx-mlp__calc" data-wpx-calc data-module="cost-per-use" id="wx-mlp-calc-{{ uid }}"><h3 class="wx-mlp__calc-h">Calculate your footprint cost</h3><div class="wx-mlp__calc-grid"><label>Sites in the footprint<input type="number" inputmode="decimal" step="1" min="0" value="10" data-k="tables"></label><label>Wipes used per site per week<input type="number" inputmode="decimal" step="10" min="0" value="500" data-k="turns"></label><label>Weeks in the period<input type="number" inputmode="decimal" step="1" min="0" value="1" data-k="services"></label><label>Case price ($)<input type="number" inputmode="decimal" step="0.01" min="0" value="42.99" data-k="price"></label><label>Wipes per case<input type="number" inputmode="decimal" step="1" min="1" value="700" data-k="count"></label><label>Wipes per use event<input type="number" inputmode="decimal" step="1" min="1" value="1" data-k="wipes"></label><label>Seconds of labour per wipe (optional)<input type="number" inputmode="decimal" step="5" min="0" value="0" data-k="seconds"></label><label>Loaded hourly rate ($, optional)<input type="number" inputmode="decimal" step="0.5" min="0" value="0" data-k="rate"></label></div><div class="wx-mlp__calc-out" role="status" aria-live="polite"><div><span data-out="table">&mdash;</span><small>cost per wipe</small></div><div><span data-out="week">&mdash;</span><small>footprint cost per period</small></div><div><span data-out="cover">&mdash;</span><small>cost per two-wipe reset</small></div></div><p class="wx-mlp__calc-note">Cost figures only, from the prices you enter. Check your own invoice.</p></div>
+<h3 id="cost-per-use-calculator-{{ uid }}">Cost-per-use calculator</h3>
+<p>Enter your own footprint and the numbers update.</p>
+<p>Reorder the formula for your own operation and the argument holds or it does not — that is the point of showing the arithmetic instead of a slogan.</p>
+</div>
+
+</section>
+{%- assign foc = section.settings.still2_image_focal | default: 'center' -%}
+{%- if section.settings.still2_image != blank -%}
+<figure class="wx-mlp__band wx-mlp__life--16x9" style="--wx-mlp-img-pos:{{ foc }};">
+<div class="wx-mlp__wrap">
+<img
+  src="{{ section.settings.still2_image | image_url: width: 1120 }}"
+  srcset="{{ section.settings.still2_image | image_url: width: 638 }} 638w,
+          {{ section.settings.still2_image | image_url: width: 1120 }} 1120w,
+          {{ section.settings.still2_image | image_url: width: 1568 }} 1568w"
+  sizes="(max-width: 1120px) 100vw, 1120px"
+  width="1120" height="630"
+  alt="{{ section.settings.still2_image_alt | default: 'One wall dispenser standard installed across a fitness facility footprint' | escape }}" loading="lazy" decoding="async">
+{%- if section.settings.still2_image_caption != blank -%}<figcaption class="wx-mlp__cap">{{ section.settings.still2_image_caption | escape }}</figcaption>{%- endif -%}
+</div></figure>
+{%- elsif request.design_mode -%}
+<figure class="wx-mlp__band wx-mlp__life--16x9"><div class="wx-mlp__wrap"><div class="wx-mlp__ph">Editor only · Editorial still (16:9)<br>One wall dispenser standard installed across a fitness facility footprint</div></div></figure>
+{%- endif -%}
+{%- assign has_video = false -%}
+{%- if section.settings.lifestyle_video != blank -%}{%- assign has_video = true -%}{%- endif -%}
+{%- assign has_fallback = false -%}
+{%- if section.settings.video_fallback_image != blank -%}{%- assign has_fallback = true -%}{%- endif -%}
+{%- if has_video or has_fallback or request.design_mode -%}
+<section class="wx-mlp__sec wx-mlp__videoband" aria-label="Editorial video">
+  <div class="wx-mlp__wrap">
+    <div class="wx-mlp__video">
+      {%- if has_video -%}
+        {{ section.settings.lifestyle_video | video_tag: image_size: '1600x', autoplay: true, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', class: 'wx-mlp__video-media' }}
+      {%- elsif has_fallback -%}
+        <img src="{{ section.settings.video_fallback_image | image_url: width: 1600 }}"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="{{ section.settings.video_fallback_image_alt | default: 'Wipex food service wipes in use' | escape }}">
+      {%- else -%}
+        <div class="wx-mlp__ph">Editor only · editorial video banner (16:9)<br>Upload a Shopify-hosted video, or set a fallback image</div>
+      {%- endif -%}
+      {%- if section.settings.video_banner_heading != blank or section.settings.video_banner_text != blank -%}
+        <div class="wx-mlp__video-content">
+          {%- if section.settings.video_banner_heading != blank -%}<h2 class="wx-mlp__video-h">{{ section.settings.video_banner_heading | escape }}</h2>{%- endif -%}
+          {%- if section.settings.video_banner_text != blank -%}<p class="wx-mlp__video-t">{{ section.settings.video_banner_text | escape }}</p>{%- endif -%}
+          {%- if section.settings.video_banner_cta_label != blank and section.settings.video_banner_cta_url != blank -%}
+            <a class="wx-mlp__btn wx-mlp__btn--primary" data-cro="multi-location-cleaning-supply-procurement-video" href="{{ section.settings.video_banner_cta_url }}">{{ section.settings.video_banner_cta_label | escape }} →</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+<section class="wx-mlp__sec" id="frequently-asked-questions-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="frequently-asked-questions-{{ uid }}">Frequently asked questions</h2>
+<h3 class="wx-mlp__faqq">What is a multi-location cleaning supply procurement program?</h3>
+<p>One standard for buying and replenishing consumables across several facilities: one approved SKU list for the footprint, a par level and reorder trigger per site, one dispenser standard, one delivery cadence. The supply half sets what you buy; the operating half keeps every site on that standard after launch.</p>
+<h3 class="wx-mlp__faqq">How do we reach volume pricing if we cannot place one huge order?</h3>
+<p>Through the whole footprint, not one shipment. Standardising the same SKUs across sites means the cumulative demand qualifies for a tier even when each site orders a normal quantity. Consolidating most of your spend with one primary supplier is what turns scattered transactions into leverage.</p>
+<h3 class="wx-mlp__faqq">How do we consolidate SKUs without breaking how the sites work?</h3>
+<p>Audit first, then collapse. List every product actually present at each site, identify the duplicates that do the same job, and settle on one approved item per category. Formats can differ by room type, but if the format differs by site for the same room, consolidation fails — the reorder cannot run on two standards at once.</p>
+<h3 class="wx-mlp__faqq">How do we set reorder points?</h3>
+<p>Use the par-level formula: (Daily Usage Rate × Lead Time) + Safety Stock. Measure the daily usage rate on a normal week, add a buffer sized to your worst realistic delay, and label the shelf with the resulting number so anyone can trigger the order.</p>
+<h3 class="wx-mlp__faqq">Should every location run the same dispenser?</h3>
+<p>Yes, per room type. Dispenser standardisation is what lets one refill fit every site, which is what lets a single order cover the network. Mixed hardware forces special orders, and special orders are the front door to emergency pricing.</p>
+<h3 class="wx-mlp__faqq">What is a volume tier and how is it reached?</h3>
+<p>A price band tied to the quantity the footprint commits over a period. It is reached through cumulative demand plus standardisation, not one large order: more sites on the same SKU list reach a better tier than the same sites buying different products.</p>
+<h3 class="wx-mlp__faqq">What should a procurement quote request include?</h3>
+<p>The number of sites and their types, the approved SKU list per room type, and the dispenser standard you intend to run. Add the delivery cadence you want and whether you need consolidated invoicing across the footprint. Those five items let a supplier quote a program instead of a product.</p>
+<h3 class="wx-mlp__faqq">How do we know whether the program is working?</h3>
+<p>Track two numbers per site: cost per wipe and stockouts. If cost per wipe is stable and stockouts fall after the par levels go in, the operating half is holding. If emergency orders persist, the par level is set too low or the dispenser standard is not uniform.</p>
+</div>
+
+</section>
+<section class="wx-mlp__sec">
+<div class="wx-mlp__read">
+<p class="wx-mlp__acc-hint">Open a step to see how it runs on the ground.</p>
+<details class="wx-mlp__acc" id="the-six-part-program-framework-{{ uid }}"><summary><h2>The six-part program framework</h2></summary><div class="wx-mlp__acc-body">
+<p>Run the six parts in this order. The order matters: reorder planning and volume tiers come before dispenser choices, and SKU consolidation comes before delivery, because you cannot ship a standard you have not agreed on.</p>
+<h3 id="1-reorder-planning--par-levels-per-site-{{ uid }}">1. Reorder planning — par levels per site</h3>
+<p>A par level is the minimum stock quantity that triggers a reorder, and it is a formula rather than a feeling: <strong>Par Level = (Daily Usage Rate × Lead Time) + Safety Stock</strong>.</p>
+<p>Daily usage rate is what a site actually burns through on a normal day. Lead time is how many days a reorder takes to arrive. Safety stock is the buffer for a busy weekend or a delayed shipment. A site that uses two rolls a day, waits three days for delivery, and wants four rolls of buffer runs a par level of ten. When the shelf hits ten, the order goes in.</p>
+<p>The single most useful thing a program does is make that number visible. Label the shelf with the product name, the case quantity, and the par level, so any staff member can flag low stock without a manager doing a walkthrough. Ten sites with a labelled par level reorder the same way; ten sites without one reorder ten different ways.</p>
+<h3 id="2-volume-tiers--how-they-are-actually-reached-{{ uid }}">2. Volume tiers — how they are actually reached</h3>
+<p>Volume pricing is not only about how much you order in one shipment. It is about how much the footprint commits to over a period. Consolidating spend toward one primary supplier, with the large majority of the SKUs on one list, turns a scatter of small transactions into a relationship worth pricing.</p>
+<p>For a wipes program the tier is unlocked by two things at once: <strong>cumulative footprint demand</strong> and <strong>standardisation</strong>. Ten sites that each buy the same refill roll are a bigger account than ten sites that each buy a different bucket. The tier is not a discount you negotiate once; it is a position the footprint holds — which means the cheapest way to improve your price is often not to buy more, but to buy the same thing in more places.</p>
+<h3 id="3-dispenser-standardisation--the-quiet-lever-{{ uid }}">3. Dispenser standardisation — the quiet lever</h3>
+<p>The dispenser is the decision most multi-location teams postpone, and it is the one that makes the reorder run itself. If three sites run three hardware formats, no single order fits them all, and the "standard" list becomes a suggestion.</p>
+<p>Choosing one dispenser format per room type across the footprint means one refill fits every site. It also fixes placement: one dispenser format per room defines where the wipe lives, which is what makes it get used at the point of need instead of being fetched. When the hardware is standard, a stockout at one site is covered by the network's par level instead of a local emergency order.</p>
+<h3 id="4-sku-consolidation--one-list-not-a-catalogue-{{ uid }}">4. SKU consolidation — one list, not a catalogue</h3>
+<p>Consolidation is an audit, not a purge. Walk every site's supply room and write down what is actually there. You will find duplicates that do the same job, and specialty items bought once and never reused.</p>
+<p>Then collapse it: one approved item per category, one approved wipe per room type, and one place to reorder. Consolidate to a single approved list covering paper, liners, wipes, chemicals, and PPE. Fewer SKUs also means higher purchase quantities per item, which is what supports the tier from step two.</p>
+<p>The most common finding in the audit is not waste. It is redundancy — two products, each fine, one of which has to go so the reorder can run on one standard.</p>
+<h3 id="5-recurring-delivery--the-cadence-not-the-surprise-{{ uid }}">5. Recurring delivery — the cadence, not the surprise</h3>
+<p>Once the list and the par levels exist, delivery becomes a schedule instead of a scramble. Set par levels by site, aggregate the sites into one order on a fixed cycle, and let the cycle — not a phone call — drive replenishment. That is the difference between a 20–30% emergency premium and a planned shipment.</p>
+<p>A fixed cadence also makes the footprint easier to forecast. When you know a site's par level and the cycle length, you know its monthly consumption before the invoice arrives.</p>
+<h3 id="6-review-cost-per-wipe-and-cost-per-use-{{ uid }}">6. Review cost per wipe and cost per use</h3>
+<p>Both numbers belong in the same review, because a cheap wipe that a site uses twice per task is not cheap. The cost section above shows the arithmetic with our own list prices, so you can redo it with yours before the budget closes.</p>
+</div></details>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="where-a-multi-location-program-leaks-money-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="where-a-multi-location-program-leaks-money-{{ uid }}">Where a multi-location program leaks money</h2>
+<p>Five leaks show up in almost every multi-site audit. None of them is a cleaning problem — every one is a procurement problem, which is why the fix is a standard rather than a product.</p>
+</div>
+<div class="wx-mlp__sec-block"><div class="wx-mlp__info-grid"><div class="wx-mlp__card-info"><h3>The local reorder</h3><p>A site that orders on its own account pays the premium the program exists to remove.</p></div><div class="wx-mlp__card-info"><h3>The duplicate SKU</h3><p>Two products doing one job means two par levels, two storage slots and more cash on shelves.</p></div><div class="wx-mlp__card-info"><h3>The mismatched dispenser</h3><p>A refill that does not fit the site&#x27;s hardware becomes a special order, then an emergency order.</p></div><div class="wx-mlp__card-info"><h3>The invisible usage rate</h3><p>Without a per-site consumption number, par levels get set from memory and drift within a quarter.</p></div><div class="wx-mlp__card-info"><h3>The unmeasured cadence</h3><p>A delivery cycle nobody tracks quietly becomes reactive buying again.</p></div></div><p class="wx-mlp__note">Audit each one before the next budget cycle closes.</p></div>
+<div class="wx-mlp__sec-block wx-mlp__system"><span class="wx-mlp__eyebrow">The system</span><h2>Two decisions, one order</h2><div class="wx-mlp__system-eq"><span class="wx-mlp__pill">One approved SKU list</span><span class="wx-mlp__op" aria-hidden="true">+</span><span class="wx-mlp__pill">One dispenser standard</span><span class="wx-mlp__op" aria-hidden="true">=</span><span class="wx-mlp__pill wx-mlp__system-result">One reorder that runs itself</span></div><p>Standardise the list and the hardware, and replenishment stops being a local decision at every site.</p><p class="wx-mlp__cta-row" style="justify-content:center;"><a class="wx-mlp__btn wx-mlp__btn--primary" data-cro="multi-location-cleaning-supply-procurement-system" href="https://wipex.co/pages/contact-us">Scope your footprint →</a></p></div>
+</section>
+<section class="wx-mlp__sec" id="which-wipe-format-fits-which-site-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="which-wipe-format-fits-which-site-{{ uid }}">Which wipe format fits which site</h2>
+<p>A mixed footprint usually runs three wipe jobs: fitness equipment, food-service front of house, and general office or shared surfaces. Match the format to the job, then hold that match across every site of the same type.</p>
+<div class="wx-mlp__tablewrap" role="region" tabindex="0" aria-label="Comparison table">
+<table class="wx-mlp__table wx-mlp__table--wide"><thead><tr>
+<th scope="col">Site type</th>
+<th scope="col">Recommended Wipex product</th>
+<th scope="col">Why it fits</th>
+<th scope="col">Cost per wipe</th>
+</tr></thead><tbody>
+<tr>
+<th scope="row" data-label="Site type">Fitness / gym floor</th>
+<td data-label="Recommended Wipex product">Natural Fitness Equipment Wipes 700ct Bulk Refill Roll</td>
+<td data-label="Why it fits">Refill-roll format that pairs with one wall or floor dispenser standard</td>
+<td data-label="Cost per wipe">~$0.061</td>
+</tr>
+<tr>
+<th scope="row" data-label="Site type">Food-service front of house</th>
+<td data-label="Recommended Wipex product">Table Bussers® Surface Wipes — Autumn-Scented</td>
+<td data-label="Why it fits">Pre-mixed surface wipe built for front-of-house reset; the scented line is NSF-certified and suitable for food service environments</td>
+<td data-label="Cost per wipe">~$0.092</td>
+</tr>
+<tr>
+<th scope="row" data-label="Site type">Sustainability-graded sites</th>
+<td data-label="Recommended Wipex product">Plant-Based 700ct Bulk Refill Roll (viscose)</td>
+<td data-label="Why it fits">Plant-based cloth with EWG Verified and the certified cloth-substrate wording</td>
+<td data-label="Cost per wipe">~$0.047 (pallet)</td>
+</tr>
+<tr>
+<th scope="row" data-label="Site type">Shared offices &amp; touchpoints</th>
+<td data-label="Recommended Wipex product">All-purpose and touchscreen-compatible wipes on the same approved list</td>
+<td data-label="Why it fits">One listed wipe per room type keeps the standard visible</td>
+<td data-label="Cost per wipe">—</td>
+</tr>
+</tbody></table></div>
+<p><em>If in doubt, test on a small, inconspicuous area first.</em></p>
+<p>Keep the scented Table Bussers on food-service sites; it is the line that carries the NSF certification, so it belongs on the front-of-house standard.</p>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="your-q4-multi-location-readiness-checklist-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="your-q4-multi-location-readiness-checklist-{{ uid }}">Your Q4 multi-location readiness checklist</h2>
+<p>Print this and run it before the budget closes.</p>
+<div class="wx-mlp__check" data-wpx-checklist><ul class="wx-mlp__check-list"><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck1-{{ uid }}" data-wpx-check><label for="wx-mlp-ck1-{{ uid }}">Every site's supply room audited — duplicates and dead SKUs listed.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck2-{{ uid }}" data-wpx-check><label for="wx-mlp-ck2-{{ uid }}">One approved wipe per room type written down for the whole footprint.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck3-{{ uid }}" data-wpx-check><label for="wx-mlp-ck3-{{ uid }}">Par level calculated per site with the formula, not from memory.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck4-{{ uid }}" data-wpx-check><label for="wx-mlp-ck4-{{ uid }}">Shelf labels in place: product name, case quantity, par level.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck5-{{ uid }}" data-wpx-check><label for="wx-mlp-ck5-{{ uid }}">One dispenser format chosen per room type, ordered for the network.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck6-{{ uid }}" data-wpx-check><label for="wx-mlp-ck6-{{ uid }}">Volume tier confirmed against cumulative footprint demand, not one order.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck7-{{ uid }}" data-wpx-check><label for="wx-mlp-ck7-{{ uid }}">Delivery cadence set to a fixed cycle with one aggregated order.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck8-{{ uid }}" data-wpx-check><label for="wx-mlp-ck8-{{ uid }}">Cost per wipe and cost per use recorded per site for the Q4 review.</label></li><li class="wx-mlp__check-item"><input type="checkbox" id="wx-mlp-ck9-{{ uid }}" data-wpx-check><label for="wx-mlp-ck9-{{ uid }}">One owner per location for the weekly stock count.</label></li></ul><p class="wx-mlp__check-note">Progress saves in this browser.</p></div>
+</div>
+
+</section>
+<section class="wx-mlp__sec" id="keep-reading-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="keep-reading-{{ uid }}">Keep Reading</h2>
+<ul><li>[Buying Wipes in Bulk: Wholesale Pricing, MOQs, and How to Set Up a Facility Account](/blogs/library/buy-cleaning-wipes-in-bulk) — the sourcing decision this guide assumes you have already made.</li><li>[Gym Cleaning Procurement: How Commercial Fitness Facilities Should Source Wipes &amp; Cleaning Supplies](/blogs/library/bulk-gym-cleaning-wipes-supplies) — the single-vertical procurement framework, for teams that run fitness sites specifically.</li><li>[Gym Wipe Dispensers vs. Buckets](/blogs/library/gym-wipe-dispenser-vs-bucket) — the hardware trade-off behind the dispenser-standard decision.</li><li>[How to Reduce Wipe Waste (and Spend) with a Refill Roll System](/blogs/library/bulk-wipe-refill-rolls-800ct) — the format that makes a par level predictable.</li><li>[Table Bussers® vs. Traditional Table Cleaning Methods: Cost, Speed &amp; Staff Efficiency](/blogs/library/restaurant-cost-per-table) — the food-service cost case behind the front-of-house room standard.</li></ul>
+</div>
+
+</section>
+<section class="wx-mlp__sec wx-mlp__sec--final" id="run-one-standard-across-every-site-{{ uid }}">
+<div class="wx-mlp__read">
+<h2 id="run-one-standard-across-every-site-{{ uid }}">Run one standard across every site</h2>
+<p>A multi-location program is not a bigger order. It is one approved list, one dispenser standard, one cadence, and a reorder that runs itself — repeated at every site with the same rules. Get those four in place before the budget closes and the next Q4 is a review, not a rebuild.</p>
+<p><strong>Request a Wipe Procurement Quote →</strong> — send us your site count, room types, and the SKU list you are considering, and we will scope a program for the footprint.</p>
+<ul><li>[Request a Wipe Procurement Quote →](/pages/contact-us)</li><li>[Compare the 700ct Bulk Refill Roll →](/products/natural-gym-wipes-bulk-refill-roll)</li><li>[Equip Your Sites with One Dispenser Standard →](/products/wall-dispenser)</li></ul>
+</div>
+
+</section>
+</article>
+<div class="wx-mlp__sticky" data-wpx-sticky aria-hidden="true"><a class="wx-mlp__btn wx-mlp__btn--primary" data-cro="multi-location-cleaning-supply-procurement-sticky" href="{{ section.settings.sticky_url | default: 'https://wipex.co/pages/contact-us' }}">{{ section.settings.sticky_label | default: 'Request a procurement quote' | escape }} →</a><button type="button" class="wx-mlp__sticky-close" data-wpx-sticky-close aria-label="Dismiss">×</button></div>
+</div>
+
+{% raw %}
+<script>
+(function () {
+  "use strict";
+  var P = "wx-mlp";
+  function init(id) {
+    var root = document.getElementById(P + "-" + id);
+    if (!root || root.getAttribute("data-wpx-ready") === "1") return;
+    root.setAttribute("data-wpx-ready", "1");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var bar = root.querySelector("[data-wpx-progress]");
+    var article = root.querySelector("article");
+    var sticky = root.querySelector("[data-wpx-sticky]");
+    var finalSec = root.querySelector(".wx-mlp__sec-block--final, .wx-mlp__sec--final");
+    var ticking = false;
+    function update() {
+      ticking = false;
+      if (!article) return;
+      var rect = article.getBoundingClientRect();
+      var total = article.offsetHeight - window.innerHeight;
+      if (bar) {
+        var scrolled = Math.min(Math.max(-rect.top, 0), total > 0 ? total : 1);
+        bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + "%";
+      }
+      if (sticky && sticky.getAttribute("data-dismissed") !== "1") {
+        var nearEnd = finalSec ? finalSec.getBoundingClientRect().top < window.innerHeight : false;
+        var show = rect.top < -320 && !nearEnd;
+        sticky.classList.toggle("is-visible", show);
+        sticky.setAttribute("aria-hidden", show ? "false" : "true");
+      }
+    }
+    function onScroll() { if (ticking) return; ticking = true; window.requestAnimationFrame(update); }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+
+    if (sticky) {
+      var close = sticky.querySelector("[data-wpx-sticky-close]");
+      if (close) close.addEventListener("click", function () {
+        sticky.setAttribute("data-dismissed", "1");
+        sticky.classList.remove("is-visible");
+        sticky.setAttribute("aria-hidden", "true");
+      });
+    }
+
+    var toc = root.querySelector("[data-wpx-toc]");
+    if (toc) {
+      var tbtn = toc.querySelector("[data-wpx-toc-toggle]");
+      if (tbtn) tbtn.addEventListener("click", function () {
+        var open = toc.getAttribute("data-open") !== "false";
+        toc.setAttribute("data-open", open ? "false" : "true");
+        tbtn.setAttribute("aria-expanded", open ? "false" : "true");
+      });
+    }
+
+    var list = root.querySelector("[data-wpx-checklist]");
+    if (list) {
+      var boxes = list.querySelectorAll("input[data-wpx-check]");
+      var key = "wpxcheck:" + id;
+      var saved = null;
+      try { saved = JSON.parse(window.localStorage.getItem(key) || "null"); } catch (e) { saved = null; }
+      for (var i = 0; i < boxes.length; i++) {
+        if (saved && saved[i]) boxes[i].checked = true;
+        boxes[i].addEventListener("change", function () {
+          var state = [];
+          for (var k = 0; k < boxes.length; k++) state.push(boxes[k].checked);
+          try { window.localStorage.setItem(key, JSON.stringify(state)); } catch (e) {}
+        });
+      }
+    }
+
+    var vids = root.querySelectorAll(".wx-mlp__video video");
+    for (var v = 0; v < vids.length; v++) {
+      vids[v].muted = true;
+      vids[v].defaultMuted = true;
+      vids[v].setAttribute("muted", "");
+      vids[v].setAttribute("playsinline", "");
+      if (reduce) { try { vids[v].pause(); vids[v].removeAttribute("autoplay"); } catch (e) {} }
+      else { var pr = vids[v].play && vids[v].play(); if (pr && pr.catch) pr.catch(function () {}); }
+    }
+
+    var calc = root.querySelector("[data-wpx-calc]");
+    if (!calc) { update(); return; }
+    var fields = calc.querySelectorAll("input[data-k]");
+    var outs = { table: calc.querySelector('[data-out="table"]'),
+                 week: calc.querySelector('[data-out="week"]'),
+                 cover: calc.querySelector('[data-out="cover"]') };
+    function val(k) {
+      for (var f = 0; f < fields.length; f++) {
+        if (fields[f].getAttribute("data-k") === k) {
+          var n = parseFloat(fields[f].value);
+          return isNaN(n) || n < 0 ? 0 : n;
+        }
+      }
+      return 0;
+    }
+    function money(x) { return "$" + (x < 1 ? x.toFixed(4) : x.toFixed(2)); }
+    var queued = false;
+    function run() {
+      queued = false;
+      var resets = val("tables") * val("turns") * val("services");
+      var perWipe = val("count") ? val("price") / val("count") : 0;
+      var perTable = perWipe * val("wipes") + val("seconds") / 3600 * val("rate");
+      var week = perTable * resets;
+      if (outs.table) outs.table.textContent = money(perTable);
+      if (outs.week) outs.week.textContent = "$" + week.toFixed(2);
+      if (outs.cover) outs.cover.textContent = resets ? money(week / (resets * 2)) : money(0);
+    }
+    function schedule() { if (!queued) { queued = true; window.requestAnimationFrame(run); } }
+    for (var f2 = 0; f2 < fields.length; f2++) fields[f2].addEventListener("input", schedule, { passive: true });
+    run();
+    update();
+  }
+  function openFromHash() {
+    var h = window.location.hash ? window.location.hash.slice(1) : "";
+    if (!h) return;
+    var el = document.getElementById(h);
+    if (el && el.tagName === "DETAILS") el.open = true;
+  }
+  function boot() {
+    var nodes = document.querySelectorAll("[data-wpx-section]");
+    for (var i = 0; i < nodes.length; i++) init(nodes[i].getAttribute("data-wpx-section"));
+    openFromHash();
+  }
+  window.addEventListener("hashchange", openFromHash);
+  if (document.readyState !== "loading") boot();
+  else document.addEventListener("DOMContentLoaded", boot);
+  document.addEventListener("shopify:section:load", function (ev) {
+    var s = ev.target.querySelector ? ev.target.querySelector("[data-wpx-section]") : null;
+    if (s) init(s.getAttribute("data-wpx-section"));
+  });
+})();
+</script>
+{% endraw %}
+
+{% schema %}
+{
+  "name": "Wipex Multi-Location",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Hero eyebrow",
+      "default": "Facility Procurement"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero H1 (defaults to the post title)",
+      "default": "Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_lede",
+      "label": "Hero intro (leave empty to use the article opening)"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_label",
+      "label": "Primary CTA label",
+      "default": "Request a Wipe Procurement Quote"
+    },
+    {
+      "type": "url",
+      "id": "hero_cta_url",
+      "label": "Primary CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta2_label",
+      "label": "Secondary CTA label",
+      "default": "See what the program saves"
+    },
+    {
+      "type": "url",
+      "id": "hero_cta2_url",
+      "label": "Secondary CTA URL"
+    },
+    {
+      "type": "header",
+      "content": "Editorial photography",
+      "info": "People, places and process. NOT product packshots. Each block hides itself when empty."
+    },
+    {
+      "type": "paragraph",
+      "content": "Hero image (16:9) — hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "hero_image_alt",
+      "label": "hero image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "hero_image_caption",
+      "label": "hero image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "hero_image_focal",
+      "label": "hero image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Editorial still (2:3) — after:Why this matters in Q4"
+    },
+    {
+      "type": "image_picker",
+      "id": "still1_image",
+      "label": "Editorial still (2:3)"
+    },
+    {
+      "type": "text",
+      "id": "still1_image_alt",
+      "label": "still1 image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "still1_image_caption",
+      "label": "still1 image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "still1_image_focal",
+      "label": "still1 image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Editorial still (16:9) — before_faq"
+    },
+    {
+      "type": "image_picker",
+      "id": "still2_image",
+      "label": "Editorial still (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "still2_image_alt",
+      "label": "still2 image alt text",
+      "info": "Describe what is visible. Leave blank for the default."
+    },
+    {
+      "type": "text",
+      "id": "still2_image_caption",
+      "label": "still2 image caption (optional)"
+    },
+    {
+      "type": "select",
+      "id": "still2_image_focal",
+      "label": "still2 image focal point",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Editorial video band",
+      "info": "Native Shopify video, muted and looping, with an optional overlay. Renders nothing if no video and no fallback are set."
+    },
+    {
+      "type": "video",
+      "id": "lifestyle_video",
+      "label": "Lifestyle video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_fallback_image",
+      "label": "Video fallback image (16:9)"
+    },
+    {
+      "type": "text",
+      "id": "video_fallback_image_alt",
+      "label": "Fallback image alt text"
+    },
+    {
+      "type": "text",
+      "id": "video_banner_heading",
+      "label": "Overlay heading (optional)"
+    },
+    {
+      "type": "textarea",
+      "id": "video_banner_text",
+      "label": "Overlay text (optional)"
+    },
+    {
+      "type": "text",
+      "id": "video_banner_cta_label",
+      "label": "Overlay CTA label (optional)"
+    },
+    {
+      "type": "url",
+      "id": "video_banner_cta_url",
+      "label": "Overlay CTA URL"
+    },
+    {
+      "type": "header",
+      "content": "Sticky mobile CTA"
+    },
+    {
+      "type": "text",
+      "id": "sticky_label",
+      "label": "Sticky CTA label",
+      "default": "Request a procurement quote"
+    },
+    {
+      "type": "url",
+      "id": "sticky_url",
+      "label": "Sticky CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wipex Multi-Location"
+    }
+  ]
+}
+{% endschema %}

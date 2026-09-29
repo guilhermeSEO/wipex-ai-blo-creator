@@ -34,6 +34,7 @@ escalation and the consolidation map.
 | `assets/reference/` | the hand-built reference section the module library was derived from |
 | `assets/evidence/` | the measured house table (`blog_patterns_21.csv`) |
 | `examples/blog-01-cost-per-table/` | a complete worked post: phase documents, config, generated section + snippet + template, fallback paste block, validation receipt |
+| `examples/blog-02-multi-location-procurement/` | a second worked post, and the first on the **`funnel` layout model** (short hero, value strip, conversion modules above the fold, accordion, collapsed TOC) |
 | `archive/` | provenance: the loose v2.1 documents, the delivered audit (delta reports), the reference section, the raw scrape |
 
 ---
