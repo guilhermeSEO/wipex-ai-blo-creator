@@ -1,5 +1,5 @@
 SECTION VALIDATION — wipex-section-multi-location-procurement-2026
-generated: sections/wipex-section-multi-location-procurement-2026.liquid (1084 lines, 81155 chars)
+generated: sections/wipex-section-multi-location-procurement-2026.liquid (1091 lines, 81996 chars)
 
 PRE-SAVE (Shopify hard limits)
   section name      : 'Wipex Multi-Location' (20 chars, limit 25)  OK

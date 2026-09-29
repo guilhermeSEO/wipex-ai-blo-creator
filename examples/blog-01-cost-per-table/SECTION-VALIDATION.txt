@@ -1,5 +1,5 @@
 SECTION VALIDATION — wipex-section-cost-per-table-2026
-generated: sections/wipex-section-cost-per-table-2026.liquid (1176 lines, 86595 chars)
+generated: sections/wipex-section-cost-per-table-2026.liquid (1183 lines, 87436 chars)
 
 PRE-SAVE (Shopify hard limits)
   section name      : 'Wipex Cost Per Table' (20 chars, limit 25)  OK

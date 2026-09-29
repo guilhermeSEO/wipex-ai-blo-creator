@@ -54,11 +54,12 @@ THEME_DEFAULTS = {
     # this block in SHOPIFY-CONFIG.json — never the CSS.
     "ink": "#1c1d1d", "ink_soft": "#4a4a48", "muted": "#6f6f6b", "line": "#e8e8e1",
     "surface": "#ffffff", "surface_warm": "#fdfbf8", "dark": "#111111",
-    # The dark bands (value strip, system block, video, sticky, code). They default to the neutral
-    # ink-black, but a post or a season can point them at a palette the brand actually owns — the
-    # band must read as "deeper than the page", not as "a black bar bolted on". Keep it dark enough
-    # for white text; set both for the gradient.
-    "band": "#111111", "band_alt": "#1d1d1d",
+    # The bands used to be solid dark fills. Since v3.4.2 every band (value strip, system block,
+        # sticky CTA, code, problem strip) uses the illuminated palette — accent-soft → surface →
+        # plum-soft with a mint→plum accent bar — which is what the closing band already used. `band` /
+        # `band_alt` remain for the one surface that must sit *behind* media (the video letterbox) and
+        # for any future solid band; they default to neutral ink-black.
+        "band": "#111111", "band_alt": "#1d1d1d",
     "accent": "#76c39c", "accent_ink": "#2f6b4f", "accent_soft": "#eaf6f0",
     "plum": "#b68fbd", "plum_soft": "#f5eef7", "gold": "#b08d57",
     "radius": "16px", "radius_sm": "6px", "pill": "999px",

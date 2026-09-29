@@ -16,6 +16,12 @@ Blog 02 — multi-location cleaning supply procurement · generated 2026-09-28 �
 > Keep Reading list had no clickable links — and the closing band, which the copy ends as a
 > markdown list, had no buttons at all.
 
+> **Revision 2026-09-29 (c) — the bands take the closing band's colouring.** On the owner's call
+> ("gostei da coloração usada nessa sessão … utilizar no resto do blog"), the value strip, the A+B
+> system block, the sticky CTA and the code block now use the **same illuminated gradient as the
+> closing band** — `accent-soft → surface → plum-soft` + mint→plum accent bar, with ink text — and
+> the plum-black fill is gone. The video letterbox keeps `band`, the one surface behind media.
+
 ## Layout model
 `SHOPIFY-CONFIG.json` sets **`layout_model: "funnel"`**. Same design tokens, same typography, same
 prose contract as the editorial model — a different arrangement and reading rhythm:
@@ -109,8 +115,9 @@ Verified in a real browser: 8 inputs compute `$0.0614 / $307.07 / $0.0307` from 
 | sticky CTA | hidden at top → visible after 1500px scroll (`aria-hidden` correct) | renders |
 | tables / checklist / FAQ | 2 / 9 items / 8 Q&A | modules render |
 | CSS leaked as page text | none | clean |
-| layout tokens | `--wx-maxw:1320px` · `--wx-readw:50rem` · `--wx-band:#3a2740`; reading column 800px | wider, less scroll |
-| band colour | value strip + system block gradient `rgb(58,39,64) → rgb(37,23,48)` | brand-toned, not black |
+| layout tokens | `--wx-maxw:1320px` · `--wx-readw:50rem`; reading column 800px | wider, less scroll |
+| band colour | every band (value strip, system, sticky, code) = the closing band's gradient `rgb(234,246,240) → rgb(255,255,255) → rgb(245,238,247)`; text `rgb(28,29,29)` | brand-toned, no dark bar |
+| accent bars | value strip 4px · sticky 3px · closing 4px (mint→plum) | renders |
 | FAQ accordion | 8 `<details>`; marker `+` closed → `–` open; answer body renders | opens |
 | Keep Reading | 5 cards, every one an `<a>`, all hrefs `https://wipex.co/…` | clickable |
 | table links | 6 anchors, all canonical `/products/` URLs | clickable |

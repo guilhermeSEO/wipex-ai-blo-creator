@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.1'
+version: '3.4.2'
 date_created: '2026-09-22'
 date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
@@ -295,6 +295,20 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.2 (2026-09-29)** — **every band takes the closing band's palette.** The owner pointed at the
+closing "Run one standard…" block and asked for *that* colouring across the rest of the post, after
+the previous pass had filled the bands with a plum-black that read as "a strong purple". So the band
+model changed rather than the values: the **value strip, the A+B system block, the sticky CTA, the
+code block and the problem strip** now use the illuminated treatment the closing band already had —
+`accent-soft → surface → plum-soft` gradient with a mint→plum accent bar, **ink text instead of
+white**, pills white with ink labels, the result pill the brand mint. Nothing on the page is dark
+any more except the video letterbox, the one surface that must sit behind media; `band` / `band_alt`
+remain for that and default to ink-black. Verified with computed styles: every band resolves to the
+same gradient `rgb(234,246,240) → rgb(255,255,255) → rgb(245,238,247)`, text `rgb(28,29,29)`,
+sticky close `rgb(111,111,107)`, accent bars 4px / 3px / 4px. Both posts rebuilt, `RESULT: NONE`.
+**Lesson recorded in `references/10`:** "darker than the page" is not a brand answer — the band has
+to be built from the brand's own tints.
 
 **v3.4.1 (2026-09-29)** — **the visual/conversion pass, and three more defects it exposed.** On the
 funnel post: the model overrides `--wx-maxw:1320px` / `--wx-readw:50rem` with a tighter

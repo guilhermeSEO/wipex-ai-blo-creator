@@ -215,10 +215,14 @@ rebuild with `diff` rather than assuming.
 
 Shared by both models (not model-specific), because they are corrections as much as styling:
 
-- **`band` / `band_alt` tokens** feed every dark band — value strip, system block, video band,
-  sticky CTA, code block. Default `#111111` / `#1d1d1d`; a post or a season sets them to a palette
-  the brand owns (blog 02: plum-derived `#3a2740` / `#251730`). This is the answer to "a black bar
-  does not look like our brand": keep it darker than the page, but not neutral black.
+- **The bands are illuminated, not dark (v3.4.2).** Value strip, A+B system block, sticky CTA,
+  code block and problem strip all use the closing band's treatment: `accent-soft → surface →
+  plum-soft` gradient with a mint→plum accent bar, **ink text on light**. The first attempt kept
+  them as solid fills and the owner rejected it twice — neutral black ("does not look like our
+  brand") and the plum-black that replaced it ("a strong purple"). The lesson is worth keeping:
+  *"deeper than the page" is not enough; the band has to be made of the brand's own tints.*
+  `band` / `band_alt` now serve only the video letterbox — the one surface that must sit behind
+  media — and default to `#111111` / `#1d1d1d`.
 - **FAQ = one `<details>` per question.** `faq_item()` emits
   `<details class="…__faq"><summary><h3 class="…__faqq">Q</h3></summary><div class="…__faqa">A</div></details>`.
   The `__faqq` class stays on the `<h3>` inside the summary, which is what the FAQPage parity check
