@@ -34,6 +34,19 @@ Blog 02 — multi-location cleaning supply procurement · generated 2026-09-28 �
 > (media is now: hero 16:9 + one 2:3 liferow still + the video band). Validation: `RESULT: NONE`,
 > 30 settings, 34 canonical links, 17 `data-cro`, 0 occurrences of "quote"/"contact-us".
 
+> **Revision 2026-09-29 (f) — the pricing reframe (owner policy).** Deleted the whole **volume-tier
+> promise**: "volume pricing", "unlocks a tier", "reach a better tier", "the cheapest way to improve
+> your price", "a price band" and "relationship worth pricing" are gone — 0 occurrences. Framework
+> §2 became **"One supplier, one list — what consolidation actually buys"** (one supplier, one list,
+> one cadence; the saving is the unplanned order, not the price), two FAQs were replaced ("Does
+> buying across sites change our price?" → **no**, and "Which pack size should the footprint
+> standardise on?" → cost per wipe moves with pack size only), the takeaway, the checklist line and
+> the meta description were rewritten, and the copy now names the only two discount paths: a
+> **subscription** or **a discount already on the product page**. `keywords` and `schema_mentions`
+> dropped "volume tier" for "pack size". Full claims re-review in `2C-compliance-report.md`
+> (REVISION f): **0 BLOCKING / 0 HIGH / 0 MEDIUM**, no T1 and no T2 claim in the piece, 2,759 words,
+> `ON PATTERN` on the funnel band, `SECTION-VALIDATION.txt` = `RESULT: NONE`.
+
 ## Layout model
 `SHOPIFY-CONFIG.json` sets **`layout_model: "funnel"`**. Same design tokens, same typography, same
 prose contract as the editorial model — a different arrangement and reading rhythm:

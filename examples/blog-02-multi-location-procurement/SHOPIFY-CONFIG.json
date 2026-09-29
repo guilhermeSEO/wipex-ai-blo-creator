@@ -1,130 +1,259 @@
 {
   "domain": "https://wipex.co",
   "css_prefix": "wx-mlp",
-  "theme": { "band": "#3a2740", "band_alt": "#251730" },
+  "theme": {
+    "band": "#3a2740",
+    "band_alt": "#251730"
+  },
   "layout_model": "funnel",
   "toc_open": false,
   "title": "Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site",
   "slug": "multi-location-cleaning-supply-procurement",
   "meta_title": "Commercial Cleaning Supplies: A Multi-Location Program Guide 2026",
-  "meta_desc": "One approved SKU list, par levels and volume tiers across every site. Cut emergency reorders and see your true cost per wipe. Start your subscription today",
+  "meta_desc": "One approved SKU list, par levels and pack sizes across every site. Cut the emergency reorders and see your true cost per wipe. Start a subscription today.",
   "meta_tags": "commercial cleaning supplies, multi-location cleaning supplies, bulk cleaning supplies, janitorial supplies, multi-location procurement",
   "author": "Lívia Schlemmer",
-  "keywords": "commercial cleaning supplies, multi-location cleaning supplies, bulk cleaning supplies, janitorial supplies, wholesale cleaning supplies, par level, volume tier, SKU consolidation",
+  "keywords": "commercial cleaning supplies, multi-location cleaning supplies, bulk cleaning supplies, janitorial supplies, wholesale cleaning supplies, par level, pack size, SKU consolidation",
   "article_section": "Facility Procurement",
   "published": "2026-11-02",
   "publish_note": "QUEUE — target the Q4 budget window (Nov 1-20). Verify stock, prices and links before publishing.",
   "section_id": "wipex-section-multi-location-procurement-2026",
   "section_name": "Wipex Multi-Location",
   "template_file": "article.multi-location-procurement.json",
-
   "hero_eyebrow": "Facility Procurement",
   "hero_lede": "",
-  "hero_cta": { "label": "Start your subscription", "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link" },
-  "hero_cta2": { "label": "See what the program saves", "url": "#what-the-program-saves-cost-per-wipe" },
-  "sticky_cta": { "label": "Subscribe now", "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link" },
-
+  "hero_cta": {
+    "label": "Start your subscription",
+    "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link"
+  },
+  "hero_cta2": {
+    "label": "See what the program saves",
+    "url": "#what-the-program-saves-cost-per-wipe"
+  },
+  "sticky_cta": {
+    "label": "Subscribe now",
+    "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link"
+  },
   "video_anchor": "before_faq",
-
   "image_slots": [
-    { "setting": "hero_image", "anchor": "hero", "ratio": "16x9", "label": "Hero image (16:9)",
+    {
+      "setting": "hero_image",
+      "anchor": "hero",
+      "ratio": "16x9",
+      "label": "Hero image (16:9)",
       "alt": "Multi-location cleaning supply procurement: one wipe program across every site",
-      "caption": "", "literal_url": "" },
-    { "setting": "still1_image", "anchor": "after:Why this matters in Q4", "ratio": "2x3", "label": "Editorial still (2:3)",
+      "caption": "",
+      "literal_url": ""
+    },
+    {
+      "setting": "still1_image",
+      "anchor": "after:Why this matters in Q4",
+      "ratio": "2x3",
+      "label": "Editorial still (2:3)",
       "alt": "Labelled par level on a supply-room shelf: product name, case quantity, reorder point",
-      "caption": "A labelled par level lets any staff member flag low stock.", "literal_url": "", "layout": "row" }
+      "caption": "A labelled par level lets any staff member flag low stock.",
+      "literal_url": "",
+      "layout": "row"
+    }
   ],
-
   "value_strip": {
     "anchor": "after_hero",
     "label": "The program, in numbers",
     "aria": "The program in numbers",
     "items": [
-      { "value": "$4.92 vs $6.10", "label": "Centralised vs decentralised procurement spend, per $1,000 of revenue" },
-      { "value": "20–30%", "label": "Emergency stockout premium over planned replenishment" },
-      { "value": "300 → 60", "label": "Facility SKUs one organisation cut to standardise" },
-      { "value": "~$0.06", "label": "Our cost per wipe at the bulk refill tier" }
+      {
+        "value": "$4.92 vs $6.10",
+        "label": "Centralised vs decentralised procurement spend, per $1,000 of revenue"
+      },
+      {
+        "value": "20–30%",
+        "label": "Emergency stockout premium over planned replenishment"
+      },
+      {
+        "value": "300 → 60",
+        "label": "Facility SKUs one organisation cut to standardise"
+      },
+      {
+        "value": "~$0.06",
+        "label": "Our cost per wipe on the bulk refill roll"
+      }
     ],
-    "cta": { "label": "Subscribe now", "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link" }
+    "cta": {
+      "label": "Subscribe now",
+      "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link"
+    }
   },
-
   "problem_strip": null,
   "stat_cards": null,
-
   "decision_tool": {
     "anchor": "after_hero",
     "heading": "Match the format to the room",
     "options": [
-      { "title": "Fitness sites", "answer": "Refill roll paired with one dispenser standard across every gym in the footprint.",
-        "cta": "Shop the 700ct refill roll", "url": "https://wipex.co/products/natural-gym-wipes-bulk-refill-roll", "recommended": true },
-      { "title": "Food-service sites", "answer": "The NSF-certified scented Table Bussers on the front-of-house list.",
-        "cta": "Shop Table Bussers", "url": "https://wipex.co/products/autumn-scented-all-purpose-cleaning-wipes" },
-      { "title": "Sustainability-graded sites", "answer": "Plant-based 700ct refill roll, same dispenser standard.",
-        "cta": "Shop the plant-based roll", "url": "https://wipex.co/products/plant-based-bulk-rolls" }
+      {
+        "title": "Fitness sites",
+        "answer": "Refill roll paired with one dispenser standard across every gym in the footprint.",
+        "cta": "Shop the 700ct refill roll",
+        "url": "https://wipex.co/products/natural-gym-wipes-bulk-refill-roll",
+        "recommended": true
+      },
+      {
+        "title": "Food-service sites",
+        "answer": "The NSF-certified scented Table Bussers on the front-of-house list.",
+        "cta": "Shop Table Bussers",
+        "url": "https://wipex.co/products/autumn-scented-all-purpose-cleaning-wipes"
+      },
+      {
+        "title": "Sustainability-graded sites",
+        "answer": "Plant-based 700ct refill roll, same dispenser standard.",
+        "cta": "Shop the plant-based roll",
+        "url": "https://wipex.co/products/plant-based-bulk-rolls"
+      }
     ]
   },
-
   "card_grid": {
     "anchor": "after:Where a multi-location program leaks money",
     "heading": "",
     "note": "Audit each one before the next budget cycle closes.",
     "cards": [
-      { "title": "The local reorder", "text": "A site that orders on its own account pays the premium the program exists to remove." },
-      { "title": "The duplicate SKU", "text": "Two products doing one job means two par levels, two storage slots and more cash on shelves." },
-      { "title": "The mismatched dispenser", "text": "A refill that does not fit the site's hardware becomes a special order, then an emergency order." },
-      { "title": "The invisible usage rate", "text": "Without a per-site consumption number, par levels get set from memory and drift within a quarter." },
-      { "title": "The unmeasured cadence", "text": "A delivery cycle nobody tracks quietly becomes reactive buying again." }
+      {
+        "title": "The local reorder",
+        "text": "A site that orders on its own account pays the premium the program exists to remove."
+      },
+      {
+        "title": "The duplicate SKU",
+        "text": "Two products doing one job means two par levels, two storage slots and more cash on shelves."
+      },
+      {
+        "title": "The mismatched dispenser",
+        "text": "A refill that does not fit the site's hardware becomes a special order, then an emergency order."
+      },
+      {
+        "title": "The invisible usage rate",
+        "text": "Without a per-site consumption number, par levels get set from memory and drift within a quarter."
+      },
+      {
+        "title": "The unmeasured cadence",
+        "text": "A delivery cycle nobody tracks quietly becomes reactive buying again."
+      }
     ]
   },
-
   "system_block": {
     "anchor": "after:Where a multi-location program leaks money",
     "eyebrow": "The system",
     "heading": "Two decisions, one order",
-    "pills": ["One approved SKU list", "One dispenser standard"],
+    "pills": [
+      "One approved SKU list",
+      "One dispenser standard"
+    ],
     "result": "One reorder that runs itself",
     "text": "Standardise the list and the hardware, and replenishment stops being a local decision at every site.",
-    "cta": { "label": "Set up a subscription", "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link" }
+    "cta": {
+      "label": "Set up a subscription",
+      "url": "https://wipex.co/a/loop_subscriptions/get-subscription-link"
+    }
   },
-
   "feature_block": null,
-
   "accordion": {
-    "sections": ["The six-part program framework"],
+    "sections": [
+      "The six-part program framework"
+    ],
     "hint": "Open a step to see how it runs on the ground."
   },
-
   "products_anchor": "",
   "products_heading": "",
   "products": [],
-
   "calculator": {
     "anchor": "before:Cost-per-use calculator",
     "heading": "Calculate your footprint cost",
     "note": "Cost figures only, from the prices you enter. Check your own invoice.",
     "covers_per_turn": 2,
     "inputs": [
-      { "key": "tables", "label": "Sites in the footprint", "value": 10, "step": 1, "min": 0 },
-      { "key": "turns", "label": "Wipes used per site per week", "value": 500, "step": 10, "min": 0 },
-      { "key": "services", "label": "Weeks in the period", "value": 1, "step": 1, "min": 0 },
-      { "key": "price", "label": "Case price ($)", "value": 42.99, "step": 0.01, "min": 0 },
-      { "key": "count", "label": "Wipes per case", "value": 700, "step": 1, "min": 1 },
-      { "key": "wipes", "label": "Wipes per use event", "value": 1, "step": 1, "min": 1 },
-      { "key": "seconds", "label": "Seconds of labour per wipe (optional)", "value": 0, "step": 5, "min": 0 },
-      { "key": "rate", "label": "Loaded hourly rate ($, optional)", "value": 0, "step": 0.5, "min": 0 }
+      {
+        "key": "tables",
+        "label": "Sites in the footprint",
+        "value": 10,
+        "step": 1,
+        "min": 0
+      },
+      {
+        "key": "turns",
+        "label": "Wipes used per site per week",
+        "value": 500,
+        "step": 10,
+        "min": 0
+      },
+      {
+        "key": "services",
+        "label": "Weeks in the period",
+        "value": 1,
+        "step": 1,
+        "min": 0
+      },
+      {
+        "key": "price",
+        "label": "Case price ($)",
+        "value": 42.99,
+        "step": 0.01,
+        "min": 0
+      },
+      {
+        "key": "count",
+        "label": "Wipes per case",
+        "value": 700,
+        "step": 1,
+        "min": 1
+      },
+      {
+        "key": "wipes",
+        "label": "Wipes per use event",
+        "value": 1,
+        "step": 1,
+        "min": 1
+      },
+      {
+        "key": "seconds",
+        "label": "Seconds of labour per wipe (optional)",
+        "value": 0,
+        "step": 5,
+        "min": 0
+      },
+      {
+        "key": "rate",
+        "label": "Loaded hourly rate ($, optional)",
+        "value": 0,
+        "step": 0.5,
+        "min": 0
+      }
     ],
     "outputs": [
-      { "key": "table", "label": "cost per wipe" },
-      { "key": "week", "label": "footprint cost per period" },
-      { "key": "cover", "label": "cost per two-wipe reset" }
+      {
+        "key": "table",
+        "label": "cost per wipe"
+      },
+      {
+        "key": "week",
+        "label": "footprint cost per period"
+      },
+      {
+        "key": "cover",
+        "label": "cost per two-wipe reset"
+      }
     ]
   },
-
   "final_cta_heading": "Run one standard across every site",
-
   "schema_products": [
-    { "name": "Natural Gym Wipes Bulk Refill Roll 700ct — Original XL (meltblown)", "sku": "WX11121FN", "price": "42.99",
-      "url": "https://wipex.co/products/natural-gym-wipes-bulk-refill-roll" }
+    {
+      "name": "Natural Gym Wipes Bulk Refill Roll 700ct — Original XL (meltblown)",
+      "sku": "WX11121FN",
+      "price": "42.99",
+      "url": "https://wipex.co/products/natural-gym-wipes-bulk-refill-roll"
+    }
   ],
-  "schema_mentions": ["Commercial cleaning supplies", "Multi-location procurement", "Par level", "Volume tier", "SKU consolidation"]
+  "schema_mentions": [
+    "Commercial cleaning supplies",
+    "Multi-location procurement",
+    "Par level",
+    "Pack size",
+    "SKU consolidation"
+  ]
 }

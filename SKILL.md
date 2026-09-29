@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.4'
+version: '3.4.5'
 date_created: '2026-09-22'
 date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
@@ -170,6 +170,14 @@ scores the post against **that model's** band, so a funnel post is not failed fo
   `https://wipex.co/a/loop_subscriptions/get-subscription-link`, and the copy never asks the reader
   to request a quote or to contact for pricing. Audience: `wipex.co/a/loop_subscriptions/…`
   is under `https://wipex.co`, so it passes the canonical-link gate. Set 2026-09-29.
+- **Prices are the prices — no tier, no volume discount, no negotiated band.** Pack size is the only
+  lever, and it is printed on the product page. Discounts come from a **subscription** or a
+  **discount already live on the product page** — never from something the copy promises. A post may
+  quote our own list prices as cost arithmetic; it may not suggest that consolidating spend improves
+  them. Set 2026-09-29, after blog 02's whole volume-tier argument had to be rebuilt around the
+  operational saving (unplanned orders + the cited stockout premium) instead of a price promise.
+  The failure mode to avoid is subtle: a price promise is not a Claims Filter violation, but it
+  asserts an outcome the business will not deliver, which is the same class of risk.
 - **A module the post does not need is switched off in the config, not deleted in the code.** The
   product-card block (`products: []`) and the problem strip (`problem_strip: null`) are both live
   examples: an empty config key renders nothing and keeps the option for the next post.
@@ -309,6 +317,18 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.5 (2026-09-29)** — **a new STANDING RULE: prices are the prices.** Blog 02's spine had been a
+volume-tier promise — standardising the footprint "unlocks a tier", "the cheapest way to improve your
+price". The owner's policy is the opposite: **the price is the price on the product page; pack size
+is the only lever; discounts come from a subscription or a discount already live on the product
+page.** The rule is recorded under STANDING RULES and the post was rebuilt around the operational
+saving instead (one supplier, one list, one cadence; fewer unplanned orders at the cited 20–30%
+stockout premium). Worth remembering as a class: **a price promise is not a Claims Filter violation,
+but it asserts an outcome the business will not deliver** — the same risk, and it only shows up when
+someone states the commercial policy. When a policy like this lands, grep the copy for the merchant
+promise it contradicts, not just for prohibited terms. Full claims matrix re-run: 0 BLOCKING, no T1
+and no T2 claim in the piece.
 
 **v3.4.4 (2026-09-29)** — **the persisted-setting trap.** The owner reported a CTA button still
 reading "Request a Wipe Procurement Quote" on the page after the section had been rebuilt without

@@ -8,10 +8,10 @@ This guide turns that drift into a program: one approved list, one dispenser sta
 
 - A multi-location program is four decisions: par level per site, one approved SKU list for the footprint, one dispenser standard, one delivery cadence.
 - Standardise first. One organisation cut its facility SKUs from 300 to 60 core items and made ordering and storage simpler the same quarter.
-- You do not need one giant order to reach volume pricing — standardising the same SKUs across sites is what unlocks a tier.
+- Consolidation does not change what a wipe costs — it removes the spend you did not plan: the local reorder, the duplicate SKU, the emergency order.
 - Reactive buying is the hidden tax: an emergency order that covers a stockout costs 20–30% more than planned replenishment.
 - Set reorder points from a formula, not a hunch: Par Level = (Daily Usage Rate × Lead Time) + Safety Stock.
-- At the refill tier our bulk roll runs about $0.06 per wipe and our pallet tier about $0.05 per wipe — about half a bucket's unit cost.
+- Our bulk refill roll works out at about $0.06 per wipe, and the pallet pack about $0.05 — roughly half a bucket's unit cost.
 
 ## On this page
 
@@ -26,9 +26,9 @@ This guide turns that drift into a program: one approved list, one dispenser sta
 
 ## What is multi-location cleaning supply procurement?
 
-Multi-location cleaning supply procurement is the practice of buying and replenishing consumables — wipes, liners, chemicals, paper — under one standard across several facilities. Without it, each site buys on its own. It has two halves. The **supply half** decides what the footprint buys and at what tier. The **operating half** keeps every site running that standard after the launch: par levels, reorder triggers, dispenser fit, and a usage number per location.
+Multi-location cleaning supply procurement is the practice of buying and replenishing consumables — wipes, liners, chemicals, paper — under one standard across several facilities. Without it, each site buys on its own. It has two halves. The **supply half** decides what the footprint buys and in which pack size. The **operating half** keeps every site running that standard after the launch: par levels, reorder triggers, dispenser fit, and a usage number per location.
 
-Most operators stop at the supply half. They negotiate once, then lose the standard within two quarters because nothing governs the sites day to day. The two halves also fail differently. A weak supply half shows up as a price you wish were lower. A weak operating half shows up as ten sites that each believe they are following the standard and none of them are.
+Most operators stop at the supply half. They standardise once, then lose it within two quarters because nothing governs the sites day to day. The two halves also fail differently. A weak supply half shows up as spend you cannot explain. A weak operating half shows up as ten sites that each believe they are following the standard and none of them are.
 
 ## Why this matters in Q4
 
@@ -38,7 +38,7 @@ That gives a multi-location buyer a natural deadline. If you want the program ru
 
 ## What the program saves: cost per wipe
 
-Cost per wipe is one price divided by one count. Cost per use is that number meeting real consumption. Both belong in the same review, because a cheap wipe that a site uses twice per task is not cheap. Every figure below is recomputed from live list prices and re-checked before publish.
+Cost per wipe is one price divided by one count. Cost per use is that number meeting real consumption. Both belong in the same review, because a cheap wipe that a site uses twice per task is not cheap. Every figure below is the list price on the product page, divided by the pack count.
 
 | Product | Variant | Price | Count | Cost per wipe |
 |---|---|---|---|---|
@@ -50,14 +50,14 @@ Cost per wipe is one price divided by one count. Cost per use is that number mee
 
 A fuller breakdown of the refill format and its dispensing options sits in [Gym Wipe Dispensers vs. Buckets](/blogs/library/gym-wipe-dispenser-vs-bucket).
 
-Take one site that burns 500 wipes a week. At the bucket tier that is roughly $46 a week before any emergency premium; at the refill tier it is closer to $26. Multiply the gap by every site in the footprint and by the weeks in a year, and the program's whole justification sits in that line. No cleaning claim is required, because the arithmetic is about price and consumption, not about how well anything works. Stack the reactive premium on top and the gap widens further — an emergency order looks like a normal invoice until you compare it against what a planned one would have cost.
+Take one site that burns 500 wipes a week. On a bucket that is roughly $46 a week before any emergency premium; on the refill roll it is closer to $26. Multiply the gap by every site in the footprint and by the weeks in a year, and the program's whole justification sits in that line. No cleaning claim is required, because the arithmetic is about price and consumption, not about how well anything works. Stack the reactive premium on top and the gap widens further — an emergency order looks like a normal invoice until you compare it against what a planned one would have cost.
 
 The formula to hand to each site:
 
 ```
 daily wipes used × days of lead time = reorder trigger
 footprint demand = sum of every site's par level
-footprint cost per cycle = footprint demand × cost per wipe at the footprint's tier
+footprint cost per cycle = footprint demand × cost per wipe at the pack size the footprint buys
 ```
 
 ### Cost-per-use calculator
@@ -71,8 +71,8 @@ Reorder the formula for your own operation and the argument holds or it does not
 **What is a multi-location cleaning supply procurement program?**
 One standard for buying and replenishing consumables across several facilities: one approved SKU list for the footprint, a par level and reorder trigger per site, one dispenser standard, one delivery cadence. The supply half sets what you buy; the operating half keeps every site on that standard after launch.
 
-**How do we reach volume pricing if we cannot place one huge order?**
-Through the whole footprint, not one shipment. Standardising the same SKUs across sites means the cumulative demand qualifies for a tier even when each site orders a normal quantity. Consolidating most of your spend with one primary supplier is what turns scattered transactions into leverage.
+**Does buying across sites change our price?**
+No. The price is the price on the product page, and the pack size you order is what sets the cost per wipe. What consolidation removes is the spend you did not plan: the local retail reorder, the duplicate SKU, and the emergency order that covers a stockout at a 20–30% premium. Discounts are separate from all of it — a subscription, or a discount already running on the product page.
 
 **How do we consolidate SKUs without breaking how the sites work?**
 Audit first, then collapse. List every product actually present at each site, identify the duplicates that do the same job, and settle on one approved item per category. Formats can differ by room type, but if the format differs by site for the same room, consolidation fails — the reorder cannot run on two standards at once.
@@ -81,10 +81,10 @@ Audit first, then collapse. List every product actually present at each site, id
 Use the par-level formula: (Daily Usage Rate × Lead Time) + Safety Stock. Measure the daily usage rate on a normal week, add a buffer sized to your worst realistic delay, and label the shelf with the resulting number so anyone can trigger the order.
 
 **Should every location run the same dispenser?**
-Yes, per room type. Dispenser standardisation is what lets one refill fit every site, which is what lets a single order cover the network. Mixed hardware forces special orders, and special orders are the front door to emergency pricing.
+Yes, per room type. Dispenser standardisation is what lets one refill fit every site, which is what lets a single order cover the network. Mixed hardware forces special orders, and special orders are the front door to the emergency premium.
 
-**What is a volume tier and how is it reached?**
-A price band tied to the quantity the footprint commits over a period. It is reached through cumulative demand plus standardisation, not one large order: more sites on the same SKU list reach a better tier than the same sites buying different products.
+**Which pack size should the footprint standardise on?**
+The one your rooms actually run. A refill roll pairs with one dispenser standard and lands at about $0.061 per wipe at the single-roll price and $0.051 in the 4-pack; a bucket suits front-of-house reset at about $0.092. The cost per wipe moves with the pack size you choose — that is the only lever here, and it is printed on the product page.
 
 **How do we keep the program running after launch?**
 Set the par levels, put the approved list and the dispenser standard in writing, and let one cadence drive replenishment. Track cost per wipe and stockouts per site, so the standard can be checked rather than assumed.
@@ -94,7 +94,7 @@ Track two numbers per site: cost per wipe and stockouts. If cost per wipe is sta
 
 ## The six-part program framework
 
-Run the six parts in this order. The order matters: reorder planning and volume tiers come before dispenser choices, and SKU consolidation comes before delivery, because you cannot ship a standard you have not agreed on.
+Run the six parts in this order. The order matters: reorder planning and the pack-size decision come before dispenser choices, and SKU consolidation comes before delivery, because you cannot ship a standard you have not agreed on.
 
 ### 1. Reorder planning — par levels per site
 
@@ -104,11 +104,11 @@ Daily usage rate is what a site actually burns through on a normal day. Lead tim
 
 The single most useful thing a program does is make that number visible. Label the shelf with the product name, the case quantity, and the par level, so any staff member can flag low stock without a manager doing a walkthrough. Ten sites with a labelled par level reorder the same way; ten sites without one reorder ten different ways.
 
-### 2. Volume tiers — how they are actually reached
+### 2. One supplier, one list — what consolidation actually buys
 
-Volume pricing is not only about how much you order in one shipment. It is about how much the footprint commits to over a period. Consolidating spend toward one primary supplier, with the large majority of the SKUs on one list, turns a scatter of small transactions into a relationship worth pricing.
+Consolidating spend toward one primary supplier, with most of the SKUs on one list, does not change what a wipe costs. The list price is the list price. What it changes is everything around the product: one supplier to order from, one SKU list to order against, and far fewer of the unplanned orders that carry the stockout premium.
 
-For a wipes program the tier is unlocked by two things at once: **cumulative footprint demand** and **standardisation**. Ten sites that each buy the same refill roll are a bigger account than ten sites that each buy a different bucket. The tier is not a discount you negotiate once; it is a position the footprint holds — which means the cheapest way to improve your price is often not to buy more, but to buy the same thing in more places.
+It also makes the pack-size decision consistent across the footprint. Ten sites ordering the same refill roll can be replenished from one place; ten sites each buying a different bucket cannot, because the quantities never line up. Standardisation is what makes a single cadence possible — and it is the cadence, not a negotiation, that removes the emergency premium.
 
 ### 3. Dispenser standardisation — the quiet lever
 
@@ -120,7 +120,7 @@ Choosing one dispenser format per room type across the footprint means one refil
 
 Consolidation is an audit, not a purge. Walk every site's supply room and write down what is actually there. You will find duplicates that do the same job, and specialty items bought once and never reused.
 
-Then collapse it: one approved item per category, one approved wipe per room type, and one place to reorder. Consolidate to a single approved list covering paper, liners, wipes, chemicals, and PPE. Fewer SKUs also means higher purchase quantities per item, which is what supports the tier from step two.
+Then collapse it: one approved item per category, one approved wipe per room type, and one place to reorder. Consolidate to a single approved list covering paper, liners, wipes, chemicals, and PPE. Fewer SKUs also means the quantity per item is larger and more predictable, which is what makes a fixed cadence work.
 
 The most common finding in the audit is not waste. It is redundancy — two products, each fine, one of which has to go so the reorder can run on one standard.
 
@@ -162,7 +162,7 @@ Print this and run it before the budget closes.
 - [ ] Par level calculated per site with the formula, not from memory.
 - [ ] Shelf labels in place: product name, case quantity, par level.
 - [ ] One dispenser format chosen per room type, ordered for the network.
-- [ ] Volume tier confirmed against cumulative footprint demand, not one order.
+- [ ] Pack size per room type agreed, so every site reorders the same item.
 - [ ] Delivery cadence set to a fixed cycle with one aggregated order.
 - [ ] Cost per wipe and cost per use recorded per site for the Q4 review.
 - [ ] One owner per location for the weekly stock count.
