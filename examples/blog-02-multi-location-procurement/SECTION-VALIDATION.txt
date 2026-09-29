@@ -1,5 +1,5 @@
 SECTION VALIDATION — wipex-section-multi-location-procurement-2026
-generated: sections/wipex-section-multi-location-procurement-2026.liquid (1044 lines, 74749 chars)
+generated: sections/wipex-section-multi-location-procurement-2026.liquid (1084 lines, 81155 chars)
 
 PRE-SAVE (Shopify hard limits)
   section name      : 'Wipex Multi-Location' (20 chars, limit 25)  OK
@@ -11,9 +11,9 @@ PRE-SAVE (Shopify hard limits)
 DELIVERABLE CHECKS
   theme-editor settings : 35 (4 image_picker, 4 url, 3 select, 1 video, 7 group blocks)
   instance safety       : section.id + registry OK
-  data-cro annotations  : 12
+  data-cro annotations  : 20
   a11y landmarks        : aria-label 6, aria-expanded 1, role=region 2, sr-only 1
-  modules rendered      : toc OK, checklist OK, calculator OK, sticky OK, progress OK, video OK, hero OK, liferow OK, value_strip OK, accordion OK
+  modules rendered      : toc OK, checklist OK, calculator OK, sticky OK, progress OK, video OK, hero OK, liferow OK, value_strip OK, accordion OK, faq_items OK, keep_reading OK
   token block applied   : OK  (root carries the bare prefix class, so the palette and base typography resolve)
   media slots           : 3 editorial stills + video band
   module library        : card_grid, decision_tool, system_block, products, faq, checklist, calculator, toc, sticky, liferow
@@ -25,19 +25,19 @@ CONTENT INTEGRITY
   Liquid-safe prose     : OK
   FAQ questions         : 8 visible == 8 in JSON-LD
   TOC entries           : 12
-  links                 : 22, all canonical (https://wipex.co)
+  links                 : 37, all canonical (https://wipex.co)
 
 CLAIMS LINT (Never-Say-Prohibitions.csv)
   source                : C:\Users\guilh\AppData\Local\hermes\workdir\wipex\01-compliance\Never-Say-Prohibitions.csv
   BLOCKING findings     : 0
-  REVIEW (context)      : 16
+  REVIEW (context)      : 13
     "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...plant-based roll → Formats on the approved list Bulk refill Natural Fitness Equipment Wipes 700ct Bulk Refill Roll Suite...
     "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...or dispensers ~$0.061 per wipe at the single-roll tier Shop Natural Fitness Equipment Wipes 700ct Bulk Refill Roll → Foo...
     "natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...t for winter occupancy. That gives a multi-location buyer a natural deadline. If you want the program running by January...
-    "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...before publish. Product Variant Price Count Cost per wipe [Natural Fitness Equipment Wipes 700ct Bulk Refill Roll](/pro...
-    "natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...l Fitness Equipment Wipes 700ct Bulk Refill Roll](/products/natural-gym-wipes-bulk-refill-roll) Single roll $42.99 700 ~...
-    "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...-gym-wipes-bulk-refill-roll) Single roll $42.99 700 ~$0.061 Natural Fitness Equipment Wipes 700ct Bulk Refill Roll 4-pac...
+    "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...d before publish. Product Variant Price Count Cost per wipe Natural Fitness Equipment Wipes 700ct Bulk Refill Roll Singl...
+    "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...Wipes 700ct Bulk Refill Roll Single roll $42.99 700 ~$0.061 Natural Fitness Equipment Wipes 700ct Bulk Refill Roll 4-pac...
     "Natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...Wipex product Why it fits Cost per wipe Fitness / gym floor Natural Fitness Equipment Wipes 700ct Bulk Refill Roll Refil...
-    "natural" — check the product is not BZK (A-008) and it is not a percentage claim | ...ontact-us) [Compare the 700ct Bulk Refill Roll →](/products/natural-gym-wipes-bulk-refill-roll) [Equip Your Sites with O...
+    "Plant-based" — fine as substrate wording; never as a "natural" claim | ...se list. Shop Table Bussers → Sustainability-graded sites ↓ Plant-based 700ct refill roll, same dispenser standard. Shop...
+    "plant-based" — fine as substrate wording; never as a "natural" claim | ...-based 700ct refill roll, same dispenser standard. Shop the plant-based roll → Formats on the approved list Bulk refill...
 
 RESULT: NONE — safe to paste

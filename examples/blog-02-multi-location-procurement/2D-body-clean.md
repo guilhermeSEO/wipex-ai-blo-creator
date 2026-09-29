@@ -144,9 +144,9 @@ A mixed footprint usually runs three wipe jobs: fitness equipment, food-service 
 
 | Site type | Recommended Wipex product | Why it fits | Cost per wipe |
 |---|---|---|---|
-| Fitness / gym floor | Natural Fitness Equipment Wipes 700ct Bulk Refill Roll | Refill-roll format that pairs with one wall or floor dispenser standard | ~$0.061 |
-| Food-service front of house | Table Bussers® Surface Wipes — Autumn-Scented | Pre-mixed surface wipe built for front-of-house reset; the scented line is NSF-certified and suitable for food service environments | ~$0.092 |
-| Sustainability-graded sites | Plant-Based 700ct Bulk Refill Roll (viscose) | Plant-based cloth with EWG Verified and the certified cloth-substrate wording | ~$0.047 (pallet) |
+| Fitness / gym floor | [Natural Fitness Equipment Wipes 700ct Bulk Refill Roll](/products/natural-gym-wipes-bulk-refill-roll) | Refill-roll format that pairs with one wall or floor dispenser standard | ~$0.061 |
+| Food-service front of house | [Table Bussers® Surface Wipes — Autumn-Scented](/products/autumn-scented-all-purpose-cleaning-wipes) | Pre-mixed surface wipe built for front-of-house reset; the scented line is NSF-certified and suitable for food service environments | ~$0.092 |
+| Sustainability-graded sites | [Plant-Based 700ct Bulk Refill Roll (viscose)](/products/plant-based-bulk-rolls) | Plant-based cloth with EWG Verified and the certified cloth-substrate wording | ~$0.047 (pallet) |
 | Shared offices & touchpoints | All-purpose and touchscreen-compatible wipes on the same approved list | One listed wipe per room type keeps the standard visible | — |
 
 *If in doubt, test on a small, inconspicuous area first.*

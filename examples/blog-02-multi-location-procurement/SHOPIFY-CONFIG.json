@@ -1,7 +1,7 @@
 {
   "domain": "https://wipex.co",
   "css_prefix": "wx-mlp",
-  "theme": {},
+  "theme": { "band": "#3a2740", "band_alt": "#251730" },
   "layout_model": "funnel",
   "toc_open": false,
   "title": "Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site",

@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4'
+version: '3.4.1'
 date_created: '2026-09-22'
 date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
@@ -295,6 +295,28 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.1 (2026-09-29)** — **the visual/conversion pass, and three more defects it exposed.** On the
+funnel post: the model overrides `--wx-maxw:1320px` / `--wx-readw:50rem` with a tighter
+`--wx-space`, so the reading column is ~800px and the page is shorter to scroll; hover states on
+table rows, product links, cards and the closing band; the closing band is an illuminated gradient
+card with an accent bar; the placeholders (design mode) are on-brand mint instead of grey stripes.
+**FAQ is now one `<details>` per question with a `+` beside it** (was a bare `h3`+`p`) — the `h3`
+keeps `__faqq` so the FAQPage parity check still passes, and the panel is native, so it opens
+without JS and is keyboard-accessible. **Keep Reading is now real link cards** — each card is an
+`<a>` wrapping title, line and arrow, with its own `data-cro`. The table's product names are links.
+New theme tokens **`band` / `band_alt`** drive every dark band (value strip, system block, video,
+sticky, code) so a post or a season can point them at a palette the brand owns instead of shipping
+a black bar; blog 02 sets them to a plum-derived aubergine (`#3a2740` / `#251730`). Three real
+defects found and fixed: (1) **relative markdown links were never converted** — `inline()` only
+matched `https?://`, so the house's `/products/…` and `/blogs/…` links rendered as literal
+markdown text on the page, which is why "Keep Reading had no links"; relative links are now
+absolutized against `DOMAIN`. (2) `promote_cta_row()` only promoted a `<p>` of links, so a post
+that closes with a **markdown list** of links (blog 02) shipped a closing band with no buttons at
+all; both shapes are promoted now. (3) blog 01's earlier `@CRO@` fix is included. Rebuilds:
+both posts = `RESULT: NONE`; blog 02 = 37 canonical links, 20 `data-cro`, 35 settings. Verified in
+a real engine: tokens resolve, FAQ opens `+`→`–`, 5 Keep-Reading anchors and 6 table product links
+all canonical, 3 closing buttons, band gradient `rgb(58,39,64)`, read column 800px.
 
 **v3.4 (2026-09-29)** — **layout models, so a series stops looking like one post.** The section used
 to be one fixed module order, which made every post read the same. `SHOPIFY-CONFIG.json` now takes

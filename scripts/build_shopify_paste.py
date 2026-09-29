@@ -54,6 +54,11 @@ THEME_DEFAULTS = {
     # this block in SHOPIFY-CONFIG.json — never the CSS.
     "ink": "#1c1d1d", "ink_soft": "#4a4a48", "muted": "#6f6f6b", "line": "#e8e8e1",
     "surface": "#ffffff", "surface_warm": "#fdfbf8", "dark": "#111111",
+    # The dark bands (value strip, system block, video, sticky, code). They default to the neutral
+    # ink-black, but a post or a season can point them at a palette the brand actually owns — the
+    # band must read as "deeper than the page", not as "a black bar bolted on". Keep it dark enough
+    # for white text; set both for the gradient.
+    "band": "#111111", "band_alt": "#1d1d1d",
     "accent": "#76c39c", "accent_ink": "#2f6b4f", "accent_soft": "#eaf6f0",
     "plum": "#b68fbd", "plum_soft": "#f5eef7", "gold": "#b08d57",
     "radius": "16px", "radius_sm": "6px", "pill": "999px",
@@ -164,6 +169,11 @@ def fin(s):
 def inline(t):
     t = html.escape(t, quote=False)
     t = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2">\1</a>', t)
+    # Relative internal links (the house markdown writes `/products/...`, `/blogs/...`) must become
+    # canonical too: they used to be left as literal markdown text on the page, so the link was not
+    # a link at all. The store is canonical at DOMAIN.
+    t = re.sub(r'\[([^\]]+)\]\((/[^)]*)\)',
+               lambda m: '<a href="%s%s">%s</a>' % (DOMAIN, m.group(2), m.group(1)), t)
     t = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', t)
     t = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', t)
     t = re.sub(r'`([^`]+)`', r'<code>\1</code>', t)
@@ -297,17 +307,23 @@ def render(blocks):
                 qm = re.match(r'^\*\*(.+?\?)\*\*\s*(.*)$', s)
                 if qm:
                     faq.append([qm.group(1), qm.group(2).strip()])
-                    nodes.append({'t': 'h3', 'id': slugify(qm.group(1)), 'text': qm.group(1),
-                                  'html': '<h3 class="@P@__faqq">%s</h3>' % inline(qm.group(1))})
+                    node = {'t': 'faqitem', 'q': qm.group(1), 'a': []}
                     if qm.group(2).strip():
-                        nodes.append({'t': 'p', 'html': '<p>%s</p>' % inline(qm.group(2).strip())})
+                        node['a'].append(inline(qm.group(2).strip()))
+                    nodes.append(node)
                     continue
                 if faq:
                     faq[-1][1] = (faq[-1][1] + ' ' + s).strip() if faq[-1][1] else s
+                    if nodes and nodes[-1]['t'] == 'faqitem':
+                        nodes[-1]['a'].append(inline(s))
+                        continue
             nodes.append({'t': 'p', 'html': '<p>%s</p>' % inline(payload)}); continue
         if kind == 'ul':
             if prev_h2.startswith('on this page'):
                 nodes.append({'t': 'toc', 'html': ''})        # replaced by the interactive TOC
+                continue
+            if prev_h2.startswith('keep reading'):
+                nodes.append({'t': 'kr', 'items': payload})   # rendered as link cards
                 continue
             cl = ' class="@P@__takeaways"' if prev_h2.startswith('quick answer') else ''
             nodes.append({'t': 'ul', 'html': '<ul%s>%s</ul>' % (cl, ''.join('<li>%s</li>' % inline(x) for x in payload))})
@@ -508,7 +524,9 @@ def value_strip(P, cfg):
 def promote_cta_row(html_str, P, slug, tag):
     """Turn the closing section's link paragraph into a real CTA row of buttons — the reference's
     final conversion band. No new copy: it restyles the links the approved article already carries,
-    which is why it cannot introduce a claim."""
+    which is why it cannot introduce a claim. The house closes a post either with a paragraph of
+    links or with a markdown list of them; both are promoted, because a list of raw links is what
+    the operator actually saw on the page."""
     def repl(m):
         links = re.findall(r'<a href="([^"]+)">(.*?)</a>', m.group(1))
         if len(links) < 2:
@@ -519,7 +537,9 @@ def promote_cta_row(html_str, P, slug, tag):
             btns.append('<a class="%s__btn %s__btn--%s" data-cro="%s-%s-%d" href="%s">%s</a>'
                         % (P, P, kind, slug, tag, i, href, label))
         return '<p class="%s__cta-row">%s</p>' % (P, ''.join(btns))
-    return re.sub(r'<p>((?:<a [^>]+>.*?</a>\s*(?:·\s*)?)+)</p>', repl, html_str)
+    out = re.sub(r'<p>((?:<a [^>]+>.*?</a>\s*(?:·\s*)?)+)</p>', repl, html_str)
+    out = re.sub(r'<ul(?:\s[^>]*)?>((?:\s*<li>\s*<a [^>]+>.*?</a>\s*</li>)+)\s*</ul>', repl, out)
+    return out
 
 
 def video_band(P, cfg, resolved):
@@ -602,6 +622,37 @@ def checklist_module(P, items, uidt):
             '<p class="@P@__check-note">Progress saves in this browser.</p></div>' % ''.join(rows))
 
 
+def faq_item(P, q, answers):
+    """One FAQ question as a native <details>. The <h3 class="…__faqq"> is kept inside the summary so
+    the FAQPage parity check (visible questions == JSON-LD entities) still matches, and the panel
+    needs no JS: <details> opens by itself and is keyboard-accessible."""
+    body = ''.join('<p>%s</p>' % a for a in answers)
+    return ('<details class="@P@__faq"><summary><h3 class="@P@__faqq">%s</h3></summary>'
+            '<div class="@P@__faqa">%s</div></details>' % (inline(q), body))
+
+
+def kr_module(P, items):
+    """Keep Reading as link cards. Each card is a real anchor wrapping title + line + arrow, so the
+    whole card is clickable and keyboard-focusable (the markdown list stays the source of truth)."""
+    cards = []
+    for i, it in enumerate(items, 1):
+        m = re.match(r'^\[([^\]]+)\]\(([^)]+)\)\s*(?:—\s*(.*))?$', it.strip())
+        if not m:
+            cards.append('<span class="@P@__kr-card"><span class="@P@__kr-t">%s</span></span>' % inline(it))
+            continue
+        title, url, desc = m.group(1), m.group(2), (m.group(3) or '').strip()
+        if url.startswith('/'):
+            url = DOMAIN + url
+        if desc == '-':
+            desc = ''
+        cards.append('<a class="@P@__kr-card" data-cro="@CRO@-keep-%d" href="%s">'
+                     '<span class="@P@__kr-t">%s</span>'
+                     '<span class="@P@__kr-d">%s</span>'
+                     '<span class="@P@__kr-a" aria-hidden="true">→</span></a>'
+                     % (i, url, html.escape(title), html.escape(desc)))
+    return '<div class="@P@__kr">%s</div>' % ''.join(cards)
+
+
 def toc_module(P, toc, uidt, open=True):
     lis = ''.join('<li><a href="#%s">%s</a></li>' % (sid, html.escape(t))
                   for sid, t in toc if not t.strip().lower().startswith(('on this page', 'keep reading')))
@@ -667,6 +718,7 @@ def token_block(theme):
     t.update({k: v for k, v in (theme or {}).items() if v not in (None, '')})
     return (".%%P%%{--wx-ink:%(ink)s;--wx-ink-soft:%(ink_soft)s;--wx-muted:%(muted)s;--wx-line:%(line)s;"
             "--wx-surface:%(surface)s;--wx-surface-warm:%(surface_warm)s;--wx-dark:%(dark)s;"
+            "--wx-band:%(band)s;--wx-band-alt:%(band_alt)s;"
             "--wx-accent:%(accent)s;--wx-accent-ink:%(accent_ink)s;--wx-accent-soft:%(accent_soft)s;"
             "--wx-plum:%(plum)s;--wx-plum-soft:%(plum_soft)s;--wx-gold:%(gold)s;"
             "--wx-radius:%(radius)s;--wx-radius-sm:%(radius_sm)s;--wx-pill:%(pill)s;"
@@ -890,6 +942,10 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                 out.append(fin(toc_module(P, toc, uidt, open=cfg.get('toc_open', True))))
             elif n['t'] == 'check':
                 out.append(fin(checklist_module(P, n['items'], uidt)))
+            elif n['t'] == 'faqitem':
+                out.append(fin(faq_item(P, n['q'], n['a'])))
+            elif n['t'] == 'kr':
+                out.append(fin(kr_module(P, n['items'])))
             else:
                 out.append(n['html'])
         return fin('\n'.join(out))
@@ -1523,6 +1579,10 @@ if CFG.get('value_strip'):
     _mod_probes = _mod_probes + (('value_strip', '<section class="%s__vstrip"' % P),)
 if CFG.get('accordion'):
     _mod_probes = _mod_probes + (('accordion', '<details class="%s__acc"' % P),)
+if any(n['t'] == 'faqitem' for n in nodes):
+    _mod_probes = _mod_probes + (('faq_items', '<details class="%s__faq"' % P),)
+if any(n['t'] == 'kr' for n in nodes):
+    _mod_probes = _mod_probes + (('keep_reading', '<div class="%s__kr"' % P),)
 _absent = [name for name, probe in _mod_probes if probe not in section_text]
 for name, probe in _mod_probes:
     if probe not in section_text:

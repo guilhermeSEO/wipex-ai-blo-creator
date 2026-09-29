@@ -211,6 +211,37 @@ band.
 places: the new model CSS (inert — no element carries the class) and the `@CRO@` fix. Verify a
 rebuild with `diff` rather than assuming.
 
+### 11b. The v3.4.1 interaction layer
+
+Shared by both models (not model-specific), because they are corrections as much as styling:
+
+- **`band` / `band_alt` tokens** feed every dark band — value strip, system block, video band,
+  sticky CTA, code block. Default `#111111` / `#1d1d1d`; a post or a season sets them to a palette
+  the brand owns (blog 02: plum-derived `#3a2740` / `#251730`). This is the answer to "a black bar
+  does not look like our brand": keep it darker than the page, but not neutral black.
+- **FAQ = one `<details>` per question.** `faq_item()` emits
+  `<details class="…__faq"><summary><h3 class="…__faqq">Q</h3></summary><div class="…__faqa">A</div></details>`.
+  The `__faqq` class stays on the `<h3>` inside the summary, which is what the FAQPage parity check
+  counts — so wrapping the question cannot desync the visible FAQ from the JSON-LD. The `+`/`–`
+  marker is a `summary::after` pseudo-element; a heading as `summary`'s first child is valid HTML.
+- **Keep Reading = link cards.** `kr_module()` parses the markdown list and emits one `<a>` per
+  entry (title + line + arrow) with `data-cro="<slug>-keep-N"`. The markdown list remains the
+  source of truth; the cards are how it is displayed.
+- **Table links.** A product name in a body table is a real link; `…__table tbody a` styles it and
+  appends an arrow.
+- **Closing band.** `promote_cta_row()` promotes BOTH a `<p>` of links and a markdown `<ul>` of
+  links into the button row. A post that closes with a list used to ship a buttonless band.
+
+### 11c. The relative-link trap (cost a delivery)
+
+`inline()` originally converted only `https?://` markdown links. The house markdown writes internal
+links relatively (`/products/…`, `/blogs/…`), so those were never converted: they rendered on the
+page as **literal markdown text** (`[Title](/products/…)`), the link was not a link, and the
+validator stayed silent because no non-canonical `href` was ever produced. `inline()` now
+absolutizes relative links against `DOMAIN`, and `kr_module()` does the same for card URLs. If a
+reviewer says "this section has no links", check the raw markdown for a relative link before
+believing the CSS.
+
 ## 10. Pitfalls (each one cost a build)
 
 - **A Liquid template cannot go through Python `%`-formatting** — `{%-` is read as a format spec.

@@ -6,6 +6,16 @@ Blog 02 — multi-location cleaning supply procurement · generated 2026-09-28 �
 > 3,566 → ~2,750 words, the six-part framework collapsed into an accordion, the conversion
 > modules moved above the fold. Image anchors and the module map below reflect that.
 
+> **Revision 2026-09-29 (b) — visual/conversion pass.** Wider reading column (funnel overrides
+> `--wx-maxw:1320px` / `--wx-readw:50rem`, reading column ≈ 800px, tighter section spacing), hover
+> states, table product links, **FAQ as one `<details>` per question with a `+`**, **Keep Reading as
+> link cards**, and an illuminated closing band. The dark bands no longer use neutral black: the
+> `band` / `band_alt` tokens are set to a plum-derived aubergine (`#3a2740` / `#251730`).
+> **Two page-visible defects were fixed in this pass:** relative markdown links (`/products/…`,
+> `/blogs/…`) had never been converted and were rendering as literal markdown text — the reason the
+> Keep Reading list had no clickable links — and the closing band, which the copy ends as a
+> markdown list, had no buttons at all.
+
 ## Layout model
 `SHOPIFY-CONFIG.json` sets **`layout_model: "funnel"`**. Same design tokens, same typography, same
 prose contract as the editorial model — a different arrangement and reading rhythm:
@@ -68,7 +78,8 @@ Verified in a real browser: 8 inputs compute `$0.0614 / $307.07 / $0.0307` from 
 | card grid | `after:Where a multi-location program leaks money` | 5 cards; no heading (the H2 carries it) |
 | system block | `after:Where a multi-location program leaks money` | the dark A+B card + CTA |
 | video band | `before_faq` | editorial break |
-| FAQ | markdown H2 | 8 Q&As == 8 FAQPage entities |
+| FAQ | markdown H2 | 8 questions, **one `<details>` each, `+` beside the question**; 8 Q&As == 8 FAQPage entities |
+| Keep Reading | markdown H2 | **5 link cards** (whole card clickable, `data-cro …-keep-N`) |
 | checklist | markdown `- [ ]` | 9 items, `localStorage` |
 | TOC | `On this page` | collapsed by default (`toc_open: false`) |
 | sticky CTA / progress | always | sticky shows past the hero, hides over the final CTA |
@@ -76,7 +87,7 @@ Verified in a real browser: 8 inputs compute `$0.0614 / $307.07 / $0.0307` from 
 ## Generated artifacts
 | Output | Status |
 |---|---|
-| `sections/wipex-section-multi-location-procurement-2026.liquid` | **the deliverable** — 1,044 lines, 74,749 chars |
+| `sections/wipex-section-multi-location-procurement-2026.liquid` | **the deliverable** — 1,084 lines, 81,155 chars |
 | `SHOPIFY-CONFIG.json` | written (`layout_model: funnel`, value_strip, accordion, anchors) |
 | `SECTION-VALIDATION.txt` | **RESULT: NONE** — 0 BLOCKING, 16 REVIEW (context) |
 | `templates/article.multi-location-procurement.json` | generated |
@@ -98,6 +109,13 @@ Verified in a real browser: 8 inputs compute `$0.0614 / $307.07 / $0.0307` from 
 | sticky CTA | hidden at top → visible after 1500px scroll (`aria-hidden` correct) | renders |
 | tables / checklist / FAQ | 2 / 9 items / 8 Q&A | modules render |
 | CSS leaked as page text | none | clean |
+| layout tokens | `--wx-maxw:1320px` · `--wx-readw:50rem` · `--wx-band:#3a2740`; reading column 800px | wider, less scroll |
+| band colour | value strip + system block gradient `rgb(58,39,64) → rgb(37,23,48)` | brand-toned, not black |
+| FAQ accordion | 8 `<details>`; marker `+` closed → `–` open; answer body renders | opens |
+| Keep Reading | 5 cards, every one an `<a>`, all hrefs `https://wipex.co/…` | clickable |
+| table links | 6 anchors, all canonical `/products/` URLs | clickable |
+| closing band | 3 buttons (`primary`/`gold`/`ghost`) + 4px accent bar | renders |
+| raw markdown visible on page | none | fixed |
 
 ## Operator checklist
 - [ ] re-paste `sections/wipex-section-multi-location-procurement-2026.liquid` (Edit code > Sections)
