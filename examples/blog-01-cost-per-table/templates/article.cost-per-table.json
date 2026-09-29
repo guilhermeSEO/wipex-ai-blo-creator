@@ -1,7 +1,15 @@
 {
   "sections": {
     "wipex-section-cost-per-table-2026": {
-      "type": "wipex-section-cost-per-table-2026"
+      "type": "wipex-section-cost-per-table-2026",
+      "settings": {
+        "hero_cta_label": "Shop Table Bussers® Autumn-Scented",
+        "hero_cta_url": "https://wipex.co/products/table-bussers-surface-wipes",
+        "hero_cta2_label": "Browse the food service collection",
+        "hero_cta2_url": "https://wipex.co/collections/food-service-commercial",
+        "sticky_label": "Shop Table Bussers®",
+        "sticky_url": "https://wipex.co/products/table-bussers-surface-wipes"
+      }
     }
   },
   "order": [

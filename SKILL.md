@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.3'
+version: '3.4.4'
 date_created: '2026-09-22'
 date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
@@ -309,6 +309,18 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.4 (2026-09-29)** — **the persisted-setting trap.** The owner reported a CTA button still
+reading "Request a Wipe Procurement Quote" on the page after the section had been rebuilt without
+it. The artifact was clean — 0 occurrences in the `.liquid` — and the cause was Shopify, not the
+generator: **the theme editor stores settings per section INSTANCE**, so re-pasting the section file
+changes the schema *default* while **the saved value survives**. A label that was saved once keeps
+showing after every future re-paste. Fix, and it is durable: the generator now writes the
+copy-bearing CTA settings (`hero_cta_label/_url`, `hero_cta2_label/_url`, `sticky_label/_url`) into
+`templates/<template>.json` as a `settings` block, so assigning the template is authoritative and
+the operator never has to repair copy in the editor. The symptom, the cause and both fixes are in
+the generated `SHOPIFY-README.md` troubleshooting table, because this will happen again. Rule worth
+remembering: **for a section, "re-pasted" is not the same as "updated".**
 
 **v3.4.3 (2026-09-29)** — **the conversion path is the subscription.** Owner call: Wipex does not
 run quote or price requests ("traz muito trabalho"), so every CTA now points at

@@ -1,7 +1,15 @@
 {
   "sections": {
     "wipex-section-multi-location-procurement-2026": {
-      "type": "wipex-section-multi-location-procurement-2026"
+      "type": "wipex-section-multi-location-procurement-2026",
+      "settings": {
+        "hero_cta_label": "Start your subscription",
+        "hero_cta_url": "https://wipex.co/a/loop_subscriptions/get-subscription-link",
+        "hero_cta2_label": "See what the program saves",
+        "hero_cta2_url": "#what-the-program-saves-cost-per-wipe",
+        "sticky_label": "Subscribe now",
+        "sticky_url": "https://wipex.co/a/loop_subscriptions/get-subscription-link"
+      }
     }
   },
   "order": [

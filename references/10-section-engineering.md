@@ -246,6 +246,26 @@ absolutizes relative links against `DOMAIN`, and `kr_module()` does the same for
 reviewer says "this section has no links", check the raw markdown for a relative link before
 believing the CSS.
 
+## 12. Section settings persist — "re-pasted" is not "updated" (v3.4.4)
+
+The theme editor stores a section's settings **per instance**, in the template. Re-pasting the
+section file replaces the schema, and therefore only the *default* of each setting; **the value that
+was saved once stays**. So a CTA label can survive a full rewrite of the section and keep showing on
+the page while the artefact on disk is clean — which is exactly what happened with a
+"Request a Wipe Procurement Quote" hero button after the CTA had been moved to the subscription
+path.
+
+Consequences the generator now carries:
+
+- `templates/<template>.json` is written with a `settings` block holding the copy-bearing CTA values
+  (`hero_cta_label`/`_url`, `hero_cta2_label`/`_url`, `sticky_label`/`_url`). Assigning that
+  template is authoritative; editing the section in the theme editor is not.
+- The generated `SHOPIFY-README.md` troubleshooting table carries the symptom → cause → fix, since a
+  future operator will hit it again.
+- When a delivered change does not appear on the storefront, **check the saved settings before
+  doubting the artefact**: grep the built section for the old string. If it is absent there, the page
+  is serving a stored value, not the file.
+
 ## 10. Pitfalls (each one cost a build)
 
 - **A Liquid template cannot go through Python `%`-formatting** — `{%-` is read as a format spec.

@@ -36,3 +36,5 @@ article is generated prose and is read-only by design.
 | article renders twice | body not empty | clear the post body |
 | no styles | theme strips section styles | add the CSS to theme CSS, keep the markup |
 | checklist does not persist | browser blocks localStorage | expected in private mode |
+| **a CTA still shows the previous text after re-pasting** | the theme editor stores settings **per section instance**, so re-pasting changes the schema default but not the saved value | edit that field in the theme editor, or assign `templates/article.cost-per-table.json` (which pins the labels/URLs) |
+| images show an "Editor only" placeholder | the slot is empty | expected outside the storefront, or fill the slot |

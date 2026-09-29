@@ -1332,8 +1332,30 @@ os.makedirs(os.path.join(OUTDIR, 'snippets'), exist_ok=True)
 os.makedirs(os.path.join(OUTDIR, 'templates'), exist_ok=True)
 io.open(os.path.join(OUTDIR, 'sections', SECTION_ID + '.liquid'), 'w', encoding='utf-8').write(SECTION)
 io.open(os.path.join(OUTDIR, 'snippets', 'wipex-blog-schema.liquid'), 'w', encoding='utf-8').write(SCHEMA_SNIPPET)
+def template_section_settings(cfg):
+    """Pin the copy-bearing CTA settings into the template JSON.
+
+    The theme editor stores settings per section INSTANCE, and re-pasting the section file only
+    changes the schema *default* — the saved value survives. That is how an old CTA label can stay
+    on a page after the section has been updated and re-pasted. Writing the values here makes
+    assigning the template authoritative, so the operator never has to fix copy in the editor."""
+    out = {}
+    for sid, src in (("hero_cta_label", cfg.get("hero_cta", {}).get("label")),
+                     ("hero_cta_url", cfg.get("hero_cta", {}).get("url")),
+                     ("hero_cta2_label", cfg.get("hero_cta2", {}).get("label")),
+                     ("hero_cta2_url", cfg.get("hero_cta2", {}).get("url")),
+                     ("sticky_label", cfg.get("sticky_cta", {}).get("label")),
+                     ("sticky_url", cfg.get("sticky_cta", {}).get("url"))):
+        if src:
+            out[sid] = src
+    return out
+
+
+TEMPLATE = {"sections": {SECTION_ID: {"type": SECTION_ID,
+                                      "settings": template_section_settings(CFG)}},
+            "order": [SECTION_ID]}
 io.open(os.path.join(OUTDIR, 'templates', CFG['template_file']), 'w', encoding='utf-8').write(
-    json.dumps({"sections": {SECTION_ID: {"type": SECTION_ID}}, "order": [SECTION_ID]}, indent=2) + '\n')
+    json.dumps(TEMPLATE, indent=2, ensure_ascii=False) + '\n')
 
 SCHEMA_JSON = build_schema(faq, toc, CFG)
 io.open(os.path.join(OUTDIR, 'SHOPIFY-SCHEMA.json'), 'w', encoding='utf-8').write(SCHEMA_JSON)
@@ -1446,9 +1468,12 @@ article is generated prose and is read-only by design.
 | article renders twice | body not empty | clear the post body |
 | no styles | theme strips section styles | add the CSS to theme CSS, keep the markup |
 | checklist does not persist | browser blocks localStorage | expected in private mode |
+| **a CTA still shows the previous text after re-pasting** | the theme editor stores settings **per section instance**, so re-pasting changes the schema default but not the saved value | edit that field in the theme editor, or assign `templates/@@T@@` (which pins the labels/URLs) |
+| images show an "Editor only" placeholder | the slot is empty | expected outside the storefront, or fill the slot |
 """
 README = (README_T % (CFG['title'], SECTION_NAME, SECTION_ID, CFG['slug'], CFG['template_file'], SECTION_ID)
-          ).replace('@@@', "{%- if article and article.handle == '" + CFG['slug'] + "' -%}{{ render 'wipex-blog-schema' }}{%- endif -%}")
+          ).replace('@@@', "{%- if article and article.handle == '" + CFG['slug'] + "' -%}{{ render 'wipex-blog-schema' }}{%- endif -%}"
+          ).replace('@@T@@', CFG['template_file'])
 io.open(os.path.join(OUTDIR, 'SHOPIFY-README.md'), 'w', encoding='utf-8').write(README)
 
 # ─────────────────────────────────────────────────────────────────────────────
