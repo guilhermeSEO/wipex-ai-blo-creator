@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.2'
+version: '3.4.3'
 date_created: '2026-09-22'
 date_updated: '2026-09-29'
 owner: Guilherme (Wipex automation lead)
@@ -162,6 +162,20 @@ scores the post against **that model's** band, so a funnel post is not failed fo
 
 ---
 
+## STANDING RULES (owner-set)
+
+- **The conversion path is the subscription, not a quote.** Wipex does not run quote or price
+  requests ("traz muito trabalho"). Every CTA — hero, sticky, value strip, system block, closing
+  band, and the meta description — points at
+  `https://wipex.co/a/loop_subscriptions/get-subscription-link`, and the copy never asks the reader
+  to request a quote or to contact for pricing. Audience: `wipex.co/a/loop_subscriptions/…`
+  is under `https://wipex.co`, so it passes the canonical-link gate. Set 2026-09-29.
+- **A module the post does not need is switched off in the config, not deleted in the code.** The
+  product-card block (`products: []`) and the problem strip (`problem_strip: null`) are both live
+  examples: an empty config key renders nothing and keeps the option for the next post.
+
+---
+
 ## THE FLOW
 
 ### PUBLISH TIMING — the runway principle
@@ -295,6 +309,17 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.3 (2026-09-29)** — **the conversion path is the subscription.** Owner call: Wipex does not
+run quote or price requests ("traz muito trabalho"), so every CTA now points at
+`https://wipex.co/a/loop_subscriptions/get-subscription-link` — hero ("Start your subscription"),
+sticky, value strip, system block and the closing band — and the copy no longer asks anyone to
+request a quote (the FAQ "what should a procurement quote request include" became "how do we keep
+the program running after launch"; the closing paragraph and the meta description were reworded).
+Recorded as a **STANDING RULE** in the SKILL body, because the next post must not reintroduce a
+quote CTA. Second rule recorded there: **a module a post does not need is switched off in the
+config, not deleted from the code** — blog 02 now runs with the product-card block emptied
+(`products: []`) and no `problem_strip`; both render nothing and cost nothing.
 
 **v3.4.2 (2026-09-29)** — **every band takes the closing band's palette.** The owner pointed at the
 closing "Run one standard…" block and asked for *that* colouring across the rest of the post, after

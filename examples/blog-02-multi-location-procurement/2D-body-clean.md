@@ -86,8 +86,8 @@ Yes, per room type. Dispenser standardisation is what lets one refill fit every 
 **What is a volume tier and how is it reached?**
 A price band tied to the quantity the footprint commits over a period. It is reached through cumulative demand plus standardisation, not one large order: more sites on the same SKU list reach a better tier than the same sites buying different products.
 
-**What should a procurement quote request include?**
-The number of sites and their types, the approved SKU list per room type, and the dispenser standard you intend to run. Add the delivery cadence you want and whether you need consolidated invoicing across the footprint. Those five items let a supplier quote a program instead of a product.
+**How do we keep the program running after launch?**
+Set the par levels, put the approved list and the dispenser standard in writing, and let one cadence drive replenishment. Track cost per wipe and stockouts per site, so the standard can be checked rather than assumed.
 
 **How do we know whether the program is working?**
 Track two numbers per site: cost per wipe and stockouts. If cost per wipe is stable and stockouts fall after the par levels go in, the operating half is holding. If emergency orders persist, the par level is set too low or the dispenser standard is not uniform.
@@ -179,8 +179,8 @@ Print this and run it before the budget closes.
 
 A multi-location program is not a bigger order. It is one approved list, one dispenser standard, one cadence, and a reorder that runs itself — repeated at every site with the same rules. Get those four in place before the budget closes and the next Q4 is a review, not a rebuild.
 
-**Request a Wipe Procurement Quote →** — send us your site count, room types, and the SKU list you are considering, and we will scope a program for the footprint.
+**Start your subscription →** — pick the wipes your rooms need, set the cadence, and let one reorder run across every site.
 
-- [Request a Wipe Procurement Quote →](/pages/contact-us)
+- [Start your subscription →](https://wipex.co/a/loop_subscriptions/get-subscription-link)
 - [Compare the 700ct Bulk Refill Roll →](/products/natural-gym-wipes-bulk-refill-roll)
 - [Equip Your Sites with One Dispenser Standard →](/products/wall-dispenser)

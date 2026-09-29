@@ -8,11 +8,11 @@ back into the next brief.
 | Section id | `wipex-section-multi-location-procurement-2026` |
 | Title | Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site |
 | Meta title (65) | Commercial Cleaning Supplies: A Multi-Location Program Guide 2026 |
-| Meta description (155) | One approved SKU list, par levels and volume tiers across every site. Cut emergency reorders and see your true cost per wipe. Request a volume quote today. |
+| Meta description (155) | One approved SKU list, par levels and volume tiers across every site. Cut emergency reorders and see your true cost per wipe. Start your subscription today |
 | Primary keyword | commercial cleaning supplies |
 | Niche headline | multi-location cleaning supply procurement |
 | Products | Natural Gym Wipes 700ct Refill · Table Bussers Sc. Autumn · Plant-Based 700ct Refill |
-| CTA | Request a Wipe Procurement Quote (/pages/contact-us) |
+| CTA | **Subscription** — https://wipex.co/a/loop_subscriptions/get-subscription-link (hero · sticky · value strip · system · closing). No quote/price request anywhere (owner call 2026-09-29) |
 | Target publish date | 2026-11-02 (Q4 runway; window Nov 1–20) |
 | Compliance | Claims Filter v1.1 · RESULT: NONE (0 BLOCKING) · reviewed 2026-09-28 |
 | Validation | SECTION-VALIDATION.txt = RESULT: NONE |
