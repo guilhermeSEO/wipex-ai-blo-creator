@@ -1,0 +1,145 @@
+Facility Procurement
+Multi-Location Cleaning Supply Procurement: How to Run One Wipe Program Across Every Site
+Every location that buys its own wipes is a location quietly drifting off-spec. One site runs a bucket, the next runs a refill roll, a third reorders whatever the local rep has on the truck this week. The invoices look fine. The operation is not.
+Start your subscription →
+See what the program saves
+Multi-location cleaning supply procurement: one wipe program across every site
+The program, in numbers
+$4.92 vs $6.10
+Centralised vs decentralised procurement spend, per $1,000 of revenue
+20–30%
+Emergency stockout premium over planned replenishment
+300 → 60
+Facility SKUs one organisation cut to standardise
+~$0.06
+Our average cost per wipe on the bulk refill roll
+Subscribe now →
+Match the format to the room
+Fitness sites
+Refill roll paired with one dispenser standard across every gym in the footprint.
+Shop the 700ct refill roll →
+Food-service sites
+The NSF-certified scented Table Bussers on the front-of-house list.
+Shop Table Bussers →
+Sustainability-graded sites
+Plant-based 700ct refill roll, same dispenser standard.
+Shop the plant-based roll →
+This guide turns that drift into a program: one approved list, one dispenser standard, one reorder that triggers itself, and a cost-per-use number you can defend in a Q4 budget review. It is written for the buyer who signs off across sites — procurement managers, operations directors, and franchise or multi-unit owners.
+Quick answer / key takeaways
+A multi-location program is four decisions: par level per site, one approved SKU list for the footprint, one dispenser standard, one delivery cadence.
+Standardise first. One organisation cut its facility SKUs from 300 to 60 core items and made ordering and storage simpler the same quarter.
+Consolidation does not change what a wipe costs — it removes the spend you did not plan: the local reorder, the duplicate SKU, the emergency order.
+Reactive buying is the hidden tax: an emergency order that covers a stockout costs 20–30% more than planned replenishment.
+Set reorder points from a formula, not a hunch: Par Level = (Daily Usage Rate × Lead Time) + Safety Stock.
+Our bulk refill roll works out at about $0.06 per wipe, and the pallet pack about $0.05 — roughly half a bucket's unit cost.
+On this page
+On this page
+What is multi-location cleaning supply procurement?
+Multi-location cleaning supply procurement is the practice of buying and replenishing consumables — wipes, liners, chemicals, paper — under one standard across several facilities. Without it, each site buys on its own. It has two halves. The supply half decides what the footprint buys and in which pack size. The operating half keeps every site running that standard after the launch: par levels, reorder triggers, dispenser fit, and a usage number per location.
+Most operators stop at the supply half. They standardise once, then lose it within two quarters because nothing governs the sites day to day. The two halves also fail differently. A weak supply half shows up as spend you cannot explain. A weak operating half shows up as ten sites that each believe they are following the standard and none of them are.
+Why this matters in Q4
+Q4 is when the next year's supply reality gets decided. Budgets close, contracts renew, and the same conversations repeat in a compressed window. It is also the quarter where cleaning-supply cost becomes a visible line. Search interest around the cost of cleaning supplies climbs into late November, and office-cleaning activity hits its second seasonal peak in mid-November as workspaces reset for winter occupancy.
+That gives a multi-location buyer a natural deadline. If you want the program running by January, the standardisation audit has to happen while the budget is still open — not in February, when the money is committed and the sites have reordered on habit. The benchmark figures behind that: centralised procurement spend runs $4.92 per $1,000 of revenue against $6.10 decentralised, and an emergency order covering a stockout carries a 20–30% premium over planned replenishment (Metro Wholesale, checked 2026-09-28).
+Labelled par level on a supply-room shelf: product name, case quantity, reorder point
+What the program saves: cost per wipe
+Cost per wipe is one price divided by one count. Cost per use is that number meeting real consumption. Both belong in the same review, because a cheap wipe that a site uses twice per task is not cheap. Every figure below is the list price on the product page, divided by the pack count.
+Product Variant Price Count Cost per wipe
+Natural Fitness Equipment Wipes 700ct Bulk Refill Roll Single roll $42.99 700 ~$0.061
+Natural Fitness Equipment Wipes 700ct Bulk Refill Roll 4-pack $142.99 2,800 ~$0.051
+Plant-Based 700ct Bulk Refill Roll (viscose) Full pallet (140 rolls) $4,585.00 98,000 ~$0.047
+Table Bussers® Surface Wipes 1 bucket $36.99 400 ~$0.092
+Table Bussers® Surface Wipes 4-pack case $119.99 1,600 ~$0.075
+A fuller breakdown of the refill format and its dispensing options sits in Gym Wipe Dispensers vs. Buckets.
+Take one site that burns 500 wipes a week. On a bucket that is roughly $46 a week before any emergency premium; on the refill roll it is closer to $26. Multiply the gap by every site in the footprint and by the weeks in a year, and the program's whole justification sits in that line. No cleaning claim is required, because the arithmetic is about price and consumption, not about how well anything works. Stack the reactive premium on top and the gap widens further — an emergency order looks like a normal invoice until you compare it against what a planned one would have cost.
+The formula to hand to each site:
+daily wipes used × days of lead time = reorder trigger
+footprint demand = sum of every site's par level
+footprint cost per cycle = footprint demand × cost per wipe at the pack size the footprint buys
+Calculate your footprint cost
+Sites in the footprint
+Wipes used per site per week
+Weeks in the period
+Case price ($)
+Wipes per case
+Wipes per use event
+Seconds of labour per wipe (optional)
+Loaded hourly rate ($, optional)
+$0.0614 cost per wipe
+$307.07 footprint cost per period
+$0.0307 cost per two-wipe reset
+Cost figures only, from the prices you enter. Check your own invoice.
+Cost-per-use calculator
+Enter your own footprint and the numbers update.
+Reorder the formula for your own operation and the argument holds or it does not — that is the point of showing the arithmetic instead of a slogan.
+Wipex food service wipes in use
+Frequently asked questions
+What is a multi-location cleaning supply procurement program?
+Does buying across sites change our price?
+How do we consolidate SKUs without breaking how the sites work?
+How do we set reorder points?
+Should every location run the same dispenser?
+Which pack size should the footprint standardise on?
+How do we keep the program running after launch?
+How do we know whether the program is working?
+Open a step to see how it runs on the ground.
+The six-part program framework
+Where a multi-location program leaks money
+Five leaks show up in almost every multi-site audit. None of them is a cleaning problem — every one is a procurement problem, which is why the fix is a standard rather than a product.
+The local reorder
+A site that orders on its own account pays the premium that the program exists to remove.
+The duplicate SKU
+Two products doing one job means two par levels, two storage slots and more cash on shelves.
+The mismatched dispenser
+A refill that does not fit the site's hardware becomes a special order, then an emergency order.
+The invisible usage rate
+Without a per-site consumption number, par levels get set from memory and drift within a quarter.
+The unmeasured cadence
+A delivery cycle nobody tracks quietly becomes reactive buying again.
+Audit each one before the next budget cycle closes.
+The system
+Two decisions, one order
+One approved SKU list
+One dispenser standard
+One reorder that runs itself
+Standardise the list and the hardware, and replenishment stops being a local decision at every site.
+Set up a subscription →
+Which wipe format fits which site
+A mixed footprint usually runs three wipe jobs: fitness equipment, food-service front of house, and general office or shared surfaces. Match the format to the job, then hold that match across every site of the same type.
+Site type Recommended Wipex product Why it fits Cost per wipe
+Fitness / gym floor Natural Fitness Equipment Wipes 700ct Bulk Refill Roll Refill-roll format that pairs with one wall or floor dispenser standard ~$0.061
+Food-service front of house Table Bussers® Surface Wipes — Autumn-Scented Pre-mixed surface wipe built for front-of-house reset; the scented line is NSF-certified and suitable for food service environments ~$0.092
+Sustainability-graded sites Plant-Based 700ct Bulk Refill Roll (viscose) Plant-based cloth with EWG Verified and the certified cloth-substrate wording ~$0.047 (pallet)
+Shared offices & touchpoints All-purpose and touchscreen-compatible wipes on the same approved list One listed wipe per room type keeps the standard visible —
+If in doubt, test on a small, inconspicuous area first.
+Keep the scented Table Bussers on food-service sites; it is the line that carries the NSF certification, so it belongs on the front-of-house standard.
+Your Q4 multi-location readiness checklist
+Print this and run it before the budget closes.
+Every site's supply room audited — duplicates and dead SKUs listed.
+One approved wipe per room type written down for the whole footprint.
+Par level calculated per site with the formula, not from memory.
+Shelf labels in place: product name, case quantity, par level.
+One dispenser format chosen per room type, ordered for the network.
+Pack size per room type agreed, so every site reorders the same item.
+Delivery cadence set to a fixed cycle with one aggregated order.
+Cost per wipe and cost per use recorded per site for the Q4 review.
+One owner per location for the weekly stock count.
+Progress saves in this browser.
+Keep Reading
+Buying Wipes in Bulk: Wholesale Pricing, MOQs, and How to Set Up a Facility Account
+the sourcing decision this guide assumes you have already made.
+Gym Cleaning Procurement: How Commercial Fitness Facilities Should Source Wipes & Cleaning Supplies
+the single-vertical procurement framework, for teams that run fitness sites specifically.
+Gym Wipe Dispensers vs. Buckets
+the hardware trade-off behind the dispenser-standard decision.
+How to Reduce Wipe Waste (and Spend) with a Refill Roll System
+the format that makes a par level predictable.
+Table Bussers® vs. Traditional Table Cleaning Methods: Cost, Speed & Staff Efficiency
+the food-service cost case behind the front-of-house room standard.
+Run one standard across every site
+A multi-location program is not necessary a bigger order. It is one approved list, one dispenser standard, one cadence, and a reorder that runs itself — repeated at every site with the same rules. Get those four in place before the budget closes and the next Q4 is a review, not a rebuild.
+Start your subscription → — pick the wipes your rooms need, set the cadence, and let one reorder run across every site.
+Start your subscription →
+Compare the 700ct Bulk Refill Roll →
+Equip Your Sites with One Dispenser Standard →
+Subscribe now →
+Plant a Tree & Save 10%
