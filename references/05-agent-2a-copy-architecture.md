@@ -57,6 +57,15 @@ Cost and format comparisons only.
 - **Direct address.** "Your floor", "your bussers", "your reset time" — write to one operator.
 - **Claim tagging.** Mark each claim-bearing sentence with its code, e.g.
   `[N]`, `[S3]`, `[C]`, `[Eco]`, `[NSF/A-004]`, `[T3]`. Untagged claim-bearing sentences are bugs.
+- **The FAQ is `**Question?**` paragraph pairs — never `###` headings.** The generator builds the
+  FAQ accordion (`<details class="…__faq">`) and the FAQPage JSON-LD **only** from bold-question
+  paragraphs inside the H2 whose title starts with `Frequently asked` / `FAQ`. An `###` question
+  renders as a plain H3, no `__faq` item is emitted, and the build fails its parity check with
+  `FAQ questions: 0 visible == 0 in JSON-LD`. Two further traps, both measured: a question
+  containing a **double quote** fails parity even when it is a bold paragraph, because the rendered
+  `<h3>` is HTML-escaped (`&quot;`) and the strings never match — keep FAQ questions quote-free; and
+  an answer written across several source lines is appended as **one `<p>` per line**, so write each
+  answer as a single long line unless you want it fragmented.
 - **Patch-test line** after any material list.
 - **Compliance block** for health/illness topics.
 - **No fabricated proof.** No invented testimonials, no invented "200+ studios", no invented

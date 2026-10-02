@@ -1,9 +1,9 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.5'
+version: '3.4.6'
 date_created: '2026-09-22'
-date_updated: '2026-09-29'
+date_updated: '2026-10-01'
 owner: Guilherme (Wipex automation lead)
 description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
@@ -317,6 +317,26 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.6 (2026-10-01)** — **two measured traps, documented instead of rediscovered.** Built the
+first post about a *third-party certification* (EWG Verified®, blog 03) and lost two build cycles to
+things the skill asserted nowhere. (1) **The FAQ is `**Question?**` paragraph pairs, not `###`
+headings.** Writing the eight FAQs as H3s produced `FAQ questions: 0 visible == 0 in JSON-LD` —
+no `__faq` item is emitted, the FAQPage block vanishes from the schema and the build fails parity.
+A question containing a **double quote** fails parity even in the right format, because the rendered
+`<h3>` is HTML-escaped and the strings never match; and an answer spread over several source lines
+is appended as **one `<p>` per line**, fragmenting the panel. All three are now in `references/05`
+§3. (2) **The claims lint blocks a Filter-permitted phrase.** Its `safe on` pattern has no
+allow-list, so the S3 sentence "safe on sensitive skin" — permitted in Part 3 — is reported as
+`BLOCKING: "safe on" — surface safety guarantee`, and `RESULT: NONE` cannot be reached with it in
+the copy. The build is right to refuse; the fix is an allow-list entry, which is a decision for the
+owner, so it is recorded rather than silently changed. Blog 03 shipped without the S3 phrase.
+**Also worth remembering from this build:** a post whose subject is a certification is a Tier 1
+surface start to finish, and the conservative reading of Part 6.4 ("no disinfect … or germ language
+**anywhere**" for products without code `D`) means even a **denial** — "it is not a disinfecting
+claim" — is that language. Both the item and the FAQ were rewritten to carry the same information
+without the banned words, which is the honest trade: the reader's misconception gets answered, and
+the piece stays inside the envelope.
 
 **v3.4.5 (2026-09-29)** — **a new STANDING RULE: prices are the prices.** Blog 02's spine had been a
 volume-tier promise — standardising the footprint "unlocks a tier", "the cheapest way to improve your
