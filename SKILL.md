@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.5.1'
+version: '3.5.2'
 date_created: '2026-09-22'
 date_updated: '2026-10-01'
 owner: Guilherme (Wipex automation lead)
@@ -317,6 +317,27 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.5.2 (2026-10-01)** — **the buttons were failing contrast, and neither of the two vision models
+noticed.** Ran the first visual review with two cheap vision models (Qwen3-VL-32B and Gemini 2.5
+Flash) against screenshots of the rendered section. They caught real things — a nearly invisible card
+CTA, white buttons on a tinted band, cramped cards — but the biggest defect was found by
+**measuring**, not looking: **white text on the brand mint `#76c39c` is 2.09:1**, against the 4.5:1 a
+button label needs; the lilac "gold" button was **2.74:1**; the card's ghost border was **1.15:1** and
+the white ghost buttons on the tinted closing band **1.19:1** (3:1 is the floor for a UI boundary).
+Fixes: `btn_bg` default is now a deeper mint gradient whose *lightest* stop is 4.60:1 (bright mint is
+still one token away — set `btn_bg` back to `#76c39c` and `btn_fg` to `#1c1d1d` for 8.5:1), `btn_gold_bg`
+defaults to `#8f5f96` (4.95:1), and ghost buttons take `--wx-btn-ghost-border` / `--wx-btn-ghost-fg`
+(blog 03 sets the brand green, 5.89:1 on the card tint). New tokens for the polish round: `card_bg`,
+`card_best`, `toc_bg`, `toc_bar`. Also: **`products[].cta`** lets a post set a short card button label —
+the default derived from the product name was wrapping to two lines inside the pill, which no gate
+would ever catch. And `scripts/make_clean_body.py` now exists so the tagged→clean step stops being an
+ad-hoc regex: the obvious `\s*\[TAG\]` strip eats the newlines that precede a line-initial tag, which
+**merges the H1 with the paragraph under it**, cuts the hero lede mid-sentence, and still passes every
+gate with `RESULT: NONE`. That one shipped in blog 03 and was only caught by reading the render.
+**Method note worth keeping:** measure contrast on the computed styles, then let the vision models
+review — they are good at composition and hierarchy, unreliable at contrast (they praised a 2.09:1
+button and flagged a 5.68:1 badge as weak).
 
 **v3.5.1 (2026-10-01)** — **the palette gets a brighter register, and a token set to hold it.** The
 owner pointed at a live Wipex post as the colour reference he likes

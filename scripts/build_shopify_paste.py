@@ -79,9 +79,18 @@ THEME_DEFAULTS = {
     "head": "#1c1d1d",
     "tint_a": "#eaf6f0", "tint_b": "#ffffff", "tint_c": "#f5eef7",
     "bar": "linear-gradient(90deg, #76c39c, #b68fbd)",
-    "btn_bg": "#76c39c",
+    # v3.5.2: btn_bg was white text on #76c39c = 2.09:1 — below the 4.5:1 a button label needs.
+    # The default is now a deeper mint gradient whose LIGHTEST stop is 4.60:1, so every future post
+    # is accessible without thinking about it. To keep the bright mint instead, set btn_bg back to
+    # #76c39c and set btn_fg to #1c1d1d (mint + dark text = 8.5:1).
+    "btn_bg": "linear-gradient(135deg, #46815f 0%, #3f7355 100%)",
+    "btn_fg": "#ffffff",
+    "btn_gold_bg": "#8f5f96",
+    "btn_ghost_border": "#e8e8e1", "btn_ghost_fg": "#1c1d1d",
     "badge_bg": "#f5eef7", "badge_fg": "#b68fbd",
     "card_tint": "#fdfbf8",
+    "card_bg": "#ffffff", "card_best": "#6f6f6b",
+    "toc_bg": "#ffffff", "toc_bar": "transparent",
 }
 
 CFG_DEFAULTS = {
@@ -638,11 +647,11 @@ def products_module(P, cfg, resolved):
   <h3 class="%(P)s__card-h">%(name)s</h3>
   <p class="%(P)s__card-best">Suited to: %(best)s</p>
   <ul class="%(P)s__card-list">%(bullets)s</ul>
-  <a class="%(P)s__btn %(P)s__btn--ghost %(P)s__btn--sm" data-cro="%(cro)s-prod-%(i)d" href="%(url)s">Shop %(short)s →</a>
+  <a class="%(P)s__btn %(P)s__btn--ghost %(P)s__btn--sm" data-cro="%(cro)s-prod-%(i)d" href="%(url)s">%(cta)s →</a>
 </article>""" % dict(P=P, media=media, badge=html.escape(pr.get('badge', '')),
                     name=html.escape(pr['name']), best=html.escape(pr.get('best_for', '')),
                     bullets=bullets, cro=cfg['slug'], i=len(cards) + 1, url=pr['url'],
-                    short=html.escape(pr['name'].split(' Surface')[0].split(' —')[0])))
+                    cta=html.escape(pr.get('cta') or ('Shop %s' % pr['name'].split(' Surface')[0].split(' —')[0]))))
     return """<div class="%(P)s__sec-block">
   <h2>%(heading)s</h2>
   <div class="%(P)s__cards">%(cards)s</div>
@@ -765,8 +774,11 @@ def token_block(theme):
             "--wx-readw:%(read_width)s;--wx-space:%(space)s;--wx-hero-tint:%(hero_tint)s;"
             "--wx-font-head:%(font_head)s;--wx-head:%(head)s;"
             "--wx-tint-a:%(tint_a)s;--wx-tint-b:%(tint_b)s;--wx-tint-c:%(tint_c)s;--wx-bar:%(bar)s;"
-            "--wx-btn-bg:%(btn_bg)s;--wx-badge-bg:%(badge_bg)s;--wx-badge-fg:%(badge_fg)s;"
-            "--wx-card-tint:%(card_tint)s;font-family:%(font_body)s;color:var(--wx-ink);"
+            "--wx-btn-bg:%(btn_bg)s;--wx-btn-fg:%(btn_fg)s;--wx-btn-gold-bg:%(btn_gold_bg)s;"
+            "--wx-btn-ghost-border:%(btn_ghost_border)s;--wx-btn-ghost-fg:%(btn_ghost_fg)s;"
+            "--wx-badge-bg:%(badge_bg)s;--wx-badge-fg:%(badge_fg)s;"
+            "--wx-card-tint:%(card_tint)s;--wx-card-bg:%(card_bg)s;--wx-card-best:%(card_best)s;"
+            "--wx-toc-bg:%(toc_bg)s;--wx-toc-bar:%(toc_bar)s;font-family:%(font_body)s;color:var(--wx-ink);"
             "line-height:1.65;font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative;"
             "-webkit-font-smoothing:antialiased}" % t)
 
