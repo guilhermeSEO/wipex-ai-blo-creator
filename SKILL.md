@@ -322,16 +322,21 @@ product/audience override; anything that would change this skill's rules.
 Owner asked for the section headings to stand out and to be capitalised. Two changes, one of them
 carrying a trap worth writing down.
 
-*Emphasis:* `.%P% h2` had **no `font-weight`** declared, so it inherited whatever the theme font
-happened to give it. It is now `font-weight:800`, the size clamp moves up to `clamp(1.5rem, 1.2rem +
-1.3vw, 2.05rem)` (measured 32.8px at 1280 wide), and each top-level H2 gets a 46×4px accent rule above
-it drawn from `--wx-bar`, so it picks up the post palette. `. %P%__acc>summary h2::before{display:none}`
-keeps the rule out of accordion summaries, where a bar above every item would be noise.
+*Emphasis:* `.%P% h1` and `.%P% h2` had **no `font-weight`** declared, so they inherited whatever the
+theme font happened to give them. Both are now `font-weight:800`. `h2` moves to `clamp(1.5rem, 1.2rem +
+1.3vw, 2.05rem)` (measured 32.8px at 1280 wide) with a 46×4px accent rule above each top-level heading;
+`h1` moves to `clamp(2rem, 1.35rem + 2.7vw, 3.15rem)` (measured 50.4px) with a 56×5px rule — same
+accent family, sized to the type. The rules draw from `--wx-bar`, so they follow the post palette.
+`.%P%__acc>summary h2::before{display:none}` keeps the rule out of accordion summaries, where a bar above
+every item would be noise. The H1 rule sits **between the eyebrow and the title** in the hero and reads as
+a separator, not a clash — verified on the render.
 
 *Title Case:* post H2s must be Title Case (articles, coordinating conjunctions and short prepositions
 stay lowercase; "not" capitalises as an adverb; `EWG Verified®` is kept intact). The convention applies
 to **module headings in the config too** — `card_grid`, `decision_tool`, `system_block`,
-`feature_block`, `products_heading`, `final_cta_heading` all render as `h2` and were sentence case.
+`feature_block`, `products_heading`, `final_cta_heading` all render as `h2` and were sentence case. The
+blog-03 H1 already conformed, so it needed the weight only — check before "fixing" a heading that is
+already right.
 
 *The trap:* **module anchors in the config match H2 text literally.** Renaming a heading silently
 un-anchors the module that sits after it, and the build reports only `WARN … anchor not found` while
