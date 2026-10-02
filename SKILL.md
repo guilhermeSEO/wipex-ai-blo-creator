@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.5.0'
+version: '3.5.1'
 date_created: '2026-09-22'
 date_updated: '2026-10-01'
 owner: Guilherme (Wipex automation lead)
@@ -317,6 +317,22 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.5.1 (2026-10-01)** — **the palette gets a brighter register, and a token set to hold it.** The
+owner pointed at a live Wipex post as the colour reference he likes
+(`/blogs/library/world-cleanup-day-2026-gym-cleaning-routine`) after calling the earlier draft "preto
+e branco sem vida". Read off the rendered page, that post uses **the same brand mint** but decorates
+with tints instead of neutrals: heading colour **rgb(64,83,74)** (a green-tinted dark, not near-black),
+background tints of **light mint rgb(213,235,221)**, **pale blue rgb(221,238,244)** and **light lilac
+rgb(247,232,248)**, an accent bar running **pale blue → sage → brand mint**, and a primary button on a
+**mint → deep-mint** gradient. Eight new tokens encode exactly that — `head`, `tint_a`, `tint_b`,
+`tint_c`, `bar`, `btn_bg`, `badge_bg`/`badge_fg`, `card_tint` — and the stylesheet now reads each one
+**with a fallback equal to the old value**, so a post that sets none of them renders exactly as
+before. Blog 03 sets them; the effect is verified by computed style in a real engine (headings
+rgb(64,83,74), band gradients, bar, button, badge, card tint). **Worth remembering:** the CSS had
+never used a fallback expression before — `var(--wx-accent-soft)` straight — so adding a token to the
+config silently did nothing unless the stylesheet referenced it. Adding *features* to a token-blind
+design system means touching the CSS and the token block together, not just the config.
 
 **v3.5.0 (2026-10-01)** — **module imagery moved into the theme editor, and a settings-budget rule
 that every future module now has to respect.** Until now the product cards were image-less by design

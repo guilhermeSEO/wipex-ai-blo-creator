@@ -69,6 +69,19 @@ THEME_DEFAULTS = {
     "font_body": "Raleway, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     "font_head": "\"New Order\", Raleway, system-ui, -apple-system, Segoe UI, sans-serif",
     "hero_tint": "linear-gradient(180deg, #fdfbf8 0%, #ffffff 78%)",
+    # ── v3.5.1: the "brighter tints" tokens ────────────────────────────────────────────────────
+    # Read off a live Wipex blog the owner pointed at as the good example of colour
+    # (world-cleanup-day-2026-gym-cleaning-routine, read 2026-10-01): the same brand mint, but the
+    # tints are not neutral — light mint, a pale blue and a light lilac — the headings are a
+    # green-tinted dark rather than near-black, the accent bar runs pale-blue → sage → mint, and the
+    # primary button runs mint → deep mint. Defaults here reproduce EXACTLY today's look, so a post
+    # that sets none of them is unchanged; a post that wants the brighter treatment sets them.
+    "head": "#1c1d1d",
+    "tint_a": "#eaf6f0", "tint_b": "#ffffff", "tint_c": "#f5eef7",
+    "bar": "linear-gradient(90deg, #76c39c, #b68fbd)",
+    "btn_bg": "#76c39c",
+    "badge_bg": "#f5eef7", "badge_fg": "#b68fbd",
+    "card_tint": "#fdfbf8",
 }
 
 CFG_DEFAULTS = {
@@ -750,7 +763,10 @@ def token_block(theme):
             "--wx-radius:%(radius)s;--wx-radius-sm:%(radius_sm)s;--wx-pill:%(pill)s;"
             "--wx-shadow:%(shadow)s;--wx-shadow-hover:%(shadow_hover)s;--wx-maxw:%(max_width)s;"
             "--wx-readw:%(read_width)s;--wx-space:%(space)s;--wx-hero-tint:%(hero_tint)s;"
-            "--wx-font-head:%(font_head)s;font-family:%(font_body)s;color:var(--wx-ink);"
+            "--wx-font-head:%(font_head)s;--wx-head:%(head)s;"
+            "--wx-tint-a:%(tint_a)s;--wx-tint-b:%(tint_b)s;--wx-tint-c:%(tint_c)s;--wx-bar:%(bar)s;"
+            "--wx-btn-bg:%(btn_bg)s;--wx-badge-bg:%(badge_bg)s;--wx-badge-fg:%(badge_fg)s;"
+            "--wx-card-tint:%(card_tint)s;font-family:%(font_body)s;color:var(--wx-ink);"
             "line-height:1.65;font-size:1.0625rem;text-rendering:optimizeLegibility;position:relative;"
             "-webkit-font-smoothing:antialiased}" % t)
 
