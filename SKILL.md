@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.7'
+version: '3.5.0'
 date_created: '2026-09-22'
 date_updated: '2026-10-01'
 owner: Guilherme (Wipex automation lead)
@@ -317,6 +317,29 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.5.0 (2026-10-01)** — **module imagery moved into the theme editor, and a settings-budget rule
+that every future module now has to respect.** Until now the product cards were image-less by design
+(the old note said "product imagery stays out of the section") and the feature block took a literal
+CDN URL, so an operator who wanted to set a picture had to edit the config. Blog 03's redesign asked
+for the opposite: **one image per product card, set in the theme editor, three across**. Three
+changes: `products[].image_setting` (or the implicit `prod<N>_image`) makes the generator declare an
+`image_picker` per card and emit `{{ section.settings.<id> | image_url: width: 600 }}` behind a
+blank-check; `feature_block.image_setting` does the same at 800px; and both fall back to the old
+literal-URL behaviour when `image` is set, so nothing existing breaks. The cards grid is now
+`repeat(3, minmax(0,1fr))` (2 at ≤1024px, 1 at ≤640px) with hover lift, an accent hairline and a
+slow image zoom, replacing `auto-fit minmax(15rem,1fr)` — which at 1180px was quietly fitting **four**
+cards per row, not three.
+**Two consequences worth carrying forward.** (1) **The 40-setting cap is now a real design budget.**
+Each card picker is one setting, and the section is capped at 40 — blog 03 landed at **39/40**, which
+it could only do by dropping one editorial still (5 settings: paragraph + picker + alt + caption +
+focal) and by keeping alt text in the post config instead of as settings. Any future module that
+wants settings has to pay for them. (2) **A module that emits Liquid breaks the Liquid-safety gate
+unless it respects `resolved`.** The generator builds the article twice — once resolved (paste
+artifact, and the `prose contains '{{'` check) and once unresolved (the section). The first attempt
+emitted the picker markup unconditionally and the build refused itself. Fixed by passing the
+resolved flag into the module conf and rendering no image in resolved mode; the lesson generalises:
+**a module's Liquid must be conditional on the build mode, never unconditional.**
 
 **v3.4.7 (2026-10-01)** — **the calculator can now be switched off, which v3.4.3 said it could.**
 The standing rule "a module a post does not need is switched off in the config, not deleted in the

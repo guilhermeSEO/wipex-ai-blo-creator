@@ -476,8 +476,17 @@ def system_block(P, cfg):
 def feature_block(P, cfg):
     """Primary feature module — the reference's 'the workhorse' block: image, eyebrow, heading,
     proof bullets, one primary CTA."""
-    media = ('<div class="@P@__feature-media"><img src="%s" width="800" height="800" loading="lazy" alt="%s"></div>'
-             % (cfg['image'], html.escape(cfg.get('image_alt', cfg['heading'])))) if cfg.get('image') else ''
+    media = ''
+    if cfg.get('image'):
+        media = ('<div class="@P@__feature-media"><img src="%s" width="800" height="800" loading="lazy" alt="%s"></div>'
+                 % (cfg['image'], html.escape(cfg.get('image_alt', cfg['heading']))))
+    elif cfg.get('image_setting') and not cfg.get('_resolved'):
+        _fid = cfg['image_setting']
+        media = ('<div class="@P@__feature-media">'
+                 '{%- if section.settings.' + _fid + ' != blank -%}'
+                 '<img src="{{ section.settings.' + _fid + ' | image_url: width: 800 }}" width="800" height="800"'
+                 ' loading="lazy" alt="' + html.escape(cfg.get('image_alt', cfg['heading'])) + '">'
+                 '{%- endif -%}</div>')
     bullets = ''.join('<li>%s</li>' % html.escape(b) for b in cfg.get('bullets', []))
     return ('<div class="@P@__sec-block"><div class="@P@__feature">%s<div class="@P@__feature-body">'
             '<span class="@P@__eyebrow">%s</span><h2>%s</h2><p>%s</p>'
@@ -591,8 +600,24 @@ def products_module(P, cfg, resolved):
         return ''
     cards = []
     for pr in prods:
-        media = ('<div class="@P@__card-media"><img src="%s" width="600" height="600" loading="lazy" alt="%s"></div>'
-                 % (pr['image'], html.escape(pr['name']))) if pr.get('image') else ''
+        i = len(cards) + 1
+        sid = pr.get('image_setting') or ('prod%d_image' % i)
+        alt = html.escape(pr.get('alt') or pr['name'])
+        if pr.get('image'):
+            # literal URL support kept: some posts point at a CDN asset instead of the editor.
+            media = ('<div class="' + P + '__card-media"><img src="' + pr['image'] +
+                     '" width="600" height="600" loading="lazy" alt="' + alt + '"></div>')
+        elif resolved:
+            # resolved mode (the paste artifact and the Liquid-safety check) renders no image:
+            # the picture is a theme-editor setting, so there is no literal src to resolve.
+            media = ''
+        else:
+            # theme-editor image: the picker is declared in build_settings() for every card.
+            media = ('<div class="' + P + '__card-media">'
+                     '{%- if section.settings.' + sid + ' != blank -%}'
+                     '<img src="{{ section.settings.' + sid + ' | image_url: width: 600 }}"'
+                     ' width="600" height="600" loading="lazy" alt="' + alt + '">'
+                     '{%- endif -%}</div>')
         bullets = ''.join('<li>%s</li>' % html.escape(b) for b in pr.get('bullets', []))
         cards.append("""<article class="%(P)s__card">
   %(media)s
@@ -917,6 +942,24 @@ def build_settings(cfg):
     S.append({"type": "header", "content": "Sticky mobile CTA"})
     S.append({"type": "text", "id": "sticky_label", "label": "Sticky CTA label", "default": cfg["sticky_cta"]["label"]})
     S.append({"type": "url", "id": "sticky_url", "label": "Sticky CTA URL"})
+    # Product-card imagery: one picker per card, so the operator sets the images in the theme editor
+    # instead of pasting URLs into the config. Budget note: Shopify caps a section at 40 settings and
+    # these are counted, so a post that turns them on has to free room elsewhere (blog 03 dropped one
+    # editorial still). Alt text stays in the config (`alt` per product) to save six more settings.
+    _prods = cfg.get("products") or []
+    if _prods:
+        S.append({"type": "header", "content": "Product card images",
+                  "info": "One image per card. Cards render a 1:1 image, three across on desktop. Alt text comes from the post config."})
+        for _i, _pr in enumerate(_prods, 1):
+            S.append({"type": "image_picker",
+                      "id": _pr.get("image_setting") or ("prod%d_image" % _i),
+                      "label": _pr.get("name", "Product %d" % _i)[:40]})
+    _fb = cfg.get("feature_block") or {}
+    if _fb.get("image_setting") and not _fb.get("image"):
+        # picker only: the alt text stays in the post config as `image_alt`, to keep the settings
+        # budget under Shopify's 40 cap (one setting here, not two).
+        S.append({"type": "header", "content": "Feature block"})
+        S.append({"type": "image_picker", "id": _fb["image_setting"], "label": "Feature image (square)"})
     return S
 
 
@@ -1011,6 +1054,10 @@ def build_article(nodes, toc, cfg, resolved, uidt):
         conf = cfg.get(key)
         if not conf:
             continue
+        conf = dict(conf)
+        # modules that can emit theme-editor image markup need to know whether this build is the
+        # resolved one (paste artifact + Liquid-safety check), where the value must be literal.
+        conf['_resolved'] = resolved
         html_mod = fin(fn(P, conf))
         if not html_mod:
             continue
@@ -1631,8 +1678,9 @@ report.append('  module library        : %s'
                                        'system_block', 'feature_block') if CFG.get(k)]
                           + ['products', 'faq', 'checklist', 'toc', 'sticky', 'liferow']
                           + (['calculator'] if CFG.get('calculator') else [])))
-report.append('  editorial media only  : %s (product imagery stays out of the section)'
-              % ('yes' if 'image_picker' in section_text else 'no'))
+report.append('  imagery               : %d editorial slot(s) + %d product-card image(s) (theme-editor pickers; '
+              'product alt text comes from the post config)'
+              % (len(CFG['image_slots']), len(CFG.get('products') or [])))
 report.append('')
 report.append('CONTENT INTEGRITY')
 report.append('  prose generated from  : %s' % os.path.basename(SRC))
