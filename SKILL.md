@@ -1,9 +1,9 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.5.2'
+version: '3.5.3'
 date_created: '2026-09-22'
-date_updated: '2026-10-01'
+date_updated: '2026-10-02'
 owner: Guilherme (Wipex automation lead)
 description: "Use when producing a Wipex blog post end to end."
 tags: [wipex, blog, content-factory, seo, aeo, geo, cro, compliance, google-trends, shopify]
@@ -317,6 +317,28 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.5.3 (2026-10-02)** — **H2s get real emphasis, and a Title Case convention with an anchor trap.**
+Owner asked for the section headings to stand out and to be capitalised. Two changes, one of them
+carrying a trap worth writing down.
+
+*Emphasis:* `.%P% h2` had **no `font-weight`** declared, so it inherited whatever the theme font
+happened to give it. It is now `font-weight:800`, the size clamp moves up to `clamp(1.5rem, 1.2rem +
+1.3vw, 2.05rem)` (measured 32.8px at 1280 wide), and each top-level H2 gets a 46×4px accent rule above
+it drawn from `--wx-bar`, so it picks up the post palette. `. %P%__acc>summary h2::before{display:none}`
+keeps the rule out of accordion summaries, where a bar above every item would be noise.
+
+*Title Case:* post H2s must be Title Case (articles, coordinating conjunctions and short prepositions
+stay lowercase; "not" capitalises as an adverb; `EWG Verified®` is kept intact). The convention applies
+to **module headings in the config too** — `card_grid`, `decision_tool`, `system_block`,
+`feature_block`, `products_heading`, `final_cta_heading` all render as `h2` and were sentence case.
+
+*The trap:* **module anchors in the config match H2 text literally.** Renaming a heading silently
+un-anchors the module that sits after it, and the build reports only `WARN … anchor not found` while
+still printing `RESULT: NONE — safe to paste`. This bit twice in one session (the products module and
+the Title Case pass). **Before trusting a build, verify every `after:`/`before:` value in the config
+against the H2/H3 of the clean body** — `_verify_edits.py` in the blog-03 folder is the throwaway
+script that does it. Making an anchor miss a BLOCKING finding is still open.
 
 **v3.5.2 (2026-10-01)** — **the buttons were failing contrast, and neither of the two vision models
 noticed.** Ran the first visual review with two cheap vision models (Qwen3-VL-32B and Gemini 2.5

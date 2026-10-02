@@ -18,7 +18,9 @@
 .%P% img{max-width:100%;height:auto;display:block}
 .%P% h1,.%P% h2,.%P% h3{font-family:var(--wx-font-head);line-height:1.18;letter-spacing:-.015em;color:var(--wx-head,var(--wx-ink));margin:0 0 .6em}
 .%P% h1{font-size:clamp(1.95rem,1.3rem + 2.6vw,3rem)}
-.%P% h2{font-size:clamp(1.4rem,1.15rem + 1.1vw,1.9rem)}
+.%P% h2{font-size:clamp(1.5rem,1.2rem + 1.3vw,2.05rem);font-weight:800}
+    .%P% h2::before{content:"";display:block;width:46px;height:4px;border-radius:99px;background:var(--wx-bar,var(--wx-accent));margin:0 0 .5rem}
+    .%P%__acc>summary h2::before{display:none}
 .%P% h3{font-size:1.15rem}
 .%P% p{margin:0 0 1.1rem}
 .%P% ul,.%P% ol{margin:0 0 1.2rem;padding-left:1.3rem}
