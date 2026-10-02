@@ -1,7 +1,7 @@
 ---
 name: wipex-blog-generation
 title: Wipex Blog Generation
-version: '3.4.6'
+version: '3.4.7'
 date_created: '2026-09-22'
 date_updated: '2026-10-01'
 owner: Guilherme (Wipex automation lead)
@@ -317,6 +317,20 @@ product/audience override; anything that would change this skill's rules.
   `multiline` / `relatedsearches` / `comparedgeo`, not by widget id.
 
 ## CHANGELOG
+
+**v3.4.7 (2026-10-01)** — **the calculator can now be switched off, which v3.4.3 said it could.**
+The standing rule "a module a post does not need is switched off in the config, not deleted in the
+code" was not true of the calculator: `build_article` always rendered it, because `calc_html` falls
+back to `CFG_DEFAULTS['calculator']` whenever the config key is absent or null. Blog 03's rebuild
+(informational angle, no cost-per-use content) exposed it — the post asked for no calculator and got
+one anyway. Two changes: the placement block is now guarded (`_calc_enabled = bool(cfg.get(
+'calculator'))`, and the three placement passes plus the "anchor not found" warning are conditional),
+and the validator's module probes only look for `__calc` when the config enables it — otherwise every
+post with the module off would fail its own receipt with `module 'calculator' declared but not
+rendered`. `"calculator": null` now disables it cleanly; omitting the key keeps the old default
+behaviour. **Known residue:** the calculator's JS init still ships in the section (one selector) and
+is inert with no markup; removing it cleanly needs the shared JS block split, which is a bigger
+change than this one warranted. Structure stays 35 settings.
 
 **v3.4.6 (2026-10-01)** — **two measured traps, documented instead of rediscovered.** Built the
 first post about a *third-party certification* (EWG Verified®, blog 03) and lost two build cycles to

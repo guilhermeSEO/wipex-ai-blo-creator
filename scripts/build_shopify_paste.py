@@ -1033,13 +1033,17 @@ def build_article(nodes, toc, cfg, resolved, uidt):
     after_hero.extend(after_hero_products)
 
     # the calculator module, placed by anchor inside its section (config: calculator.anchor)
-    _calc_cfg = dict(CFG_DEFAULTS['calculator'])
+    # "calculator": null in the config switches the module off — standing rule: a module a post does
+    # not need is disabled in the config, never deleted from the code. Without this guard the
+    # calculator rendered on every post regardless of config, which broke that rule.
+    _calc_enabled = bool(cfg.get('calculator'))
+    _calc_cfg = dict(CFG_DEFAULTS['calculator']) if _calc_enabled else {}
     _calc_cfg.update({k: v for k, v in (cfg.get('calculator') or {}).items() if v not in (None, '', [], {})})
     _anchor = _calc_cfg.get('anchor', 'before:Worked example')
     _needle = _anchor.split(':', 1)[1].strip().lower() if ':' in _anchor else _anchor.lower()
     _calc_node = {'t': 'html', 'html': fin(calc_html(P, cfg, uidt))}
     _placed = False
-    for sec in sections:
+    for sec in (sections if _calc_enabled else []):
         for k, n in enumerate(sec['nodes']):
             if n['t'] in ('h2', 'h3') and _needle and _needle in (n.get('text') or '').lower():
                 sec['nodes'].insert(k, _calc_node)
@@ -1047,14 +1051,14 @@ def build_article(nodes, toc, cfg, resolved, uidt):
                 break
         if _placed:
             break
-    if not _placed:
+    if not _placed and _calc_enabled:
         for sec in sections:
             if any(_needle and _needle in (n.get('text') or '').lower() for n in sec['nodes']) or \
                any('calculate' in (n.get('text') or '').lower() for n in sec['nodes']):
                 sec['nodes'].append(_calc_node)
                 _placed = True
                 break
-    if not _placed:
+    if not _placed and _calc_enabled:
         print('  WARN calculator anchor not found: %r — the module was not placed' % _anchor)
 
     faq_i = None
@@ -1598,9 +1602,11 @@ report.append('  a11y landmarks        : aria-label %d, aria-expanded %d, role=r
               % (len(re.findall(r'aria-label=', section_text)), len(re.findall(r'aria-expanded=', section_text)),
                  len(re.findall(r'role="region"', section_text)), len(re.findall(r'%s__sr' % P, section_text))))
 _mod_probes = (('toc', '<nav class="%s__toc"' % P), ('checklist', '<div class="%s__check"' % P),
-               ('calculator', '<div class="%s__calc"' % P), ('sticky', '<div class="%s__sticky"' % P),
+               ('sticky', '<div class="%s__sticky"' % P),
                ('progress', '<div class="%s__progress"' % P), ('video', 'lifestyle_video'),
                ('hero', '<header class="%s__hero"' % P), ('liferow', '<div class="%s__liferow"' % P))
+if CFG.get('calculator'):
+    _mod_probes = _mod_probes + (('calculator', '<div class="%s__calc"' % P),)
 if CFG.get('value_strip'):
     _mod_probes = _mod_probes + (('value_strip', '<section class="%s__vstrip"' % P),)
 if CFG.get('accordion'):
@@ -1623,7 +1629,8 @@ report.append('  media slots           : %d editorial stills + video band' % len
 report.append('  module library        : %s'
               % ', '.join([k for k in ('problem_strip', 'stat_cards', 'card_grid', 'decision_tool',
                                        'system_block', 'feature_block') if CFG.get(k)]
-                          + ['products', 'faq', 'checklist', 'calculator', 'toc', 'sticky', 'liferow']))
+                          + ['products', 'faq', 'checklist', 'toc', 'sticky', 'liferow']
+                          + (['calculator'] if CFG.get('calculator') else [])))
 report.append('  editorial media only  : %s (product imagery stays out of the section)'
               % ('yes' if 'image_picker' in section_text else 'no'))
 report.append('')
